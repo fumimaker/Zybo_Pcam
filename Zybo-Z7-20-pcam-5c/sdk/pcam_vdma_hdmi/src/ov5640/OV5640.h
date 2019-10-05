@@ -685,9 +685,7 @@ public:
 		uint8_t id_h, id_l;
 		readReg(reg_ID_h, id_h);
 		readReg(reg_ID_l, id_l);
-		//if (id_h != dev_ID_h_ || id_l != dev_ID_l_)
-		/*
-		if (false)
+		/*if (id_h != dev_ID_h_ || id_l != dev_ID_l_)
 		{
 			/* Does not work. https://www.xilinx.com/support/answers/64193.html
 	      std::stringstream ss;
