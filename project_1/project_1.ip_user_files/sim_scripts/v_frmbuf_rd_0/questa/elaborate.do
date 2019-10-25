@@ -1,0 +1,1 @@
+vopt -64 +acc -l elaborate.log -L xil_defaultlib -L v_frmbuf_rd_v2_1_2 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.v_frmbuf_rd_0 xil_defaultlib.glbl -o v_frmbuf_rd_0_opt

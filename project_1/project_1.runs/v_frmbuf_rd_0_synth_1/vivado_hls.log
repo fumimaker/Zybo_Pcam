@@ -1,0 +1,255 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vivado/2019.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'fumi' on host 'fumimaker6bee' (Windows NT_amd64 version 6.2) on Thu Oct 24 19:46:07 +0900 2019
+INFO: [HLS 200-10] In directory 'Z:/GitHub/Zybo_Pcam/project_1/project_1.runs/v_frmbuf_rd_0_synth_1'
+Sourcing Tcl script 'Z:/GitHub/Zybo_Pcam/project_1/project_1.runs/v_frmbuf_rd_0_synth_1/runhls.tcl'
+INFO: [HLS 200-10] Creating and opening project 'Z:/GitHub/Zybo_Pcam/project_1/project_1.runs/v_frmbuf_rd_0_synth_1/v_frmbuf_rd_0'.
+INFO: [HLS 200-10] Adding design file 'z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd_config.h' to the project
+INFO: [HLS 200-10] Adding design file 'z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.h' to the project
+INFO: [HLS 200-10] Creating and opening solution 'Z:/GitHub/Zybo_Pcam/project_1/project_1.runs/v_frmbuf_rd_0_synth_1/v_frmbuf_rd_0/prj'.
+INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'ap_clk' with a period of 6.667ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 164.434 ; gain = 72.758
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 164.434 ; gain = 72.758
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:25 . Memory (MB): peak = 199.586 ; gain = 107.910
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp:248: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:26 . Memory (MB): peak = 237.383 ; gain = 145.707
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2.1' (z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp:221) in function 'MultiPixStream2AXIvideo' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp:708) in function 'Bytes2MultiPixStream' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (C:/Xilinx/Vivado/2019.1/common/technology/autopilot/hls/hls_video_core.h:180) in function 'MultiPixStream2AXIvideo' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.2' (z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp:242) in function 'MultiPixStream2AXIvideo' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.2.1' (z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp:244) in function 'MultiPixStream2AXIvideo' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp:720) in function 'Bytes2MultiPixStream' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp:722) in function 'Bytes2MultiPixStream' completely with a factor of 2.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'img.V.val.V' .
+INFO: [XFORM 203-101] Partitioning array 'pix.val.V' (z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp:165) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'map.V' (z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp:211) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pix.val.V' (z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp:705) in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'v_frmbuf_rd' , detected/extracted 5 process function(s): 
+	 'Block_._crit_edge44_proc'
+	 'AXIMMvideo2Bytes'
+	 'Bytes2MultiPixStream'
+	 'Block_._crit_edge448_proc'
+	 'MultiPixStream2AXIvideo'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:29 . Memory (MB): peak = 299.242 ; gain = 207.566
+WARNING: [XFORM 203-631] Renaming function 'MultiPixStream2AXIvideo' to 'MultiPixStream2AXIvi' (z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp:139:53)
+WARNING: [XFORM 203-631] Renaming function 'Block_._crit_edge44_proc' to 'Block_._crit_edge44_' 
+WARNING: [XFORM 203-631] Renaming function 'Block_._crit_edge448_proc' to 'Block_._crit_edge448' 
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'srcImg.V' (z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp:355:64). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+WARNING: [XFORM 203-631] Renaming function 'Block_._crit_edge44_5' to 'Block_._crit_edge44_' 
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:31 . Memory (MB): peak = 357.219 ; gain = 265.543
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'v_frmbuf_rd' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block_._crit_edge44_' to 'Block_crit_edge44_s'.
+WARNING: [SYN 201-103] Legalizing function name 'Block_._crit_edge448' to 'Block_crit_edge448'.
+WARNING: [SYN 201-103] Legalizing function name 'reg<unsigned short>' to 'reg_unsigned_short_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_crit_edge44_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 30.764 seconds; current allocated memory: 288.569 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 288.665 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIMMvideo2Bytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_AXIMMvideo2Bytes_1plane.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.396 seconds; current allocated memory: 289.002 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.963 seconds; current allocated memory: 289.626 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Bytes2MultiPixStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_RGB8_YUV8.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 8, Final II = 8, Depth = 9.
+WARNING: [SCHED 204-21] Estimated clock period (6.38ns) exceeds the target (target clock period: 6.667ns, clock uncertainty: 0.833375ns, effective delay budget: 5.83362ns).
+WARNING: [SCHED 204-21] The critical path in module 'Bytes2MultiPixStream' consists of the following:
+	'mul' operation of DSP[64] ('mul_ln693', z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp:693->z:/GitHub/Zybo_Pcam/project_1/project_1.srcs/sources_1/ip/v_frmbuf_rd_0/src/v_frmbuf_rd.cpp:133) [64]  (6.38 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 3.202 seconds; current allocated memory: 290.307 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 3.936 seconds; current allocated memory: 291.205 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_crit_edge448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 3.972 seconds; current allocated memory: 291.311 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.141 seconds; current allocated memory: 291.357 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'reg_unsigned_short_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 291.371 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 291.411 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MultiPixStream2AXIvi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.255 seconds; current allocated memory: 291.677 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.049 seconds; current allocated memory: 292.172 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'v_frmbuf_rd' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.074 seconds; current allocated memory: 292.360 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.944 seconds; current allocated memory: 292.897 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_crit_edge44_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Block_crit_edge44_s_BYTES_PER_PIXEL' to 'Block_crit_edge44bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_crit_edge44_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.893 seconds; current allocated memory: 293.128 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIMMvideo2Bytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIMMvideo2Bytes'.
+INFO: [HLS 200-111]  Elapsed time: 0.321 seconds; current allocated memory: 294.403 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Bytes2MultiPixStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'v_frmbuf_rd_urem_13ns_3ns_2_17_seq_1' to 'v_frmbuf_rd_urem_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'v_frmbuf_rd_mul_mul_15ns_13ns_28_1_1' to 'v_frmbuf_rd_mul_mdEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'v_frmbuf_rd_mul_mdEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'v_frmbuf_rd_urem_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Bytes2MultiPixStream'.
+INFO: [HLS 200-111]  Elapsed time: 3.18 seconds; current allocated memory: 295.995 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_crit_edge448' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Block_crit_edge448_MEMORY2LIVE' to 'Block_crit_edge44eOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_crit_edge448'.
+INFO: [HLS 200-111]  Elapsed time: 5.152 seconds; current allocated memory: 296.405 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'reg_unsigned_short_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'reg_unsigned_short_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.198 seconds; current allocated memory: 296.557 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MultiPixStream2AXIvi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'MultiPixStream2AXIvi_mapComp' to 'MultiPixStream2AXfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'v_frmbuf_rd_mux_63_8_1_1' to 'v_frmbuf_rd_mux_6g8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'v_frmbuf_rd_mux_6g8j': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2AXIvi'.
+INFO: [HLS 200-111]  Elapsed time: 0.289 seconds; current allocated memory: 297.841 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'v_frmbuf_rd' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_frmbuf_rd/mm_video' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_frmbuf_rd/HwReg_width' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_frmbuf_rd/HwReg_height' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_frmbuf_rd/HwReg_stride' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_frmbuf_rd/HwReg_video_format' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_frmbuf_rd/HwReg_frm_buffer_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_frmbuf_rd/HwReg_frm_buffer2_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_frmbuf_rd/m_axis_video_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_frmbuf_rd/m_axis_video_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_frmbuf_rd/m_axis_video_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_frmbuf_rd/m_axis_video_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_frmbuf_rd/m_axis_video_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_frmbuf_rd/m_axis_video_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_frmbuf_rd/m_axis_video_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'v_frmbuf_rd' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'HwReg_width', 'HwReg_height', 'HwReg_stride', 'HwReg_video_format', 'HwReg_frm_buffer_V', 'HwReg_frm_buffer2_V' and 'return' to AXI-Lite port CTRL.
+INFO: [SYN 201-210] Renamed object name 'start_for_Bytes2MultiPixStream_U0' to 'start_for_Bytes2Mhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_MultiPixStream2AXIvi_U0' to 'start_for_MultiPiibs' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'v_frmbuf_rd'.
+INFO: [HLS 200-111]  Elapsed time: 2.889 seconds; current allocated memory: 299.140 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [RTMG 210-279] Implementing memory 'v_frmbuf_rd_0_Block_crit_edge44bkb_rom' using distributed ROMs.
+INFO: [RTMG 210-282] Generating pipelined core: 'v_frmbuf_rd_0_v_frmbuf_rd_urem_cud_div'
+INFO: [RTMG 210-279] Implementing memory 'v_frmbuf_rd_0_Block_crit_edge44eOg_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'v_frmbuf_rd_0_MultiPixStream2AXfYi_rom' using distributed ROMs.
+INFO: [RTMG 210-285] Implementing FIFO 'mul_ln131_loc_c_U(v_frmbuf_rd_0_fifo_w16_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'HwReg_frm_buffer_V_c_U(v_frmbuf_rd_0_fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'tmp_U(v_frmbuf_rd_0_fifo_w16_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'bytePlanes_plane0_V_s_U(v_frmbuf_rd_0_fifo_w128_d480_B)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'mul_ln131_loc_c15_U(v_frmbuf_rd_0_fifo_w16_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_V_val_0_V_U(v_frmbuf_rd_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_V_val_1_V_U(v_frmbuf_rd_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_V_val_2_V_U(v_frmbuf_rd_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_V_val_3_V_U(v_frmbuf_rd_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_V_val_4_V_U(v_frmbuf_rd_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_V_val_5_V_U(v_frmbuf_rd_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'trunc_ln139_loc_c_U(v_frmbuf_rd_0_fifo_w3_d3_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Bytes2Mhbi_U(v_frmbuf_rd_0_start_for_Bytes2Mhbi)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_MultiPiibs_U(v_frmbuf_rd_0_start_for_MultiPiibs)' using Shift Registers.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:37 ; elapsed = 00:01:11 . Memory (MB): peak = 374.051 ; gain = 282.375
+INFO: [VHDL 208-304] Generating VHDL RTL for v_frmbuf_rd with prefix v_frmbuf_rd_0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for v_frmbuf_rd with prefix v_frmbuf_rd_0_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 24 19:47:32 2019...
+INFO: [HLS 200-112] Total elapsed time: 86.609 seconds; peak allocated memory: 299.140 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Thu Oct 24 19:47:33 2019...
