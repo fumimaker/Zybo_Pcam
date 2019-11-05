@@ -1,0 +1,663 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Nov  1 16:41:41 2019
+# Process ID: 7356
+# Current directory: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2528 C:\Github\Zybo_Pcam\Zybo-Z7-20-pcam-5c\proj\pcam-5c.xpr
+# Log file: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/vivado.log
+# Journal file: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.xpr
+INFO: [Project 1-313] Project file moved from 'Z:/GitHub/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 877.602 ; gain = 208.891
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/repo'.
+update_compile_order -fileset sources_1
+open_bd_design {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd}
+Adding cell -- digilentinc.com:user:AXI_BayerToRGB:1.0 - AXI_BayerToRGB_1
+Adding cell -- digilentinc.com:user:AXI_GammaCorrection:1.0 - AXI_GammaCorrection_0
+Adding cell -- digilentinc.com:ip:rgb2dvi:1.4 - rgb2dvi_0
+Adding cell -- natinst.com:module_ref:DVIClocking:1.0 - DVIClocking_0
+Adding cell -- digilentinc.com:ip:MIPI_D_PHY_RX:1.2 - MIPI_D_PHY_RX_0
+Adding cell -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding cell -- xilinx.com:ip:clk_wiz:5.4 - clk_wiz_0
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_0_50M
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_vid_clk_dyn
+Adding cell -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding cell -- xilinx.com:ip:clk_wiz:5.4 - video_dynclk
+Adding cell -- xilinx.com:ip:v_tc:6.1 - vtg
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- digilentinc.com:ip:MIPI_CSI_2_RX:1.1 - MIPI_CSI_2_RX_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /DVIClocking_0/PixelClk(undef) and /rgb2dvi_0/PixelClk(clk)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /DVIClocking_0/PixelClk(undef) and /rst_vid_clk_dyn/slowest_sync_clk(clk)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /DVIClocking_0/PixelClk(undef) and /v_axi4s_vid_out_0/vid_io_out_clk(clk)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /DVIClocking_0/PixelClk(undef) and /vtg/clk(clk)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /v_axi4s_vid_out_0/locked(undef) and /rgb2dvi_0/aRst_n(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /DVIClocking_0/SerialClk(undef) and /rgb2dvi_0/SerialClk(clk)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /video_dynclk/pxl_clk_5x(clk) and /DVIClocking_0/PixelClk5X(undef)
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system> from BD file <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1095.668 ; gain = 95.168
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {MIPI_D_PHY_RX_0_D_PHY_PPI }]
+true
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets MIPI_D_PHY_RX_0_D_PHY_PPI] {NON_AXI_SIGNALS "Data and Trigger" CLK_SRC "/MIPI_D_PHY_RX_0/RxByteClkHS" SYSTEM_ILA "Auto" } \
+                                                         ]
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode INTERFACE, 1 slot interface pins and 0 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /MIPI_D_PHY_RX_0/RxByteClkHS to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting interface connection /MIPI_D_PHY_RX_0_D_PHY_PPI, to System ILA slot interface pin /system_ila_0/SLOT_0_RX_MIPI_PPI_IF for debug.
+apply_bd_automation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1384.039 ; gain = 245.012
+endgroup
+save_bd_design
+Wrote  : <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd> 
+Wrote  : <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ui/bd_c954508f.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-721] Attempt to set value '50000000' on disabled parameter 'C_S_AXI_LITE_FREQ_HZ' of cell '/MIPI_D_PHY_RX_0' is ignored
+WARNING: [BD 41-721] Attempt to set value '200000000' on disabled parameter 'kRefClkFreqHz' of cell '/MIPI_D_PHY_RX_0' is ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(50). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(150). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP2_FREQMHZ(10) on '/processing_system7_0' with propagated value(150). Command ignored
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 50000000 propagated into CONFIG.C_S_AXI_LITE_FREQ_HZ
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 200000000 propagated into CONFIG.kRefClkFreqHz
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 84000000 propagated onto RxByteClkHS
+INFO: [digilentinc.com:ip:MIPI_CSI_2_RX:1.1-17] /MIPI_CSI_2_RX_0Verified that video_aclk frequency can handle RxByteClkHS frequency. AXI-Stream bandwidth 600000000 Pix/s >= PPI bandwidth 134400000.0 Pix/s
+WARNING: [BD 41-927] Following properties on pin /AXI_BayerToRGB_1/StreamClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /AXI_GammaCorrection_0/StreamClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /AXI_GammaCorrection_0/AxiLiteClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_0/PixelClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_video_dynclk_0_PXL_CLK_O 
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_0/SerialClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_video_dynclk_0_PXL_CLK_5X_O 
+Wrote  : <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd> 
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/synth/system.vhd
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/sim/system.vhd
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hdl/system_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI_BayerToRGB_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI_GammaCorrection_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MIPI_CSI_2_RX_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MIPI_D_PHY_RX_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_vid_clk_dyn .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_axi4s_vid_out_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block vtg .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DVIClocking_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block video_dynclk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_system_ila_0_0/bd_0/hw_handoff/system_system_ila_0_0.hwh
+Generated Block Design Tcl file c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_system_ila_0_0/bd_0/hw_handoff/system_system_ila_0_0_bd.tcl
+Generated Hardware Definition File c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_system_ila_0_0/bd_0/synth/system_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_2/system_auto_pc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon_1/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
+Exporting to file C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/synth/system.hwdef
+[Fri Nov  1 17:29:29 2019] Launched system_DVIClocking_0_0_synth_1, system_auto_pc_2_synth_1, system_auto_pc_1_synth_1, system_auto_pc_0_synth_1, system_system_ila_0_0_synth_1, synth_1...
+Run output will be captured here:
+system_DVIClocking_0_0_synth_1: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/system_DVIClocking_0_0_synth_1/runme.log
+system_auto_pc_2_synth_1: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/system_auto_pc_2_synth_1/runme.log
+system_auto_pc_1_synth_1: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/system_auto_pc_1_synth_1/runme.log
+system_auto_pc_0_synth_1: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/system_auto_pc_0_synth_1/runme.log
+system_system_ila_0_0_synth_1: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/system_system_ila_0_0_synth_1/runme.log
+synth_1: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/synth_1/runme.log
+[Fri Nov  1 17:29:30 2019] Launched impl_1...
+Run output will be captured here: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 1680.113 ; gain = 259.078
+export_ip_user_files -of_objects  [get_files C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset ila_0 C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0/ila_0.xci
+INFO: [Project 1-386] Moving file 'C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0/ila_0.xci' from fileset 'ila_0' to fileset 'sources_1'.
+remove_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1817.359 ; gain = 0.000
+export_ip_user_files -of_objects  [get_files C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/vio_0/vio_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset vio_0 C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/vio_0/vio_0.xci
+INFO: [Project 1-386] Moving file 'C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/vio_0/vio_0.xci' from fileset 'vio_0' to fileset 'sources_1'.
+remove_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1817.359 ; gain = 0.000
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Fri Nov  1 17:38:25 2019] Launched impl_1...
+Run output will be captured here: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/runme.log
+open_bd_design {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd}
+open_bd_design {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd}
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_intf_nets { MIPI_D_PHY_RX_0_D_PHY_PPI } ]
+disconnect_bd_intf_net [get_bd_intf_net MIPI_D_PHY_RX_0_D_PHY_PPI] [get_bd_intf_pins system_ila_0/SLOT_0_RX_MIPI_PPI_IF]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
+endgroup
+save_bd_design
+Wrote  : <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd> 
+Wrote  : <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ui/bd_c954508f.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-721] Attempt to set value '50000000' on disabled parameter 'C_S_AXI_LITE_FREQ_HZ' of cell '/MIPI_D_PHY_RX_0' is ignored
+WARNING: [BD 41-721] Attempt to set value '200000000' on disabled parameter 'kRefClkFreqHz' of cell '/MIPI_D_PHY_RX_0' is ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(50). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(150). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP2_FREQMHZ(10) on '/processing_system7_0' with propagated value(150). Command ignored
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 50000000 propagated into CONFIG.C_S_AXI_LITE_FREQ_HZ
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 200000000 propagated into CONFIG.kRefClkFreqHz
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 84000000 propagated onto RxByteClkHS
+INFO: [digilentinc.com:ip:MIPI_CSI_2_RX:1.1-17] /MIPI_CSI_2_RX_0Verified that video_aclk frequency can handle RxByteClkHS frequency. AXI-Stream bandwidth 600000000 Pix/s >= PPI bandwidth 134400000.0 Pix/s
+WARNING: [BD 41-927] Following properties on pin /AXI_BayerToRGB_1/StreamClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /AXI_GammaCorrection_0/StreamClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /AXI_GammaCorrection_0/AxiLiteClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_0/PixelClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_video_dynclk_0_PXL_CLK_O 
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_0/SerialClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_video_dynclk_0_PXL_CLK_5X_O 
+Wrote  : <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd> 
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/synth/system.vhd
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/sim/system.vhd
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hdl/system_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI_BayerToRGB_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI_GammaCorrection_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MIPI_CSI_2_RX_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MIPI_D_PHY_RX_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_vid_clk_dyn .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_axi4s_vid_out_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block vtg .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DVIClocking_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block video_dynclk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_2/system_auto_pc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon_1/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
+Exporting to file C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/synth/system.hwdef
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_auto_pc_2, cache-ID = 4dd34692d305e055.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_auto_pc_1, cache-ID = 33b7f4840ae1f7c6.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = c2978110246e62cc.
+[Fri Nov  1 17:45:08 2019] Launched synth_1...
+Run output will be captured here: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/synth_1/runme.log
+[Fri Nov  1 17:45:08 2019] Launched impl_1...
+Run output will be captured here: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 1865.496 ; gain = 40.699
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {MIPI_D_PHY_RX_0_D_PHY_PPI }]
+true
+save_bd_design
+Wrote  : <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-721] Attempt to set value '50000000' on disabled parameter 'C_S_AXI_LITE_FREQ_HZ' of cell '/MIPI_D_PHY_RX_0' is ignored
+WARNING: [BD 41-721] Attempt to set value '200000000' on disabled parameter 'kRefClkFreqHz' of cell '/MIPI_D_PHY_RX_0' is ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(50). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(150). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP2_FREQMHZ(10) on '/processing_system7_0' with propagated value(150). Command ignored
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 50000000 propagated into CONFIG.C_S_AXI_LITE_FREQ_HZ
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 200000000 propagated into CONFIG.kRefClkFreqHz
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 84000000 propagated onto RxByteClkHS
+INFO: [digilentinc.com:ip:MIPI_CSI_2_RX:1.1-17] /MIPI_CSI_2_RX_0Verified that video_aclk frequency can handle RxByteClkHS frequency. AXI-Stream bandwidth 600000000 Pix/s >= PPI bandwidth 134400000.0 Pix/s
+WARNING: [BD 41-927] Following properties on pin /AXI_BayerToRGB_1/StreamClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /AXI_GammaCorrection_0/StreamClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /AXI_GammaCorrection_0/AxiLiteClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_0/PixelClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_video_dynclk_0_PXL_CLK_O 
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_0/SerialClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_video_dynclk_0_PXL_CLK_5X_O 
+Wrote  : <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd> 
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/synth/system.vhd
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/sim/system.vhd
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hdl/system_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI_BayerToRGB_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI_GammaCorrection_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MIPI_CSI_2_RX_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MIPI_D_PHY_RX_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_vid_clk_dyn .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_axi4s_vid_out_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block vtg .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DVIClocking_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block video_dynclk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_2/system_auto_pc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon_1/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
+Exporting to file C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/synth/system.hwdef
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_auto_pc_2, cache-ID = 4dd34692d305e055.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_auto_pc_1, cache-ID = 33b7f4840ae1f7c6.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = c2978110246e62cc.
+[Fri Nov  1 17:54:53 2019] Launched synth_1...
+Run output will be captured here: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/synth_1/runme.log
+[Fri Nov  1 17:54:53 2019] Launched impl_1...
+Run output will be captured here: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 1890.262 ; gain = 24.766
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 2723 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-7356-FUMIMAKER6BEE/dcp61/system_wrapper_board.xdc]
+Finished Parsing XDC File [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-7356-FUMIMAKER6BEE/dcp61/system_wrapper_board.xdc]
+Parsing XDC File [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-7356-FUMIMAKER6BEE/dcp61/system_wrapper_early.xdc]
+Finished Parsing XDC File [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-7356-FUMIMAKER6BEE/dcp61/system_wrapper_early.xdc]
+Parsing XDC File [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-7356-FUMIMAKER6BEE/dcp61/system_wrapper.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/.Xil/Vivado-6684-FUMIMAKER6BEE/dbg_hub_CV.0/out/xsdbm.xdc:10]
+WARNING: [Timing 38-3] User defined clock exists on pin system_i/video_dynclk/inst/CLK_CORE_DRP_I/clk_inst/mmcm_adv_inst/CLKOUT0 [See C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/constraints/timing.xdc:9] and will prevent any subsequent automatic derivation of generated clocks on that pin. [c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/.Xil/Vivado-6684-FUMIMAKER6BEE/dbg_hub_CV.0/out/xsdbm.xdc:10]
+WARNING: [Timing 38-3] User defined clock exists on pin system_i/DVIClocking_0/U0/PixelClkBuffer/O [See C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/constraints/timing.xdc:17] and will prevent any subsequent automatic derivation of generated clocks on that pin. [c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/.Xil/Vivado-6684-FUMIMAKER6BEE/dbg_hub_CV.0/out/xsdbm.xdc:10]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/.Xil/Vivado-6684-FUMIMAKER6BEE/dbg_hub_CV.0/out/xsdbm.xdc:10]
+get_clocks: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2777.965 ; gain = 560.789
+Finished Parsing XDC File [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-7356-FUMIMAKER6BEE/dcp61/system_wrapper.xdc]
+Parsing XDC File [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-7356-FUMIMAKER6BEE/dcp61/system_wrapper_late.xdc]
+Finished Parsing XDC File [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/.Xil/Vivado-7356-FUMIMAKER6BEE/dcp61/system_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2777.965 ; gain = 0.000
+Restored from archive | CPU: 3.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2777.965 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 913 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 888 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 3 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 21 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
+
+open_run: Time (s): cpu = 00:01:00 ; elapsed = 00:00:53 . Memory (MB): peak = 2905.746 ; gain = 1009.832
+open_report: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2979.664 ; gain = 73.918
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351A6C9E3A
+open_hw_target: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 3522.531 ; gain = 537.457
+set_property PROGRAM.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILARxClk' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILA_LaneGen[1].ILARxClk_Lane' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILA_LaneGen[0].ILARxClk_Lane' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILAVidClk' from probes file, since it cannot be found on the programmed device.
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILARxClk' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILA_LaneGen[1].ILARxClk_Lane' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILA_LaneGen[0].ILARxClk_Lane' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILAVidClk' from probes file, since it cannot be found on the programmed device.
+set_property PROBES.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILARxClk' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILA_LaneGen[1].ILARxClk_Lane' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILA_LaneGen[0].ILARxClk_Lane' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILAVidClk' from probes file, since it cannot be found on the programmed device.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_0 -dir c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip
+set_property -dict [list CONFIG.C_PROBE0_WIDTH {32} CONFIG.C_NUM_OF_PROBES {8}] [get_ips ila_0]
+generate_target {instantiation_template} [get_files c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_1/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_0'...
+generate_target all [get_files  c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_1/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_0'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_1/ila_0_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_0'...
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_1/ila_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_1/ila_0.xci]
+launch_runs -jobs 12 ila_0_synth_1
+[Fri Nov  1 18:16:47 2019] Launched ila_0_synth_1...
+Run output will be captured here: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/ila_0_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_1/ila_0.xci] -directory C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.ip_user_files/sim_scripts -ip_user_files_dir C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.ip_user_files -ipstatic_source_dir C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.cache/compile_simlib/modelsim} {questa=C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.cache/compile_simlib/questa} {riviera=C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.cache/compile_simlib/riviera} {activehdl=C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_hw
+open_bd_design {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd}
+export_ip_user_files -of_objects  [get_files c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_1/ila_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset ila_0 c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_1/ila_0.xci
+INFO: [Project 1-386] Moving file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_1/ila_0.xci' from fileset 'ila_0' to fileset 'sources_1'.
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets MIPI_D_PHY_RX_0_D_PHY_PPI] {NON_AXI_SIGNALS "Data and Trigger" CLK_SRC "/MIPI_D_PHY_RX_0/RxByteClkHS" SYSTEM_ILA "Auto" } \
+                                                         ]
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode INTERFACE, 1 slot interface pins and 0 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /MIPI_D_PHY_RX_0/RxByteClkHS to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting interface connection /MIPI_D_PHY_RX_0_D_PHY_PPI, to System ILA slot interface pin /system_ila_0/SLOT_0_RX_MIPI_PPI_IF for debug.
+save_bd_design
+Wrote  : <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd> 
+Wrote  : <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ui/bd_c954508f.ui> 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-721] Attempt to set value '50000000' on disabled parameter 'C_S_AXI_LITE_FREQ_HZ' of cell '/MIPI_D_PHY_RX_0' is ignored
+WARNING: [BD 41-721] Attempt to set value '200000000' on disabled parameter 'kRefClkFreqHz' of cell '/MIPI_D_PHY_RX_0' is ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(50). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(150). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP2_FREQMHZ(10) on '/processing_system7_0' with propagated value(150). Command ignored
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 50000000 propagated into CONFIG.C_S_AXI_LITE_FREQ_HZ
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 200000000 propagated into CONFIG.kRefClkFreqHz
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 84000000 propagated onto RxByteClkHS
+INFO: [digilentinc.com:ip:MIPI_CSI_2_RX:1.1-17] /MIPI_CSI_2_RX_0Verified that video_aclk frequency can handle RxByteClkHS frequency. AXI-Stream bandwidth 600000000 Pix/s >= PPI bandwidth 134400000.0 Pix/s
+WARNING: [BD 41-927] Following properties on pin /AXI_BayerToRGB_1/StreamClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /AXI_GammaCorrection_0/StreamClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /AXI_GammaCorrection_0/AxiLiteClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_0/PixelClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_video_dynclk_0_PXL_CLK_O 
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_0/SerialClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_video_dynclk_0_PXL_CLK_5X_O 
+Wrote  : <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd> 
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/synth/system.vhd
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/sim/system.vhd
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hdl/system_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI_BayerToRGB_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI_GammaCorrection_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MIPI_CSI_2_RX_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MIPI_D_PHY_RX_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_vid_clk_dyn .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_axi4s_vid_out_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block vtg .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DVIClocking_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block video_dynclk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_system_ila_0_0/bd_0/hw_handoff/system_system_ila_0_0.hwh
+Generated Block Design Tcl file c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_system_ila_0_0/bd_0/hw_handoff/system_system_ila_0_0_bd.tcl
+Generated Hardware Definition File c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_system_ila_0_0/bd_0/synth/system_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_2/system_auto_pc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon_1/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
+Exporting to file C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/synth/system.hwdef
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_system_ila_0_0, cache-ID = 70cd6c8d627b4551.
+config_ip_cache: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3729.012 ; gain = 15.105
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_auto_pc_2, cache-ID = 4dd34692d305e055.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_auto_pc_1, cache-ID = 33b7f4840ae1f7c6.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = c2978110246e62cc.
+[Fri Nov  1 18:18:47 2019] Launched synth_1...
+Run output will be captured here: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/synth_1/runme.log
+[Fri Nov  1 18:18:47 2019] Launched impl_1...
+Run output will be captured here: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 3729.012 ; gain = 103.219
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_intf_nets { MIPI_D_PHY_RX_0_D_PHY_PPI } ]
+disconnect_bd_intf_net [get_bd_intf_net MIPI_D_PHY_RX_0_D_PHY_PPI] [get_bd_intf_pins system_ila_0/SLOT_0_RX_MIPI_PPI_IF]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
+endgroup
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {MIPI_D_PHY_RX_0_D_PHY_PPI }]
+true
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+delete_bd_objs [get_bd_cells ila_0]
+save_bd_design
+Wrote  : <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd> 
+Wrote  : <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ui/bd_c954508f.ui> 
+close_bd_design [get_bd_designs system]
+open_bd_design {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd}
+Adding cell -- digilentinc.com:user:AXI_BayerToRGB:1.0 - AXI_BayerToRGB_1
+Adding cell -- digilentinc.com:user:AXI_GammaCorrection:1.0 - AXI_GammaCorrection_0
+Adding cell -- digilentinc.com:ip:rgb2dvi:1.4 - rgb2dvi_0
+Adding cell -- xilinx.com:module_ref:DVIClocking:1.0 - DVIClocking_0
+Adding cell -- digilentinc.com:ip:MIPI_D_PHY_RX:1.2 - MIPI_D_PHY_RX_0
+Adding cell -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding cell -- xilinx.com:ip:clk_wiz:5.4 - clk_wiz_0
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'set_property' was cancelled
+INFO: [Common 17-344] 'set_property' was cancelled
+INFO: [BD 41-1808] Open Block Design has been cancelled.
+INFO: [Common 17-344] 'open_bd_design' was cancelled
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_0 -dir c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip
+set_property -dict [list CONFIG.C_PROBE3_WIDTH {2} CONFIG.C_PROBE2_WIDTH {2} CONFIG.C_PROBE1_WIDTH {4} CONFIG.C_PROBE0_WIDTH {32} CONFIG.C_NUM_OF_PROBES {8}] [get_ips ila_0]
+generate_target {instantiation_template} [get_files c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_2/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_2/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_0'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_2/ila_0_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_0'...
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_2/ila_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_2/ila_0.xci]
+launch_runs -jobs 12 ila_0_synth_1
+[Fri Nov  1 18:57:06 2019] Launched ila_0_synth_1...
+Run output will be captured here: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/ila_0_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.srcs/sources_1/ip/ila_0_2/ila_0.xci] -directory C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.ip_user_files/sim_scripts -ip_user_files_dir C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.ip_user_files -ipstatic_source_dir C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.cache/compile_simlib/modelsim} {questa=C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.cache/compile_simlib/questa} {riviera=C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.cache/compile_simlib/riviera} {activehdl=C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [BD 41-1731] Type mismatch between connected pins: /DVIClocking_0/PixelClk(undef) and /rgb2dvi_0/PixelClk(clk)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /DVIClocking_0/PixelClk(undef) and /rst_vid_clk_dyn/slowest_sync_clk(clk)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /DVIClocking_0/PixelClk(undef) and /v_axi4s_vid_out_0/vid_io_out_clk(clk)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /DVIClocking_0/PixelClk(undef) and /vtg/clk(clk)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /v_axi4s_vid_out_0/locked(undef) and /rgb2dvi_0/aRst_n(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /DVIClocking_0/SerialClk(undef) and /rgb2dvi_0/SerialClk(clk)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /video_dynclk/pxl_clk_5x(clk) and /DVIClocking_0/PixelClk5X(undef)
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-721] Attempt to set value '50000000' on disabled parameter 'C_S_AXI_LITE_FREQ_HZ' of cell '/MIPI_D_PHY_RX_0' is ignored
+WARNING: [BD 41-721] Attempt to set value '200000000' on disabled parameter 'kRefClkFreqHz' of cell '/MIPI_D_PHY_RX_0' is ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(50). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(150). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP2_FREQMHZ(10) on '/processing_system7_0' with propagated value(150). Command ignored
+INFO: [digilentinc.com:ip:MIPI_CSI_2_RX:1.1-17] /MIPI_CSI_2_RX_0Verified that video_aclk frequency can handle RxByteClkHS frequency. AXI-Stream bandwidth 600000000 Pix/s >= PPI bandwidth 134400000.0 Pix/s
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 50000000 propagated into CONFIG.C_S_AXI_LITE_FREQ_HZ
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 200000000 propagated into CONFIG.kRefClkFreqHz
+INFO: [digilentinc.com:ip:MIPI_D_PHY_RX:1.2-17] /MIPI_D_PHY_RX_0FREQ_HZ of 84000000 propagated onto RxByteClkHS
+WARNING: [BD 41-927] Following properties on pin /AXI_BayerToRGB_1/StreamClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /AXI_GammaCorrection_0/StreamClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /AXI_GammaCorrection_0/AxiLiteClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_clk_wiz_0_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_0/PixelClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_video_dynclk_0_PXL_CLK_O 
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_0/SerialClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=system_video_dynclk_0_PXL_CLK_5X_O 
+Wrote  : <C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/system.bd> 
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/synth/system.vhd
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/sim/system.vhd
+VHDL Output written to : C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hdl/system_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI_BayerToRGB_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI_GammaCorrection_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MIPI_CSI_2_RX_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MIPI_D_PHY_RX_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_vid_clk_dyn .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_axi4s_vid_out_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block vtg .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DVIClocking_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block video_dynclk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_2/system_auto_pc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon_1/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
+Exporting to file C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/synth/system.hwdef
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_auto_pc_2, cache-ID = 4dd34692d305e055.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_auto_pc_1, cache-ID = 33b7f4840ae1f7c6.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = c2978110246e62cc.
+[Fri Nov  1 18:58:07 2019] Launched synth_1...
+Run output will be captured here: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/synth_1/runme.log
+[Fri Nov  1 18:58:08 2019] Launched impl_1...
+Run output will be captured here: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 3824.145 ; gain = 29.348
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351A6C9E3A
+set_property PROGRAM.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILARxClk' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILA_LaneGen[1].ILARxClk_Lane' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILA_LaneGen[0].ILARxClk_Lane' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILAVidClk' from probes file, since it cannot be found on the programmed device.
+set_property PROBES.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILARxClk' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILA_LaneGen[1].ILARxClk_Lane' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILA_LaneGen[0].ILARxClk_Lane' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILAVidClk' from probes file, since it cannot be found on the programmed device.
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILARxClk' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILA_LaneGen[1].ILARxClk_Lane' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILA_LaneGen[0].ILARxClk_Lane' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/GenerateDebug.ILAVidClk' from probes file, since it cannot be found on the programmed device.
+close_hw
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  1 22:02:30 2019...

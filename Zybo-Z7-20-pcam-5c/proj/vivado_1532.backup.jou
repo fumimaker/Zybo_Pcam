@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Oct  6 00:54:22 2019
+# Process ID: 1532
+# Current directory: Z:/GitHub/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11724 Z:\GitHub\Zybo_Pcam\Zybo-Z7-20-pcam-5c\proj\pcam-5c.xpr
+# Log file: Z:/GitHub/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/vivado.log
+# Journal file: Z:/GitHub/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Z:/GitHub/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.xpr
+file copy -force Z:/GitHub/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.runs/impl_1/system_wrapper.sysdef Z:/GitHub/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.sdk/system_wrapper.hdf
+
+update_compile_order -fileset sources_1
+launch_sdk -workspace Z:/GitHub/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.sdk -hwspec Z:/GitHub/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.sdk/system_wrapper.hdf

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Z:/GitHub/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="23583fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/dbgLMLane[0][rbSkwRdEn]" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/dbgLMLane[0][rbSkwRdEn]</obj_property>
+      <obj_property name="ObjectShortName">dbgLMLane[0][rbSkwRdEn]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/dbgLMLane[0][rbSkwWrEn]" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/dbgLMLane[0][rbSkwWrEn]</obj_property>
+      <obj_property name="ObjectShortName">dbgLMLane[0][rbSkwWrEn]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/dbgLMLane[0][rbSkwFull]" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/dbgLMLane[0][rbSkwFull]</obj_property>
+      <obj_property name="ObjectShortName">dbgLMLane[0][rbSkwFull]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/dbgLMLane[0][rbActiveHS]" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/dbgLMLane[0][rbActiveHS]</obj_property>
+      <obj_property name="ObjectShortName">dbgLMLane[0][rbActiveHS]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/dbgLMLane[0][rbSyncHS]" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/dbgLMLane[0][rbSyncHS]</obj_property>
+      <obj_property name="ObjectShortName">dbgLMLane[0][rbSyncHS]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/dbgLMLane[0][rbValidHS]" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/dbgLMLane[0][rbValidHS]</obj_property>
+      <obj_property name="ObjectShortName">dbgLMLane[0][rbValidHS]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/dbgLMLane[0][rbDataHS]" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/dbgLMLane[0][rbDataHS][7:0]</obj_property>
+      <obj_property name="ObjectShortName">dbgLMLane[0][rbDataHS][7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,10 @@
+!SESSION 2019-10-04 23:11:31.437 -----------------------------------------------
+eclipse.buildId=2017.4
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -application com.xilinx.sdk.cmdline.service 50441
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.xilinx.sdk.cmdline.service 50441 -data C:/Users/fumi/Downloads/Zybo-Z7-20-pcam-5c-2017.4-1/Zybo-Z7-20-pcam-5c/sdk
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-10-04 23:12:15.201
+!MESSAGE The workspace will exit with unsaved changes in this session.

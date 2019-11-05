@@ -1,0 +1,8 @@
+00:18:40 **** Auto Build of configuration Debug for project fsbl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: *** `src/ps7_init.o' に必要なターゲット `Z:/GitHub/Zybo_Pcam/Zybo-Z7-20-pcam-5c/proj/pcam-5c.sdk/system_wrapper_hw_platform_0/ps7_init.c' を make するルールがありません.  中止.
+
+00:18:41 Build Finished (took 781ms)
+
