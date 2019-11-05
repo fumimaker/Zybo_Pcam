@@ -1260,6 +1260,9 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net AXI_GammaCorrection_0_AXI_Stream_Master [get_bd_intf_pins AXI_GammaCorrection_0/AXI_Stream_Master] [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM]
   connect_bd_intf_net -intf_net MIPI_CSI_2_RX_0_m_axis_video [get_bd_intf_pins AXI_BayerToRGB_1/AXI_Slave_Interface] [get_bd_intf_pins MIPI_CSI_2_RX_0/m_axis_video]
   connect_bd_intf_net -intf_net MIPI_D_PHY_RX_0_D_PHY_PPI [get_bd_intf_pins MIPI_CSI_2_RX_0/rx_mipi_ppi] [get_bd_intf_pins MIPI_D_PHY_RX_0/D_PHY_PPI]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_intf_nets MIPI_D_PHY_RX_0_D_PHY_PPI]
   connect_bd_intf_net -intf_net axi_mem_intercon_1_M00_AXI [get_bd_intf_pins axi_mem_intercon_1/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP2]
   connect_bd_intf_net -intf_net axi_mem_intercon_M00_AXI [get_bd_intf_pins axi_mem_intercon/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
   connect_bd_intf_net -intf_net axi_vdma_0_M_AXIS_MM2S [get_bd_intf_pins axi_vdma_0/M_AXIS_MM2S] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]

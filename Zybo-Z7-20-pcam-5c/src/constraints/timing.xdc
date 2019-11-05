@@ -27,3 +27,4 @@ create_clock -period 4.761 -name dphy_hs_clock_p -waveform {0.000 2.380} [get_po
 #set_false_path -from [get_pins {system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/LLP_inst/SyncSReset/SyncAsyncx/oSyncStages_reg[1]/C}] -to [get_pins system_i/MIPI_CSI_2_RX_0/U0/MIPI_CSI2_Rx_inst/LLP_inst/DataFIFO/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rst_rd_reg2_reg/PRE]
 
 
+

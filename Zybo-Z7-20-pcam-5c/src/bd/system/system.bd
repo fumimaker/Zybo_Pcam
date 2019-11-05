@@ -287,7 +287,7 @@
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>DVIClocking_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="DVIClocking" spirit:vendor="natinst.com" spirit:version="1.0"/>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="DVIClocking" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_DVIClocking_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceName">DVIClocking</spirit:configurableElementValue>
@@ -1060,6 +1060,10 @@
         <spirit:name>MIPI_D_PHY_RX_0_D_PHY_PPI</spirit:name>
         <spirit:activeInterface spirit:busRef="rx_mipi_ppi" spirit:componentRef="MIPI_CSI_2_RX_0"/>
         <spirit:activeInterface spirit:busRef="D_PHY_PPI" spirit:componentRef="MIPI_D_PHY_RX_0"/>
+        <bd:hdl_attributes>
+          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
+          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
+        </bd:hdl_attributes>
       </spirit:interconnection>
       <spirit:interconnection>
         <spirit:name>axi_mem_intercon_1_M00_AXI</spirit:name>
@@ -1203,13 +1207,13 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="S_AXI_HP0_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="S_AXI_HP2_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="aclk"/>
+        <spirit:internalPortReference spirit:componentRef="MIPI_CSI_2_RX_0" spirit:portRef="video_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="M00_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="MIPI_CSI_2_RX_0" spirit:portRef="video_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_CLK0</spirit:name>
@@ -1246,6 +1250,7 @@
         <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="aresetn"/>
         <spirit:internalPortReference spirit:componentRef="video_dynclk" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="vtg" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="MIPI_CSI_2_RX_0" spirit:portRef="s_axi_lite_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="S00_ARESETN"/>
@@ -1257,7 +1262,6 @@
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M03_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M04_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M05_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="MIPI_CSI_2_RX_0" spirit:portRef="s_axi_lite_aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_clk_wiz_0_50M_peripheral_reset</spirit:name>
@@ -1284,6 +1288,7 @@
         <spirit:internalPortReference spirit:componentRef="rst_clk_wiz_0_50M" spirit:portRef="slowest_sync_clk"/>
         <spirit:internalPortReference spirit:componentRef="video_dynclk" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="vtg" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="MIPI_CSI_2_RX_0" spirit:portRef="s_axi_lite_aclk"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M00_ACLK"/>
@@ -1292,7 +1297,6 @@
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M03_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M04_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M05_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="MIPI_CSI_2_RX_0" spirit:portRef="s_axi_lite_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>v_axi4s_vid_out_0_locked</spirit:name>
