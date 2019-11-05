@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
---Date        : Tue Nov  5 19:27:37 2019
+--Date        : Tue Nov  5 21:36:31 2019
 --Host        : FUMIMAKER6BEE running 64-bit major release  (build 9200)
 --Command     : generate_target system.bd
 --Design      : system
@@ -2823,10 +2823,10 @@ entity system is
     hdmi_tx_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
     hdmi_tx_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute core_generation_info : string;
-  attribute core_generation_info of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=31,numReposBlks=19,numNonXlnxBlks=5,numHierBlks=12,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,synth_mode=OOC_per_IP}";
-  attribute hw_handoff : string;
-  attribute hw_handoff of system : entity is "system.hwdef";
+  attribute CORE_GENERATION_INFO : string;
+  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=31,numReposBlks=19,numNonXlnxBlks=5,numHierBlks=12,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,synth_mode=OOC_per_IP}";
+  attribute HW_HANDOFF : string;
+  attribute HW_HANDOFF of system : entity is "system.hwdef";
 end system;
 
 architecture STRUCTURE of system is
@@ -2898,15 +2898,6 @@ architecture STRUCTURE of system is
     SerialClk : in STD_LOGIC
   );
   end component system_rgb2dvi_0_0;
-  component system_DVIClocking_0_0 is
-  port (
-    PixelClk5X : in STD_LOGIC;
-    PixelClk : out STD_LOGIC;
-    SerialClk : out STD_LOGIC;
-    aLockedIn : in STD_LOGIC;
-    aLockedOut : out STD_LOGIC
-  );
-  end component system_DVIClocking_0_0;
   component system_MIPI_D_PHY_RX_0_0 is
   port (
     dphy_clk_hs_p : in STD_LOGIC;
@@ -3424,6 +3415,15 @@ architecture STRUCTURE of system is
     s_axi_lite_aresetn : in STD_LOGIC
   );
   end component system_MIPI_CSI_2_RX_0_0;
+  component system_DVIClocking_0_0 is
+  port (
+    PixelClk5X : in STD_LOGIC;
+    PixelClk : out STD_LOGIC;
+    SerialClk : out STD_LOGIC;
+    aLockedIn : in STD_LOGIC;
+    aLockedOut : out STD_LOGIC
+  );
+  end component system_DVIClocking_0_0;
   signal AXI_BayerToRGB_1_AXI_Stream_Master_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal AXI_BayerToRGB_1_AXI_Stream_Master_TLAST : STD_LOGIC;
   signal AXI_BayerToRGB_1_AXI_Stream_Master_TREADY : STD_LOGIC;
@@ -3442,46 +3442,46 @@ architecture STRUCTURE of system is
   signal MIPI_CSI_2_RX_0_m_axis_video_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal MIPI_CSI_2_RX_0_m_axis_video_TVALID : STD_LOGIC;
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_CL_ENABLE : STD_LOGIC;
+  attribute DEBUG : string;
+  attribute DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_CL_ENABLE : signal is "true";
   attribute MARK_DEBUG : boolean;
   attribute MARK_DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_CL_ENABLE : signal is std.standard.true;
-  attribute debug : string;
-  attribute debug of MIPI_D_PHY_RX_0_D_PHY_PPI_CL_ENABLE : signal is "true";
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_CL_RXCLKACTIVEHS : STD_LOGIC;
+  attribute DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_CL_RXCLKACTIVEHS : signal is "true";
   attribute MARK_DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_CL_RXCLKACTIVEHS : signal is std.standard.true;
-  attribute debug of MIPI_D_PHY_RX_0_D_PHY_PPI_CL_RXCLKACTIVEHS : signal is "true";
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_CL_STOPSTATE : STD_LOGIC;
+  attribute DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_CL_STOPSTATE : signal is "true";
   attribute MARK_DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_CL_STOPSTATE : signal is std.standard.true;
-  attribute debug of MIPI_D_PHY_RX_0_D_PHY_PPI_CL_STOPSTATE : signal is "true";
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_ENABLE : STD_LOGIC;
+  attribute DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_ENABLE : signal is "true";
   attribute MARK_DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_ENABLE : signal is std.standard.true;
-  attribute debug of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_ENABLE : signal is "true";
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXACTIVEHS : STD_LOGIC;
+  attribute DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXACTIVEHS : signal is "true";
   attribute MARK_DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXACTIVEHS : signal is std.standard.true;
-  attribute debug of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXACTIVEHS : signal is "true";
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXDATAHS : STD_LOGIC_VECTOR ( 7 downto 0 );
+  attribute DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXDATAHS : signal is "true";
   attribute MARK_DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXDATAHS : signal is std.standard.true;
-  attribute debug of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXDATAHS : signal is "true";
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXSYNCHS : STD_LOGIC;
+  attribute DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXSYNCHS : signal is "true";
   attribute MARK_DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXSYNCHS : signal is std.standard.true;
-  attribute debug of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXSYNCHS : signal is "true";
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXVALIDHS : STD_LOGIC;
+  attribute DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXVALIDHS : signal is "true";
   attribute MARK_DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXVALIDHS : signal is std.standard.true;
-  attribute debug of MIPI_D_PHY_RX_0_D_PHY_PPI_DL0_RXVALIDHS : signal is "true";
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_ENABLE : STD_LOGIC;
+  attribute DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_ENABLE : signal is "true";
   attribute MARK_DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_ENABLE : signal is std.standard.true;
-  attribute debug of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_ENABLE : signal is "true";
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXACTIVEHS : STD_LOGIC;
+  attribute DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXACTIVEHS : signal is "true";
   attribute MARK_DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXACTIVEHS : signal is std.standard.true;
-  attribute debug of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXACTIVEHS : signal is "true";
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXDATAHS : STD_LOGIC_VECTOR ( 7 downto 0 );
+  attribute DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXDATAHS : signal is "true";
   attribute MARK_DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXDATAHS : signal is std.standard.true;
-  attribute debug of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXDATAHS : signal is "true";
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXSYNCHS : STD_LOGIC;
+  attribute DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXSYNCHS : signal is "true";
   attribute MARK_DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXSYNCHS : signal is std.standard.true;
-  attribute debug of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXSYNCHS : signal is "true";
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXVALIDHS : STD_LOGIC;
+  attribute DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXVALIDHS : signal is "true";
   attribute MARK_DEBUG of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXVALIDHS : signal is std.standard.true;
-  attribute debug of MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXVALIDHS : signal is "true";
   signal MIPI_D_PHY_RX_0_RxByteClkHS : STD_LOGIC;
   signal PixelClk_Generator_clk_out1 : STD_LOGIC;
   signal axi_mem_intercon_1_M00_AXI_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -3834,47 +3834,47 @@ architecture STRUCTURE of system is
   signal NLW_v_axi4s_vid_out_0_vid_vblank_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_status_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_vtg_fsync_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  attribute x_interface_info : string;
-  attribute x_interface_info of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
-  attribute x_interface_info of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
-  attribute x_interface_info of DDR_ck_p : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_P";
-  attribute x_interface_info of DDR_cke : signal is "xilinx.com:interface:ddrx:1.0 DDR CKE";
-  attribute x_interface_info of DDR_cs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CS_N";
-  attribute x_interface_info of DDR_odt : signal is "xilinx.com:interface:ddrx:1.0 DDR ODT";
-  attribute x_interface_info of DDR_ras_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RAS_N";
-  attribute x_interface_info of DDR_reset_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RESET_N";
-  attribute x_interface_info of DDR_we_n : signal is "xilinx.com:interface:ddrx:1.0 DDR WE_N";
-  attribute x_interface_info of FIXED_IO_ddr_vrn : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN";
-  attribute x_interface_parameter : string;
-  attribute x_interface_parameter of FIXED_IO_ddr_vrn : signal is "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false";
-  attribute x_interface_info of FIXED_IO_ddr_vrp : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP";
-  attribute x_interface_info of FIXED_IO_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
-  attribute x_interface_info of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
-  attribute x_interface_info of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
-  attribute x_interface_info of cam_iic_scl_i : signal is "xilinx.com:interface:iic:1.0 cam_iic SCL_I";
-  attribute x_interface_info of cam_iic_scl_o : signal is "xilinx.com:interface:iic:1.0 cam_iic SCL_O";
-  attribute x_interface_info of cam_iic_scl_t : signal is "xilinx.com:interface:iic:1.0 cam_iic SCL_T";
-  attribute x_interface_info of cam_iic_sda_i : signal is "xilinx.com:interface:iic:1.0 cam_iic SDA_I";
-  attribute x_interface_info of cam_iic_sda_o : signal is "xilinx.com:interface:iic:1.0 cam_iic SDA_O";
-  attribute x_interface_info of cam_iic_sda_t : signal is "xilinx.com:interface:iic:1.0 cam_iic SDA_T";
-  attribute x_interface_info of dphy_hs_clock_clk_n : signal is "xilinx.com:interface:diff_clock:1.0 dphy_hs_clock CLK_N";
-  attribute x_interface_parameter of dphy_hs_clock_clk_n : signal is "XIL_INTERFACENAME dphy_hs_clock, CAN_DEBUG false, FREQ_HZ 336000000";
-  attribute x_interface_info of dphy_hs_clock_clk_p : signal is "xilinx.com:interface:diff_clock:1.0 dphy_hs_clock CLK_P";
-  attribute x_interface_info of hdmi_tx_clk_n : signal is "digilentinc.com:interface:tmds:1.0 hdmi_tx CLK_N";
-  attribute x_interface_info of hdmi_tx_clk_p : signal is "digilentinc.com:interface:tmds:1.0 hdmi_tx CLK_P";
-  attribute x_interface_info of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
-  attribute x_interface_parameter of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
-  attribute x_interface_info of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
-  attribute x_interface_info of DDR_dm : signal is "xilinx.com:interface:ddrx:1.0 DDR DM";
-  attribute x_interface_info of DDR_dq : signal is "xilinx.com:interface:ddrx:1.0 DDR DQ";
-  attribute x_interface_info of DDR_dqs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_N";
-  attribute x_interface_info of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
-  attribute x_interface_info of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
-  attribute x_interface_info of cam_gpio_tri_i : signal is "xilinx.com:interface:gpio:1.0 cam_gpio TRI_I";
-  attribute x_interface_info of cam_gpio_tri_o : signal is "xilinx.com:interface:gpio:1.0 cam_gpio TRI_O";
-  attribute x_interface_info of cam_gpio_tri_t : signal is "xilinx.com:interface:gpio:1.0 cam_gpio TRI_T";
-  attribute x_interface_info of hdmi_tx_data_n : signal is "digilentinc.com:interface:tmds:1.0 hdmi_tx DATA_N";
-  attribute x_interface_info of hdmi_tx_data_p : signal is "digilentinc.com:interface:tmds:1.0 hdmi_tx DATA_P";
+  attribute X_INTERFACE_INFO : string;
+  attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
+  attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
+  attribute X_INTERFACE_INFO of DDR_ck_p : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_P";
+  attribute X_INTERFACE_INFO of DDR_cke : signal is "xilinx.com:interface:ddrx:1.0 DDR CKE";
+  attribute X_INTERFACE_INFO of DDR_cs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CS_N";
+  attribute X_INTERFACE_INFO of DDR_odt : signal is "xilinx.com:interface:ddrx:1.0 DDR ODT";
+  attribute X_INTERFACE_INFO of DDR_ras_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RAS_N";
+  attribute X_INTERFACE_INFO of DDR_reset_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RESET_N";
+  attribute X_INTERFACE_INFO of DDR_we_n : signal is "xilinx.com:interface:ddrx:1.0 DDR WE_N";
+  attribute X_INTERFACE_INFO of FIXED_IO_ddr_vrn : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN";
+  attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of FIXED_IO_ddr_vrn : signal is "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false";
+  attribute X_INTERFACE_INFO of FIXED_IO_ddr_vrp : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP";
+  attribute X_INTERFACE_INFO of FIXED_IO_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
+  attribute X_INTERFACE_INFO of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
+  attribute X_INTERFACE_INFO of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
+  attribute X_INTERFACE_INFO of cam_iic_scl_i : signal is "xilinx.com:interface:iic:1.0 cam_iic SCL_I";
+  attribute X_INTERFACE_INFO of cam_iic_scl_o : signal is "xilinx.com:interface:iic:1.0 cam_iic SCL_O";
+  attribute X_INTERFACE_INFO of cam_iic_scl_t : signal is "xilinx.com:interface:iic:1.0 cam_iic SCL_T";
+  attribute X_INTERFACE_INFO of cam_iic_sda_i : signal is "xilinx.com:interface:iic:1.0 cam_iic SDA_I";
+  attribute X_INTERFACE_INFO of cam_iic_sda_o : signal is "xilinx.com:interface:iic:1.0 cam_iic SDA_O";
+  attribute X_INTERFACE_INFO of cam_iic_sda_t : signal is "xilinx.com:interface:iic:1.0 cam_iic SDA_T";
+  attribute X_INTERFACE_INFO of dphy_hs_clock_clk_n : signal is "xilinx.com:interface:diff_clock:1.0 dphy_hs_clock CLK_N";
+  attribute X_INTERFACE_PARAMETER of dphy_hs_clock_clk_n : signal is "XIL_INTERFACENAME dphy_hs_clock, CAN_DEBUG false, FREQ_HZ 336000000";
+  attribute X_INTERFACE_INFO of dphy_hs_clock_clk_p : signal is "xilinx.com:interface:diff_clock:1.0 dphy_hs_clock CLK_P";
+  attribute X_INTERFACE_INFO of hdmi_tx_clk_n : signal is "digilentinc.com:interface:tmds:1.0 hdmi_tx CLK_N";
+  attribute X_INTERFACE_INFO of hdmi_tx_clk_p : signal is "digilentinc.com:interface:tmds:1.0 hdmi_tx CLK_P";
+  attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
+  attribute X_INTERFACE_PARAMETER of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
+  attribute X_INTERFACE_INFO of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
+  attribute X_INTERFACE_INFO of DDR_dm : signal is "xilinx.com:interface:ddrx:1.0 DDR DM";
+  attribute X_INTERFACE_INFO of DDR_dq : signal is "xilinx.com:interface:ddrx:1.0 DDR DQ";
+  attribute X_INTERFACE_INFO of DDR_dqs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_N";
+  attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
+  attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
+  attribute X_INTERFACE_INFO of cam_gpio_tri_i : signal is "xilinx.com:interface:gpio:1.0 cam_gpio TRI_I";
+  attribute X_INTERFACE_INFO of cam_gpio_tri_o : signal is "xilinx.com:interface:gpio:1.0 cam_gpio TRI_O";
+  attribute X_INTERFACE_INFO of cam_gpio_tri_t : signal is "xilinx.com:interface:gpio:1.0 cam_gpio TRI_T";
+  attribute X_INTERFACE_INFO of hdmi_tx_data_n : signal is "digilentinc.com:interface:tmds:1.0 hdmi_tx DATA_N";
+  attribute X_INTERFACE_INFO of hdmi_tx_data_p : signal is "digilentinc.com:interface:tmds:1.0 hdmi_tx DATA_P";
 begin
   cam_gpio_tri_o(0) <= processing_system7_0_GPIO_0_TRI_O(0);
   cam_gpio_tri_t(0) <= processing_system7_0_GPIO_0_TRI_T(0);

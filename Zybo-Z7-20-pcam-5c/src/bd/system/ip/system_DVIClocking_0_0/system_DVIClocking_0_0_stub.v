@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Fri Nov  1 17:30:31 2019
+// Date        : Tue Nov  5 21:37:26 2019
 // Host        : FUMIMAKER6BEE running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_DVIClocking_0_0/system_DVIClocking_0_0_stub.v
