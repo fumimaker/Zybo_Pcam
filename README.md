@@ -1,0 +1,2 @@
+# Zybo_Pcam
+Zyboでカメラを使ってみるリポジトリです。最初はPiCamRev1.3で頑張ってたんだけど、InitializeRegisterがあまりにも違いすぎて移植を断念。
