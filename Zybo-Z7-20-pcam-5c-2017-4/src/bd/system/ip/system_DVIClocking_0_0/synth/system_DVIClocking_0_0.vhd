@@ -80,7 +80,7 @@ ARCHITECTURE system_DVIClocking_0_0_arch OF system_DVIClocking_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF system_DVIClocking_0_0_arch : ARCHITECTURE IS "system_DVIClocking_0_0,DVIClocking,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF system_DVIClocking_0_0_arch: ARCHITECTURE IS "system_DVIClocking_0_0,DVIClocking,{x_ipProduct=Vivado 2017.4,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=DVIClocking,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
+  ATTRIBUTE CORE_GENERATION_INFO OF system_DVIClocking_0_0_arch: ARCHITECTURE IS "system_DVIClocking_0_0,DVIClocking,{x_ipProduct=Vivado 2017.4,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=DVIClocking,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}";
 BEGIN
   U0 : DVIClocking
     PORT MAP (
