@@ -157,7 +157,8 @@
 	      if (fifo_wren)// && S_AXIS_TSTRB[byte_index])
 	        begin
 	          stream_data_fifo[write_pointer] <= S_AXIS_TDATA[(byte_index*8+7) -: 8];
-	        end  
+	        end
+          
 	    end  
 	  end		
 	endgenerate
