@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2020 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -46,7 +46,7 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: natinst.com:module_ref:DVIClocking:1.0
+-- IP VLNV: xilinx.com:module_ref:DVIClocking:1.0
 -- IP Revision: 1
 
 LIBRARY ieee;

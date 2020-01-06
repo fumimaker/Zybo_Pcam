@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Tue Jun 19 19:04:12 2018
--- Host        : elodlt-ro running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top system_video_dynclk_1 -prefix
---               system_video_dynclk_1_ system_video_dynclk_1_sim_netlist.vhdl
+-- Date        : Mon Jan  6 20:11:25 2020
+-- Host        : FUMIMAKER6BEE running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_video_dynclk_1/system_video_dynclk_1_sim_netlist.vhdl
 -- Design      : system_video_dynclk_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -132,6 +132,8 @@ entity system_video_dynclk_1_system_video_dynclk_1_address_decoder is
     \bus2ip_addr_i_reg[2]_rep__1_1\ : in STD_LOGIC;
     \bus2ip_addr_i_reg[3]_rep__1_1\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_video_dynclk_1_system_video_dynclk_1_address_decoder : entity is "system_video_dynclk_1_address_decoder";
 end system_video_dynclk_1_system_video_dynclk_1_address_decoder;
 
 architecture STRUCTURE of system_video_dynclk_1_system_video_dynclk_1_address_decoder is
@@ -2405,6 +2407,8 @@ entity system_video_dynclk_1_system_video_dynclk_1_clk_wiz is
     DI : in STD_LOGIC_VECTOR ( 15 downto 0 );
     DADDR : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_video_dynclk_1_system_video_dynclk_1_clk_wiz : entity is "system_video_dynclk_1_clk_wiz";
 end system_video_dynclk_1_system_video_dynclk_1_clk_wiz;
 
 architecture STRUCTURE of system_video_dynclk_1_system_video_dynclk_1_clk_wiz is
@@ -2549,6 +2553,8 @@ entity system_video_dynclk_1_system_video_dynclk_1_mmcm_drp is
     DEN_reg_0 : in STD_LOGIC;
     \load_enable_reg_reg[30]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_video_dynclk_1_system_video_dynclk_1_mmcm_drp : entity is "system_video_dynclk_1_mmcm_drp";
 end system_video_dynclk_1_system_video_dynclk_1_mmcm_drp;
 
 architecture STRUCTURE of system_video_dynclk_1_system_video_dynclk_1_mmcm_drp is
@@ -14253,6 +14259,8 @@ entity system_video_dynclk_1_system_video_dynclk_1_soft_reset is
     reset_trig0 : in STD_LOGIC;
     sw_rst_cond : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_video_dynclk_1_system_video_dynclk_1_soft_reset : entity is "system_video_dynclk_1_soft_reset";
 end system_video_dynclk_1_system_video_dynclk_1_soft_reset;
 
 architecture STRUCTURE of system_video_dynclk_1_system_video_dynclk_1_soft_reset is
@@ -14822,6 +14830,8 @@ entity system_video_dynclk_1_system_video_dynclk_1_clk_wiz_drp is
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_30\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \bus2ip_addr_i_reg[8]\ : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_video_dynclk_1_system_video_dynclk_1_clk_wiz_drp : entity is "system_video_dynclk_1_clk_wiz_drp";
 end system_video_dynclk_1_system_video_dynclk_1_clk_wiz_drp;
 
 architecture STRUCTURE of system_video_dynclk_1_system_video_dynclk_1_clk_wiz_drp is
@@ -32688,6 +32698,8 @@ entity system_video_dynclk_1_system_video_dynclk_1_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 10 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 10 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_video_dynclk_1_system_video_dynclk_1_slave_attachment : entity is "system_video_dynclk_1_slave_attachment";
 end system_video_dynclk_1_system_video_dynclk_1_slave_attachment;
 
 architecture STRUCTURE of system_video_dynclk_1_system_video_dynclk_1_slave_attachment is
@@ -35516,6 +35528,8 @@ entity system_video_dynclk_1_system_video_dynclk_1_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 10 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 10 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_video_dynclk_1_system_video_dynclk_1_axi_lite_ipif : entity is "system_video_dynclk_1_axi_lite_ipif";
 end system_video_dynclk_1_system_video_dynclk_1_axi_lite_ipif;
 
 architecture STRUCTURE of system_video_dynclk_1_system_video_dynclk_1_axi_lite_ipif is
@@ -35657,6 +35671,8 @@ entity system_video_dynclk_1_system_video_dynclk_1_axi_clk_config is
   attribute C_S_AXI_ADDR_WIDTH of system_video_dynclk_1_system_video_dynclk_1_axi_clk_config : entity is 11;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of system_video_dynclk_1_system_video_dynclk_1_axi_clk_config : entity is 32;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_video_dynclk_1_system_video_dynclk_1_axi_clk_config : entity is "system_video_dynclk_1_axi_clk_config";
 end system_video_dynclk_1_system_video_dynclk_1_axi_clk_config;
 
 architecture STRUCTURE of system_video_dynclk_1_system_video_dynclk_1_axi_clk_config is
