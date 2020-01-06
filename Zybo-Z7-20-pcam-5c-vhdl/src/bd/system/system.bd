@@ -263,13 +263,6 @@
     <spirit:version>1.00.a</spirit:version>
     <spirit:componentInstances>
       <spirit:componentInstance>
-        <spirit:instanceName>AXI_BayerToRGB_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="AXI_BayerToRGB" spirit:vendor="digilentinc.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_AXI_BayerToRGB_1_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>AXI_GammaCorrection_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="AXI_GammaCorrection" spirit:vendor="digilentinc.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -287,7 +280,7 @@
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>DVIClocking_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="DVIClocking" spirit:vendor="natinst.com" spirit:version="1.0"/>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="DVIClocking" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_DVIClocking_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceName">DVIClocking</spirit:configurableElementValue>
@@ -1039,22 +1032,19 @@
           <spirit:configurableElementValue spirit:referenceId="kDebug">true</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>BayerToRGB3_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="BayerToRGB3" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_BayerToRGB3_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
-      <spirit:interconnection>
-        <spirit:name>AXI_BayerToRGB_1_AXI_Stream_Master</spirit:name>
-        <spirit:activeInterface spirit:busRef="AXI_Stream_Master" spirit:componentRef="AXI_BayerToRGB_1"/>
-        <spirit:activeInterface spirit:busRef="AXI_Slave_Interface" spirit:componentRef="AXI_GammaCorrection_0"/>
-      </spirit:interconnection>
       <spirit:interconnection>
         <spirit:name>AXI_GammaCorrection_0_AXI_Stream_Master</spirit:name>
         <spirit:activeInterface spirit:busRef="AXI_Stream_Master" spirit:componentRef="AXI_GammaCorrection_0"/>
         <spirit:activeInterface spirit:busRef="S_AXIS_S2MM" spirit:componentRef="axi_vdma_0"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>MIPI_CSI_2_RX_0_m_axis_video</spirit:name>
-        <spirit:activeInterface spirit:busRef="AXI_Slave_Interface" spirit:componentRef="AXI_BayerToRGB_1"/>
-        <spirit:activeInterface spirit:busRef="m_axis_video" spirit:componentRef="MIPI_CSI_2_RX_0"/>
       </spirit:interconnection>
       <spirit:interconnection>
         <spirit:name>MIPI_D_PHY_RX_0_D_PHY_PPI</spirit:name>
@@ -1131,6 +1121,16 @@
         <spirit:activeInterface spirit:busRef="M01_AXI" spirit:componentRef="ps7_0_axi_periph"/>
         <spirit:activeInterface spirit:busRef="s_axi_lite" spirit:componentRef="video_dynclk"/>
       </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>MIPI_CSI_2_RX_0_m_axis_video</spirit:name>
+        <spirit:activeInterface spirit:busRef="m_axis_video" spirit:componentRef="MIPI_CSI_2_RX_0"/>
+        <spirit:activeInterface spirit:busRef="S00_AXI_Slave" spirit:componentRef="BayerToRGB3_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>BayerToRGB3_0_S01_AXI_Master</spirit:name>
+        <spirit:activeInterface spirit:busRef="S01_AXI_Master" spirit:componentRef="BayerToRGB3_0"/>
+        <spirit:activeInterface spirit:busRef="AXI_Slave_Interface" spirit:componentRef="AXI_GammaCorrection_0"/>
+      </spirit:interconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
       <spirit:adHocConnection>
@@ -1194,7 +1194,6 @@
       <spirit:adHocConnection>
         <spirit:name>mm_clk_150</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out2"/>
-        <spirit:internalPortReference spirit:componentRef="AXI_BayerToRGB_1" spirit:portRef="StreamClk"/>
         <spirit:internalPortReference spirit:componentRef="AXI_GammaCorrection_0" spirit:portRef="StreamClk"/>
         <spirit:internalPortReference spirit:componentRef="axi_vdma_0" spirit:portRef="m_axi_mm2s_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_vdma_0" spirit:portRef="m_axis_mm2s_aclk"/>
@@ -1203,13 +1202,15 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="S_AXI_HP0_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="S_AXI_HP2_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="aclk"/>
+        <spirit:internalPortReference spirit:componentRef="MIPI_CSI_2_RX_0" spirit:portRef="video_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="M00_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="MIPI_CSI_2_RX_0" spirit:portRef="video_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="BayerToRGB3_0" spirit:portRef="s01_axi_master_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="BayerToRGB3_0" spirit:portRef="s00_axi_slave_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_CLK0</spirit:name>
@@ -1238,7 +1239,6 @@
       <spirit:adHocConnection>
         <spirit:name>rst_clk_wiz_0_50M_peripheral_aresetn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="rst_clk_wiz_0_50M" spirit:portRef="peripheral_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="AXI_BayerToRGB_1" spirit:portRef="sStreamReset_n"/>
         <spirit:internalPortReference spirit:componentRef="AXI_GammaCorrection_0" spirit:portRef="aAxiLiteReset_n"/>
         <spirit:internalPortReference spirit:componentRef="AXI_GammaCorrection_0" spirit:portRef="sStreamReset_n"/>
         <spirit:internalPortReference spirit:componentRef="MIPI_D_PHY_RX_0" spirit:portRef="s_axi_lite_aresetn"/>
@@ -1246,6 +1246,7 @@
         <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="aresetn"/>
         <spirit:internalPortReference spirit:componentRef="video_dynclk" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="vtg" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="MIPI_CSI_2_RX_0" spirit:portRef="s_axi_lite_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="S00_ARESETN"/>
@@ -1257,7 +1258,8 @@
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M03_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M04_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M05_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="MIPI_CSI_2_RX_0" spirit:portRef="s_axi_lite_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="BayerToRGB3_0" spirit:portRef="s00_axi_slave_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="BayerToRGB3_0" spirit:portRef="s01_axi_master_aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_clk_wiz_0_50M_peripheral_reset</spirit:name>
@@ -1284,6 +1286,7 @@
         <spirit:internalPortReference spirit:componentRef="rst_clk_wiz_0_50M" spirit:portRef="slowest_sync_clk"/>
         <spirit:internalPortReference spirit:componentRef="video_dynclk" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="vtg" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="MIPI_CSI_2_RX_0" spirit:portRef="s_axi_lite_aclk"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M00_ACLK"/>
@@ -1292,7 +1295,6 @@
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M03_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M04_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M05_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="MIPI_CSI_2_RX_0" spirit:portRef="s_axi_lite_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>v_axi4s_vid_out_0_locked</spirit:name>
