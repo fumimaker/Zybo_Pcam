@@ -8537,3 +8537,9 @@ Note: Frame Delay must be less than or equal to Frame Buffers or an undefined re
 
 !ENTRY com.xilinx.sdk.utils 0 0 2020-01-08 19:54:13.639
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-01-08 20:22:05.802
+!MESSAGE XSCT Command: [disconnect tcfchan#15], Thread: Thread-951
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-01-08 20:22:05.811
+!MESSAGE XSCT command with result: [disconnect tcfchan#15], Result: [null, ]. Thread: Thread-951
