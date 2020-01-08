@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Tue Jun 19 19:04:12 2018
-// Host        : elodlt-ro running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top system_video_dynclk_1 -prefix
-//               system_video_dynclk_1_ system_video_dynclk_1_sim_netlist.v
+// Date        : Mon Jan  6 20:11:25 2020
+// Host        : FUMIMAKER6BEE running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_video_dynclk_1/system_video_dynclk_1_sim_netlist.v
 // Design      : system_video_dynclk_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -109,6 +109,7 @@ module system_video_dynclk_1
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
+(* ORIG_REF_NAME = "system_video_dynclk_1_address_decoder" *) 
 module system_video_dynclk_1_system_video_dynclk_1_address_decoder
    (rdack_reg_10,
     D,
@@ -2178,7 +2179,7 @@ module system_video_dynclk_1_system_video_dynclk_1_address_decoder
         .O(wrack_reg_1_reg));
 endmodule
 
-(* C_S_AXI_ADDR_WIDTH = "11" *) (* C_S_AXI_DATA_WIDTH = "32" *) 
+(* C_S_AXI_ADDR_WIDTH = "11" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* ORIG_REF_NAME = "system_video_dynclk_1_axi_clk_config" *) 
 module system_video_dynclk_1_system_video_dynclk_1_axi_clk_config
    (s_axi_aclk,
     s_axi_aresetn,
@@ -2693,6 +2694,7 @@ module system_video_dynclk_1_system_video_dynclk_1_axi_clk_config
         .R(reset2ip_reset));
 endmodule
 
+(* ORIG_REF_NAME = "system_video_dynclk_1_axi_lite_ipif" *) 
 module system_video_dynclk_1_system_video_dynclk_1_axi_lite_ipif
    (bus2ip_reset_active_high,
     s_axi_rresp,
@@ -3099,6 +3101,7 @@ module system_video_dynclk_1_system_video_dynclk_1_axi_lite_ipif
         .wrack_reg_1_reg(wrack_reg_1_reg));
 endmodule
 
+(* ORIG_REF_NAME = "system_video_dynclk_1_clk_wiz" *) 
 module system_video_dynclk_1_system_video_dynclk_1_clk_wiz
    (pxl_clk_5x,
     drdy,
@@ -3237,6 +3240,7 @@ module system_video_dynclk_1_system_video_dynclk_1_clk_wiz
         .RST(reset));
 endmodule
 
+(* ORIG_REF_NAME = "system_video_dynclk_1_clk_wiz_drp" *) 
 module system_video_dynclk_1_system_video_dynclk_1_clk_wiz_drp
    (pxl_clk_5x,
     locked,
@@ -16654,6 +16658,7 @@ module system_video_dynclk_1_system_video_dynclk_1_clk_wiz_drp
         .R(wrack_reg_10));
 endmodule
 
+(* ORIG_REF_NAME = "system_video_dynclk_1_mmcm_drp" *) 
 module system_video_dynclk_1_system_video_dynclk_1_mmcm_drp
    (SRDY,
     dwe,
@@ -25511,6 +25516,7 @@ module system_video_dynclk_1_system_video_dynclk_1_mmcm_drp
         .S(\state_count[4]_i_1_n_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "system_video_dynclk_1_slave_attachment" *) 
 module system_video_dynclk_1_system_video_dynclk_1_slave_attachment
    (SR,
     s_axi_rresp,
@@ -27845,6 +27851,7 @@ module system_video_dynclk_1_system_video_dynclk_1_slave_attachment
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "system_video_dynclk_1_soft_reset" *) 
 module system_video_dynclk_1_system_video_dynclk_1_soft_reset
    (FF_WRACK_0,
     wrack,

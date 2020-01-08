@@ -26,31 +26,22 @@ set_property webtalk.parent_dir C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB
 set_property parent.project_path C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/proj/pcam-5c.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
-set_property target_language Verilog [current_project]
-set_property ip_repo_paths c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/repo [current_project]
+set_property target_language VHDL [current_project]
+set_property ip_repo_paths {
+  c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/ip_repo/RGBChanger_1.0
+  c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/repo
+} [current_project]
 set_property ip_output_repo c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/repo/cache [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/hdl/system_wrapper.vhd
 add_files C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/system.bd
 set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/line_buffer_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/line_buffer/line_buffer.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/ila_rxclk_lane/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/ila_rxclk_lane/ila_rxclk_lane_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/ila_rxclk/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/ila_rxclk/ila_rxclk_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/ila_vidclk/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/ila_vidclk/ila_vidclk_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/cdc_fifo.xdc]
 set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/cdc_fifo/cdc_fifo_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/mipi_csi2_rx.xdc]
 set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/mipi_csi2_rx_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/mipi_csi2_rx_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/ila_sfen_rxclk/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/ila_sfen_rxclk/ila_sfen_rxclk_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/ila_scnn_refclk/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/ila_scnn_refclk/ila_scnn_refclk_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/ila_sfen_refclk/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/ila_sfen_refclk/ila_sfen_refclk_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/MIPI_DPHY_Receiver.xdc]
 set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/MIPI_DPHY_Receiver_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/MIPI_DPHY_Receiver_ooc.xdc]
@@ -110,3 +101,4 @@ synth_design -top system_wrapper -part xc7z020clg400-1 -flatten_hierarchy none -
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
 write_checkpoint -force -noxdef system_wrapper.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb"

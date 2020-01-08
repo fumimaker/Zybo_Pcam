@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Tue Jun 19 19:03:07 2018
-// Host        : elodlt-ro running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top system_AXI_BayerToRGB_1_0 -prefix
-//               system_AXI_BayerToRGB_1_0_ system_AXI_BayerToRGB_1_0_stub.v
+// Date        : Mon Jan  6 20:08:30 2020
+// Host        : FUMIMAKER6BEE running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub
+//               C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/src/bd/system/ip/system_AXI_BayerToRGB_1_0/system_AXI_BayerToRGB_1_0_stub.v
 // Design      : system_AXI_BayerToRGB_1_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

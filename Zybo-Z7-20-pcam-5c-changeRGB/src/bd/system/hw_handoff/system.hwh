@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jun 20 16:15:44 2018" VIVADOVERSION="2017.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jan  6 20:21:19 2020" VIVADOVERSION="2017.4">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -548,7 +548,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE FULLNAME="/DVIClocking_0" HWVERSION="1.0" INSTANCE="DVIClocking_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DVIClocking" VLNV="natinst.com:module_ref:DVIClocking:1.0">
+    <MODULE FULLNAME="/DVIClocking_0" HWVERSION="1.0" INSTANCE="DVIClocking_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DVIClocking" VLNV="xilinx.com:module_ref:DVIClocking:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="system_DVIClocking_0_0"/>
@@ -588,7 +588,7 @@
     </MODULE>
     <MODULE FULLNAME="/MIPI_CSI_2_RX_0" HWVERSION="1.1" INSTANCE="MIPI_CSI_2_RX_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="MIPI_CSI_2_RX" VLNV="digilentinc.com:ip:MIPI_CSI_2_RX:1.1">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/git/Zybo-Z7-20-pcam-5c/repo/vivado-library/ip/MIPI_CSI_2_RX/docs/mipi_csi_2_rx.pdf"/>
+        <DOCUMENT SOURCE="c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/repo/vivado-library/ip/MIPI_CSI_2_RX/docs/mipi_csi_2_rx.pdf"/>
       </DOCUMENTS>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI_LITE" NAME="S_AXI_LITE_reg" RANGE="4096" USAGE="register"/>
@@ -935,7 +935,7 @@
     </MODULE>
     <MODULE FULLNAME="/MIPI_D_PHY_RX_0" HWVERSION="1.2" INSTANCE="MIPI_D_PHY_RX_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="MIPI_D_PHY_RX" VLNV="digilentinc.com:ip:MIPI_D_PHY_RX:1.2">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/git/Zybo-Z7-20-pcam-5c/repo/vivado-library/ip/MIPI_D_PHY_RX/docs/mipi_d_phy_rx.pdf"/>
+        <DOCUMENT SOURCE="c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/repo/vivado-library/ip/MIPI_D_PHY_RX/docs/mipi_d_phy_rx.pdf"/>
       </DOCUMENTS>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI_LITE" NAME="S_AXI_LITE_reg" RANGE="4096" USAGE="register"/>
@@ -8685,7 +8685,7 @@
     </MODULE>
     <MODULE FULLNAME="/rgb2dvi_0" HWVERSION="1.4" INSTANCE="rgb2dvi_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2dvi" VLNV="digilentinc.com:ip:rgb2dvi:1.4">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/git/Zybo-Z7-20-pcam-5c/repo/vivado-library/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
+        <DOCUMENT SOURCE="c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-changeRGB/repo/vivado-library/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kGenerateSerialClk" VALUE="false"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1578209237">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1578309817">
   <File Type="PA-TCL" Name="system_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="system_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="system_wrapper_reports.tcl"/>
@@ -76,9 +76,25 @@
       <Desc>Vivado Synthesis Defaults</Desc>
     </StratHandle>
     <Step Id="synth_design">
-      <Option Id="FlattenHierarchy">1</Option>
       <Option Id="Directive">0</Option>
+      <Option Id="FlattenHierarchy">1</Option>
       <Option Id="FsmExtraction">0</Option>
     </Step>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="system_MIPI_D_PHY_RX_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_v_axi4s_vid_out_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_AXI_BayerToRGB_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axi_vdma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_DVIClocking_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_MIPI_CSI_2_RX_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_vtg_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xlconcat_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_AXI_GammaCorrection_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_rst_vid_clk_dyn_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_rgb2dvi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_rst_clk_wiz_0_50M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_video_dynclk_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_processing_system7_0_0"/>
 </GenRun>
