@@ -6,7 +6,7 @@
 <Project Version="7" Minor="35" Path="c:/github/zybo_pcam/zybo-z7-20-pcam-5c-vhdl/proj/pcam-5c.tmp/bayertorgb3_v1_0_project/BayerToRGB3_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="3aeb97a5e13b4ecfa7ddfc8ecc0d5239"/>
+    <Option Name="Id" Val="ddd65f86dbc3402cbbf3c7b2c5e5740b"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -59,7 +59,7 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../../../../Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/ip_repo/BayerToRGB3_1.0/hdl/BayerToRGB3_v1_0.vhd">
+      <File Path="$PPRDIR/../../../../../../Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/ip_repo/BayerToRGB3_1.0/hdl/BayerToRGB3_v1_0_S01_AXI_Master.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -67,12 +67,11 @@
       </File>
       <File Path="$PPRDIR/../../../../../../Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/ip_repo/BayerToRGB3_1.0/hdl/BayerToRGB3_v1_0_S00_AXI_Slave.vhd">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/ip_repo/BayerToRGB3_1.0/hdl/BayerToRGB3_v1_0_S01_AXI_Master.vhd">
+      <File Path="$PPRDIR/../../../../../../Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/ip_repo/BayerToRGB3_1.0/hdl/BayerToRGB3_v1_0.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -84,8 +83,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="BayerToRGB3_v1_0"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/ip_repo/BayerToRGB3_1.0/hdl/BayerToRGB3_v1_0.vhd"/>
+        <Option Name="TopModule" Val="AXI_BayerToRGB"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

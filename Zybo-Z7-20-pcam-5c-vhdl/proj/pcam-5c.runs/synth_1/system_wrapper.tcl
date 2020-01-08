@@ -28,9 +28,9 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_repo_paths {
+  c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/ip_repo/BayerToRGB3_1.0
   c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/ip_repo/BayerToRGB_user_1.0
   c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/repo
-  c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/src/bd/system/ip/system_AXI_BayerToRGB_1_0
 } [current_project]
 set_property ip_output_repo c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/repo/cache [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -114,3 +114,4 @@ synth_design -top system_wrapper -part xc7z020clg400-1 -flatten_hierarchy none -
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
 write_checkpoint -force -noxdef system_wrapper.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb"

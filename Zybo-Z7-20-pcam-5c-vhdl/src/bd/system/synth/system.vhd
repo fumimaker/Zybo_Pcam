@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
---Date        : Mon Jan  6 21:12:36 2020
+--Date        : Wed Jan  8 16:12:06 2020
 --Host        : FUMIMAKER6BEE running 64-bit major release  (build 9200)
 --Command     : generate_target system.bd
 --Design      : system
@@ -2830,22 +2830,6 @@ entity system is
 end system;
 
 architecture STRUCTURE of system is
-  component system_AXI_BayerToRGB_1_0 is
-  port (
-    StreamClk : in STD_LOGIC;
-    sStreamReset_n : in STD_LOGIC;
-    s_axis_video_tready : out STD_LOGIC;
-    s_axis_video_tdata : in STD_LOGIC_VECTOR ( 39 downto 0 );
-    s_axis_video_tvalid : in STD_LOGIC;
-    s_axis_video_tuser : in STD_LOGIC;
-    s_axis_video_tlast : in STD_LOGIC;
-    m_axis_video_tready : in STD_LOGIC;
-    m_axis_video_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axis_video_tvalid : out STD_LOGIC;
-    m_axis_video_tuser : out STD_LOGIC;
-    m_axis_video_tlast : out STD_LOGIC
-  );
-  end component system_AXI_BayerToRGB_1_0;
   component system_AXI_GammaCorrection_0_0 is
   port (
     StreamClk : in STD_LOGIC;
@@ -3424,11 +3408,27 @@ architecture STRUCTURE of system is
     s_axi_lite_aresetn : in STD_LOGIC
   );
   end component system_MIPI_CSI_2_RX_0_0;
-  signal AXI_BayerToRGB_1_AXI_Stream_Master_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal AXI_BayerToRGB_1_AXI_Stream_Master_TLAST : STD_LOGIC;
-  signal AXI_BayerToRGB_1_AXI_Stream_Master_TREADY : STD_LOGIC;
-  signal AXI_BayerToRGB_1_AXI_Stream_Master_TUSER : STD_LOGIC;
-  signal AXI_BayerToRGB_1_AXI_Stream_Master_TVALID : STD_LOGIC;
+  component system_AXI_BayerToRGB_0_0 is
+  port (
+    StreamClk : in STD_LOGIC;
+    sStreamReset_n : in STD_LOGIC;
+    s_axis_video_tready : out STD_LOGIC;
+    s_axis_video_tdata : in STD_LOGIC_VECTOR ( 39 downto 0 );
+    s_axis_video_tvalid : in STD_LOGIC;
+    s_axis_video_tuser : in STD_LOGIC;
+    s_axis_video_tlast : in STD_LOGIC;
+    m_axis_video_tready : in STD_LOGIC;
+    m_axis_video_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axis_video_tvalid : out STD_LOGIC;
+    m_axis_video_tuser : out STD_LOGIC;
+    m_axis_video_tlast : out STD_LOGIC
+  );
+  end component system_AXI_BayerToRGB_0_0;
+  signal AXI_BayerToRGB_0_AXI_Stream_Master_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal AXI_BayerToRGB_0_AXI_Stream_Master_TLAST : STD_LOGIC;
+  signal AXI_BayerToRGB_0_AXI_Stream_Master_TREADY : STD_LOGIC;
+  signal AXI_BayerToRGB_0_AXI_Stream_Master_TUSER : STD_LOGIC;
+  signal AXI_BayerToRGB_0_AXI_Stream_Master_TVALID : STD_LOGIC;
   signal AXI_GammaCorrection_0_AXI_Stream_Master_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal AXI_GammaCorrection_0_AXI_Stream_Master_TLAST : STD_LOGIC;
   signal AXI_GammaCorrection_0_AXI_Stream_Master_TREADY : STD_LOGIC;
@@ -3869,14 +3869,14 @@ begin
   processing_system7_0_GPIO_0_TRI_I(0) <= cam_gpio_tri_i(0);
   processing_system7_0_IIC_0_SCL_I <= cam_iic_scl_i;
   processing_system7_0_IIC_0_SDA_I <= cam_iic_sda_i;
-AXI_BayerToRGB_1: component system_AXI_BayerToRGB_1_0
+AXI_BayerToRGB_0: component system_AXI_BayerToRGB_0_0
      port map (
       StreamClk => mm_clk_150,
-      m_axis_video_tdata(31 downto 0) => AXI_BayerToRGB_1_AXI_Stream_Master_TDATA(31 downto 0),
-      m_axis_video_tlast => AXI_BayerToRGB_1_AXI_Stream_Master_TLAST,
-      m_axis_video_tready => AXI_BayerToRGB_1_AXI_Stream_Master_TREADY,
-      m_axis_video_tuser => AXI_BayerToRGB_1_AXI_Stream_Master_TUSER,
-      m_axis_video_tvalid => AXI_BayerToRGB_1_AXI_Stream_Master_TVALID,
+      m_axis_video_tdata(31 downto 0) => AXI_BayerToRGB_0_AXI_Stream_Master_TDATA(31 downto 0),
+      m_axis_video_tlast => AXI_BayerToRGB_0_AXI_Stream_Master_TLAST,
+      m_axis_video_tready => AXI_BayerToRGB_0_AXI_Stream_Master_TREADY,
+      m_axis_video_tuser => AXI_BayerToRGB_0_AXI_Stream_Master_TUSER,
+      m_axis_video_tvalid => AXI_BayerToRGB_0_AXI_Stream_Master_TVALID,
       sStreamReset_n => rst_clk_wiz_0_50M_peripheral_aresetn(0),
       s_axis_video_tdata(39 downto 0) => MIPI_CSI_2_RX_0_m_axis_video_TDATA(39 downto 0),
       s_axis_video_tlast => MIPI_CSI_2_RX_0_m_axis_video_TLAST,
@@ -3914,11 +3914,11 @@ AXI_GammaCorrection_0: component system_AXI_GammaCorrection_0_0
       m_axis_video_tuser => AXI_GammaCorrection_0_AXI_Stream_Master_TUSER,
       m_axis_video_tvalid => AXI_GammaCorrection_0_AXI_Stream_Master_TVALID,
       sStreamReset_n => rst_clk_wiz_0_50M_peripheral_aresetn(0),
-      s_axis_video_tdata(31 downto 0) => AXI_BayerToRGB_1_AXI_Stream_Master_TDATA(31 downto 0),
-      s_axis_video_tlast => AXI_BayerToRGB_1_AXI_Stream_Master_TLAST,
-      s_axis_video_tready => AXI_BayerToRGB_1_AXI_Stream_Master_TREADY,
-      s_axis_video_tuser => AXI_BayerToRGB_1_AXI_Stream_Master_TUSER,
-      s_axis_video_tvalid => AXI_BayerToRGB_1_AXI_Stream_Master_TVALID
+      s_axis_video_tdata(31 downto 0) => AXI_BayerToRGB_0_AXI_Stream_Master_TDATA(31 downto 0),
+      s_axis_video_tlast => AXI_BayerToRGB_0_AXI_Stream_Master_TLAST,
+      s_axis_video_tready => AXI_BayerToRGB_0_AXI_Stream_Master_TREADY,
+      s_axis_video_tuser => AXI_BayerToRGB_0_AXI_Stream_Master_TUSER,
+      s_axis_video_tvalid => AXI_BayerToRGB_0_AXI_Stream_Master_TVALID
     );
 DVIClocking_0: component system_DVIClocking_0_0
      port map (

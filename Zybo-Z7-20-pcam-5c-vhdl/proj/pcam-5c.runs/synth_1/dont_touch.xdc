@@ -10,9 +10,6 @@
 # Block Designs: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/src/bd/system/system.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system || ORIG_REF_NAME==system} -quiet] -quiet
 
-# IP: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/src/bd/system/ip/system_AXI_BayerToRGB_1_0/system_AXI_BayerToRGB_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_AXI_BayerToRGB_1_0 || ORIG_REF_NAME==system_AXI_BayerToRGB_1_0} -quiet] -quiet
-
 # IP: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/src/bd/system/ip/system_AXI_GammaCorrection_0_0/system_AXI_GammaCorrection_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_AXI_GammaCorrection_0_0 || ORIG_REF_NAME==system_AXI_GammaCorrection_0_0} -quiet] -quiet
 
@@ -66,6 +63,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_video_dy
 
 # IP: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/src/bd/system/ip/system_xbar_0/system_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xbar_0 || ORIG_REF_NAME==system_xbar_0} -quiet] -quiet
+
+# IP: c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/src/bd/system/ip/system_AXI_BayerToRGB_0_0/system_AXI_BayerToRGB_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_AXI_BayerToRGB_0_0 || ORIG_REF_NAME==system_AXI_BayerToRGB_0_0} -quiet] -quiet
 
 # IP: c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-vhdl/src/bd/system/ip/system_auto_pc_2/system_auto_pc_2.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_2 || ORIG_REF_NAME==system_auto_pc_2} -quiet] -quiet

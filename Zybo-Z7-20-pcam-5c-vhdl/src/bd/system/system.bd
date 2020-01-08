@@ -1033,10 +1033,10 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>BayerToRGB3_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="BayerToRGB3" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:instanceName>AXI_BayerToRGB_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="AXI_BayerToRGB" spirit:vendor="digilentinc.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_BayerToRGB3_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_AXI_BayerToRGB_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -1124,11 +1124,11 @@
       <spirit:interconnection>
         <spirit:name>MIPI_CSI_2_RX_0_m_axis_video</spirit:name>
         <spirit:activeInterface spirit:busRef="m_axis_video" spirit:componentRef="MIPI_CSI_2_RX_0"/>
-        <spirit:activeInterface spirit:busRef="S00_AXI_Slave" spirit:componentRef="BayerToRGB3_0"/>
+        <spirit:activeInterface spirit:busRef="AXI_Slave_Interface" spirit:componentRef="AXI_BayerToRGB_0"/>
       </spirit:interconnection>
       <spirit:interconnection>
-        <spirit:name>BayerToRGB3_0_S01_AXI_Master</spirit:name>
-        <spirit:activeInterface spirit:busRef="S01_AXI_Master" spirit:componentRef="BayerToRGB3_0"/>
+        <spirit:name>AXI_BayerToRGB_0_AXI_Stream_Master</spirit:name>
+        <spirit:activeInterface spirit:busRef="AXI_Stream_Master" spirit:componentRef="AXI_BayerToRGB_0"/>
         <spirit:activeInterface spirit:busRef="AXI_Slave_Interface" spirit:componentRef="AXI_GammaCorrection_0"/>
       </spirit:interconnection>
     </spirit:interconnections>
@@ -1209,8 +1209,7 @@
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="M00_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="BayerToRGB3_0" spirit:portRef="s01_axi_master_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="BayerToRGB3_0" spirit:portRef="s00_axi_slave_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="AXI_BayerToRGB_0" spirit:portRef="StreamClk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_CLK0</spirit:name>
@@ -1258,8 +1257,7 @@
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M03_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M04_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M05_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="BayerToRGB3_0" spirit:portRef="s00_axi_slave_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="BayerToRGB3_0" spirit:portRef="s01_axi_master_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="AXI_BayerToRGB_0" spirit:portRef="sStreamReset_n"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_clk_wiz_0_50M_peripheral_reset</spirit:name>
