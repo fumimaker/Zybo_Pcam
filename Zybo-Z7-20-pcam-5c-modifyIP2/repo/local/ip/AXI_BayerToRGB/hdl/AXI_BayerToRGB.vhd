@@ -87,7 +87,7 @@ port (
 );
 end AXI_BayerToRGB;
 
-3architecture rtl of AXI_BayerToRGB is
+architecture rtl of AXI_BayerToRGB is
 
   type AXI_Strobes_t is record
     User: STD_LOGIC;
@@ -366,7 +366,7 @@ begin
           when "01" =>
             sAXIMasterBlue  <= sPixel(1)(kBayerWidth-1 downto 0);
             sAXIMasterGreen <= sPixel(0) + sPixel(3);
-            sAXIMasterRed  <= sPixel(2)(kBayerWidth-1 downto 0);
+            sAXIMasterred  <= sPixel(2)(kBayerWidth-1 downto 0);
           when "00" =>
             sAXIMasterBlue  <= sPixel(0)(kBayerWidth-1 downto 0);
             sAXIMasterGreen <= sPixel(1) + sPixel(2);
@@ -416,9 +416,9 @@ end process AssignValid;
 -- Assign AXI stream output interface signals.
 m_axis_video_tuser  <= sStrobesShiftReg(3).User;
 m_axis_video_tlast  <= sStrobesShiftReg(3).Last;
-m_axis_video_tdata  <= "00" & std_logic_vector(sAXIMasterRed) &
-  std_logic_vector(sAXIMasterBlue) &
-  std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1));
+m_axis_video_tdata  <= "00" & std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) & 
+    std_logic_vector(sAXIMasterBlue) & 
+    std_logic_vector(sAXIMasterRed);
 
 end rtl;
 
