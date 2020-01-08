@@ -32,7 +32,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\system_axi_mem_intercon_0\system_axi_mem_intercon_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_mem_intercon"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -40,7 +39,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\system_axi_mem_intercon_1_0\system_axi_mem_intercon_1_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_mem_intercon_1"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -72,7 +70,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\system_ps7_0_axi_periph_0\system_ps7_0_axi_periph_0.xci" Type="IP">
-        <Instance HierarchyPath="ps7_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
