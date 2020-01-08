@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Jan  8 19:16:54 2020
-# Process ID: 4000
+# Start of session at: Wed Jan  8 19:37:27 2020
+# Process ID: 7032
 # Current directory: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.runs/system_AXI_BayerToRGB_1_0_synth_1
 # Command line: vivado.exe -log system_AXI_BayerToRGB_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_AXI_BayerToRGB_1_0.tcl
 # Log file: C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.runs/system_AXI_BayerToRGB_1_0_synth_1/system_AXI_BayerToRGB_1_0.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10608 
+INFO: Helper process launched with PID 5936 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 365.488 ; gain = 101.363
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 365.508 ; gain = 100.637
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'system_AXI_BayerToRGB_1_0' [c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_AXI_BayerToRGB_1_0/synth/system_AXI_BayerToRGB_1_0.vhd:73]
 	Parameter kBayerWidth bound to: 10 - type: integer 
@@ -39,7 +39,7 @@ WARNING: [Synth 8-6014] Unused sequential element sStrobesShiftReg_reg[3][FirstC
 INFO: [Synth 8-256] done synthesizing module 'AXI_BayerToRGB' (2#1) [c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:90]
 INFO: [Synth 8-256] done synthesizing module 'system_AXI_BayerToRGB_1_0' (3#1) [c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_AXI_BayerToRGB_1_0/synth/system_AXI_BayerToRGB_1_0.vhd:73]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 417.891 ; gain = 153.766
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 418.289 ; gain = 153.418
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -49,7 +49,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 417.891 ; gain = 153.766
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 418.289 ; gain = 153.418
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -61,29 +61,29 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 765.457 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 766.613 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 765.457 ; gain = 501.332
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 766.613 ; gain = 501.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 765.457 ; gain = 501.332
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 766.613 ; gain = 501.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 765.457 ; gain = 501.332
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 766.613 ; gain = 501.742
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:365]
 INFO: [Synth 8-5546] ROM "sStrobesShiftReg[0][FirstColumn]" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element sCntColumns_reg was removed.  [c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:177]
 WARNING: [Synth 8-6014] Unused sequential element sCntLines_reg was removed.  [c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:301]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 765.457 ; gain = 501.332
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 766.613 ; gain = 501.742
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -190,7 +190,7 @@ INFO: [Synth 8-3332] Sequential element (U0/sPixel_reg[0][10]) is unused and wil
 INFO: [Synth 8-3332] Sequential element (U0/sPixel_reg[1][10]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
 INFO: [Synth 8-3886] merging instance 'U0/sLineBufferRead_reg' (FDR) to 'U0/sLineBufferWrite_reg'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 765.457 ; gain = 501.332
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 766.613 ; gain = 501.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -217,13 +217,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 770.082 ; gain = 505.957
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 773.742 ; gain = 508.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 770.305 ; gain = 506.180
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 774.043 ; gain = 509.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -250,7 +250,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4480] The timing for the instance U0/LineBufferInst/pLineBuffer_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 791.582 ; gain = 527.457
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 795.258 ; gain = 530.387
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -274,7 +274,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 791.582 ; gain = 527.457
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 795.258 ; gain = 530.387
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -287,7 +287,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 791.582 ; gain = 527.457
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 795.258 ; gain = 530.387
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -299,25 +299,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 791.582 ; gain = 527.457
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 795.258 ; gain = 530.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 791.582 ; gain = 527.457
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 795.258 ; gain = 530.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 791.582 ; gain = 527.457
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 795.258 ; gain = 530.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 791.582 ; gain = 527.457
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 795.258 ; gain = 530.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -353,11 +353,11 @@ Report Instance Areas:
 |3     |    LineBufferInst |LineBuffer     |    11|
 +------+-------------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 791.582 ; gain = 527.457
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 795.258 ; gain = 530.387
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 791.582 ; gain = 179.891
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 791.582 ; gain = 527.457
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 795.258 ; gain = 182.063
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 795.258 ; gain = 530.387
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -369,11 +369,11 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 44 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 791.582 ; gain = 538.926
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 795.258 ; gain = 541.859
 INFO: [Common 17-1381] The checkpoint 'C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.runs/system_AXI_BayerToRGB_1_0_synth_1/system_AXI_BayerToRGB_1_0.dcp' has been generated.
 INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_AXI_BayerToRGB_1_0/system_AXI_BayerToRGB_1_0.xci
 INFO: [Coretcl 2-1174] Renamed 2 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.runs/system_AXI_BayerToRGB_1_0_synth_1/system_AXI_BayerToRGB_1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_AXI_BayerToRGB_1_0_utilization_synth.rpt -pb system_AXI_BayerToRGB_1_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 791.582 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Jan  8 19:17:42 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 795.258 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jan  8 19:38:18 2020...

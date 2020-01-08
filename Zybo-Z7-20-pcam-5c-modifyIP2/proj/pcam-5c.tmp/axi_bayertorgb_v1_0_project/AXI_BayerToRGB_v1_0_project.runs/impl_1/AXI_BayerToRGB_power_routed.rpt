@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Wed Jan  8 19:16:06 2020
+| Date             : Wed Jan  8 19:36:35 2020
 | Host             : FUMIMAKER6BEE running 64-bit major release  (build 9200)
 | Command          : report_power -file AXI_BayerToRGB_power_routed.rpt -pb AXI_BayerToRGB_power_summary_routed.pb -rpx AXI_BayerToRGB_power_routed.rpx
 | Design           : AXI_BayerToRGB
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 19.163 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 19.150 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 18.122                           |
+| Dynamic (W)              | 18.109                           |
 | Device Static (W)        | 1.041                            |
 | Effective TJA (C/W)      | 11.5                             |
 | Max Ambient (C)          | 0.0                              |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     1.259 |      316 |       --- |             --- |
-|   LUT as Logic |     1.133 |      104 |     53200 |            0.20 |
+| Slice Logic    |     1.243 |      316 |       --- |             --- |
+|   LUT as Logic |     1.116 |      104 |     53200 |            0.20 |
 |   Register     |     0.101 |      178 |    106400 |            0.17 |
 |   CARRY4       |     0.020 |        3 |     13300 |            0.02 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |     1.818 |      269 |       --- |             --- |
+| Signals        |     1.822 |      269 |       --- |             --- |
 | Block RAM      |     0.240 |        1 |       140 |            0.71 |
 | I/O            |    14.805 |       82 |       125 |           65.60 |
 | Static Power   |     1.041 |          |           |                 |
-| Total          |    19.163 |          |           |                 |
+| Total          |    19.150 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     3.776 |       3.477 |      0.299 |
+| Vccint    |       1.000 |     3.763 |       3.464 |      0.299 |
 | Vccaux    |       1.800 |     1.297 |       1.198 |      0.100 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -146,8 +146,8 @@ Table of Contents
 +------------------+-----------+
 | Name             | Power (W) |
 +------------------+-----------+
-| AXI_BayerToRGB   |    18.122 |
-|   LineBufferInst |     0.383 |
+| AXI_BayerToRGB   |    18.109 |
+|   LineBufferInst |     0.382 |
 +------------------+-----------+
 
 
