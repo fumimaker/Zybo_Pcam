@@ -87,7 +87,7 @@ port (
 );
 end AXI_BayerToRGB;
 
-architecture rtl of AXI_BayerToRGB is
+3architecture rtl of AXI_BayerToRGB is
 
   type AXI_Strobes_t is record
     User: STD_LOGIC;
