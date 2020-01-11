@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Wed Jan  8 19:38:18 2020
+-- Date        : Sat Jan 11 13:00:11 2020
 -- Host        : FUMIMAKER6BEE running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_AXI_BayerToRGB_1_0/system_AXI_BayerToRGB_1_0_sim_netlist.vhdl
@@ -643,7 +643,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       I1 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
       I2 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
       I3 => \sAXIMasterGreen[10]_i_3_n_0\,
-      I4 => \^m_axis_video_tdata\(9),
+      I4 => \^m_axis_video_tdata\(19),
       O => \sAXIMasterBlue[9]_i_1_n_0\
     );
 \sAXIMasterBlue[9]_i_2\: unisim.vcomponents.LUT6
@@ -664,7 +664,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[0]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(0),
+      Q => \^m_axis_video_tdata\(10),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[1]\: unisim.vcomponents.FDRE
@@ -672,7 +672,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[1]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(1),
+      Q => \^m_axis_video_tdata\(11),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[2]\: unisim.vcomponents.FDRE
@@ -680,7 +680,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[2]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(2),
+      Q => \^m_axis_video_tdata\(12),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[3]\: unisim.vcomponents.FDRE
@@ -688,7 +688,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[3]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(3),
+      Q => \^m_axis_video_tdata\(13),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[4]\: unisim.vcomponents.FDRE
@@ -696,7 +696,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[4]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(4),
+      Q => \^m_axis_video_tdata\(14),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[5]\: unisim.vcomponents.FDRE
@@ -704,7 +704,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[5]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(5),
+      Q => \^m_axis_video_tdata\(15),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[6]\: unisim.vcomponents.FDRE
@@ -712,7 +712,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[6]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(6),
+      Q => \^m_axis_video_tdata\(16),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[7]\: unisim.vcomponents.FDRE
@@ -720,7 +720,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[7]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(7),
+      Q => \^m_axis_video_tdata\(17),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[8]\: unisim.vcomponents.FDRE
@@ -728,7 +728,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[8]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(8),
+      Q => \^m_axis_video_tdata\(18),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[9]\: unisim.vcomponents.FDRE
@@ -736,7 +736,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => '1',
       D => \sAXIMasterBlue[9]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(9),
+      Q => \^m_axis_video_tdata\(19),
       R => \sAXIMasterGreen[10]_i_1_n_0\
     );
 \sAXIMasterGreen[10]_i_1\: unisim.vcomponents.LUT1
@@ -1303,7 +1303,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       I1 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
       I2 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
       I3 => \sAXIMasterGreen[10]_i_3_n_0\,
-      I4 => \^m_axis_video_tdata\(19),
+      I4 => \^m_axis_video_tdata\(9),
       O => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sAXIMasterRed[9]_i_2\: unisim.vcomponents.LUT6
@@ -1324,7 +1324,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[0]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(10),
+      Q => \^m_axis_video_tdata\(0),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[1]\: unisim.vcomponents.FDRE
@@ -1332,7 +1332,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[1]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(11),
+      Q => \^m_axis_video_tdata\(1),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[2]\: unisim.vcomponents.FDRE
@@ -1340,7 +1340,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[2]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(12),
+      Q => \^m_axis_video_tdata\(2),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[3]\: unisim.vcomponents.FDRE
@@ -1348,7 +1348,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[3]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(13),
+      Q => \^m_axis_video_tdata\(3),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[4]\: unisim.vcomponents.FDRE
@@ -1356,7 +1356,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[4]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(14),
+      Q => \^m_axis_video_tdata\(4),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[5]\: unisim.vcomponents.FDRE
@@ -1364,7 +1364,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[5]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(15),
+      Q => \^m_axis_video_tdata\(5),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[6]\: unisim.vcomponents.FDRE
@@ -1372,7 +1372,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[6]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(16),
+      Q => \^m_axis_video_tdata\(6),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[7]\: unisim.vcomponents.FDRE
@@ -1380,7 +1380,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[7]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(17),
+      Q => \^m_axis_video_tdata\(7),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[8]\: unisim.vcomponents.FDRE
@@ -1388,7 +1388,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[8]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(18),
+      Q => \^m_axis_video_tdata\(8),
       R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[9]\: unisim.vcomponents.FDRE
@@ -1396,7 +1396,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       C => StreamClk,
       CE => '1',
       D => \sAXIMasterRed[9]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(19),
+      Q => \^m_axis_video_tdata\(9),
       R => \sAXIMasterGreen[10]_i_1_n_0\
     );
 sAXI_SlaveLastAsserted_i_1: unisim.vcomponents.LUT6
