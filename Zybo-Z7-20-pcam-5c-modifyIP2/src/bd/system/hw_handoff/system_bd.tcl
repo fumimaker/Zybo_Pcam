@@ -182,10 +182,6 @@ proc create_root_design { parentCell } {
   set AXI_BayerToRGB_1 [ create_bd_cell -type ip -vlnv digilentinc.com:user:AXI_BayerToRGB:1.0 AXI_BayerToRGB_1 ]
 
   set_property -dict [ list \
-   CONFIG.TDATA_NUM_BYTES {5} \
- ] [get_bd_intf_pins /AXI_BayerToRGB_1/AXI_Slave_Interface]
-
-  set_property -dict [ list \
    CONFIG.TDATA_NUM_BYTES {4} \
  ] [get_bd_intf_pins /AXI_BayerToRGB_1/AXI_Stream_Master]
 

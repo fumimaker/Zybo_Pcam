@@ -1,8 +1,8 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
---Date        : Sat Jan 11 12:59:02 2020
---Host        : FUMIMAKER6BEE running 64-bit major release  (build 9200)
+--Date        : Wed Jan 15 21:07:23 2020
+--Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
 --Command     : generate_target system.bd
 --Design      : system
 --Purpose     : IP block netlist
@@ -2882,15 +2882,6 @@ architecture STRUCTURE of system is
     SerialClk : in STD_LOGIC
   );
   end component system_rgb2dvi_0_0;
-  component system_DVIClocking_0_0 is
-  port (
-    PixelClk5X : in STD_LOGIC;
-    PixelClk : out STD_LOGIC;
-    SerialClk : out STD_LOGIC;
-    aLockedIn : in STD_LOGIC;
-    aLockedOut : out STD_LOGIC
-  );
-  end component system_DVIClocking_0_0;
   component system_MIPI_D_PHY_RX_0_0 is
   port (
     dphy_clk_hs_p : in STD_LOGIC;
@@ -3408,6 +3399,15 @@ architecture STRUCTURE of system is
     s_axi_lite_aresetn : in STD_LOGIC
   );
   end component system_MIPI_CSI_2_RX_0_0;
+  component system_DVIClocking_0_0 is
+  port (
+    PixelClk5X : in STD_LOGIC;
+    PixelClk : out STD_LOGIC;
+    SerialClk : out STD_LOGIC;
+    aLockedIn : in STD_LOGIC;
+    aLockedOut : out STD_LOGIC
+  );
+  end component system_DVIClocking_0_0;
   component system_AXI_BayerToRGB_1_0 is
   port (
     StreamClk : in STD_LOGIC;

@@ -14,30 +14,30 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2760 
+INFO: Helper process launched with PID 18720 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 365.289 ; gain = 104.848
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 363.508 ; gain = 104.551
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'system_DVIClocking_0_0' [c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_DVIClocking_0_0/synth/system_DVIClocking_0_0.vhd:66]
-INFO: [Synth 8-3491] module 'DVIClocking' declared at 'C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/DVIClocking.vhd:34' bound to instance 'U0' of component 'DVIClocking' [c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_DVIClocking_0_0/synth/system_DVIClocking_0_0.vhd:85]
-INFO: [Synth 8-638] synthesizing module 'DVIClocking' [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/DVIClocking.vhd:42]
-INFO: [Synth 8-113] binding component instance 'SerialClkBuffer' to cell 'BUFIO' [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/DVIClocking.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'system_DVIClocking_0_0' [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_DVIClocking_0_0/synth/system_DVIClocking_0_0.vhd:66]
+INFO: [Synth 8-3491] module 'DVIClocking' declared at 'C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/DVIClocking.vhd:34' bound to instance 'U0' of component 'DVIClocking' [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_DVIClocking_0_0/synth/system_DVIClocking_0_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'DVIClocking' [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/DVIClocking.vhd:42]
+INFO: [Synth 8-113] binding component instance 'SerialClkBuffer' to cell 'BUFIO' [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/DVIClocking.vhd:47]
 	Parameter BUFR_DIVIDE bound to: 5 - type: string 
 	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
-INFO: [Synth 8-113] binding component instance 'PixelClkBuffer' to cell 'BUFR' [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/DVIClocking.vhd:53]
-INFO: [Synth 8-638] synthesizing module 'ResetBridge' [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/SyncAsyncReset.vhd:65]
+INFO: [Synth 8-113] binding component instance 'PixelClkBuffer' to cell 'BUFR' [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/DVIClocking.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'ResetBridge' [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/SyncAsyncReset.vhd:65]
 	Parameter kPolarity bound to: 1'b0 
-INFO: [Synth 8-638] synthesizing module 'SyncAsync' [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/SyncAsync.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync' [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/SyncAsync.vhd:66]
 	Parameter kResetTo bound to: 1'b0 
 	Parameter kStages bound to: 2 - type: integer 
 	Parameter kResetPolarity bound to: 1'b0 
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/SyncAsync.vhd:67]
-INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (1#1) [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/SyncAsync.vhd:66]
-INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (2#1) [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/SyncAsyncReset.vhd:65]
-INFO: [Synth 8-256] done synthesizing module 'DVIClocking' (3#1) [C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/DVIClocking.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'system_DVIClocking_0_0' (4#1) [c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_DVIClocking_0_0/synth/system_DVIClocking_0_0.vhd:66]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/SyncAsync.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (1#1) [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/SyncAsync.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (2#1) [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/SyncAsyncReset.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'DVIClocking' (3#1) [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/hdl/DVIClocking.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'system_DVIClocking_0_0' (4#1) [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_DVIClocking_0_0/synth/system_DVIClocking_0_0.vhd:66]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 417.594 ; gain = 157.152
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 416.066 ; gain = 157.109
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -47,7 +47,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 417.594 ; gain = 157.152
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 416.066 ; gain = 157.109
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -61,25 +61,25 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 700.117 ; gain = 0.004
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 697.961 ; gain = 0.012
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 700.117 ; gain = 439.676
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 697.961 ; gain = 439.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 700.117 ; gain = 439.676
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 697.961 ; gain = 439.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 700.117 ; gain = 439.676
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 697.961 ; gain = 439.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 700.117 ; gain = 439.676
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 697.961 ; gain = 439.004
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -120,7 +120,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 700.117 ; gain = 439.676
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 697.961 ; gain = 439.004
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -132,13 +132,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 763.922 ; gain = 503.480
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 758.527 ; gain = 499.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 763.922 ; gain = 503.480
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 758.527 ; gain = 499.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -150,7 +150,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 782.988 ; gain = 522.547
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 777.586 ; gain = 518.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -174,7 +174,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 782.988 ; gain = 522.547
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 777.586 ; gain = 518.629
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -187,7 +187,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 782.988 ; gain = 522.547
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 777.586 ; gain = 518.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -199,25 +199,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 782.988 ; gain = 522.547
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 777.586 ; gain = 518.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 782.988 ; gain = 522.547
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 777.586 ; gain = 518.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 782.988 ; gain = 522.547
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 777.586 ; gain = 518.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 782.988 ; gain = 522.547
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 777.586 ; gain = 518.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -249,11 +249,11 @@ Report Instance Areas:
 |4     |      SyncAsyncx  |SyncAsync   |     3|
 +------+------------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 782.988 ; gain = 522.547
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 777.586 ; gain = 518.629
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 782.988 ; gain = 240.023
-Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 782.988 ; gain = 522.547
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 777.586 ; gain = 236.734
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 777.586 ; gain = 518.629
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -265,10 +265,10 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 25 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 788.609 ; gain = 537.473
-INFO: [Common 17-1381] The checkpoint 'C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.runs/system_DVIClocking_0_0_synth_1/system_DVIClocking_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 778.664 ; gain = 529.488
+INFO: [Common 17-1381] The checkpoint 'C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.runs/system_DVIClocking_0_0_synth_1/system_DVIClocking_0_0.dcp' has been generated.
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-INFO: [Common 17-1381] The checkpoint 'C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.runs/system_DVIClocking_0_0_synth_1/system_DVIClocking_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.runs/system_DVIClocking_0_0_synth_1/system_DVIClocking_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_DVIClocking_0_0_utilization_synth.rpt -pb system_DVIClocking_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 788.609 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Jan  8 17:16:27 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 778.664 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 11 14:31:57 2020...

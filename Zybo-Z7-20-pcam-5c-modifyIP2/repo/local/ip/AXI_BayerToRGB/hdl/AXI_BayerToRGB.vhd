@@ -416,10 +416,10 @@ end process AssignValid;
 -- Assign AXI stream output interface signals.
 m_axis_video_tuser  <= sStrobesShiftReg(3).User;
 m_axis_video_tlast  <= sStrobesShiftReg(3).Last;
-m_axis_video_tdata  <= "00" & std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) & 
-    std_logic_vector(sAXIMasterBlue)&
-    std_logic_vector(sAXIMasterRed)
-    ;
+m_axis_video_tdata  <= "00" &std_logic_vector(sAXIMasterRed) &
+    std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) &
+    std_logic_vector(sAXIMasterBlue);
+    
 
 end rtl;
 
