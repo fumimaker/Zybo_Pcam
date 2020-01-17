@@ -14,11 +14,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18056 
+INFO: Helper process launched with PID 1920 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 343.949 ; gain = 100.906
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 343.621 ; gain = 100.590
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'AXI_BayerToRGB' [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'AXI_BayerToRGB' [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:91]
 	Parameter kAXI_InputDataWidth bound to: 40 - type: integer 
 	Parameter kBayerWidth bound to: 10 - type: integer 
 	Parameter kAXI_OutputDataWidth bound to: 32 - type: integer 
@@ -26,32 +26,30 @@ INFO: [Synth 8-638] synthesizing module 'AXI_BayerToRGB' [C:/Users/fpga/Document
 INFO: [Synth 8-638] synthesizing module 'LineBuffer' [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/LineBuffer.vhd:56]
 	Parameter kLineBufferWidth bound to: 2048 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'LineBuffer' (1#1) [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/LineBuffer.vhd:56]
-INFO: [Synth 8-226] default block is never used [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:365]
-WARNING: [Synth 8-6014] Unused sequential element sStrobesShiftReg_reg[3][FirstLine] was removed.  [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:359]
-WARNING: [Synth 8-6014] Unused sequential element sStrobesShiftReg_reg[3][FirstColumn] was removed.  [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:359]
-INFO: [Synth 8-256] done synthesizing module 'AXI_BayerToRGB' (2#1) [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:90]
-WARNING: [Synth 8-3917] design AXI_BayerToRGB has port m_axis_video_tdata[31] driven by constant 0
-WARNING: [Synth 8-3917] design AXI_BayerToRGB has port m_axis_video_tdata[30] driven by constant 0
+INFO: [Synth 8-226] default block is never used [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:366]
+WARNING: [Synth 8-6014] Unused sequential element sStrobesShiftReg_reg[3][FirstLine] was removed.  [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:360]
+WARNING: [Synth 8-6014] Unused sequential element sStrobesShiftReg_reg[3][FirstColumn] was removed.  [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:360]
+INFO: [Synth 8-256] done synthesizing module 'AXI_BayerToRGB' (2#1) [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:91]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 395.316 ; gain = 152.273
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 396.051 ; gain = 153.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 395.316 ; gain = 152.273
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 396.051 ; gain = 153.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 395.316 ; gain = 152.273
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 396.051 ; gain = 153.020
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:365]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:366]
 INFO: [Synth 8-5546] ROM "sStrobesShiftReg[0][FirstColumn]" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element sCntColumns_reg was removed.  [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:177]
-WARNING: [Synth 8-6014] Unused sequential element sCntLines_reg was removed.  [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:301]
+WARNING: [Synth 8-6014] Unused sequential element sCntColumns_reg was removed.  [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:178]
+WARNING: [Synth 8-6014] Unused sequential element sCntLines_reg was removed.  [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:302]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 395.316 ; gain = 152.273
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 396.051 ; gain = 153.020
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -76,15 +74,14 @@ Detailed RTL Component Info :
 +---RAMs : 
 	              20K Bit         RAMs := 1     
 +---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     30 Bit        Muxes := 1     
-	   4 Input     11 Bit        Muxes := 3     
+	   3 Input     11 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 1     
-	   3 Input     11 Bit        Muxes := 1     
+	   4 Input     11 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 5     
 	   4 Input     10 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 2     
-	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 15    
 ---------------------------------------------------------------------------------
@@ -106,15 +103,14 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 4     
 	                1 Bit    Registers := 19    
 +---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     30 Bit        Muxes := 1     
-	   4 Input     11 Bit        Muxes := 3     
+	   3 Input     11 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 1     
-	   3 Input     11 Bit        Muxes := 1     
+	   4 Input     11 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 5     
 	   4 Input     10 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 2     
-	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 15    
 Module LineBuffer 
@@ -140,8 +136,8 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "sStrobesShiftReg[0][FirstColumn]" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element sCntColumns_reg was removed.  [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:177]
-WARNING: [Synth 8-6014] Unused sequential element sCntLines_reg was removed.  [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:301]
+WARNING: [Synth 8-6014] Unused sequential element sCntColumns_reg was removed.  [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:178]
+WARNING: [Synth 8-6014] Unused sequential element sCntLines_reg was removed.  [C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd:302]
 WARNING: [Synth 8-3917] design AXI_BayerToRGB has port m_axis_video_tdata[31] driven by constant 0
 WARNING: [Synth 8-3917] design AXI_BayerToRGB has port m_axis_video_tdata[30] driven by constant 0
 INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM LineBufferInst/pLineBuffer_reg to conserve power
@@ -164,7 +160,7 @@ WARNING: [Synth 8-3332] Sequential element (sPixel_reg[0][10]) is unused and wil
 WARNING: [Synth 8-3332] Sequential element (sPixel_reg[1][10]) is unused and will be removed from module AXI_BayerToRGB.
 INFO: [Synth 8-3886] merging instance 'sLineBufferRead_reg' (FDR) to 'sLineBufferWrite_reg'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 565.816 ; gain = 322.773
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 565.633 ; gain = 322.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -192,7 +188,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 565.816 ; gain = 322.773
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 565.633 ; gain = 322.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -219,7 +215,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4480] The timing for the instance LineBufferInst/pLineBuffer_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 567.098 ; gain = 324.055
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 567.738 ; gain = 324.707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -243,7 +239,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.098 ; gain = 324.055
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.738 ; gain = 324.707
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -256,7 +252,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.098 ; gain = 324.055
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.738 ; gain = 324.707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -268,25 +264,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.098 ; gain = 324.055
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.738 ; gain = 324.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.098 ; gain = 324.055
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.738 ; gain = 324.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.098 ; gain = 324.055
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.738 ; gain = 324.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.098 ; gain = 324.055
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.738 ; gain = 324.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -307,9 +303,9 @@ Report Cell Usage:
 |3     |LUT1     |     2|
 |4     |LUT2     |     4|
 |5     |LUT3     |    26|
-|6     |LUT4     |    48|
-|7     |LUT5     |     8|
-|8     |LUT6     |    41|
+|6     |LUT4     |    47|
+|7     |LUT5     |    11|
+|8     |LUT6     |    68|
 |9     |RAMB36E1 |     1|
 |10    |FDRE     |   178|
 |11    |IBUF     |    46|
@@ -320,28 +316,28 @@ Report Instance Areas:
 +------+-----------------+-----------+------+
 |      |Instance         |Module     |Cells |
 +------+-----------------+-----------+------+
-|1     |top              |           |   394|
+|1     |top              |           |   423|
 |2     |  LineBufferInst |LineBuffer |    11|
 +------+-----------------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.098 ; gain = 324.055
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.738 ; gain = 324.707
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.098 ; gain = 324.055
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.098 ; gain = 324.055
+Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.738 ; gain = 324.707
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 567.738 ; gain = 324.707
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 50 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-24 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+24 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 672.922 ; gain = 442.691
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 671.742 ; gain = 441.848
 INFO: [Common 17-1381] The checkpoint 'C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.runs/synth_1/AXI_BayerToRGB.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file AXI_BayerToRGB_utilization_synth.rpt -pb AXI_BayerToRGB_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 672.922 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 17 16:56:39 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 671.742 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 17 21:38:21 2020...

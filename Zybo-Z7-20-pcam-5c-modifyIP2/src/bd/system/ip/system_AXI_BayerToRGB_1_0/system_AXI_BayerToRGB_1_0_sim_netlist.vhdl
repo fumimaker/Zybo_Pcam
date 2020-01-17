@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Fri Jan 17 17:26:06 2020
+-- Date        : Fri Jan 17 22:22:52 2020
 -- Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_AXI_BayerToRGB_1_0/system_AXI_BayerToRGB_1_0_sim_netlist.vhdl
@@ -252,12 +252,12 @@ entity system_AXI_BayerToRGB_1_0_AXI_BayerToRGB is
     m_axis_video_tlast : out STD_LOGIC;
     s_axis_video_tready : out STD_LOGIC;
     m_axis_video_tvalid : out STD_LOGIC;
-    s_axis_video_tvalid : in STD_LOGIC;
-    sStreamReset_n : in STD_LOGIC;
-    m_axis_video_tready : in STD_LOGIC;
     StreamClk : in STD_LOGIC;
-    s_axis_video_tuser : in STD_LOGIC;
     s_axis_video_tdata : in STD_LOGIC_VECTOR ( 39 downto 0 );
+    s_axis_video_tvalid : in STD_LOGIC;
+    m_axis_video_tready : in STD_LOGIC;
+    sStreamReset_n : in STD_LOGIC;
+    s_axis_video_tuser : in STD_LOGIC;
     s_axis_video_tlast : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -276,6 +276,7 @@ architecture STRUCTURE of system_AXI_BayerToRGB_1_0_AXI_BayerToRGB is
   signal LineBufferInst_n_18 : STD_LOGIC;
   signal LineBufferInst_n_19 : STD_LOGIC;
   signal \^m_axis_video_tdata\ : STD_LOGIC_VECTOR ( 29 downto 0 );
+  signal \m_axis_video_tdata[28]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal \^m_axis_video_tvalid\ : STD_LOGIC;
   signal m_axis_video_tvalid_i_1_n_0 : STD_LOGIC;
   signal p_1_in : STD_LOGIC_VECTOR ( 29 downto 0 );
@@ -284,29 +285,24 @@ architecture STRUCTURE of system_AXI_BayerToRGB_1_0_AXI_BayerToRGB is
   signal \sAXIMasterBlue[1]_i_1_n_0\ : STD_LOGIC;
   signal \sAXIMasterBlue[2]_i_1_n_0\ : STD_LOGIC;
   signal \sAXIMasterBlue[3]_i_1_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[3]_i_2_n_0\ : STD_LOGIC;
   signal \sAXIMasterBlue[4]_i_1_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[4]_i_2_n_0\ : STD_LOGIC;
   signal \sAXIMasterBlue[5]_i_1_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[5]_i_2_n_0\ : STD_LOGIC;
   signal \sAXIMasterBlue[6]_i_1_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[6]_i_2_n_0\ : STD_LOGIC;
   signal \sAXIMasterBlue[7]_i_1_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[7]_i_2_n_0\ : STD_LOGIC;
   signal \sAXIMasterBlue[8]_i_1_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[8]_i_3_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[8]_i_4_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[9]_i_10_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[9]_i_11_n_0\ : STD_LOGIC;
   signal \sAXIMasterBlue[9]_i_1_n_0\ : STD_LOGIC;
   signal \sAXIMasterBlue[9]_i_2_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[9]_i_3_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[9]_i_4_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[9]_i_5_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[9]_i_6_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[9]_i_7_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[9]_i_8_n_0\ : STD_LOGIC;
-  signal \sAXIMasterBlue[9]_i_9_n_0\ : STD_LOGIC;
+  signal \sAXIMasterBlue_reg_n_0_[0]\ : STD_LOGIC;
+  signal \sAXIMasterBlue_reg_n_0_[1]\ : STD_LOGIC;
+  signal \sAXIMasterBlue_reg_n_0_[2]\ : STD_LOGIC;
+  signal \sAXIMasterBlue_reg_n_0_[3]\ : STD_LOGIC;
+  signal \sAXIMasterBlue_reg_n_0_[4]\ : STD_LOGIC;
+  signal \sAXIMasterBlue_reg_n_0_[5]\ : STD_LOGIC;
+  signal \sAXIMasterBlue_reg_n_0_[6]\ : STD_LOGIC;
+  signal \sAXIMasterBlue_reg_n_0_[7]\ : STD_LOGIC;
+  signal \sAXIMasterBlue_reg_n_0_[8]\ : STD_LOGIC;
+  signal \sAXIMasterBlue_reg_n_0_[9]\ : STD_LOGIC;
+  signal sAXIMasterGreen1_in : STD_LOGIC_VECTOR ( 10 downto 1 );
   signal \sAXIMasterGreen[10]_i_1_n_0\ : STD_LOGIC;
   signal \sAXIMasterGreen[3]_i_2_n_0\ : STD_LOGIC;
   signal \sAXIMasterGreen[3]_i_3_n_0\ : STD_LOGIC;
@@ -324,47 +320,53 @@ architecture STRUCTURE of system_AXI_BayerToRGB_1_0_AXI_BayerToRGB is
   signal \sAXIMasterGreen[7]_i_7_n_0\ : STD_LOGIC;
   signal \sAXIMasterGreen[7]_i_8_n_0\ : STD_LOGIC;
   signal \sAXIMasterGreen[7]_i_9_n_0\ : STD_LOGIC;
-  signal \sAXIMasterGreen[9]_i_2_n_0\ : STD_LOGIC;
+  signal \sAXIMasterGreen[9]_i_1_n_0\ : STD_LOGIC;
   signal \sAXIMasterGreen[9]_i_3_n_0\ : STD_LOGIC;
   signal \sAXIMasterGreen[9]_i_4_n_0\ : STD_LOGIC;
   signal \sAXIMasterGreen[9]_i_5_n_0\ : STD_LOGIC;
+  signal \sAXIMasterGreen[9]_i_6_n_0\ : STD_LOGIC;
+  signal \sAXIMasterGreen[9]_i_7_n_0\ : STD_LOGIC;
   signal \sAXIMasterGreen_reg[3]_i_1_n_0\ : STD_LOGIC;
   signal \sAXIMasterGreen_reg[3]_i_1_n_1\ : STD_LOGIC;
   signal \sAXIMasterGreen_reg[3]_i_1_n_2\ : STD_LOGIC;
   signal \sAXIMasterGreen_reg[3]_i_1_n_3\ : STD_LOGIC;
-  signal \sAXIMasterGreen_reg[3]_i_1_n_4\ : STD_LOGIC;
-  signal \sAXIMasterGreen_reg[3]_i_1_n_5\ : STD_LOGIC;
-  signal \sAXIMasterGreen_reg[3]_i_1_n_6\ : STD_LOGIC;
-  signal \sAXIMasterGreen_reg[3]_i_1_n_7\ : STD_LOGIC;
   signal \sAXIMasterGreen_reg[7]_i_1_n_0\ : STD_LOGIC;
   signal \sAXIMasterGreen_reg[7]_i_1_n_1\ : STD_LOGIC;
   signal \sAXIMasterGreen_reg[7]_i_1_n_2\ : STD_LOGIC;
   signal \sAXIMasterGreen_reg[7]_i_1_n_3\ : STD_LOGIC;
-  signal \sAXIMasterGreen_reg[7]_i_1_n_4\ : STD_LOGIC;
-  signal \sAXIMasterGreen_reg[7]_i_1_n_5\ : STD_LOGIC;
-  signal \sAXIMasterGreen_reg[7]_i_1_n_6\ : STD_LOGIC;
-  signal \sAXIMasterGreen_reg[7]_i_1_n_7\ : STD_LOGIC;
-  signal \sAXIMasterGreen_reg[9]_i_1_n_1\ : STD_LOGIC;
-  signal \sAXIMasterGreen_reg[9]_i_1_n_3\ : STD_LOGIC;
-  signal \sAXIMasterGreen_reg[9]_i_1_n_6\ : STD_LOGIC;
-  signal \sAXIMasterGreen_reg[9]_i_1_n_7\ : STD_LOGIC;
-  signal \sAXIMasterGreen_reg_n_0_[0]\ : STD_LOGIC;
+  signal \sAXIMasterGreen_reg[9]_i_2_n_3\ : STD_LOGIC;
+  signal \sAXIMasterGreen_reg_n_0_[10]\ : STD_LOGIC;
+  signal \sAXIMasterGreen_reg_n_0_[1]\ : STD_LOGIC;
+  signal \sAXIMasterGreen_reg_n_0_[2]\ : STD_LOGIC;
+  signal \sAXIMasterGreen_reg_n_0_[3]\ : STD_LOGIC;
+  signal \sAXIMasterGreen_reg_n_0_[4]\ : STD_LOGIC;
+  signal \sAXIMasterGreen_reg_n_0_[5]\ : STD_LOGIC;
+  signal \sAXIMasterGreen_reg_n_0_[6]\ : STD_LOGIC;
+  signal \sAXIMasterGreen_reg_n_0_[7]\ : STD_LOGIC;
+  signal \sAXIMasterGreen_reg_n_0_[8]\ : STD_LOGIC;
+  signal \sAXIMasterGreen_reg_n_0_[9]\ : STD_LOGIC;
   signal \sAXIMasterRed[0]_i_1_n_0\ : STD_LOGIC;
   signal \sAXIMasterRed[1]_i_1_n_0\ : STD_LOGIC;
   signal \sAXIMasterRed[2]_i_1_n_0\ : STD_LOGIC;
   signal \sAXIMasterRed[3]_i_1_n_0\ : STD_LOGIC;
-  signal \sAXIMasterRed[3]_i_2_n_0\ : STD_LOGIC;
   signal \sAXIMasterRed[4]_i_1_n_0\ : STD_LOGIC;
   signal \sAXIMasterRed[5]_i_1_n_0\ : STD_LOGIC;
-  signal \sAXIMasterRed[5]_i_2_n_0\ : STD_LOGIC;
   signal \sAXIMasterRed[6]_i_1_n_0\ : STD_LOGIC;
-  signal \sAXIMasterRed[6]_i_2_n_0\ : STD_LOGIC;
   signal \sAXIMasterRed[7]_i_1_n_0\ : STD_LOGIC;
-  signal \sAXIMasterRed[7]_i_2_n_0\ : STD_LOGIC;
   signal \sAXIMasterRed[8]_i_1_n_0\ : STD_LOGIC;
-  signal \sAXIMasterRed[8]_i_2_n_0\ : STD_LOGIC;
   signal \sAXIMasterRed[9]_i_1_n_0\ : STD_LOGIC;
   signal \sAXIMasterRed[9]_i_2_n_0\ : STD_LOGIC;
+  signal \sAXIMasterRed[9]_i_3_n_0\ : STD_LOGIC;
+  signal \sAXIMasterRed[9]_i_4_n_0\ : STD_LOGIC;
+  signal \sAXIMasterRed_reg_n_0_[0]\ : STD_LOGIC;
+  signal \sAXIMasterRed_reg_n_0_[1]\ : STD_LOGIC;
+  signal \sAXIMasterRed_reg_n_0_[2]\ : STD_LOGIC;
+  signal \sAXIMasterRed_reg_n_0_[3]\ : STD_LOGIC;
+  signal \sAXIMasterRed_reg_n_0_[4]\ : STD_LOGIC;
+  signal \sAXIMasterRed_reg_n_0_[5]\ : STD_LOGIC;
+  signal \sAXIMasterRed_reg_n_0_[6]\ : STD_LOGIC;
+  signal \sAXIMasterRed_reg_n_0_[7]\ : STD_LOGIC;
+  signal \sAXIMasterRed_reg_n_0_[8]\ : STD_LOGIC;
   signal sAXI_SlaveLastAsserted_i_1_n_0 : STD_LOGIC;
   signal sAXI_SlaveLastAsserted_reg_n_0 : STD_LOGIC;
   signal \sCntColumns[10]_i_1_n_0\ : STD_LOGIC;
@@ -438,10 +440,8 @@ architecture STRUCTURE of system_AXI_BayerToRGB_1_0_AXI_BayerToRGB is
   signal \sStrobesShiftReg[0][FirstColumn]_i_2_n_0\ : STD_LOGIC;
   signal \sStrobesShiftReg[0][FirstColumn]_i_3_n_0\ : STD_LOGIC;
   signal \sStrobesShiftReg[0][FirstColumn]_i_4_n_0\ : STD_LOGIC;
-  signal \sStrobesShiftReg[0][FirstColumn]_i_5_n_0\ : STD_LOGIC;
   signal \sStrobesShiftReg[0][FirstLine]_i_1_n_0\ : STD_LOGIC;
   signal \sStrobesShiftReg[0][Last]_i_1_n_0\ : STD_LOGIC;
-  signal \sStrobesShiftReg[0][Last]_i_2_n_0\ : STD_LOGIC;
   signal \sStrobesShiftReg[0][User]_i_1_n_0\ : STD_LOGIC;
   signal \sStrobesShiftReg_reg[0][FirstColumn]__0\ : STD_LOGIC;
   signal \sStrobesShiftReg_reg[0][FirstLine]__0\ : STD_LOGIC;
@@ -455,59 +455,56 @@ architecture STRUCTURE of system_AXI_BayerToRGB_1_0_AXI_BayerToRGB is
   signal \sStrobesShiftReg_reg[2][FirstLine]__0\ : STD_LOGIC;
   signal \sStrobesShiftReg_reg[2][Last]__0\ : STD_LOGIC;
   signal \sStrobesShiftReg_reg[2][User]__0\ : STD_LOGIC;
-  signal \NLW_sAXIMasterGreen_reg[9]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \NLW_sAXIMasterGreen_reg[9]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
+  signal \NLW_sAXIMasterGreen_reg[3]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \NLW_sAXIMasterGreen_reg[9]_i_2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_sAXIMasterGreen_reg[9]_i_2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of m_axis_video_tvalid_i_1 : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \sAXIMasterBlue[9]_i_6\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \m_axis_video_tdata[20]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \m_axis_video_tdata[22]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \sAXIMasterGreen[9]_i_3\ : label is "soft_lutpair20";
   attribute METHODOLOGY_DRC_VIOS : string;
   attribute METHODOLOGY_DRC_VIOS of \sAXIMasterGreen_reg[3]_i_1\ : label is "{SYNTH-8 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of \sAXIMasterGreen_reg[7]_i_1\ : label is "{SYNTH-8 {cell *THIS*}}";
-  attribute METHODOLOGY_DRC_VIOS of \sAXIMasterGreen_reg[9]_i_1\ : label is "{SYNTH-8 {cell *THIS*}}";
-  attribute SOFT_HLUTNM of \sAXIMasterRed[8]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \sCntColumns[0]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \sCntColumns[1]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \sCntColumns[2]_i_1\ : label is "soft_lutpair17";
+  attribute METHODOLOGY_DRC_VIOS of \sAXIMasterGreen_reg[9]_i_2\ : label is "{SYNTH-8 {cell *THIS*}}";
+  attribute SOFT_HLUTNM of \sAXIMasterRed[9]_i_4\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \sCntColumns[1]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \sCntColumns[2]_i_1\ : label is "soft_lutpair24";
   attribute SOFT_HLUTNM of \sCntColumns[3]_i_1\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of \sCntColumns[4]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \sCntColumns[6]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \sCntColumns[7]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \sCntColumns[6]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \sCntColumns[7]_i_1\ : label is "soft_lutpair25";
   attribute SOFT_HLUTNM of \sCntColumns[8]_i_1\ : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of \sCntColumns[9]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \sCntLines[0]_i_2\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \sCntLines[0]_i_3\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \sCntRemPixels[0]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \sCntRemPixels[1]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of sCoverInitialLatency_i_1 : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \sLineBufferWriteData[0]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \sLineBufferWriteData[1]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \sLineBufferWriteData[2]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \sLineBufferWriteData[3]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \sLineBufferWriteData[4]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[11]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[12]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[13]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[14]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[15]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[16]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[17]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[18]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[19]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[20]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[21]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[22]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[23]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[24]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[25]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[26]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[27]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[28]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[29]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \sOtherPixelsData[6]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \sStrobesShiftReg[0][FirstColumn]_i_4\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \sStrobesShiftReg[0][FirstColumn]_i_5\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \sStrobesShiftReg[0][Last]_i_2\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of s_axis_video_tready_INST_0 : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \sCntLines[0]_i_3\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \sCntRemPixels[0]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \sCntRemPixels[1]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[10]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[11]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[13]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[14]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[16]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[17]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[18]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[19]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[1]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[20]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[21]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[22]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[23]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[24]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[25]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[26]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[27]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[28]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[29]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[3]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[5]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[6]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[7]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[8]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \sOtherPixelsData[9]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \sStrobesShiftReg[0][FirstColumn]_i_2\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of s_axis_video_tready_INST_0 : label is "soft_lutpair19";
 begin
   m_axis_video_tdata(29 downto 0) <= \^m_axis_video_tdata\(29 downto 0);
   m_axis_video_tvalid <= \^m_axis_video_tvalid\;
@@ -531,15 +528,404 @@ LineBufferInst: entity work.system_AXI_BayerToRGB_1_0_LineBuffer
       \sPixel_reg[2][9]\(1) => LineBufferInst_n_18,
       \sPixel_reg[2][9]\(0) => LineBufferInst_n_19
     );
-m_axis_video_tvalid_i_1: unisim.vcomponents.LUT4
+\m_axis_video_tdata[0]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8F80"
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterBlue_reg_n_0_[0]\,
+      O => \^m_axis_video_tdata\(0)
+    );
+\m_axis_video_tdata[10]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5557555500000000"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterGreen_reg_n_0_[1]\,
+      O => \^m_axis_video_tdata\(10)
+    );
+\m_axis_video_tdata[11]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5557555500000000"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterGreen_reg_n_0_[2]\,
+      O => \^m_axis_video_tdata\(11)
+    );
+\m_axis_video_tdata[12]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5557555500000000"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterGreen_reg_n_0_[3]\,
+      O => \^m_axis_video_tdata\(12)
+    );
+\m_axis_video_tdata[13]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5557555500000000"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterGreen_reg_n_0_[4]\,
+      O => \^m_axis_video_tdata\(13)
+    );
+\m_axis_video_tdata[14]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5557555500000000"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterGreen_reg_n_0_[5]\,
+      O => \^m_axis_video_tdata\(14)
+    );
+\m_axis_video_tdata[15]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5557555500000000"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterGreen_reg_n_0_[6]\,
+      O => \^m_axis_video_tdata\(15)
+    );
+\m_axis_video_tdata[16]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5557555500000000"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterGreen_reg_n_0_[7]\,
+      O => \^m_axis_video_tdata\(16)
+    );
+\m_axis_video_tdata[17]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5557555500000000"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterGreen_reg_n_0_[8]\,
+      O => \^m_axis_video_tdata\(17)
+    );
+\m_axis_video_tdata[18]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5557555500000000"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterGreen_reg_n_0_[9]\,
+      O => \^m_axis_video_tdata\(18)
+    );
+\m_axis_video_tdata[19]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5557555500000000"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterGreen_reg_n_0_[10]\,
+      O => \^m_axis_video_tdata\(19)
+    );
+\m_axis_video_tdata[1]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterBlue_reg_n_0_[1]\,
+      O => \^m_axis_video_tdata\(1)
+    );
+\m_axis_video_tdata[20]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFA8FFAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      O => \^m_axis_video_tdata\(20)
+    );
+\m_axis_video_tdata[21]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FAF8FAFA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      O => \^m_axis_video_tdata\(21)
+    );
+\m_axis_video_tdata[22]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"EEECEEEE"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      O => \^m_axis_video_tdata\(22)
+    );
+\m_axis_video_tdata[23]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterRed_reg_n_0_[3]\,
+      O => \^m_axis_video_tdata\(23)
+    );
+\m_axis_video_tdata[24]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterRed_reg_n_0_[4]\,
+      O => \^m_axis_video_tdata\(24)
+    );
+\m_axis_video_tdata[25]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterRed_reg_n_0_[5]\,
+      O => \^m_axis_video_tdata\(25)
+    );
+\m_axis_video_tdata[26]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterRed_reg_n_0_[6]\,
+      O => \^m_axis_video_tdata\(26)
+    );
+\m_axis_video_tdata[27]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterRed_reg_n_0_[7]\,
+      O => \^m_axis_video_tdata\(27)
+    );
+\m_axis_video_tdata[28]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterRed_reg_n_0_[8]\,
+      O => \^m_axis_video_tdata\(28)
+    );
+\m_axis_video_tdata[28]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000001"
+    )
+        port map (
+      I0 => \sAXIMasterRed_reg_n_0_[3]\,
+      I1 => \sAXIMasterRed_reg_n_0_[4]\,
+      I2 => \sAXIMasterRed_reg_n_0_[5]\,
+      I3 => \sAXIMasterRed_reg_n_0_[6]\,
+      I4 => \sAXIMasterRed_reg_n_0_[8]\,
+      I5 => \sAXIMasterRed_reg_n_0_[7]\,
+      O => \m_axis_video_tdata[28]_INST_0_i_1_n_0\
+    );
+\m_axis_video_tdata[2]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterBlue_reg_n_0_[2]\,
+      O => \^m_axis_video_tdata\(2)
+    );
+\m_axis_video_tdata[3]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterBlue_reg_n_0_[3]\,
+      O => \^m_axis_video_tdata\(3)
+    );
+\m_axis_video_tdata[4]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterBlue_reg_n_0_[4]\,
+      O => \^m_axis_video_tdata\(4)
+    );
+\m_axis_video_tdata[5]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterBlue_reg_n_0_[5]\,
+      O => \^m_axis_video_tdata\(5)
+    );
+\m_axis_video_tdata[6]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterBlue_reg_n_0_[6]\,
+      O => \^m_axis_video_tdata\(6)
+    );
+\m_axis_video_tdata[7]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterBlue_reg_n_0_[7]\,
+      O => \^m_axis_video_tdata\(7)
+    );
+\m_axis_video_tdata[8]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterBlue_reg_n_0_[8]\,
+      O => \^m_axis_video_tdata\(8)
+    );
+\m_axis_video_tdata[9]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAA8AAAA"
+    )
+        port map (
+      I0 => \^m_axis_video_tdata\(29),
+      I1 => \sAXIMasterRed_reg_n_0_[2]\,
+      I2 => \sAXIMasterRed_reg_n_0_[1]\,
+      I3 => \sAXIMasterRed_reg_n_0_[0]\,
+      I4 => \m_axis_video_tdata[28]_INST_0_i_1_n_0\,
+      I5 => \sAXIMasterBlue_reg_n_0_[9]\,
+      O => \^m_axis_video_tdata\(9)
+    );
+m_axis_video_tvalid_i_1: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAA8FFFFAAA80000"
     )
         port map (
       I0 => sCoverInitialLatency,
-      I1 => sOtherPixelsData,
-      I2 => m_axis_video_tready,
-      I3 => \^m_axis_video_tvalid\,
+      I1 => sCntRemPixels(1),
+      I2 => sCntRemPixels(0),
+      I3 => s_axis_video_tvalid,
+      I4 => m_axis_video_tready,
+      I5 => \^m_axis_video_tvalid\,
       O => m_axis_video_tvalid_i_1_n_0
     );
 m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
@@ -548,438 +934,240 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => m_axis_video_tvalid_i_1_n_0,
       Q => \^m_axis_video_tvalid\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sAXIMasterBlue[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFAAF0CC00AAF0CC"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
-      I0 => \sPixel_reg[1]\(0),
-      I1 => \sPixel_reg[0]\(0),
+      I0 => \sPixel_reg[0]\(0),
+      I1 => \sPixel_reg[1]\(0),
       I2 => \sPixel_reg[2]\(0),
-      I3 => sCrntPositionIndicatorDly3(1),
-      I4 => sCrntPositionIndicatorDly3(0),
+      I3 => sCrntPositionIndicatorDly3(0),
+      I4 => sCrntPositionIndicatorDly3(1),
       I5 => \sPixel_reg[3]\(0),
       O => \sAXIMasterBlue[0]_i_1_n_0\
     );
 \sAXIMasterBlue[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFAAF0CC00AAF0CC"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
-      I0 => \sPixel_reg[1]\(1),
-      I1 => \sPixel_reg[0]\(1),
+      I0 => \sPixel_reg[0]\(1),
+      I1 => \sPixel_reg[1]\(1),
       I2 => \sPixel_reg[2]\(1),
-      I3 => sCrntPositionIndicatorDly3(1),
-      I4 => sCrntPositionIndicatorDly3(0),
+      I3 => sCrntPositionIndicatorDly3(0),
+      I4 => sCrntPositionIndicatorDly3(1),
       I5 => \sPixel_reg[3]\(1),
       O => \sAXIMasterBlue[1]_i_1_n_0\
     );
 \sAXIMasterBlue[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFAAF0CC00AAF0CC"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
-      I0 => \sPixel_reg[1]\(2),
-      I1 => \sPixel_reg[0]\(2),
+      I0 => \sPixel_reg[0]\(2),
+      I1 => \sPixel_reg[1]\(2),
       I2 => \sPixel_reg[2]\(2),
-      I3 => sCrntPositionIndicatorDly3(1),
-      I4 => sCrntPositionIndicatorDly3(0),
+      I3 => sCrntPositionIndicatorDly3(0),
+      I4 => sCrntPositionIndicatorDly3(1),
       I5 => \sPixel_reg[3]\(2),
       O => \sAXIMasterBlue[2]_i_1_n_0\
     );
-\sAXIMasterBlue[3]_i_1\: unisim.vcomponents.LUT5
+\sAXIMasterBlue[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAB"
-    )
-        port map (
-      I0 => \sAXIMasterBlue[3]_i_2_n_0\,
-      I1 => \sAXIMasterBlue[9]_i_4_n_0\,
-      I2 => \sAXIMasterBlue[9]_i_5_n_0\,
-      I3 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      I4 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
-      O => \sAXIMasterBlue[3]_i_1_n_0\
-    );
-\sAXIMasterBlue[3]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFCCF0AA00CCF0AA"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
       I0 => \sPixel_reg[0]\(3),
-      I1 => \sPixel_reg[2]\(3),
-      I2 => \sPixel_reg[1]\(3),
+      I1 => \sPixel_reg[1]\(3),
+      I2 => \sPixel_reg[2]\(3),
       I3 => sCrntPositionIndicatorDly3(0),
       I4 => sCrntPositionIndicatorDly3(1),
       I5 => \sPixel_reg[3]\(3),
-      O => \sAXIMasterBlue[3]_i_2_n_0\
+      O => \sAXIMasterBlue[3]_i_1_n_0\
     );
 \sAXIMasterBlue[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0F010FFFFFFFF"
-    )
-        port map (
-      I0 => \sAXIMasterBlue[9]_i_4_n_0\,
-      I1 => \sAXIMasterBlue[9]_i_5_n_0\,
-      I2 => sOtherPixelsData,
-      I3 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
-      I4 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      I5 => sStreamReset_n,
-      O => \sAXIMasterBlue[4]_i_1_n_0\
-    );
-\sAXIMasterBlue[4]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFCCF0AA00CCF0AA"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
       I0 => \sPixel_reg[0]\(4),
-      I1 => \sPixel_reg[2]\(4),
-      I2 => \sPixel_reg[1]\(4),
+      I1 => \sPixel_reg[1]\(4),
+      I2 => \sPixel_reg[2]\(4),
       I3 => sCrntPositionIndicatorDly3(0),
       I4 => sCrntPositionIndicatorDly3(1),
       I5 => \sPixel_reg[3]\(4),
-      O => \sAXIMasterBlue[4]_i_2_n_0\
+      O => \sAXIMasterBlue[4]_i_1_n_0\
     );
-\sAXIMasterBlue[5]_i_1\: unisim.vcomponents.LUT5
+\sAXIMasterBlue[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAB"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
-      I0 => \sAXIMasterBlue[5]_i_2_n_0\,
-      I1 => \sAXIMasterBlue[9]_i_4_n_0\,
-      I2 => \sAXIMasterBlue[9]_i_5_n_0\,
-      I3 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      I4 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
+      I0 => \sPixel_reg[0]\(5),
+      I1 => \sPixel_reg[1]\(5),
+      I2 => \sPixel_reg[2]\(5),
+      I3 => sCrntPositionIndicatorDly3(0),
+      I4 => sCrntPositionIndicatorDly3(1),
+      I5 => \sPixel_reg[3]\(5),
       O => \sAXIMasterBlue[5]_i_1_n_0\
     );
-\sAXIMasterBlue[5]_i_2\: unisim.vcomponents.LUT6
+\sAXIMasterBlue[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFAAF0CC00AAF0CC"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
-      I0 => \sPixel_reg[1]\(5),
-      I1 => \sPixel_reg[0]\(5),
-      I2 => \sPixel_reg[2]\(5),
-      I3 => sCrntPositionIndicatorDly3(1),
-      I4 => sCrntPositionIndicatorDly3(0),
-      I5 => \sPixel_reg[3]\(5),
-      O => \sAXIMasterBlue[5]_i_2_n_0\
-    );
-\sAXIMasterBlue[6]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"AAAAAAAB"
-    )
-        port map (
-      I0 => \sAXIMasterBlue[6]_i_2_n_0\,
-      I1 => \sAXIMasterBlue[9]_i_4_n_0\,
-      I2 => \sAXIMasterBlue[9]_i_5_n_0\,
-      I3 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      I4 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
+      I0 => \sPixel_reg[0]\(6),
+      I1 => \sPixel_reg[1]\(6),
+      I2 => \sPixel_reg[2]\(6),
+      I3 => sCrntPositionIndicatorDly3(0),
+      I4 => sCrntPositionIndicatorDly3(1),
+      I5 => \sPixel_reg[3]\(6),
       O => \sAXIMasterBlue[6]_i_1_n_0\
     );
-\sAXIMasterBlue[6]_i_2\: unisim.vcomponents.LUT6
+\sAXIMasterBlue[7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFAAF0CC00AAF0CC"
-    )
-        port map (
-      I0 => \sPixel_reg[1]\(6),
-      I1 => \sPixel_reg[0]\(6),
-      I2 => \sPixel_reg[2]\(6),
-      I3 => sCrntPositionIndicatorDly3(1),
-      I4 => sCrntPositionIndicatorDly3(0),
-      I5 => \sPixel_reg[3]\(6),
-      O => \sAXIMasterBlue[6]_i_2_n_0\
-    );
-\sAXIMasterBlue[7]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"AAAAAAAB"
-    )
-        port map (
-      I0 => \sAXIMasterBlue[7]_i_2_n_0\,
-      I1 => \sAXIMasterBlue[9]_i_4_n_0\,
-      I2 => \sAXIMasterBlue[9]_i_5_n_0\,
-      I3 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      I4 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
-      O => \sAXIMasterBlue[7]_i_1_n_0\
-    );
-\sAXIMasterBlue[7]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFCCF0AA00CCF0AA"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
       I0 => \sPixel_reg[0]\(7),
-      I1 => \sPixel_reg[2]\(7),
-      I2 => \sPixel_reg[1]\(7),
+      I1 => \sPixel_reg[1]\(7),
+      I2 => \sPixel_reg[2]\(7),
       I3 => sCrntPositionIndicatorDly3(0),
       I4 => sCrntPositionIndicatorDly3(1),
       I5 => \sPixel_reg[3]\(7),
-      O => \sAXIMasterBlue[7]_i_2_n_0\
+      O => \sAXIMasterBlue[7]_i_1_n_0\
     );
-\sAXIMasterBlue[8]_i_1\: unisim.vcomponents.LUT4
+\sAXIMasterBlue[8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E0FF"
-    )
-        port map (
-      I0 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      I1 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
-      I2 => sOtherPixelsData,
-      I3 => sStreamReset_n,
-      O => \sAXIMasterBlue[8]_i_1_n_0\
-    );
-\sAXIMasterBlue[8]_i_2\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"AAA8"
-    )
-        port map (
-      I0 => m_axis_video_tready,
-      I1 => sCntRemPixels(0),
-      I2 => sCntRemPixels(1),
-      I3 => s_axis_video_tvalid,
-      O => sOtherPixelsData
-    );
-\sAXIMasterBlue[8]_i_3\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"AAAAAAAB"
-    )
-        port map (
-      I0 => \sAXIMasterBlue[8]_i_4_n_0\,
-      I1 => \sAXIMasterBlue[9]_i_4_n_0\,
-      I2 => \sAXIMasterBlue[9]_i_5_n_0\,
-      I3 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      I4 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
-      O => \sAXIMasterBlue[8]_i_3_n_0\
-    );
-\sAXIMasterBlue[8]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFCCF0AA00CCF0AA"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
       I0 => \sPixel_reg[0]\(8),
-      I1 => \sPixel_reg[2]\(8),
-      I2 => \sPixel_reg[1]\(8),
+      I1 => \sPixel_reg[1]\(8),
+      I2 => \sPixel_reg[2]\(8),
       I3 => sCrntPositionIndicatorDly3(0),
       I4 => sCrntPositionIndicatorDly3(1),
       I5 => \sPixel_reg[3]\(8),
-      O => \sAXIMasterBlue[8]_i_4_n_0\
+      O => \sAXIMasterBlue[8]_i_1_n_0\
     );
-\sAXIMasterBlue[9]_i_1\: unisim.vcomponents.LUT1
+\sAXIMasterBlue[9]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"1"
+      INIT => X"FFFE00FE"
     )
         port map (
-      I0 => sStreamReset_n,
+      I0 => \sAXIMasterBlue[9]_i_2_n_0\,
+      I1 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
+      I2 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
+      I3 => \sAXIMasterRed[9]_i_4_n_0\,
+      I4 => \sAXIMasterBlue_reg_n_0_[9]\,
       O => \sAXIMasterBlue[9]_i_1_n_0\
-    );
-\sAXIMasterBlue[9]_i_10\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"000001FF"
-    )
-        port map (
-      I0 => \^m_axis_video_tdata\(10),
-      I1 => \^m_axis_video_tdata\(12),
-      I2 => \^m_axis_video_tdata\(11),
-      I3 => \^m_axis_video_tdata\(13),
-      I4 => \^m_axis_video_tdata\(14),
-      O => \sAXIMasterBlue[9]_i_10_n_0\
-    );
-\sAXIMasterBlue[9]_i_11\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"80000000"
-    )
-        port map (
-      I0 => \^m_axis_video_tdata\(26),
-      I1 => \^m_axis_video_tdata\(24),
-      I2 => \^m_axis_video_tdata\(25),
-      I3 => \^m_axis_video_tdata\(27),
-      I4 => \^m_axis_video_tdata\(28),
-      O => \sAXIMasterBlue[9]_i_11_n_0\
     );
 \sAXIMasterBlue[9]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"ABFFFFFFAB00FF00"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
-      I0 => \sAXIMasterBlue[9]_i_3_n_0\,
-      I1 => \sAXIMasterBlue[9]_i_4_n_0\,
-      I2 => \sAXIMasterBlue[9]_i_5_n_0\,
-      I3 => sOtherPixelsData,
-      I4 => \sAXIMasterBlue[9]_i_6_n_0\,
-      I5 => \^m_axis_video_tdata\(29),
-      O => \sAXIMasterBlue[9]_i_2_n_0\
-    );
-\sAXIMasterBlue[9]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFAAF0CC00AAF0CC"
-    )
-        port map (
-      I0 => \sPixel_reg[1]\(9),
-      I1 => \sPixel_reg[0]\(9),
+      I0 => \sPixel_reg[0]\(9),
+      I1 => \sPixel_reg[1]\(9),
       I2 => \sPixel_reg[2]\(9),
-      I3 => sCrntPositionIndicatorDly3(1),
-      I4 => sCrntPositionIndicatorDly3(0),
+      I3 => sCrntPositionIndicatorDly3(0),
+      I4 => sCrntPositionIndicatorDly3(1),
       I5 => \sPixel_reg[3]\(9),
-      O => \sAXIMasterBlue[9]_i_3_n_0\
-    );
-\sAXIMasterBlue[9]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFF1110"
-    )
-        port map (
-      I0 => \^m_axis_video_tdata\(9),
-      I1 => \^m_axis_video_tdata\(8),
-      I2 => \sAXIMasterBlue[9]_i_7_n_0\,
-      I3 => \sAXIMasterBlue[9]_i_8_n_0\,
-      I4 => \sAXIMasterBlue[9]_i_9_n_0\,
-      I5 => \sAXIMasterBlue[9]_i_10_n_0\,
-      O => \sAXIMasterBlue[9]_i_4_n_0\
-    );
-\sAXIMasterBlue[9]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"000000005555777F"
-    )
-        port map (
-      I0 => \sAXIMasterBlue[9]_i_11_n_0\,
-      I1 => \^m_axis_video_tdata\(22),
-      I2 => \^m_axis_video_tdata\(21),
-      I3 => \^m_axis_video_tdata\(20),
-      I4 => \^m_axis_video_tdata\(23),
-      I5 => \^m_axis_video_tdata\(29),
-      O => \sAXIMasterBlue[9]_i_5_n_0\
-    );
-\sAXIMasterBlue[9]_i_6\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      I1 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
-      O => \sAXIMasterBlue[9]_i_6_n_0\
-    );
-\sAXIMasterBlue[9]_i_7\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0057"
-    )
-        port map (
-      I0 => \^m_axis_video_tdata\(1),
-      I1 => \^m_axis_video_tdata\(0),
-      I2 => \sAXIMasterGreen_reg_n_0_[0]\,
-      I3 => \^m_axis_video_tdata\(2),
-      O => \sAXIMasterBlue[9]_i_7_n_0\
-    );
-\sAXIMasterBlue[9]_i_8\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"7FFFFFFF"
-    )
-        port map (
-      I0 => \^m_axis_video_tdata\(5),
-      I1 => \^m_axis_video_tdata\(4),
-      I2 => \^m_axis_video_tdata\(3),
-      I3 => \^m_axis_video_tdata\(6),
-      I4 => \^m_axis_video_tdata\(7),
-      O => \sAXIMasterBlue[9]_i_8_n_0\
-    );
-\sAXIMasterBlue[9]_i_9\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"7FFFFFFF"
-    )
-        port map (
-      I0 => \^m_axis_video_tdata\(16),
-      I1 => \^m_axis_video_tdata\(15),
-      I2 => \^m_axis_video_tdata\(17),
-      I3 => \^m_axis_video_tdata\(18),
-      I4 => \^m_axis_video_tdata\(19),
-      O => \sAXIMasterBlue[9]_i_9_n_0\
+      O => \sAXIMasterBlue[9]_i_2_n_0\
     );
 \sAXIMasterBlue_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[0]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(20),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      Q => \sAXIMasterBlue_reg_n_0_[0]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[1]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(21),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      Q => \sAXIMasterBlue_reg_n_0_[1]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[2]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(22),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      Q => \sAXIMasterBlue_reg_n_0_[2]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[3]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(23),
-      R => \sAXIMasterBlue[8]_i_1_n_0\
+      Q => \sAXIMasterBlue_reg_n_0_[3]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
-      D => \sAXIMasterBlue[4]_i_2_n_0\,
-      Q => \^m_axis_video_tdata\(24),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      D => \sAXIMasterBlue[4]_i_1_n_0\,
+      Q => \sAXIMasterBlue_reg_n_0_[4]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[5]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(25),
-      R => \sAXIMasterBlue[8]_i_1_n_0\
+      Q => \sAXIMasterBlue_reg_n_0_[5]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[6]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(26),
-      R => \sAXIMasterBlue[8]_i_1_n_0\
+      Q => \sAXIMasterBlue_reg_n_0_[6]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterBlue[7]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(27),
-      R => \sAXIMasterBlue[8]_i_1_n_0\
+      Q => \sAXIMasterBlue_reg_n_0_[7]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
-      D => \sAXIMasterBlue[8]_i_3_n_0\,
-      Q => \^m_axis_video_tdata\(28),
-      R => \sAXIMasterBlue[8]_i_1_n_0\
+      D => \sAXIMasterBlue[8]_i_1_n_0\,
+      Q => \sAXIMasterBlue_reg_n_0_[8]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterBlue_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => '1',
-      D => \sAXIMasterBlue[9]_i_2_n_0\,
-      Q => \^m_axis_video_tdata\(29),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      D => \sAXIMasterBlue[9]_i_1_n_0\,
+      Q => \sAXIMasterBlue_reg_n_0_[9]\,
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sAXIMasterGreen[10]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFE0"
+      INIT => X"FFFE00FE"
     )
         port map (
-      I0 => \sAXIMasterBlue[9]_i_5_n_0\,
-      I1 => \sAXIMasterBlue[9]_i_4_n_0\,
-      I2 => \sAXIMasterGreen_reg[9]_i_1_n_1\,
-      I3 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
-      I4 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
+      I0 => sAXIMasterGreen1_in(10),
+      I1 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
+      I2 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
+      I3 => \sAXIMasterRed[9]_i_4_n_0\,
+      I4 => \sAXIMasterGreen_reg_n_0_[10]\,
       O => \sAXIMasterGreen[10]_i_1_n_0\
     );
 \sAXIMasterGreen[3]_i_2\: unisim.vcomponents.LUT4
@@ -988,8 +1176,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \sPixel_reg[3]\(3),
-      I1 => sCrntPositionIndicatorDly3(1),
-      I2 => sCrntPositionIndicatorDly3(0),
+      I1 => sCrntPositionIndicatorDly3(0),
+      I2 => sCrntPositionIndicatorDly3(1),
       I3 => \sPixel_reg[2]\(3),
       O => \sAXIMasterGreen[3]_i_2_n_0\
     );
@@ -999,8 +1187,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \sPixel_reg[3]\(2),
-      I1 => sCrntPositionIndicatorDly3(1),
-      I2 => sCrntPositionIndicatorDly3(0),
+      I1 => sCrntPositionIndicatorDly3(0),
+      I2 => sCrntPositionIndicatorDly3(1),
       I3 => \sPixel_reg[2]\(2),
       O => \sAXIMasterGreen[3]_i_3_n_0\
     );
@@ -1010,8 +1198,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \sPixel_reg[3]\(1),
-      I1 => sCrntPositionIndicatorDly3(1),
-      I2 => sCrntPositionIndicatorDly3(0),
+      I1 => sCrntPositionIndicatorDly3(0),
+      I2 => sCrntPositionIndicatorDly3(1),
       I3 => \sPixel_reg[2]\(1),
       O => \sAXIMasterGreen[3]_i_4_n_0\
     );
@@ -1021,8 +1209,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \sPixel_reg[3]\(0),
-      I1 => sCrntPositionIndicatorDly3(1),
-      I2 => sCrntPositionIndicatorDly3(0),
+      I1 => sCrntPositionIndicatorDly3(0),
+      I2 => sCrntPositionIndicatorDly3(1),
       I3 => \sPixel_reg[2]\(0),
       O => \sAXIMasterGreen[3]_i_5_n_0\
     );
@@ -1034,8 +1222,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       I0 => \sPixel_reg[2]\(3),
       I1 => \sPixel_reg[3]\(3),
       I2 => \sPixel_reg[1]\(3),
-      I3 => sCrntPositionIndicatorDly3(0),
-      I4 => sCrntPositionIndicatorDly3(1),
+      I3 => sCrntPositionIndicatorDly3(1),
+      I4 => sCrntPositionIndicatorDly3(0),
       I5 => \sPixel_reg[0]\(3),
       O => \sAXIMasterGreen[3]_i_6_n_0\
     );
@@ -1047,8 +1235,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       I0 => \sPixel_reg[2]\(2),
       I1 => \sPixel_reg[3]\(2),
       I2 => \sPixel_reg[1]\(2),
-      I3 => sCrntPositionIndicatorDly3(0),
-      I4 => sCrntPositionIndicatorDly3(1),
+      I3 => sCrntPositionIndicatorDly3(1),
+      I4 => sCrntPositionIndicatorDly3(0),
       I5 => \sPixel_reg[0]\(2),
       O => \sAXIMasterGreen[3]_i_7_n_0\
     );
@@ -1060,8 +1248,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       I0 => \sPixel_reg[2]\(1),
       I1 => \sPixel_reg[3]\(1),
       I2 => \sPixel_reg[1]\(1),
-      I3 => sCrntPositionIndicatorDly3(0),
-      I4 => sCrntPositionIndicatorDly3(1),
+      I3 => sCrntPositionIndicatorDly3(1),
+      I4 => sCrntPositionIndicatorDly3(0),
       I5 => \sPixel_reg[0]\(1),
       O => \sAXIMasterGreen[3]_i_8_n_0\
     );
@@ -1073,8 +1261,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       I0 => \sPixel_reg[2]\(0),
       I1 => \sPixel_reg[3]\(0),
       I2 => \sPixel_reg[1]\(0),
-      I3 => sCrntPositionIndicatorDly3(0),
-      I4 => sCrntPositionIndicatorDly3(1),
+      I3 => sCrntPositionIndicatorDly3(1),
+      I4 => sCrntPositionIndicatorDly3(0),
       I5 => \sPixel_reg[0]\(0),
       O => \sAXIMasterGreen[3]_i_9_n_0\
     );
@@ -1084,8 +1272,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \sPixel_reg[3]\(7),
-      I1 => sCrntPositionIndicatorDly3(1),
-      I2 => sCrntPositionIndicatorDly3(0),
+      I1 => sCrntPositionIndicatorDly3(0),
+      I2 => sCrntPositionIndicatorDly3(1),
       I3 => \sPixel_reg[2]\(7),
       O => \sAXIMasterGreen[7]_i_2_n_0\
     );
@@ -1095,8 +1283,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \sPixel_reg[3]\(6),
-      I1 => sCrntPositionIndicatorDly3(1),
-      I2 => sCrntPositionIndicatorDly3(0),
+      I1 => sCrntPositionIndicatorDly3(0),
+      I2 => sCrntPositionIndicatorDly3(1),
       I3 => \sPixel_reg[2]\(6),
       O => \sAXIMasterGreen[7]_i_3_n_0\
     );
@@ -1106,8 +1294,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \sPixel_reg[3]\(5),
-      I1 => sCrntPositionIndicatorDly3(1),
-      I2 => sCrntPositionIndicatorDly3(0),
+      I1 => sCrntPositionIndicatorDly3(0),
+      I2 => sCrntPositionIndicatorDly3(1),
       I3 => \sPixel_reg[2]\(5),
       O => \sAXIMasterGreen[7]_i_4_n_0\
     );
@@ -1117,8 +1305,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \sPixel_reg[3]\(4),
-      I1 => sCrntPositionIndicatorDly3(1),
-      I2 => sCrntPositionIndicatorDly3(0),
+      I1 => sCrntPositionIndicatorDly3(0),
+      I2 => sCrntPositionIndicatorDly3(1),
       I3 => \sPixel_reg[2]\(4),
       O => \sAXIMasterGreen[7]_i_5_n_0\
     );
@@ -1130,8 +1318,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       I0 => \sPixel_reg[2]\(7),
       I1 => \sPixel_reg[3]\(7),
       I2 => \sPixel_reg[1]\(7),
-      I3 => sCrntPositionIndicatorDly3(0),
-      I4 => sCrntPositionIndicatorDly3(1),
+      I3 => sCrntPositionIndicatorDly3(1),
+      I4 => sCrntPositionIndicatorDly3(0),
       I5 => \sPixel_reg[0]\(7),
       O => \sAXIMasterGreen[7]_i_6_n_0\
     );
@@ -1143,8 +1331,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       I0 => \sPixel_reg[2]\(6),
       I1 => \sPixel_reg[3]\(6),
       I2 => \sPixel_reg[1]\(6),
-      I3 => sCrntPositionIndicatorDly3(0),
-      I4 => sCrntPositionIndicatorDly3(1),
+      I3 => sCrntPositionIndicatorDly3(1),
+      I4 => sCrntPositionIndicatorDly3(0),
       I5 => \sPixel_reg[0]\(6),
       O => \sAXIMasterGreen[7]_i_7_n_0\
     );
@@ -1156,8 +1344,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       I0 => \sPixel_reg[2]\(5),
       I1 => \sPixel_reg[3]\(5),
       I2 => \sPixel_reg[1]\(5),
-      I3 => sCrntPositionIndicatorDly3(0),
-      I4 => sCrntPositionIndicatorDly3(1),
+      I3 => sCrntPositionIndicatorDly3(1),
+      I4 => sCrntPositionIndicatorDly3(0),
       I5 => \sPixel_reg[0]\(5),
       O => \sAXIMasterGreen[7]_i_8_n_0\
     );
@@ -1169,34 +1357,56 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       I0 => \sPixel_reg[2]\(4),
       I1 => \sPixel_reg[3]\(4),
       I2 => \sPixel_reg[1]\(4),
-      I3 => sCrntPositionIndicatorDly3(0),
-      I4 => sCrntPositionIndicatorDly3(1),
+      I3 => sCrntPositionIndicatorDly3(1),
+      I4 => sCrntPositionIndicatorDly3(0),
       I5 => \sPixel_reg[0]\(4),
       O => \sAXIMasterGreen[7]_i_9_n_0\
     );
-\sAXIMasterGreen[9]_i_2\: unisim.vcomponents.LUT4
+\sAXIMasterGreen[9]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"E0E0E000FFFFFFFF"
+    )
+        port map (
+      I0 => s_axis_video_tvalid,
+      I1 => \sAXIMasterGreen[9]_i_3_n_0\,
+      I2 => m_axis_video_tready,
+      I3 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
+      I4 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
+      I5 => sStreamReset_n,
+      O => \sAXIMasterGreen[9]_i_1_n_0\
+    );
+\sAXIMasterGreen[9]_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => sCntRemPixels(0),
+      I1 => sCntRemPixels(1),
+      O => \sAXIMasterGreen[9]_i_3_n_0\
+    );
+\sAXIMasterGreen[9]_i_4\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"EB28"
     )
         port map (
       I0 => \sPixel_reg[3]\(9),
-      I1 => sCrntPositionIndicatorDly3(1),
-      I2 => sCrntPositionIndicatorDly3(0),
+      I1 => sCrntPositionIndicatorDly3(0),
+      I2 => sCrntPositionIndicatorDly3(1),
       I3 => \sPixel_reg[2]\(9),
-      O => \sAXIMasterGreen[9]_i_2_n_0\
+      O => \sAXIMasterGreen[9]_i_4_n_0\
     );
-\sAXIMasterGreen[9]_i_3\: unisim.vcomponents.LUT4
+\sAXIMasterGreen[9]_i_5\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"EB28"
     )
         port map (
       I0 => \sPixel_reg[3]\(8),
-      I1 => sCrntPositionIndicatorDly3(1),
-      I2 => sCrntPositionIndicatorDly3(0),
+      I1 => sCrntPositionIndicatorDly3(0),
+      I2 => sCrntPositionIndicatorDly3(1),
       I3 => \sPixel_reg[2]\(8),
-      O => \sAXIMasterGreen[9]_i_3_n_0\
+      O => \sAXIMasterGreen[9]_i_5_n_0\
     );
-\sAXIMasterGreen[9]_i_4\: unisim.vcomponents.LUT6
+\sAXIMasterGreen[9]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"5A33335A5ACCCC5A"
     )
@@ -1204,12 +1414,12 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       I0 => \sPixel_reg[2]\(9),
       I1 => \sPixel_reg[3]\(9),
       I2 => \sPixel_reg[1]\(9),
-      I3 => sCrntPositionIndicatorDly3(0),
-      I4 => sCrntPositionIndicatorDly3(1),
+      I3 => sCrntPositionIndicatorDly3(1),
+      I4 => sCrntPositionIndicatorDly3(0),
       I5 => \sPixel_reg[0]\(9),
-      O => \sAXIMasterGreen[9]_i_4_n_0\
+      O => \sAXIMasterGreen[9]_i_6_n_0\
     );
-\sAXIMasterGreen[9]_i_5\: unisim.vcomponents.LUT6
+\sAXIMasterGreen[9]_i_7\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"5A33335A5ACCCC5A"
     )
@@ -1217,50 +1427,42 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       I0 => \sPixel_reg[2]\(8),
       I1 => \sPixel_reg[3]\(8),
       I2 => \sPixel_reg[1]\(8),
-      I3 => sCrntPositionIndicatorDly3(0),
-      I4 => sCrntPositionIndicatorDly3(1),
+      I3 => sCrntPositionIndicatorDly3(1),
+      I4 => sCrntPositionIndicatorDly3(0),
       I5 => \sPixel_reg[0]\(8),
-      O => \sAXIMasterGreen[9]_i_5_n_0\
-    );
-\sAXIMasterGreen_reg[0]\: unisim.vcomponents.FDRE
-     port map (
-      C => StreamClk,
-      CE => sOtherPixelsData,
-      D => \sAXIMasterGreen_reg[3]_i_1_n_7\,
-      Q => \sAXIMasterGreen_reg_n_0_[0]\,
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      O => \sAXIMasterGreen[9]_i_7_n_0\
     );
 \sAXIMasterGreen_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
-      CE => sOtherPixelsData,
+      CE => '1',
       D => \sAXIMasterGreen[10]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(9),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      Q => \sAXIMasterGreen_reg_n_0_[10]\,
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sAXIMasterGreen_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
-      D => \sAXIMasterGreen_reg[3]_i_1_n_6\,
-      Q => \^m_axis_video_tdata\(0),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      D => sAXIMasterGreen1_in(1),
+      Q => \sAXIMasterGreen_reg_n_0_[1]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterGreen_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
-      D => \sAXIMasterGreen_reg[3]_i_1_n_5\,
-      Q => \^m_axis_video_tdata\(1),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      D => sAXIMasterGreen1_in(2),
+      Q => \sAXIMasterGreen_reg_n_0_[2]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterGreen_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
-      D => \sAXIMasterGreen_reg[3]_i_1_n_4\,
-      Q => \^m_axis_video_tdata\(2),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      D => sAXIMasterGreen1_in(3),
+      Q => \sAXIMasterGreen_reg_n_0_[3]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterGreen_reg[3]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -1274,10 +1476,8 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       DI(2) => \sAXIMasterGreen[3]_i_3_n_0\,
       DI(1) => \sAXIMasterGreen[3]_i_4_n_0\,
       DI(0) => \sAXIMasterGreen[3]_i_5_n_0\,
-      O(3) => \sAXIMasterGreen_reg[3]_i_1_n_4\,
-      O(2) => \sAXIMasterGreen_reg[3]_i_1_n_5\,
-      O(1) => \sAXIMasterGreen_reg[3]_i_1_n_6\,
-      O(0) => \sAXIMasterGreen_reg[3]_i_1_n_7\,
+      O(3 downto 1) => sAXIMasterGreen1_in(3 downto 1),
+      O(0) => \NLW_sAXIMasterGreen_reg[3]_i_1_O_UNCONNECTED\(0),
       S(3) => \sAXIMasterGreen[3]_i_6_n_0\,
       S(2) => \sAXIMasterGreen[3]_i_7_n_0\,
       S(1) => \sAXIMasterGreen[3]_i_8_n_0\,
@@ -1287,33 +1487,33 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
-      D => \sAXIMasterGreen_reg[7]_i_1_n_7\,
-      Q => \^m_axis_video_tdata\(3),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      D => sAXIMasterGreen1_in(4),
+      Q => \sAXIMasterGreen_reg_n_0_[4]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterGreen_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
-      D => \sAXIMasterGreen_reg[7]_i_1_n_6\,
-      Q => \^m_axis_video_tdata\(4),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      D => sAXIMasterGreen1_in(5),
+      Q => \sAXIMasterGreen_reg_n_0_[5]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterGreen_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
-      D => \sAXIMasterGreen_reg[7]_i_1_n_5\,
-      Q => \^m_axis_video_tdata\(5),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      D => sAXIMasterGreen1_in(6),
+      Q => \sAXIMasterGreen_reg_n_0_[6]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterGreen_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
-      D => \sAXIMasterGreen_reg[7]_i_1_n_4\,
-      Q => \^m_axis_video_tdata\(6),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      D => sAXIMasterGreen1_in(7),
+      Q => \sAXIMasterGreen_reg_n_0_[7]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterGreen_reg[7]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -1327,10 +1527,7 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       DI(2) => \sAXIMasterGreen[7]_i_3_n_0\,
       DI(1) => \sAXIMasterGreen[7]_i_4_n_0\,
       DI(0) => \sAXIMasterGreen[7]_i_5_n_0\,
-      O(3) => \sAXIMasterGreen_reg[7]_i_1_n_4\,
-      O(2) => \sAXIMasterGreen_reg[7]_i_1_n_5\,
-      O(1) => \sAXIMasterGreen_reg[7]_i_1_n_6\,
-      O(0) => \sAXIMasterGreen_reg[7]_i_1_n_7\,
+      O(3 downto 0) => sAXIMasterGreen1_in(7 downto 4),
       S(3) => \sAXIMasterGreen[7]_i_6_n_0\,
       S(2) => \sAXIMasterGreen[7]_i_7_n_0\,
       S(1) => \sAXIMasterGreen[7]_i_8_n_0\,
@@ -1340,44 +1537,43 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
-      D => \sAXIMasterGreen_reg[9]_i_1_n_7\,
-      Q => \^m_axis_video_tdata\(7),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      D => sAXIMasterGreen1_in(8),
+      Q => \sAXIMasterGreen_reg_n_0_[8]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterGreen_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
-      D => \sAXIMasterGreen_reg[9]_i_1_n_6\,
-      Q => \^m_axis_video_tdata\(8),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      D => sAXIMasterGreen1_in(9),
+      Q => \sAXIMasterGreen_reg_n_0_[9]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
-\sAXIMasterGreen_reg[9]_i_1\: unisim.vcomponents.CARRY4
+\sAXIMasterGreen_reg[9]_i_2\: unisim.vcomponents.CARRY4
      port map (
       CI => \sAXIMasterGreen_reg[7]_i_1_n_0\,
-      CO(3) => \NLW_sAXIMasterGreen_reg[9]_i_1_CO_UNCONNECTED\(3),
-      CO(2) => \sAXIMasterGreen_reg[9]_i_1_n_1\,
-      CO(1) => \NLW_sAXIMasterGreen_reg[9]_i_1_CO_UNCONNECTED\(1),
-      CO(0) => \sAXIMasterGreen_reg[9]_i_1_n_3\,
+      CO(3) => \NLW_sAXIMasterGreen_reg[9]_i_2_CO_UNCONNECTED\(3),
+      CO(2) => sAXIMasterGreen1_in(10),
+      CO(1) => \NLW_sAXIMasterGreen_reg[9]_i_2_CO_UNCONNECTED\(1),
+      CO(0) => \sAXIMasterGreen_reg[9]_i_2_n_3\,
       CYINIT => '0',
       DI(3 downto 2) => B"00",
-      DI(1) => \sAXIMasterGreen[9]_i_2_n_0\,
-      DI(0) => \sAXIMasterGreen[9]_i_3_n_0\,
-      O(3 downto 2) => \NLW_sAXIMasterGreen_reg[9]_i_1_O_UNCONNECTED\(3 downto 2),
-      O(1) => \sAXIMasterGreen_reg[9]_i_1_n_6\,
-      O(0) => \sAXIMasterGreen_reg[9]_i_1_n_7\,
+      DI(1) => \sAXIMasterGreen[9]_i_4_n_0\,
+      DI(0) => \sAXIMasterGreen[9]_i_5_n_0\,
+      O(3 downto 2) => \NLW_sAXIMasterGreen_reg[9]_i_2_O_UNCONNECTED\(3 downto 2),
+      O(1 downto 0) => sAXIMasterGreen1_in(9 downto 8),
       S(3 downto 2) => B"01",
-      S(1) => \sAXIMasterGreen[9]_i_4_n_0\,
-      S(0) => \sAXIMasterGreen[9]_i_5_n_0\
+      S(1) => \sAXIMasterGreen[9]_i_6_n_0\,
+      S(0) => \sAXIMasterGreen[9]_i_7_n_0\
     );
 \sAXIMasterRed[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFCCF0AA00CCF0AA"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
       I0 => \sPixel_reg[3]\(0),
-      I1 => \sPixel_reg[1]\(0),
-      I2 => \sPixel_reg[2]\(0),
+      I1 => \sPixel_reg[2]\(0),
+      I2 => \sPixel_reg[1]\(0),
       I3 => sCrntPositionIndicatorDly3(0),
       I4 => sCrntPositionIndicatorDly3(1),
       I5 => \sPixel_reg[0]\(0),
@@ -1385,12 +1581,12 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
     );
 \sAXIMasterRed[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFCCF0AA00CCF0AA"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
       I0 => \sPixel_reg[3]\(1),
-      I1 => \sPixel_reg[1]\(1),
-      I2 => \sPixel_reg[2]\(1),
+      I1 => \sPixel_reg[2]\(1),
+      I2 => \sPixel_reg[1]\(1),
       I3 => sCrntPositionIndicatorDly3(0),
       I4 => sCrntPositionIndicatorDly3(1),
       I5 => \sPixel_reg[0]\(1),
@@ -1398,272 +1594,230 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
     );
 \sAXIMasterRed[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFAAF0CC00AAF0CC"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
-      I0 => \sPixel_reg[2]\(2),
-      I1 => \sPixel_reg[3]\(2),
+      I0 => \sPixel_reg[3]\(2),
+      I1 => \sPixel_reg[2]\(2),
       I2 => \sPixel_reg[1]\(2),
-      I3 => sCrntPositionIndicatorDly3(1),
-      I4 => sCrntPositionIndicatorDly3(0),
+      I3 => sCrntPositionIndicatorDly3(0),
+      I4 => sCrntPositionIndicatorDly3(1),
       I5 => \sPixel_reg[0]\(2),
       O => \sAXIMasterRed[2]_i_1_n_0\
     );
-\sAXIMasterRed[3]_i_1\: unisim.vcomponents.LUT5
+\sAXIMasterRed[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAB"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
-      I0 => \sAXIMasterRed[3]_i_2_n_0\,
-      I1 => \sAXIMasterBlue[9]_i_4_n_0\,
-      I2 => \sAXIMasterBlue[9]_i_5_n_0\,
-      I3 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      I4 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
-      O => \sAXIMasterRed[3]_i_1_n_0\
-    );
-\sAXIMasterRed[3]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFAAF0CC00AAF0CC"
-    )
-        port map (
-      I0 => \sPixel_reg[2]\(3),
-      I1 => \sPixel_reg[3]\(3),
+      I0 => \sPixel_reg[3]\(3),
+      I1 => \sPixel_reg[2]\(3),
       I2 => \sPixel_reg[1]\(3),
-      I3 => sCrntPositionIndicatorDly3(1),
-      I4 => sCrntPositionIndicatorDly3(0),
+      I3 => sCrntPositionIndicatorDly3(0),
+      I4 => sCrntPositionIndicatorDly3(1),
       I5 => \sPixel_reg[0]\(3),
-      O => \sAXIMasterRed[3]_i_2_n_0\
+      O => \sAXIMasterRed[3]_i_1_n_0\
     );
 \sAXIMasterRed[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFAAF0CC00AAF0CC"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
-      I0 => \sPixel_reg[2]\(4),
-      I1 => \sPixel_reg[3]\(4),
+      I0 => \sPixel_reg[3]\(4),
+      I1 => \sPixel_reg[2]\(4),
       I2 => \sPixel_reg[1]\(4),
-      I3 => sCrntPositionIndicatorDly3(1),
-      I4 => sCrntPositionIndicatorDly3(0),
+      I3 => sCrntPositionIndicatorDly3(0),
+      I4 => sCrntPositionIndicatorDly3(1),
       I5 => \sPixel_reg[0]\(4),
       O => \sAXIMasterRed[4]_i_1_n_0\
     );
-\sAXIMasterRed[5]_i_1\: unisim.vcomponents.LUT5
+\sAXIMasterRed[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAB"
-    )
-        port map (
-      I0 => \sAXIMasterRed[5]_i_2_n_0\,
-      I1 => \sAXIMasterBlue[9]_i_4_n_0\,
-      I2 => \sAXIMasterBlue[9]_i_5_n_0\,
-      I3 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      I4 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
-      O => \sAXIMasterRed[5]_i_1_n_0\
-    );
-\sAXIMasterRed[5]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFCCF0AA00CCF0AA"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
       I0 => \sPixel_reg[3]\(5),
-      I1 => \sPixel_reg[1]\(5),
-      I2 => \sPixel_reg[2]\(5),
+      I1 => \sPixel_reg[2]\(5),
+      I2 => \sPixel_reg[1]\(5),
       I3 => sCrntPositionIndicatorDly3(0),
       I4 => sCrntPositionIndicatorDly3(1),
       I5 => \sPixel_reg[0]\(5),
-      O => \sAXIMasterRed[5]_i_2_n_0\
+      O => \sAXIMasterRed[5]_i_1_n_0\
     );
-\sAXIMasterRed[6]_i_1\: unisim.vcomponents.LUT5
+\sAXIMasterRed[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAB"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
-      I0 => \sAXIMasterRed[6]_i_2_n_0\,
-      I1 => \sAXIMasterBlue[9]_i_4_n_0\,
-      I2 => \sAXIMasterBlue[9]_i_5_n_0\,
-      I3 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      I4 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
+      I0 => \sPixel_reg[3]\(6),
+      I1 => \sPixel_reg[2]\(6),
+      I2 => \sPixel_reg[1]\(6),
+      I3 => sCrntPositionIndicatorDly3(0),
+      I4 => sCrntPositionIndicatorDly3(1),
+      I5 => \sPixel_reg[0]\(6),
       O => \sAXIMasterRed[6]_i_1_n_0\
     );
-\sAXIMasterRed[6]_i_2\: unisim.vcomponents.LUT6
+\sAXIMasterRed[7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFAAF0CC00AAF0CC"
-    )
-        port map (
-      I0 => \sPixel_reg[2]\(6),
-      I1 => \sPixel_reg[3]\(6),
-      I2 => \sPixel_reg[1]\(6),
-      I3 => sCrntPositionIndicatorDly3(1),
-      I4 => sCrntPositionIndicatorDly3(0),
-      I5 => \sPixel_reg[0]\(6),
-      O => \sAXIMasterRed[6]_i_2_n_0\
-    );
-\sAXIMasterRed[7]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"AAAAAAAB"
-    )
-        port map (
-      I0 => \sAXIMasterRed[7]_i_2_n_0\,
-      I1 => \sAXIMasterBlue[9]_i_4_n_0\,
-      I2 => \sAXIMasterBlue[9]_i_5_n_0\,
-      I3 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      I4 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
-      O => \sAXIMasterRed[7]_i_1_n_0\
-    );
-\sAXIMasterRed[7]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CCFFF0AACC00F0AA"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
       I0 => \sPixel_reg[3]\(7),
-      I1 => \sPixel_reg[0]\(7),
-      I2 => \sPixel_reg[2]\(7),
+      I1 => \sPixel_reg[2]\(7),
+      I2 => \sPixel_reg[1]\(7),
       I3 => sCrntPositionIndicatorDly3(0),
       I4 => sCrntPositionIndicatorDly3(1),
-      I5 => \sPixel_reg[1]\(7),
-      O => \sAXIMasterRed[7]_i_2_n_0\
+      I5 => \sPixel_reg[0]\(7),
+      O => \sAXIMasterRed[7]_i_1_n_0\
     );
-\sAXIMasterRed[8]_i_1\: unisim.vcomponents.LUT5
+\sAXIMasterRed[8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAB"
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
-      I0 => \sAXIMasterRed[8]_i_2_n_0\,
-      I1 => \sAXIMasterBlue[9]_i_4_n_0\,
-      I2 => \sAXIMasterBlue[9]_i_5_n_0\,
-      I3 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      I4 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
+      I0 => \sPixel_reg[3]\(8),
+      I1 => \sPixel_reg[2]\(8),
+      I2 => \sPixel_reg[1]\(8),
+      I3 => sCrntPositionIndicatorDly3(0),
+      I4 => sCrntPositionIndicatorDly3(1),
+      I5 => \sPixel_reg[0]\(8),
       O => \sAXIMasterRed[8]_i_1_n_0\
     );
-\sAXIMasterRed[8]_i_2\: unisim.vcomponents.LUT6
+\sAXIMasterRed[9]_i_1\: unisim.vcomponents.LUT1
     generic map(
-      INIT => X"FFAAF0CC00AAF0CC"
+      INIT => X"1"
     )
         port map (
-      I0 => \sPixel_reg[2]\(8),
-      I1 => \sPixel_reg[3]\(8),
-      I2 => \sPixel_reg[1]\(8),
-      I3 => sCrntPositionIndicatorDly3(1),
-      I4 => sCrntPositionIndicatorDly3(0),
-      I5 => \sPixel_reg[0]\(8),
-      O => \sAXIMasterRed[8]_i_2_n_0\
-    );
-\sAXIMasterRed[9]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"ABFFFFFFAB00FF00"
-    )
-        port map (
-      I0 => \sAXIMasterRed[9]_i_2_n_0\,
-      I1 => \sAXIMasterBlue[9]_i_4_n_0\,
-      I2 => \sAXIMasterBlue[9]_i_5_n_0\,
-      I3 => sOtherPixelsData,
-      I4 => \sAXIMasterBlue[9]_i_6_n_0\,
-      I5 => \^m_axis_video_tdata\(19),
+      I0 => sStreamReset_n,
       O => \sAXIMasterRed[9]_i_1_n_0\
     );
-\sAXIMasterRed[9]_i_2\: unisim.vcomponents.LUT6
+\sAXIMasterRed[9]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CCFFF0AACC00F0AA"
+      INIT => X"FFFE00FE"
+    )
+        port map (
+      I0 => \sAXIMasterRed[9]_i_3_n_0\,
+      I1 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
+      I2 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
+      I3 => \sAXIMasterRed[9]_i_4_n_0\,
+      I4 => \^m_axis_video_tdata\(29),
+      O => \sAXIMasterRed[9]_i_2_n_0\
+    );
+\sAXIMasterRed[9]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFF0CCAA00F0CCAA"
     )
         port map (
       I0 => \sPixel_reg[3]\(9),
-      I1 => \sPixel_reg[0]\(9),
-      I2 => \sPixel_reg[2]\(9),
+      I1 => \sPixel_reg[2]\(9),
+      I2 => \sPixel_reg[1]\(9),
       I3 => sCrntPositionIndicatorDly3(0),
       I4 => sCrntPositionIndicatorDly3(1),
-      I5 => \sPixel_reg[1]\(9),
-      O => \sAXIMasterRed[9]_i_2_n_0\
+      I5 => \sPixel_reg[0]\(9),
+      O => \sAXIMasterRed[9]_i_3_n_0\
+    );
+\sAXIMasterRed[9]_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"01FF"
+    )
+        port map (
+      I0 => s_axis_video_tvalid,
+      I1 => sCntRemPixels(0),
+      I2 => sCntRemPixels(1),
+      I3 => m_axis_video_tready,
+      O => \sAXIMasterRed[9]_i_4_n_0\
     );
 \sAXIMasterRed_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[0]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(10),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      Q => \sAXIMasterRed_reg_n_0_[0]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[1]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(11),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      Q => \sAXIMasterRed_reg_n_0_[1]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[2]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(12),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      Q => \sAXIMasterRed_reg_n_0_[2]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[3]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(13),
-      R => \sAXIMasterBlue[8]_i_1_n_0\
+      Q => \sAXIMasterRed_reg_n_0_[3]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[4]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(14),
-      R => \sAXIMasterBlue[4]_i_1_n_0\
+      Q => \sAXIMasterRed_reg_n_0_[4]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[5]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(15),
-      R => \sAXIMasterBlue[8]_i_1_n_0\
+      Q => \sAXIMasterRed_reg_n_0_[5]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[6]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(16),
-      R => \sAXIMasterBlue[8]_i_1_n_0\
+      Q => \sAXIMasterRed_reg_n_0_[6]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[7]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(17),
-      R => \sAXIMasterBlue[8]_i_1_n_0\
+      Q => \sAXIMasterRed_reg_n_0_[7]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => sOtherPixelsData,
       D => \sAXIMasterRed[8]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(18),
-      R => \sAXIMasterBlue[8]_i_1_n_0\
+      Q => \sAXIMasterRed_reg_n_0_[8]\,
+      R => \sAXIMasterGreen[9]_i_1_n_0\
     );
 \sAXIMasterRed_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => '1',
-      D => \sAXIMasterRed[9]_i_1_n_0\,
-      Q => \^m_axis_video_tdata\(19),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      D => \sAXIMasterRed[9]_i_2_n_0\,
+      Q => \^m_axis_video_tdata\(29),
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 sAXI_SlaveLastAsserted_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AA0EAAAAAA0AAAAA"
+      INIT => X"FF0F0008FFFF0000"
     )
         port map (
-      I0 => sAXI_SlaveLastAsserted_reg_n_0,
-      I1 => s_axis_video_tvalid,
+      I0 => s_axis_video_tvalid,
+      I1 => s_axis_video_tlast,
       I2 => sCntRemPixels(0),
       I3 => sCntRemPixels(1),
-      I4 => m_axis_video_tready,
-      I5 => s_axis_video_tlast,
+      I4 => sAXI_SlaveLastAsserted_reg_n_0,
+      I5 => m_axis_video_tready,
       O => sAXI_SlaveLastAsserted_i_1_n_0
     );
 sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
@@ -1672,7 +1826,7 @@ sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => sAXI_SlaveLastAsserted_i_1_n_0,
       Q => sAXI_SlaveLastAsserted_reg_n_0,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sCntColumns[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -1684,27 +1838,27 @@ sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
     );
 \sCntColumns[10]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0800FFFF"
+      INIT => X"2000FFFF"
     )
         port map (
-      I0 => sAXI_SlaveLastAsserted_reg_n_0,
-      I1 => sCntRemPixels(0),
-      I2 => sCntRemPixels(1),
+      I0 => sCntRemPixels(0),
+      I1 => sCntRemPixels(1),
+      I2 => sAXI_SlaveLastAsserted_reg_n_0,
       I3 => m_axis_video_tready,
       I4 => sStreamReset_n,
       O => \sCntColumns[10]_i_1_n_0\
     );
 \sCntColumns[10]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6AAAAAAAAAAAAAAA"
+      INIT => X"7FFFFFFF80000000"
     )
         port map (
-      I0 => \sCntColumns_reg__0\(10),
-      I1 => \sCntColumns_reg__0\(8),
-      I2 => \sCntColumns_reg__0\(6),
-      I3 => \sCntColumns[10]_i_3_n_0\,
+      I0 => \sCntColumns[10]_i_3_n_0\,
+      I1 => \sCntColumns_reg__0\(6),
+      I2 => \sCntColumns_reg__0\(9),
+      I3 => \sCntColumns_reg__0\(8),
       I4 => \sCntColumns_reg__0\(7),
-      I5 => \sCntColumns_reg__0\(9),
+      I5 => \sCntColumns_reg__0\(10),
       O => plusOp(10)
     );
 \sCntColumns[10]_i_3\: unisim.vcomponents.LUT6
@@ -1712,12 +1866,12 @@ sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
       INIT => X"8000000000000000"
     )
         port map (
-      I0 => \sCntColumns_reg__0\(5),
-      I1 => \sCntColumns_reg__0\(4),
-      I2 => \sCntColumns_reg__0\(2),
-      I3 => \sCntColumns_reg__0\(0),
-      I4 => \sCntColumns_reg__0\(1),
-      I5 => \sCntColumns_reg__0\(3),
+      I0 => \sCntColumns_reg__0\(4),
+      I1 => \sCntColumns_reg__0\(2),
+      I2 => \sCntColumns_reg__0\(0),
+      I3 => \sCntColumns_reg__0\(1),
+      I4 => \sCntColumns_reg__0\(3),
+      I5 => \sCntColumns_reg__0\(5),
       O => \sCntColumns[10]_i_3_n_0\
     );
 \sCntColumns[1]_i_1\: unisim.vcomponents.LUT2
@@ -1731,40 +1885,28 @@ sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
     );
 \sCntColumns[2]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"6A"
+      INIT => X"78"
+    )
+        port map (
+      I0 => \sCntColumns_reg__0\(1),
+      I1 => \sCntColumns_reg__0\(0),
+      I2 => \sCntColumns_reg__0\(2),
+      O => plusOp(2)
+    );
+\sCntColumns[3]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7F80"
     )
         port map (
       I0 => \sCntColumns_reg__0\(2),
       I1 => \sCntColumns_reg__0\(0),
       I2 => \sCntColumns_reg__0\(1),
-      O => plusOp(2)
-    );
-\sCntColumns[3]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"6AAA"
-    )
-        port map (
-      I0 => \sCntColumns_reg__0\(3),
-      I1 => \sCntColumns_reg__0\(1),
-      I2 => \sCntColumns_reg__0\(0),
-      I3 => \sCntColumns_reg__0\(2),
+      I3 => \sCntColumns_reg__0\(3),
       O => plusOp(3)
     );
 \sCntColumns[4]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"6AAAAAAA"
-    )
-        port map (
-      I0 => \sCntColumns_reg__0\(4),
-      I1 => \sCntColumns_reg__0\(2),
-      I2 => \sCntColumns_reg__0\(0),
-      I3 => \sCntColumns_reg__0\(1),
-      I4 => \sCntColumns_reg__0\(3),
-      O => plusOp(4)
-    );
-\sCntColumns[5]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFF80000000"
+      INIT => X"7FFF8000"
     )
         port map (
       I0 => \sCntColumns_reg__0\(3),
@@ -1772,6 +1914,18 @@ sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
       I2 => \sCntColumns_reg__0\(0),
       I3 => \sCntColumns_reg__0\(2),
       I4 => \sCntColumns_reg__0\(4),
+      O => plusOp(4)
+    );
+\sCntColumns[5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7FFFFFFF80000000"
+    )
+        port map (
+      I0 => \sCntColumns_reg__0\(4),
+      I1 => \sCntColumns_reg__0\(2),
+      I2 => \sCntColumns_reg__0\(0),
+      I3 => \sCntColumns_reg__0\(1),
+      I4 => \sCntColumns_reg__0\(3),
       I5 => \sCntColumns_reg__0\(5),
       O => plusOp(5)
     );
@@ -1780,41 +1934,41 @@ sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
       INIT => X"6"
     )
         port map (
-      I0 => \sCntColumns_reg__0\(6),
-      I1 => \sCntColumns[10]_i_3_n_0\,
+      I0 => \sCntColumns[10]_i_3_n_0\,
+      I1 => \sCntColumns_reg__0\(6),
       O => plusOp(6)
     );
 \sCntColumns[7]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"6A"
+      INIT => X"78"
     )
         port map (
-      I0 => \sCntColumns_reg__0\(7),
-      I1 => \sCntColumns[10]_i_3_n_0\,
-      I2 => \sCntColumns_reg__0\(6),
+      I0 => \sCntColumns[10]_i_3_n_0\,
+      I1 => \sCntColumns_reg__0\(6),
+      I2 => \sCntColumns_reg__0\(7),
       O => plusOp(7)
     );
 \sCntColumns[8]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"6AAA"
+      INIT => X"7F80"
     )
         port map (
-      I0 => \sCntColumns_reg__0\(8),
+      I0 => \sCntColumns[10]_i_3_n_0\,
       I1 => \sCntColumns_reg__0\(6),
-      I2 => \sCntColumns[10]_i_3_n_0\,
-      I3 => \sCntColumns_reg__0\(7),
+      I2 => \sCntColumns_reg__0\(7),
+      I3 => \sCntColumns_reg__0\(8),
       O => plusOp(8)
     );
 \sCntColumns[9]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"6AAAAAAA"
+      INIT => X"7FFF8000"
     )
         port map (
-      I0 => \sCntColumns_reg__0\(9),
-      I1 => \sCntColumns_reg__0\(7),
-      I2 => \sCntColumns[10]_i_3_n_0\,
-      I3 => \sCntColumns_reg__0\(6),
-      I4 => \sCntColumns_reg__0\(8),
+      I0 => \sCntColumns[10]_i_3_n_0\,
+      I1 => \sCntColumns_reg__0\(6),
+      I2 => \sCntColumns_reg__0\(7),
+      I3 => \sCntColumns_reg__0\(8),
+      I4 => \sCntColumns_reg__0\(9),
       O => plusOp(9)
     );
 \sCntColumns_reg[0]\: unisim.vcomponents.FDRE
@@ -1938,38 +2092,38 @@ sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
       Q => \sCntColumns_reg__0\(9),
       R => \sCntColumns[10]_i_1_n_0\
     );
-\sCntLines[0]_i_1\: unisim.vcomponents.LUT6
+\sCntLines[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"6060606000606060"
+      INIT => X"28280028"
     )
         port map (
-      I0 => \sCntLines[0]_i_2_n_0\,
-      I1 => sCntLines_reg(0),
-      I2 => sStreamReset_n,
-      I3 => m_axis_video_tready,
-      I4 => s_axis_video_tuser,
-      I5 => \sCntLines[0]_i_3_n_0\,
+      I0 => sStreamReset_n,
+      I1 => \sCntLines[0]_i_2_n_0\,
+      I2 => sCntLines_reg(0),
+      I3 => s_axis_video_tuser,
+      I4 => \sCntLines[0]_i_3_n_0\,
       O => \sCntLines[0]_i_1_n_0\
     );
 \sCntLines[0]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2000"
+      INIT => X"0800"
     )
         port map (
       I0 => m_axis_video_tready,
-      I1 => sCntRemPixels(1),
-      I2 => sCntRemPixels(0),
-      I3 => sAXI_SlaveLastAsserted_reg_n_0,
+      I1 => sAXI_SlaveLastAsserted_reg_n_0,
+      I2 => sCntRemPixels(1),
+      I3 => sCntRemPixels(0),
       O => \sCntLines[0]_i_2_n_0\
     );
-\sCntLines[0]_i_3\: unisim.vcomponents.LUT3
+\sCntLines[0]_i_3\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"EF"
+      INIT => X"FDFF"
     )
         port map (
-      I0 => sCntRemPixels(1),
+      I0 => s_axis_video_tvalid,
       I1 => sCntRemPixels(0),
-      I2 => s_axis_video_tvalid,
+      I2 => sCntRemPixels(1),
+      I3 => m_axis_video_tready,
       O => \sCntLines[0]_i_3_n_0\
     );
 \sCntLines_reg[0]\: unisim.vcomponents.FDRE
@@ -1999,8 +2153,8 @@ sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => s_axis_video_tvalid,
-      I1 => sCntRemPixels(1),
-      I2 => sCntRemPixels(0),
+      I1 => sCntRemPixels(0),
+      I2 => sCntRemPixels(1),
       O => \sCntRemPixels[1]_i_1_n_0\
     );
 \sCntRemPixels_reg[0]\: unisim.vcomponents.FDRE
@@ -2009,7 +2163,7 @@ sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sCntRemPixels[0]_i_1_n_0\,
       Q => sCntRemPixels(0),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sCntRemPixels_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -2017,7 +2171,7 @@ sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sCntRemPixels[1]_i_1_n_0\,
       Q => sCntRemPixels(1),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 sCoverInitialLatency_i_1: unisim.vcomponents.LUT2
     generic map(
@@ -2034,7 +2188,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => sCoverInitialLatency_i_1_n_0,
       Q => sCoverInitialLatency,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sCrntPositionIndicatorDly1_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -2042,7 +2196,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sCntColumns_reg__0\(0),
       Q => sCrntPositionIndicatorDly1(0),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sCrntPositionIndicatorDly1_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -2050,7 +2204,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sCntLines_reg(0),
       Q => sCrntPositionIndicatorDly1(1),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sCrntPositionIndicatorDly2_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -2058,7 +2212,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sCrntPositionIndicatorDly1(0),
       Q => sCrntPositionIndicatorDly2(0),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sCrntPositionIndicatorDly2_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -2066,7 +2220,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sCrntPositionIndicatorDly1(1),
       Q => sCrntPositionIndicatorDly2(1),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sCrntPositionIndicatorDly3_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -2074,7 +2228,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sCrntPositionIndicatorDly2(0),
       Q => sCrntPositionIndicatorDly3(0),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sCrntPositionIndicatorDly3_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -2082,7 +2236,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sCrntPositionIndicatorDly2(1),
       Q => sCrntPositionIndicatorDly3(1),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferCrntAddr_reg[10]\: unisim.vcomponents.FDRE
      port map (
@@ -2090,7 +2244,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sCntColumns_reg__0\(10),
       Q => sLineBufferCrntAddr(10),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferCrntAddr_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -2098,7 +2252,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sCntColumns_reg__0\(1),
       Q => sLineBufferCrntAddr(1),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferCrntAddr_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -2106,7 +2260,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sCntColumns_reg__0\(2),
       Q => sLineBufferCrntAddr(2),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferCrntAddr_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -2114,7 +2268,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sCntColumns_reg__0\(3),
       Q => sLineBufferCrntAddr(3),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferCrntAddr_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -2122,7 +2276,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sCntColumns_reg__0\(4),
       Q => sLineBufferCrntAddr(4),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferCrntAddr_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -2130,7 +2284,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sCntColumns_reg__0\(5),
       Q => sLineBufferCrntAddr(5),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferCrntAddr_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -2138,7 +2292,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sCntColumns_reg__0\(6),
       Q => sLineBufferCrntAddr(6),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferCrntAddr_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -2146,7 +2300,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sCntColumns_reg__0\(7),
       Q => sLineBufferCrntAddr(7),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferCrntAddr_reg[8]\: unisim.vcomponents.FDRE
      port map (
@@ -2154,7 +2308,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sCntColumns_reg__0\(8),
       Q => sLineBufferCrntAddr(8),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferCrntAddr_reg[9]\: unisim.vcomponents.FDRE
      port map (
@@ -2162,15 +2316,18 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sCntColumns_reg__0\(9),
       Q => sLineBufferCrntAddr(9),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
-\sLineBufferReadDataBuf[9]_i_1\: unisim.vcomponents.LUT2
+\sLineBufferReadDataBuf[9]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"2"
+      INIT => X"55570000"
     )
         port map (
-      I0 => sLineBufferWrite_reg_n_0,
-      I1 => sOtherPixelsData,
+      I0 => m_axis_video_tready,
+      I1 => sCntRemPixels(1),
+      I2 => sCntRemPixels(0),
+      I3 => s_axis_video_tvalid,
+      I4 => sLineBufferWrite_reg_n_0,
       O => sLineBufferReadDataBuf_0
     );
 \sLineBufferReadDataBuf_reg[0]\: unisim.vcomponents.FDRE
@@ -2179,7 +2336,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sLineBufferReadDataBuf_0,
       D => sLineBufferReadData(0),
       Q => sLineBufferReadDataBuf(0),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferReadDataBuf_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -2187,7 +2344,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sLineBufferReadDataBuf_0,
       D => sLineBufferReadData(1),
       Q => sLineBufferReadDataBuf(1),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferReadDataBuf_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -2195,7 +2352,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sLineBufferReadDataBuf_0,
       D => sLineBufferReadData(2),
       Q => sLineBufferReadDataBuf(2),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferReadDataBuf_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -2203,7 +2360,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sLineBufferReadDataBuf_0,
       D => sLineBufferReadData(3),
       Q => sLineBufferReadDataBuf(3),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferReadDataBuf_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -2211,7 +2368,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sLineBufferReadDataBuf_0,
       D => sLineBufferReadData(4),
       Q => sLineBufferReadDataBuf(4),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferReadDataBuf_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -2219,7 +2376,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sLineBufferReadDataBuf_0,
       D => sLineBufferReadData(5),
       Q => sLineBufferReadDataBuf(5),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferReadDataBuf_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -2227,7 +2384,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sLineBufferReadDataBuf_0,
       D => sLineBufferReadData(6),
       Q => sLineBufferReadDataBuf(6),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferReadDataBuf_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -2235,7 +2392,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sLineBufferReadDataBuf_0,
       D => sLineBufferReadData(7),
       Q => sLineBufferReadDataBuf(7),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferReadDataBuf_reg[8]\: unisim.vcomponents.FDRE
      port map (
@@ -2243,7 +2400,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sLineBufferReadDataBuf_0,
       D => sLineBufferReadData(8),
       Q => sLineBufferReadDataBuf(8),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferReadDataBuf_reg[9]\: unisim.vcomponents.FDRE
      port map (
@@ -2251,7 +2408,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sLineBufferReadDataBuf_0,
       D => sLineBufferReadData(9),
       Q => sLineBufferReadDataBuf(9),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteDataDly_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -2259,7 +2416,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteData(0),
       Q => sLineBufferWriteDataDly(0),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteDataDly_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -2267,7 +2424,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteData(1),
       Q => sLineBufferWriteDataDly(1),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteDataDly_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -2275,7 +2432,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteData(2),
       Q => sLineBufferWriteDataDly(2),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteDataDly_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -2283,7 +2440,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteData(3),
       Q => sLineBufferWriteDataDly(3),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteDataDly_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -2291,7 +2448,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteData(4),
       Q => sLineBufferWriteDataDly(4),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteDataDly_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -2299,7 +2456,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteData(5),
       Q => sLineBufferWriteDataDly(5),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteDataDly_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -2307,7 +2464,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteData(6),
       Q => sLineBufferWriteDataDly(6),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteDataDly_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -2315,7 +2472,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteData(7),
       Q => sLineBufferWriteDataDly(7),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteDataDly_reg[8]\: unisim.vcomponents.FDRE
      port map (
@@ -2323,7 +2480,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteData(8),
       Q => sLineBufferWriteDataDly(8),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteDataDly_reg[9]\: unisim.vcomponents.FDRE
      port map (
@@ -2331,7 +2488,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteData(9),
       Q => sLineBufferWriteDataDly(9),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteData[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -2449,7 +2606,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sLineBufferWriteData[0]_i_1_n_0\,
       Q => sLineBufferWriteData(0),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteData_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -2457,7 +2614,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sLineBufferWriteData[1]_i_1_n_0\,
       Q => sLineBufferWriteData(1),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteData_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -2465,7 +2622,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sLineBufferWriteData[2]_i_1_n_0\,
       Q => sLineBufferWriteData(2),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteData_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -2473,7 +2630,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sLineBufferWriteData[3]_i_1_n_0\,
       Q => sLineBufferWriteData(3),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteData_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -2481,7 +2638,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sLineBufferWriteData[4]_i_1_n_0\,
       Q => sLineBufferWriteData(4),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteData_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -2489,7 +2646,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sLineBufferWriteData[5]_i_1_n_0\,
       Q => sLineBufferWriteData(5),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteData_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -2497,7 +2654,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sLineBufferWriteData[6]_i_1_n_0\,
       Q => sLineBufferWriteData(6),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteData_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -2505,7 +2662,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sLineBufferWriteData[7]_i_1_n_0\,
       Q => sLineBufferWriteData(7),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteData_reg[8]\: unisim.vcomponents.FDRE
      port map (
@@ -2513,7 +2670,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sLineBufferWriteData[8]_i_1_n_0\,
       Q => sLineBufferWriteData(8),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sLineBufferWriteData_reg[9]\: unisim.vcomponents.FDRE
      port map (
@@ -2521,7 +2678,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sLineBufferWriteData[9]_i_1_n_0\,
       Q => sLineBufferWriteData(9),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 sLineBufferWrite_reg: unisim.vcomponents.FDRE
      port map (
@@ -2529,7 +2686,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => sOtherPixelsData,
       Q => sLineBufferWrite_reg_n_0,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -2857,7 +3014,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(0),
       Q => \sOtherPixelsData_reg_n_0_[0]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[10]\: unisim.vcomponents.FDRE
      port map (
@@ -2865,7 +3022,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(10),
       Q => \sOtherPixelsData_reg_n_0_[10]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[11]\: unisim.vcomponents.FDRE
      port map (
@@ -2873,7 +3030,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(11),
       Q => \sOtherPixelsData_reg_n_0_[11]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[12]\: unisim.vcomponents.FDRE
      port map (
@@ -2881,7 +3038,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(12),
       Q => \sOtherPixelsData_reg_n_0_[12]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[13]\: unisim.vcomponents.FDRE
      port map (
@@ -2889,7 +3046,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(13),
       Q => \sOtherPixelsData_reg_n_0_[13]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[14]\: unisim.vcomponents.FDRE
      port map (
@@ -2897,7 +3054,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(14),
       Q => \sOtherPixelsData_reg_n_0_[14]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[15]\: unisim.vcomponents.FDRE
      port map (
@@ -2905,7 +3062,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(15),
       Q => \sOtherPixelsData_reg_n_0_[15]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[16]\: unisim.vcomponents.FDRE
      port map (
@@ -2913,7 +3070,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(16),
       Q => \sOtherPixelsData_reg_n_0_[16]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[17]\: unisim.vcomponents.FDRE
      port map (
@@ -2921,7 +3078,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(17),
       Q => \sOtherPixelsData_reg_n_0_[17]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[18]\: unisim.vcomponents.FDRE
      port map (
@@ -2929,7 +3086,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(18),
       Q => \sOtherPixelsData_reg_n_0_[18]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[19]\: unisim.vcomponents.FDRE
      port map (
@@ -2937,7 +3094,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(19),
       Q => \sOtherPixelsData_reg_n_0_[19]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -2945,7 +3102,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(1),
       Q => \sOtherPixelsData_reg_n_0_[1]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[20]\: unisim.vcomponents.FDRE
      port map (
@@ -2953,7 +3110,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(20),
       Q => \sOtherPixelsData_reg_n_0_[20]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[21]\: unisim.vcomponents.FDRE
      port map (
@@ -2961,7 +3118,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(21),
       Q => \sOtherPixelsData_reg_n_0_[21]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[22]\: unisim.vcomponents.FDRE
      port map (
@@ -2969,7 +3126,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(22),
       Q => \sOtherPixelsData_reg_n_0_[22]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[23]\: unisim.vcomponents.FDRE
      port map (
@@ -2977,7 +3134,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(23),
       Q => \sOtherPixelsData_reg_n_0_[23]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[24]\: unisim.vcomponents.FDRE
      port map (
@@ -2985,7 +3142,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(24),
       Q => \sOtherPixelsData_reg_n_0_[24]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[25]\: unisim.vcomponents.FDRE
      port map (
@@ -2993,7 +3150,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(25),
       Q => \sOtherPixelsData_reg_n_0_[25]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[26]\: unisim.vcomponents.FDRE
      port map (
@@ -3001,7 +3158,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(26),
       Q => \sOtherPixelsData_reg_n_0_[26]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[27]\: unisim.vcomponents.FDRE
      port map (
@@ -3009,7 +3166,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(27),
       Q => \sOtherPixelsData_reg_n_0_[27]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[28]\: unisim.vcomponents.FDRE
      port map (
@@ -3017,7 +3174,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(28),
       Q => \sOtherPixelsData_reg_n_0_[28]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[29]\: unisim.vcomponents.FDRE
      port map (
@@ -3025,7 +3182,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(29),
       Q => \sOtherPixelsData_reg_n_0_[29]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -3033,7 +3190,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(2),
       Q => \sOtherPixelsData_reg_n_0_[2]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -3041,7 +3198,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(3),
       Q => \sOtherPixelsData_reg_n_0_[3]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -3049,7 +3206,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(4),
       Q => \sOtherPixelsData_reg_n_0_[4]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -3057,7 +3214,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(5),
       Q => \sOtherPixelsData_reg_n_0_[5]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -3065,7 +3222,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(6),
       Q => \sOtherPixelsData_reg_n_0_[6]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -3073,7 +3230,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(7),
       Q => \sOtherPixelsData_reg_n_0_[7]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[8]\: unisim.vcomponents.FDRE
      port map (
@@ -3081,7 +3238,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(8),
       Q => \sOtherPixelsData_reg_n_0_[8]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sOtherPixelsData_reg[9]\: unisim.vcomponents.FDRE
      port map (
@@ -3089,7 +3246,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => p_1_in(9),
       Q => \sOtherPixelsData_reg_n_0_[9]\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[0][0]\: unisim.vcomponents.FDRE
      port map (
@@ -3097,7 +3254,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteDataDly(0),
       Q => \sPixel_reg[0]\(0),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[0][1]\: unisim.vcomponents.FDRE
      port map (
@@ -3105,7 +3262,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteDataDly(1),
       Q => \sPixel_reg[0]\(1),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[0][2]\: unisim.vcomponents.FDRE
      port map (
@@ -3113,7 +3270,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteDataDly(2),
       Q => \sPixel_reg[0]\(2),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[0][3]\: unisim.vcomponents.FDRE
      port map (
@@ -3121,7 +3278,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteDataDly(3),
       Q => \sPixel_reg[0]\(3),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[0][4]\: unisim.vcomponents.FDRE
      port map (
@@ -3129,7 +3286,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteDataDly(4),
       Q => \sPixel_reg[0]\(4),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[0][5]\: unisim.vcomponents.FDRE
      port map (
@@ -3137,7 +3294,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteDataDly(5),
       Q => \sPixel_reg[0]\(5),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[0][6]\: unisim.vcomponents.FDRE
      port map (
@@ -3145,7 +3302,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteDataDly(6),
       Q => \sPixel_reg[0]\(6),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[0][7]\: unisim.vcomponents.FDRE
      port map (
@@ -3153,7 +3310,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteDataDly(7),
       Q => \sPixel_reg[0]\(7),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[0][8]\: unisim.vcomponents.FDRE
      port map (
@@ -3161,7 +3318,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteDataDly(8),
       Q => \sPixel_reg[0]\(8),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[0][9]\: unisim.vcomponents.FDRE
      port map (
@@ -3169,7 +3326,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => sLineBufferWriteDataDly(9),
       Q => \sPixel_reg[0]\(9),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[1][0]\: unisim.vcomponents.FDRE
      port map (
@@ -3177,7 +3334,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[0]\(0),
       Q => \sPixel_reg[1]\(0),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[1][1]\: unisim.vcomponents.FDRE
      port map (
@@ -3185,7 +3342,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[0]\(1),
       Q => \sPixel_reg[1]\(1),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[1][2]\: unisim.vcomponents.FDRE
      port map (
@@ -3193,7 +3350,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[0]\(2),
       Q => \sPixel_reg[1]\(2),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[1][3]\: unisim.vcomponents.FDRE
      port map (
@@ -3201,7 +3358,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[0]\(3),
       Q => \sPixel_reg[1]\(3),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[1][4]\: unisim.vcomponents.FDRE
      port map (
@@ -3209,7 +3366,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[0]\(4),
       Q => \sPixel_reg[1]\(4),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[1][5]\: unisim.vcomponents.FDRE
      port map (
@@ -3217,7 +3374,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[0]\(5),
       Q => \sPixel_reg[1]\(5),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[1][6]\: unisim.vcomponents.FDRE
      port map (
@@ -3225,7 +3382,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[0]\(6),
       Q => \sPixel_reg[1]\(6),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[1][7]\: unisim.vcomponents.FDRE
      port map (
@@ -3233,7 +3390,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[0]\(7),
       Q => \sPixel_reg[1]\(7),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[1][8]\: unisim.vcomponents.FDRE
      port map (
@@ -3241,7 +3398,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[0]\(8),
       Q => \sPixel_reg[1]\(8),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[1][9]\: unisim.vcomponents.FDRE
      port map (
@@ -3249,7 +3406,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[0]\(9),
       Q => \sPixel_reg[1]\(9),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[2][0]\: unisim.vcomponents.FDRE
      port map (
@@ -3257,7 +3414,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => LineBufferInst_n_19,
       Q => \sPixel_reg[2]\(0),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[2][1]\: unisim.vcomponents.FDRE
      port map (
@@ -3265,7 +3422,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => LineBufferInst_n_18,
       Q => \sPixel_reg[2]\(1),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[2][2]\: unisim.vcomponents.FDRE
      port map (
@@ -3273,7 +3430,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => LineBufferInst_n_17,
       Q => \sPixel_reg[2]\(2),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[2][3]\: unisim.vcomponents.FDRE
      port map (
@@ -3281,7 +3438,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => LineBufferInst_n_16,
       Q => \sPixel_reg[2]\(3),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[2][4]\: unisim.vcomponents.FDRE
      port map (
@@ -3289,7 +3446,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => LineBufferInst_n_15,
       Q => \sPixel_reg[2]\(4),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[2][5]\: unisim.vcomponents.FDRE
      port map (
@@ -3297,7 +3454,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => LineBufferInst_n_14,
       Q => \sPixel_reg[2]\(5),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[2][6]\: unisim.vcomponents.FDRE
      port map (
@@ -3305,7 +3462,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => LineBufferInst_n_13,
       Q => \sPixel_reg[2]\(6),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[2][7]\: unisim.vcomponents.FDRE
      port map (
@@ -3313,7 +3470,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => LineBufferInst_n_12,
       Q => \sPixel_reg[2]\(7),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[2][8]\: unisim.vcomponents.FDRE
      port map (
@@ -3321,7 +3478,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => LineBufferInst_n_11,
       Q => \sPixel_reg[2]\(8),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[2][9]\: unisim.vcomponents.FDRE
      port map (
@@ -3329,7 +3486,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => LineBufferInst_n_10,
       Q => \sPixel_reg[2]\(9),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[3][0]\: unisim.vcomponents.FDRE
      port map (
@@ -3337,7 +3494,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[2]\(0),
       Q => \sPixel_reg[3]\(0),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[3][1]\: unisim.vcomponents.FDRE
      port map (
@@ -3345,7 +3502,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[2]\(1),
       Q => \sPixel_reg[3]\(1),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[3][2]\: unisim.vcomponents.FDRE
      port map (
@@ -3353,7 +3510,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[2]\(2),
       Q => \sPixel_reg[3]\(2),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[3][3]\: unisim.vcomponents.FDRE
      port map (
@@ -3361,7 +3518,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[2]\(3),
       Q => \sPixel_reg[3]\(3),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[3][4]\: unisim.vcomponents.FDRE
      port map (
@@ -3369,7 +3526,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[2]\(4),
       Q => \sPixel_reg[3]\(4),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[3][5]\: unisim.vcomponents.FDRE
      port map (
@@ -3377,7 +3534,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[2]\(5),
       Q => \sPixel_reg[3]\(5),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[3][6]\: unisim.vcomponents.FDRE
      port map (
@@ -3385,7 +3542,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[2]\(6),
       Q => \sPixel_reg[3]\(6),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[3][7]\: unisim.vcomponents.FDRE
      port map (
@@ -3393,7 +3550,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[2]\(7),
       Q => \sPixel_reg[3]\(7),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[3][8]\: unisim.vcomponents.FDRE
      port map (
@@ -3401,7 +3558,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[2]\(8),
       Q => \sPixel_reg[3]\(8),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sPixel_reg[3][9]\: unisim.vcomponents.FDRE
      port map (
@@ -3409,112 +3566,106 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sPixel_reg[2]\(9),
       Q => \sPixel_reg[3]\(9),
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
-\sStrobesShiftReg[0][FirstColumn]_i_1\: unisim.vcomponents.LUT5
+\sStrobesShiftReg[0][FirstColumn]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2F222022"
+      INIT => X"FF80808000808080"
     )
         port map (
       I0 => \sStrobesShiftReg[0][FirstColumn]_i_2_n_0\,
       I1 => \sStrobesShiftReg[0][FirstColumn]_i_3_n_0\,
-      I2 => sOtherPixelsData,
-      I3 => sStreamReset_n,
-      I4 => \sStrobesShiftReg_reg[0][FirstColumn]__0\,
+      I2 => \sStrobesShiftReg[0][FirstColumn]_i_4_n_0\,
+      I3 => \sAXIMasterRed[9]_i_4_n_0\,
+      I4 => sStreamReset_n,
+      I5 => \sStrobesShiftReg_reg[0][FirstColumn]__0\,
       O => \sStrobesShiftReg[0][FirstColumn]_i_1_n_0\
     );
-\sStrobesShiftReg[0][FirstColumn]_i_2\: unisim.vcomponents.LUT5
+\sStrobesShiftReg[0][FirstColumn]_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"00000001"
+      INIT => X"DF"
     )
         port map (
-      I0 => \sCntColumns_reg__0\(3),
-      I1 => \sCntColumns_reg__0\(9),
-      I2 => \sCntColumns_reg__0\(4),
-      I3 => \sCntColumns_reg__0\(8),
-      I4 => \sStrobesShiftReg[0][FirstColumn]_i_4_n_0\,
+      I0 => sCntRemPixels(0),
+      I1 => sCntRemPixels(1),
+      I2 => sAXI_SlaveLastAsserted_reg_n_0,
       O => \sStrobesShiftReg[0][FirstColumn]_i_2_n_0\
     );
-\sStrobesShiftReg[0][FirstColumn]_i_3\: unisim.vcomponents.LUT5
+\sStrobesShiftReg[0][FirstColumn]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFE"
+      INIT => X"0000000100000000"
     )
         port map (
-      I0 => \sStrobesShiftReg[0][FirstColumn]_i_5_n_0\,
-      I1 => \sCntColumns_reg__0\(2),
-      I2 => \sCntColumns_reg__0\(5),
+      I0 => \sCntColumns_reg__0\(8),
+      I1 => \sCntColumns_reg__0\(9),
+      I2 => \sCntColumns_reg__0\(6),
       I3 => \sCntColumns_reg__0\(7),
       I4 => \sCntColumns_reg__0\(10),
+      I5 => sStreamReset_n,
       O => \sStrobesShiftReg[0][FirstColumn]_i_3_n_0\
     );
-\sStrobesShiftReg[0][FirstColumn]_i_4\: unisim.vcomponents.LUT4
+\sStrobesShiftReg[0][FirstColumn]_i_4\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEF"
+      INIT => X"0000000000000001"
     )
         port map (
-      I0 => \sCntColumns_reg__0\(1),
-      I1 => \sCntColumns_reg__0\(0),
-      I2 => sStreamReset_n,
-      I3 => \sCntColumns_reg__0\(6),
+      I0 => \sCntColumns_reg__0\(2),
+      I1 => \sCntColumns_reg__0\(3),
+      I2 => \sCntColumns_reg__0\(0),
+      I3 => \sCntColumns_reg__0\(1),
+      I4 => \sCntColumns_reg__0\(5),
+      I5 => \sCntColumns_reg__0\(4),
       O => \sStrobesShiftReg[0][FirstColumn]_i_4_n_0\
-    );
-\sStrobesShiftReg[0][FirstColumn]_i_5\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"08"
-    )
-        port map (
-      I0 => sAXI_SlaveLastAsserted_reg_n_0,
-      I1 => sCntRemPixels(0),
-      I2 => sCntRemPixels(1),
-      O => \sStrobesShiftReg[0][FirstColumn]_i_5_n_0\
     );
 \sStrobesShiftReg[0][FirstLine]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FBFFFFFF08000800"
+      INIT => X"FFDFFFFF00C00000"
     )
         port map (
-      I0 => s_axis_video_tuser,
-      I1 => s_axis_video_tvalid,
-      I2 => \sStrobesShiftReg[0][Last]_i_2_n_0\,
-      I3 => m_axis_video_tready,
-      I4 => \sStrobesShiftReg_reg[0][Last]__0\,
+      I0 => \sStrobesShiftReg_reg[0][Last]__0\,
+      I1 => s_axis_video_tuser,
+      I2 => s_axis_video_tvalid,
+      I3 => \sAXIMasterGreen[9]_i_3_n_0\,
+      I4 => m_axis_video_tready,
       I5 => \sStrobesShiftReg_reg[0][FirstLine]__0\,
       O => \sStrobesShiftReg[0][FirstLine]_i_1_n_0\
     );
 \sStrobesShiftReg[0][Last]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"DFDFDF0000000000"
+      INIT => X"A8A800A8A8A8A8A8"
     )
         port map (
-      I0 => m_axis_video_tready,
-      I1 => \sStrobesShiftReg[0][Last]_i_2_n_0\,
-      I2 => s_axis_video_tvalid,
-      I3 => \sCntLines[0]_i_2_n_0\,
-      I4 => \sStrobesShiftReg_reg[0][Last]__0\,
-      I5 => sStreamReset_n,
+      I0 => sStreamReset_n,
+      I1 => \sCntLines[0]_i_2_n_0\,
+      I2 => \sStrobesShiftReg_reg[0][Last]__0\,
+      I3 => m_axis_video_tready,
+      I4 => \sAXIMasterGreen[9]_i_3_n_0\,
+      I5 => s_axis_video_tvalid,
       O => \sStrobesShiftReg[0][Last]_i_1_n_0\
-    );
-\sStrobesShiftReg[0][Last]_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => sCntRemPixels(0),
-      I1 => sCntRemPixels(1),
-      O => \sStrobesShiftReg[0][Last]_i_2_n_0\
     );
 \sStrobesShiftReg[0][User]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0200FFFF02000000"
+      INIT => X"0008FFFF00080000"
     )
         port map (
       I0 => s_axis_video_tuser,
-      I1 => sCntRemPixels(1),
+      I1 => s_axis_video_tvalid,
       I2 => sCntRemPixels(0),
-      I3 => s_axis_video_tvalid,
+      I3 => sCntRemPixels(1),
       I4 => m_axis_video_tready,
       I5 => \sStrobesShiftReg_reg[0][User]__0\,
       O => \sStrobesShiftReg[0][User]_i_1_n_0\
+    );
+\sStrobesShiftReg[3][User]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"AAA8"
+    )
+        port map (
+      I0 => m_axis_video_tready,
+      I1 => sCntRemPixels(1),
+      I2 => sCntRemPixels(0),
+      I3 => s_axis_video_tvalid,
+      O => sOtherPixelsData
     );
 \sStrobesShiftReg_reg[0][FirstColumn]\: unisim.vcomponents.FDRE
      port map (
@@ -3530,7 +3681,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \sStrobesShiftReg[0][FirstLine]_i_1_n_0\,
       Q => \sStrobesShiftReg_reg[0][FirstLine]__0\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sStrobesShiftReg_reg[0][Last]\: unisim.vcomponents.FDRE
      port map (
@@ -3546,7 +3697,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \sStrobesShiftReg[0][User]_i_1_n_0\,
       Q => \sStrobesShiftReg_reg[0][User]__0\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sStrobesShiftReg_reg[1][FirstColumn]\: unisim.vcomponents.FDRE
      port map (
@@ -3554,7 +3705,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sStrobesShiftReg_reg[0][FirstColumn]__0\,
       Q => \sStrobesShiftReg_reg[1][FirstColumn]__0\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sStrobesShiftReg_reg[1][FirstLine]\: unisim.vcomponents.FDRE
      port map (
@@ -3562,7 +3713,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sStrobesShiftReg_reg[0][FirstLine]__0\,
       Q => \sStrobesShiftReg_reg[1][FirstLine]__0\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sStrobesShiftReg_reg[1][Last]\: unisim.vcomponents.FDRE
      port map (
@@ -3570,7 +3721,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sStrobesShiftReg_reg[0][Last]__0\,
       Q => \sStrobesShiftReg_reg[1][Last]__0\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sStrobesShiftReg_reg[1][User]\: unisim.vcomponents.FDRE
      port map (
@@ -3578,7 +3729,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sStrobesShiftReg_reg[0][User]__0\,
       Q => \sStrobesShiftReg_reg[1][User]__0\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sStrobesShiftReg_reg[2][FirstColumn]\: unisim.vcomponents.FDRE
      port map (
@@ -3586,7 +3737,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sStrobesShiftReg_reg[1][FirstColumn]__0\,
       Q => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sStrobesShiftReg_reg[2][FirstLine]\: unisim.vcomponents.FDRE
      port map (
@@ -3594,7 +3745,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sStrobesShiftReg_reg[1][FirstLine]__0\,
       Q => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sStrobesShiftReg_reg[2][Last]\: unisim.vcomponents.FDRE
      port map (
@@ -3602,7 +3753,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sStrobesShiftReg_reg[1][Last]__0\,
       Q => \sStrobesShiftReg_reg[2][Last]__0\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sStrobesShiftReg_reg[2][User]\: unisim.vcomponents.FDRE
      port map (
@@ -3610,7 +3761,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sStrobesShiftReg_reg[1][User]__0\,
       Q => \sStrobesShiftReg_reg[2][User]__0\,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sStrobesShiftReg_reg[3][Last]\: unisim.vcomponents.FDRE
      port map (
@@ -3618,7 +3769,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sStrobesShiftReg_reg[2][Last]__0\,
       Q => m_axis_video_tlast,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 \sStrobesShiftReg_reg[3][User]\: unisim.vcomponents.FDRE
      port map (
@@ -3626,7 +3777,7 @@ sLineBufferWrite_reg: unisim.vcomponents.FDRE
       CE => sOtherPixelsData,
       D => \sStrobesShiftReg_reg[2][User]__0\,
       Q => m_axis_video_tuser,
-      R => \sAXIMasterBlue[9]_i_1_n_0\
+      R => \sAXIMasterRed[9]_i_1_n_0\
     );
 s_axis_video_tready_INST_0: unisim.vcomponents.LUT3
     generic map(

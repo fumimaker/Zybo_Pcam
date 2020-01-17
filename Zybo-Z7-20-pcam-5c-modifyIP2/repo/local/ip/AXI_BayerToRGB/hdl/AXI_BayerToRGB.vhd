@@ -84,6 +84,7 @@ port (
   m_axis_video_tvalid : out STD_LOGIC;
   m_axis_video_tuser : out STD_LOGIC;
   m_axis_video_tlast : out STD_LOGIC
+  
 );
 end AXI_BayerToRGB;
 
@@ -125,7 +126,7 @@ architecture rtl of AXI_BayerToRGB is
 
   signal sDataIsAvailableAndRequested: STD_LOGIC;
   signal sCoverInitialLatency: STD_LOGIC;
-
+  
 begin
 
 -- Until we cover the initial component latency (i.e. the amount of time needed until the
@@ -381,14 +382,14 @@ begin
             sAXIMasterRed  <= sPixel(1)(kBayerWidth-1 downto 0);
           when others => null;
         end case;
-        if (sAXIMasterBlue>to_unsigned(500, sAXIMasterBlue'length)) and
-            (sAXIMasterRed>to_unsigned(1000, sAXIMasterGreen'length)) and
-            (sAXIMasterGreen>to_unsigned(500, sAXIMasterRed'length)) then
+--        if (sAXIMasterBlue>to_unsigned(512, sAXIMasterBlue'length)) or
+--            (sAXIMasterGreen>to_unsigned(1024, sAXIMasterGreen'length)) or
+--            (sAXIMasterRed>to_unsigned(512, sAXIMasterRed'length)) then
             
-            sAXIMasterBlue  <= to_unsigned(1000, sAXIMasterBlue'length);
-            sAXIMasterGreen <= to_unsigned(0, sAXIMasterGreen'length);
-            sAXIMasterRed  <= to_unsigned(1000, sAXIMasterRed'length);
-        end if;
+--            sAXIMasterBlue  <= to_unsigned(0, sAXIMasterBlue'length);
+--            sAXIMasterGreen <= to_unsigned(0, sAXIMasterGreen'length);
+--            sAXIMasterRed  <= to_unsigned(0, sAXIMasterRed'length);
+--        end if;
       end if;
     end if;
   end if;
@@ -407,6 +408,7 @@ begin
   end if;
 end process ShiftStrobes;
 
+
 -- This process assigns the Valid signal on the AXI stream output interface.
 AssignValid: process(StreamClk)
 begin
@@ -424,10 +426,22 @@ end process AssignValid;
 -- Assign AXI stream output interface signals.
 m_axis_video_tuser  <= sStrobesShiftReg(3).User;
 m_axis_video_tlast  <= sStrobesShiftReg(3).Last;
-m_axis_video_tdata  <= "00" & 
-std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1))&
-    std_logic_vector(sAXIMasterBlue) &
-    std_logic_vector(sAXIMasterRed);
+
+m_axis_video_tdata  <=
+    "00" &
+    std_logic_vector(to_unsigned(0, sAXIMasterRed'length))& 
+    std_logic_vector(to_unsigned(0, sAXIMasterGreen'length-1))&
+    std_logic_vector(to_unsigned(0, sAXIMasterBlue'length)) when
+    sAXIMasterRed > 512 else
+    "00" &
+    std_logic_vector(sAXIMasterRed) &
+    std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) &
+    std_logic_vector(sAXIMasterBlue);
+
+
+-- m_axis_video_tdata  <= "00" &
+--    std_logic_vector(sAXIMasterRed)& 
+--    std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1))&
+--    std_logic_vector(sAXIMasterBlue);
 
 end rtl;
-
