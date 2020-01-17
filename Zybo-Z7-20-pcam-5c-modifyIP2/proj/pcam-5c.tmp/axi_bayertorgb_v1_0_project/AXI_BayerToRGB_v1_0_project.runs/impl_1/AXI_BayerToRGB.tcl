@@ -68,12 +68,12 @@ set rc [catch {
   create_project -in_memory -part xc7z020clg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir c:/users/fpga/documents/github/zybo_pcam/zybo-z7-20-pcam-5c-modifyip2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.cache/wt [current_project]
-  set_property parent.project_path c:/users/fpga/documents/github/zybo_pcam/zybo-z7-20-pcam-5c-modifyip2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.xpr [current_project]
+  set_property webtalk.parent_dir C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.cache/wt [current_project]
+  set_property parent.project_path C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.xpr [current_project]
   set_property ip_repo_paths C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo [current_project]
-  set_property ip_output_repo c:/users/fpga/documents/github/zybo_pcam/zybo-z7-20-pcam-5c-modifyip2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.cache/ip [current_project]
+  set_property ip_output_repo C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet c:/users/fpga/documents/github/zybo_pcam/zybo-z7-20-pcam-5c-modifyip2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.runs/synth_1/AXI_BayerToRGB.dcp
+  add_files -quiet C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.runs/synth_1/AXI_BayerToRGB.dcp
   link_design -top AXI_BayerToRGB -part xc7z020clg400-1
   close_msg_db -file init_design.pb
 } RESULT]

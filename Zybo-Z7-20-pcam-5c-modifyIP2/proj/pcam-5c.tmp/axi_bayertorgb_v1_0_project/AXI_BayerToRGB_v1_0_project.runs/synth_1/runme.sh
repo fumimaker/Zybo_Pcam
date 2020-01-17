@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='c:/users/fpga/documents/github/zybo_pcam/zybo-z7-20-pcam-5c-modifyip2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.runs/synth_1'
+HD_PWD='C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

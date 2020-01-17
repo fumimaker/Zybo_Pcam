@@ -21,16 +21,16 @@ create_project -in_memory -part xc7z020clg400-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir c:/users/fpga/documents/github/zybo_pcam/zybo-z7-20-pcam-5c-modifyip2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.cache/wt [current_project]
-set_property parent.project_path c:/users/fpga/documents/github/zybo_pcam/zybo-z7-20-pcam-5c-modifyip2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.cache/wt [current_project]
+set_property parent.project_path C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_repo_paths c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo [current_project]
-set_property ip_output_repo c:/users/fpga/documents/github/zybo_pcam/zybo-z7-20-pcam-5c-modifyip2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.cache/ip [current_project]
+set_property ip_output_repo c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/LineBuffer.vhd
-  c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd
+  C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/LineBuffer.vhd
+  C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/repo/local/ip/AXI_BayerToRGB/hdl/AXI_BayerToRGB.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
