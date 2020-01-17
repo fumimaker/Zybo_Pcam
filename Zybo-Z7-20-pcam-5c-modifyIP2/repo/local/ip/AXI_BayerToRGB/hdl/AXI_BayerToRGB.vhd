@@ -381,11 +381,13 @@ begin
             sAXIMasterRed  <= sPixel(1)(kBayerWidth-1 downto 0);
           when others => null;
         end case;
-
-        if sAXIMasterBlue>'1000' and sAXIMasterRed>'1000' and sAXIMasterGreen>'2000' then
-             sAXIMasterBlue  <= '1023';
-             sAXIMasterGreen <= (others => '0');
-             sAXIMasterRed  <= '1023';
+        if (sAXIMasterBlue>to_unsigned(500, sAXIMasterBlue'length)) and
+            (sAXIMasterRed>to_unsigned(1000, sAXIMasterGreen'length)) and
+            (sAXIMasterGreen>to_unsigned(500, sAXIMasterRed'length)) then
+            
+            sAXIMasterBlue  <= to_unsigned(1000, sAXIMasterBlue'length);
+            sAXIMasterGreen <= to_unsigned(0, sAXIMasterGreen'length);
+            sAXIMasterRed  <= to_unsigned(1000, sAXIMasterRed'length);
         end if;
       end if;
     end if;
@@ -422,10 +424,10 @@ end process AssignValid;
 -- Assign AXI stream output interface signals.
 m_axis_video_tuser  <= sStrobesShiftReg(3).User;
 m_axis_video_tlast  <= sStrobesShiftReg(3).Last;
-m_axis_video_tdata  <= "00" & std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) &
+m_axis_video_tdata  <= "00" & 
+std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1))&
     std_logic_vector(sAXIMasterBlue) &
     std_logic_vector(sAXIMasterRed);
-    
 
 end rtl;
 
