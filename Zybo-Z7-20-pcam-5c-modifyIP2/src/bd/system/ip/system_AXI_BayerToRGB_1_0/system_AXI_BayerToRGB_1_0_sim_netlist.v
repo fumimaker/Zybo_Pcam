@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Fri Jan 17 22:22:52 2020
+// Date        : Fri Jan 17 23:48:10 2020
 // Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_AXI_BayerToRGB_1_0/system_AXI_BayerToRGB_1_0_sim_netlist.v
@@ -113,7 +113,6 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
   wire LineBufferInst_n_19;
   wire StreamClk;
   wire [29:0]m_axis_video_tdata;
-  wire \m_axis_video_tdata[28]_INST_0_i_1_n_0 ;
   wire m_axis_video_tlast;
   wire m_axis_video_tready;
   wire m_axis_video_tuser;
@@ -132,16 +131,6 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
   wire \sAXIMasterBlue[8]_i_1_n_0 ;
   wire \sAXIMasterBlue[9]_i_1_n_0 ;
   wire \sAXIMasterBlue[9]_i_2_n_0 ;
-  wire \sAXIMasterBlue_reg_n_0_[0] ;
-  wire \sAXIMasterBlue_reg_n_0_[1] ;
-  wire \sAXIMasterBlue_reg_n_0_[2] ;
-  wire \sAXIMasterBlue_reg_n_0_[3] ;
-  wire \sAXIMasterBlue_reg_n_0_[4] ;
-  wire \sAXIMasterBlue_reg_n_0_[5] ;
-  wire \sAXIMasterBlue_reg_n_0_[6] ;
-  wire \sAXIMasterBlue_reg_n_0_[7] ;
-  wire \sAXIMasterBlue_reg_n_0_[8] ;
-  wire \sAXIMasterBlue_reg_n_0_[9] ;
   wire [10:1]sAXIMasterGreen1_in;
   wire \sAXIMasterGreen[10]_i_1_n_0 ;
   wire \sAXIMasterGreen[3]_i_2_n_0 ;
@@ -160,12 +149,10 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
   wire \sAXIMasterGreen[7]_i_7_n_0 ;
   wire \sAXIMasterGreen[7]_i_8_n_0 ;
   wire \sAXIMasterGreen[7]_i_9_n_0 ;
-  wire \sAXIMasterGreen[9]_i_1_n_0 ;
+  wire \sAXIMasterGreen[9]_i_2_n_0 ;
   wire \sAXIMasterGreen[9]_i_3_n_0 ;
   wire \sAXIMasterGreen[9]_i_4_n_0 ;
   wire \sAXIMasterGreen[9]_i_5_n_0 ;
-  wire \sAXIMasterGreen[9]_i_6_n_0 ;
-  wire \sAXIMasterGreen[9]_i_7_n_0 ;
   wire \sAXIMasterGreen_reg[3]_i_1_n_0 ;
   wire \sAXIMasterGreen_reg[3]_i_1_n_1 ;
   wire \sAXIMasterGreen_reg[3]_i_1_n_2 ;
@@ -174,17 +161,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
   wire \sAXIMasterGreen_reg[7]_i_1_n_1 ;
   wire \sAXIMasterGreen_reg[7]_i_1_n_2 ;
   wire \sAXIMasterGreen_reg[7]_i_1_n_3 ;
-  wire \sAXIMasterGreen_reg[9]_i_2_n_3 ;
-  wire \sAXIMasterGreen_reg_n_0_[10] ;
-  wire \sAXIMasterGreen_reg_n_0_[1] ;
-  wire \sAXIMasterGreen_reg_n_0_[2] ;
-  wire \sAXIMasterGreen_reg_n_0_[3] ;
-  wire \sAXIMasterGreen_reg_n_0_[4] ;
-  wire \sAXIMasterGreen_reg_n_0_[5] ;
-  wire \sAXIMasterGreen_reg_n_0_[6] ;
-  wire \sAXIMasterGreen_reg_n_0_[7] ;
-  wire \sAXIMasterGreen_reg_n_0_[8] ;
-  wire \sAXIMasterGreen_reg_n_0_[9] ;
+  wire \sAXIMasterGreen_reg[9]_i_1_n_3 ;
   wire \sAXIMasterRed[0]_i_1_n_0 ;
   wire \sAXIMasterRed[1]_i_1_n_0 ;
   wire \sAXIMasterRed[2]_i_1_n_0 ;
@@ -194,19 +171,12 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
   wire \sAXIMasterRed[6]_i_1_n_0 ;
   wire \sAXIMasterRed[7]_i_1_n_0 ;
   wire \sAXIMasterRed[8]_i_1_n_0 ;
+  wire \sAXIMasterRed[8]_i_3_n_0 ;
+  wire \sAXIMasterRed[8]_i_4_n_0 ;
   wire \sAXIMasterRed[9]_i_1_n_0 ;
   wire \sAXIMasterRed[9]_i_2_n_0 ;
   wire \sAXIMasterRed[9]_i_3_n_0 ;
   wire \sAXIMasterRed[9]_i_4_n_0 ;
-  wire \sAXIMasterRed_reg_n_0_[0] ;
-  wire \sAXIMasterRed_reg_n_0_[1] ;
-  wire \sAXIMasterRed_reg_n_0_[2] ;
-  wire \sAXIMasterRed_reg_n_0_[3] ;
-  wire \sAXIMasterRed_reg_n_0_[4] ;
-  wire \sAXIMasterRed_reg_n_0_[5] ;
-  wire \sAXIMasterRed_reg_n_0_[6] ;
-  wire \sAXIMasterRed_reg_n_0_[7] ;
-  wire \sAXIMasterRed_reg_n_0_[8] ;
   wire sAXI_SlaveLastAsserted_i_1_n_0;
   wire sAXI_SlaveLastAsserted_reg_n_0;
   wire \sCntColumns[10]_i_1_n_0 ;
@@ -272,10 +242,46 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
   wire \sOtherPixelsData_reg_n_0_[7] ;
   wire \sOtherPixelsData_reg_n_0_[8] ;
   wire \sOtherPixelsData_reg_n_0_[9] ;
-  wire [9:0]\sPixel_reg[0] ;
-  wire [9:0]\sPixel_reg[1] ;
-  wire [9:0]\sPixel_reg[2] ;
-  wire [9:0]\sPixel_reg[3] ;
+  wire \sPixel_reg_n_0_[0][0] ;
+  wire \sPixel_reg_n_0_[0][1] ;
+  wire \sPixel_reg_n_0_[0][2] ;
+  wire \sPixel_reg_n_0_[0][3] ;
+  wire \sPixel_reg_n_0_[0][4] ;
+  wire \sPixel_reg_n_0_[0][5] ;
+  wire \sPixel_reg_n_0_[0][6] ;
+  wire \sPixel_reg_n_0_[0][7] ;
+  wire \sPixel_reg_n_0_[0][8] ;
+  wire \sPixel_reg_n_0_[0][9] ;
+  wire \sPixel_reg_n_0_[1][0] ;
+  wire \sPixel_reg_n_0_[1][1] ;
+  wire \sPixel_reg_n_0_[1][2] ;
+  wire \sPixel_reg_n_0_[1][3] ;
+  wire \sPixel_reg_n_0_[1][4] ;
+  wire \sPixel_reg_n_0_[1][5] ;
+  wire \sPixel_reg_n_0_[1][6] ;
+  wire \sPixel_reg_n_0_[1][7] ;
+  wire \sPixel_reg_n_0_[1][8] ;
+  wire \sPixel_reg_n_0_[1][9] ;
+  wire \sPixel_reg_n_0_[2][0] ;
+  wire \sPixel_reg_n_0_[2][1] ;
+  wire \sPixel_reg_n_0_[2][2] ;
+  wire \sPixel_reg_n_0_[2][3] ;
+  wire \sPixel_reg_n_0_[2][4] ;
+  wire \sPixel_reg_n_0_[2][5] ;
+  wire \sPixel_reg_n_0_[2][6] ;
+  wire \sPixel_reg_n_0_[2][7] ;
+  wire \sPixel_reg_n_0_[2][8] ;
+  wire \sPixel_reg_n_0_[2][9] ;
+  wire \sPixel_reg_n_0_[3][0] ;
+  wire \sPixel_reg_n_0_[3][1] ;
+  wire \sPixel_reg_n_0_[3][2] ;
+  wire \sPixel_reg_n_0_[3][3] ;
+  wire \sPixel_reg_n_0_[3][4] ;
+  wire \sPixel_reg_n_0_[3][5] ;
+  wire \sPixel_reg_n_0_[3][6] ;
+  wire \sPixel_reg_n_0_[3][7] ;
+  wire \sPixel_reg_n_0_[3][8] ;
+  wire \sPixel_reg_n_0_[3][9] ;
   wire sStreamReset_n;
   wire \sStrobesShiftReg[0][FirstColumn]_i_1_n_0 ;
   wire \sStrobesShiftReg[0][FirstColumn]_i_2_n_0 ;
@@ -302,8 +308,8 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
   wire s_axis_video_tuser;
   wire s_axis_video_tvalid;
   wire [0:0]\NLW_sAXIMasterGreen_reg[3]_i_1_O_UNCONNECTED ;
-  wire [3:1]\NLW_sAXIMasterGreen_reg[9]_i_2_CO_UNCONNECTED ;
-  wire [3:2]\NLW_sAXIMasterGreen_reg[9]_i_2_O_UNCONNECTED ;
+  wire [3:1]\NLW_sAXIMasterGreen_reg[9]_i_1_CO_UNCONNECTED ;
+  wire [3:2]\NLW_sAXIMasterGreen_reg[9]_i_1_O_UNCONNECTED ;
 
   system_AXI_BayerToRGB_1_0_LineBuffer LineBufferInst
        (.ADDRARDADDR({sLineBufferCrntAddr,sCrntPositionIndicatorDly1[0]}),
@@ -313,305 +319,6 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .\sLineBufferReadDataBuf_reg[9] (sLineBufferReadDataBuf),
         .sLineBufferWrite_reg(sLineBufferWrite_reg_n_0),
         .\sPixel_reg[2][9] ({LineBufferInst_n_10,LineBufferInst_n_11,LineBufferInst_n_12,LineBufferInst_n_13,LineBufferInst_n_14,LineBufferInst_n_15,LineBufferInst_n_16,LineBufferInst_n_17,LineBufferInst_n_18,LineBufferInst_n_19}));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[0]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterBlue_reg_n_0_[0] ),
-        .O(m_axis_video_tdata[0]));
-  LUT6 #(
-    .INIT(64'h5557555500000000)) 
-    \m_axis_video_tdata[10]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterGreen_reg_n_0_[1] ),
-        .O(m_axis_video_tdata[10]));
-  LUT6 #(
-    .INIT(64'h5557555500000000)) 
-    \m_axis_video_tdata[11]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterGreen_reg_n_0_[2] ),
-        .O(m_axis_video_tdata[11]));
-  LUT6 #(
-    .INIT(64'h5557555500000000)) 
-    \m_axis_video_tdata[12]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterGreen_reg_n_0_[3] ),
-        .O(m_axis_video_tdata[12]));
-  LUT6 #(
-    .INIT(64'h5557555500000000)) 
-    \m_axis_video_tdata[13]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterGreen_reg_n_0_[4] ),
-        .O(m_axis_video_tdata[13]));
-  LUT6 #(
-    .INIT(64'h5557555500000000)) 
-    \m_axis_video_tdata[14]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterGreen_reg_n_0_[5] ),
-        .O(m_axis_video_tdata[14]));
-  LUT6 #(
-    .INIT(64'h5557555500000000)) 
-    \m_axis_video_tdata[15]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterGreen_reg_n_0_[6] ),
-        .O(m_axis_video_tdata[15]));
-  LUT6 #(
-    .INIT(64'h5557555500000000)) 
-    \m_axis_video_tdata[16]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterGreen_reg_n_0_[7] ),
-        .O(m_axis_video_tdata[16]));
-  LUT6 #(
-    .INIT(64'h5557555500000000)) 
-    \m_axis_video_tdata[17]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterGreen_reg_n_0_[8] ),
-        .O(m_axis_video_tdata[17]));
-  LUT6 #(
-    .INIT(64'h5557555500000000)) 
-    \m_axis_video_tdata[18]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterGreen_reg_n_0_[9] ),
-        .O(m_axis_video_tdata[18]));
-  LUT6 #(
-    .INIT(64'h5557555500000000)) 
-    \m_axis_video_tdata[19]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterGreen_reg_n_0_[10] ),
-        .O(m_axis_video_tdata[19]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[1]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterBlue_reg_n_0_[1] ),
-        .O(m_axis_video_tdata[1]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT5 #(
-    .INIT(32'hFFA8FFAA)) 
-    \m_axis_video_tdata[20]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .O(m_axis_video_tdata[20]));
-  LUT5 #(
-    .INIT(32'hFAF8FAFA)) 
-    \m_axis_video_tdata[21]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .O(m_axis_video_tdata[21]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT5 #(
-    .INIT(32'hEEECEEEE)) 
-    \m_axis_video_tdata[22]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .O(m_axis_video_tdata[22]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[23]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterRed_reg_n_0_[3] ),
-        .O(m_axis_video_tdata[23]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[24]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterRed_reg_n_0_[4] ),
-        .O(m_axis_video_tdata[24]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[25]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterRed_reg_n_0_[5] ),
-        .O(m_axis_video_tdata[25]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[26]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterRed_reg_n_0_[6] ),
-        .O(m_axis_video_tdata[26]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[27]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterRed_reg_n_0_[7] ),
-        .O(m_axis_video_tdata[27]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[28]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterRed_reg_n_0_[8] ),
-        .O(m_axis_video_tdata[28]));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    \m_axis_video_tdata[28]_INST_0_i_1 
-       (.I0(\sAXIMasterRed_reg_n_0_[3] ),
-        .I1(\sAXIMasterRed_reg_n_0_[4] ),
-        .I2(\sAXIMasterRed_reg_n_0_[5] ),
-        .I3(\sAXIMasterRed_reg_n_0_[6] ),
-        .I4(\sAXIMasterRed_reg_n_0_[8] ),
-        .I5(\sAXIMasterRed_reg_n_0_[7] ),
-        .O(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[2]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterBlue_reg_n_0_[2] ),
-        .O(m_axis_video_tdata[2]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[3]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterBlue_reg_n_0_[3] ),
-        .O(m_axis_video_tdata[3]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[4]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterBlue_reg_n_0_[4] ),
-        .O(m_axis_video_tdata[4]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[5]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterBlue_reg_n_0_[5] ),
-        .O(m_axis_video_tdata[5]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[6]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterBlue_reg_n_0_[6] ),
-        .O(m_axis_video_tdata[6]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[7]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterBlue_reg_n_0_[7] ),
-        .O(m_axis_video_tdata[7]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[8]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterBlue_reg_n_0_[8] ),
-        .O(m_axis_video_tdata[8]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAA8AAAA)) 
-    \m_axis_video_tdata[9]_INST_0 
-       (.I0(m_axis_video_tdata[29]),
-        .I1(\sAXIMasterRed_reg_n_0_[2] ),
-        .I2(\sAXIMasterRed_reg_n_0_[1] ),
-        .I3(\sAXIMasterRed_reg_n_0_[0] ),
-        .I4(\m_axis_video_tdata[28]_INST_0_i_1_n_0 ),
-        .I5(\sAXIMasterBlue_reg_n_0_[9] ),
-        .O(m_axis_video_tdata[9]));
   LUT6 #(
     .INIT(64'hAAA8FFFFAAA80000)) 
     m_axis_video_tvalid_i_1
@@ -631,92 +338,92 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterBlue[0]_i_1 
-       (.I0(\sPixel_reg[0] [0]),
-        .I1(\sPixel_reg[1] [0]),
-        .I2(\sPixel_reg[2] [0]),
+       (.I0(\sPixel_reg_n_0_[0][0] ),
+        .I1(\sPixel_reg_n_0_[1][0] ),
+        .I2(\sPixel_reg_n_0_[2][0] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[3] [0]),
+        .I5(\sPixel_reg_n_0_[3][0] ),
         .O(\sAXIMasterBlue[0]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterBlue[1]_i_1 
-       (.I0(\sPixel_reg[0] [1]),
-        .I1(\sPixel_reg[1] [1]),
-        .I2(\sPixel_reg[2] [1]),
+       (.I0(\sPixel_reg_n_0_[0][1] ),
+        .I1(\sPixel_reg_n_0_[1][1] ),
+        .I2(\sPixel_reg_n_0_[2][1] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[3] [1]),
+        .I5(\sPixel_reg_n_0_[3][1] ),
         .O(\sAXIMasterBlue[1]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterBlue[2]_i_1 
-       (.I0(\sPixel_reg[0] [2]),
-        .I1(\sPixel_reg[1] [2]),
-        .I2(\sPixel_reg[2] [2]),
+       (.I0(\sPixel_reg_n_0_[0][2] ),
+        .I1(\sPixel_reg_n_0_[1][2] ),
+        .I2(\sPixel_reg_n_0_[2][2] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[3] [2]),
+        .I5(\sPixel_reg_n_0_[3][2] ),
         .O(\sAXIMasterBlue[2]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterBlue[3]_i_1 
-       (.I0(\sPixel_reg[0] [3]),
-        .I1(\sPixel_reg[1] [3]),
-        .I2(\sPixel_reg[2] [3]),
+       (.I0(\sPixel_reg_n_0_[0][3] ),
+        .I1(\sPixel_reg_n_0_[1][3] ),
+        .I2(\sPixel_reg_n_0_[2][3] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[3] [3]),
+        .I5(\sPixel_reg_n_0_[3][3] ),
         .O(\sAXIMasterBlue[3]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterBlue[4]_i_1 
-       (.I0(\sPixel_reg[0] [4]),
-        .I1(\sPixel_reg[1] [4]),
-        .I2(\sPixel_reg[2] [4]),
+       (.I0(\sPixel_reg_n_0_[0][4] ),
+        .I1(\sPixel_reg_n_0_[1][4] ),
+        .I2(\sPixel_reg_n_0_[2][4] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[3] [4]),
+        .I5(\sPixel_reg_n_0_[3][4] ),
         .O(\sAXIMasterBlue[4]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterBlue[5]_i_1 
-       (.I0(\sPixel_reg[0] [5]),
-        .I1(\sPixel_reg[1] [5]),
-        .I2(\sPixel_reg[2] [5]),
+       (.I0(\sPixel_reg_n_0_[0][5] ),
+        .I1(\sPixel_reg_n_0_[1][5] ),
+        .I2(\sPixel_reg_n_0_[2][5] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[3] [5]),
+        .I5(\sPixel_reg_n_0_[3][5] ),
         .O(\sAXIMasterBlue[5]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterBlue[6]_i_1 
-       (.I0(\sPixel_reg[0] [6]),
-        .I1(\sPixel_reg[1] [6]),
-        .I2(\sPixel_reg[2] [6]),
+       (.I0(\sPixel_reg_n_0_[0][6] ),
+        .I1(\sPixel_reg_n_0_[1][6] ),
+        .I2(\sPixel_reg_n_0_[2][6] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[3] [6]),
+        .I5(\sPixel_reg_n_0_[3][6] ),
         .O(\sAXIMasterBlue[6]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterBlue[7]_i_1 
-       (.I0(\sPixel_reg[0] [7]),
-        .I1(\sPixel_reg[1] [7]),
-        .I2(\sPixel_reg[2] [7]),
+       (.I0(\sPixel_reg_n_0_[0][7] ),
+        .I1(\sPixel_reg_n_0_[1][7] ),
+        .I2(\sPixel_reg_n_0_[2][7] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[3] [7]),
+        .I5(\sPixel_reg_n_0_[3][7] ),
         .O(\sAXIMasterBlue[7]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterBlue[8]_i_1 
-       (.I0(\sPixel_reg[0] [8]),
-        .I1(\sPixel_reg[1] [8]),
-        .I2(\sPixel_reg[2] [8]),
+       (.I0(\sPixel_reg_n_0_[0][8] ),
+        .I1(\sPixel_reg_n_0_[1][8] ),
+        .I2(\sPixel_reg_n_0_[2][8] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[3] [8]),
+        .I5(\sPixel_reg_n_0_[3][8] ),
         .O(\sAXIMasterBlue[8]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hFFFE00FE)) 
@@ -725,77 +432,77 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(\sStrobesShiftReg_reg[2][FirstColumn]__0 ),
         .I2(\sStrobesShiftReg_reg[2][FirstLine]__0 ),
         .I3(\sAXIMasterRed[9]_i_4_n_0 ),
-        .I4(\sAXIMasterBlue_reg_n_0_[9] ),
+        .I4(m_axis_video_tdata[9]),
         .O(\sAXIMasterBlue[9]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterBlue[9]_i_2 
-       (.I0(\sPixel_reg[0] [9]),
-        .I1(\sPixel_reg[1] [9]),
-        .I2(\sPixel_reg[2] [9]),
+       (.I0(\sPixel_reg_n_0_[0][9] ),
+        .I1(\sPixel_reg_n_0_[1][9] ),
+        .I2(\sPixel_reg_n_0_[2][9] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[3] [9]),
+        .I5(\sPixel_reg_n_0_[3][9] ),
         .O(\sAXIMasterBlue[9]_i_2_n_0 ));
   FDRE \sAXIMasterBlue_reg[0] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterBlue[0]_i_1_n_0 ),
-        .Q(\sAXIMasterBlue_reg_n_0_[0] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[0]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterBlue_reg[1] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterBlue[1]_i_1_n_0 ),
-        .Q(\sAXIMasterBlue_reg_n_0_[1] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[1]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterBlue_reg[2] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterBlue[2]_i_1_n_0 ),
-        .Q(\sAXIMasterBlue_reg_n_0_[2] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[2]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterBlue_reg[3] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterBlue[3]_i_1_n_0 ),
-        .Q(\sAXIMasterBlue_reg_n_0_[3] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[3]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterBlue_reg[4] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterBlue[4]_i_1_n_0 ),
-        .Q(\sAXIMasterBlue_reg_n_0_[4] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[4]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterBlue_reg[5] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterBlue[5]_i_1_n_0 ),
-        .Q(\sAXIMasterBlue_reg_n_0_[5] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[5]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterBlue_reg[6] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterBlue[6]_i_1_n_0 ),
-        .Q(\sAXIMasterBlue_reg_n_0_[6] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[6]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterBlue_reg[7] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterBlue[7]_i_1_n_0 ),
-        .Q(\sAXIMasterBlue_reg_n_0_[7] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[7]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterBlue_reg[8] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterBlue[8]_i_1_n_0 ),
-        .Q(\sAXIMasterBlue_reg_n_0_[8] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[8]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterBlue_reg[9] 
        (.C(StreamClk),
         .CE(1'b1),
         .D(\sAXIMasterBlue[9]_i_1_n_0 ),
-        .Q(\sAXIMasterBlue_reg_n_0_[9] ),
+        .Q(m_axis_video_tdata[9]),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hFFFE00FE)) 
@@ -804,229 +511,212 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(\sStrobesShiftReg_reg[2][FirstColumn]__0 ),
         .I2(\sStrobesShiftReg_reg[2][FirstLine]__0 ),
         .I3(\sAXIMasterRed[9]_i_4_n_0 ),
-        .I4(\sAXIMasterGreen_reg_n_0_[10] ),
+        .I4(m_axis_video_tdata[19]),
         .O(\sAXIMasterGreen[10]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'hEB28)) 
     \sAXIMasterGreen[3]_i_2 
-       (.I0(\sPixel_reg[3] [3]),
+       (.I0(\sPixel_reg_n_0_[3][3] ),
         .I1(sCrntPositionIndicatorDly3[0]),
         .I2(sCrntPositionIndicatorDly3[1]),
-        .I3(\sPixel_reg[2] [3]),
+        .I3(\sPixel_reg_n_0_[2][3] ),
         .O(\sAXIMasterGreen[3]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hEB28)) 
     \sAXIMasterGreen[3]_i_3 
-       (.I0(\sPixel_reg[3] [2]),
+       (.I0(\sPixel_reg_n_0_[3][2] ),
         .I1(sCrntPositionIndicatorDly3[0]),
         .I2(sCrntPositionIndicatorDly3[1]),
-        .I3(\sPixel_reg[2] [2]),
+        .I3(\sPixel_reg_n_0_[2][2] ),
         .O(\sAXIMasterGreen[3]_i_3_n_0 ));
   LUT4 #(
     .INIT(16'hEB28)) 
     \sAXIMasterGreen[3]_i_4 
-       (.I0(\sPixel_reg[3] [1]),
+       (.I0(\sPixel_reg_n_0_[3][1] ),
         .I1(sCrntPositionIndicatorDly3[0]),
         .I2(sCrntPositionIndicatorDly3[1]),
-        .I3(\sPixel_reg[2] [1]),
+        .I3(\sPixel_reg_n_0_[2][1] ),
         .O(\sAXIMasterGreen[3]_i_4_n_0 ));
   LUT4 #(
     .INIT(16'hEB28)) 
     \sAXIMasterGreen[3]_i_5 
-       (.I0(\sPixel_reg[3] [0]),
+       (.I0(\sPixel_reg_n_0_[3][0] ),
         .I1(sCrntPositionIndicatorDly3[0]),
         .I2(sCrntPositionIndicatorDly3[1]),
-        .I3(\sPixel_reg[2] [0]),
+        .I3(\sPixel_reg_n_0_[2][0] ),
         .O(\sAXIMasterGreen[3]_i_5_n_0 ));
   LUT6 #(
     .INIT(64'h5A33335A5ACCCC5A)) 
     \sAXIMasterGreen[3]_i_6 
-       (.I0(\sPixel_reg[2] [3]),
-        .I1(\sPixel_reg[3] [3]),
-        .I2(\sPixel_reg[1] [3]),
+       (.I0(\sPixel_reg_n_0_[2][3] ),
+        .I1(\sPixel_reg_n_0_[3][3] ),
+        .I2(\sPixel_reg_n_0_[1][3] ),
         .I3(sCrntPositionIndicatorDly3[1]),
         .I4(sCrntPositionIndicatorDly3[0]),
-        .I5(\sPixel_reg[0] [3]),
+        .I5(\sPixel_reg_n_0_[0][3] ),
         .O(\sAXIMasterGreen[3]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h5A33335A5ACCCC5A)) 
     \sAXIMasterGreen[3]_i_7 
-       (.I0(\sPixel_reg[2] [2]),
-        .I1(\sPixel_reg[3] [2]),
-        .I2(\sPixel_reg[1] [2]),
+       (.I0(\sPixel_reg_n_0_[2][2] ),
+        .I1(\sPixel_reg_n_0_[3][2] ),
+        .I2(\sPixel_reg_n_0_[1][2] ),
         .I3(sCrntPositionIndicatorDly3[1]),
         .I4(sCrntPositionIndicatorDly3[0]),
-        .I5(\sPixel_reg[0] [2]),
+        .I5(\sPixel_reg_n_0_[0][2] ),
         .O(\sAXIMasterGreen[3]_i_7_n_0 ));
   LUT6 #(
     .INIT(64'h5A33335A5ACCCC5A)) 
     \sAXIMasterGreen[3]_i_8 
-       (.I0(\sPixel_reg[2] [1]),
-        .I1(\sPixel_reg[3] [1]),
-        .I2(\sPixel_reg[1] [1]),
+       (.I0(\sPixel_reg_n_0_[2][1] ),
+        .I1(\sPixel_reg_n_0_[3][1] ),
+        .I2(\sPixel_reg_n_0_[1][1] ),
         .I3(sCrntPositionIndicatorDly3[1]),
         .I4(sCrntPositionIndicatorDly3[0]),
-        .I5(\sPixel_reg[0] [1]),
+        .I5(\sPixel_reg_n_0_[0][1] ),
         .O(\sAXIMasterGreen[3]_i_8_n_0 ));
   LUT6 #(
     .INIT(64'h5A33335A5ACCCC5A)) 
     \sAXIMasterGreen[3]_i_9 
-       (.I0(\sPixel_reg[2] [0]),
-        .I1(\sPixel_reg[3] [0]),
-        .I2(\sPixel_reg[1] [0]),
+       (.I0(\sPixel_reg_n_0_[2][0] ),
+        .I1(\sPixel_reg_n_0_[3][0] ),
+        .I2(\sPixel_reg_n_0_[1][0] ),
         .I3(sCrntPositionIndicatorDly3[1]),
         .I4(sCrntPositionIndicatorDly3[0]),
-        .I5(\sPixel_reg[0] [0]),
+        .I5(\sPixel_reg_n_0_[0][0] ),
         .O(\sAXIMasterGreen[3]_i_9_n_0 ));
   LUT4 #(
     .INIT(16'hEB28)) 
     \sAXIMasterGreen[7]_i_2 
-       (.I0(\sPixel_reg[3] [7]),
+       (.I0(\sPixel_reg_n_0_[3][7] ),
         .I1(sCrntPositionIndicatorDly3[0]),
         .I2(sCrntPositionIndicatorDly3[1]),
-        .I3(\sPixel_reg[2] [7]),
+        .I3(\sPixel_reg_n_0_[2][7] ),
         .O(\sAXIMasterGreen[7]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hEB28)) 
     \sAXIMasterGreen[7]_i_3 
-       (.I0(\sPixel_reg[3] [6]),
+       (.I0(\sPixel_reg_n_0_[3][6] ),
         .I1(sCrntPositionIndicatorDly3[0]),
         .I2(sCrntPositionIndicatorDly3[1]),
-        .I3(\sPixel_reg[2] [6]),
+        .I3(\sPixel_reg_n_0_[2][6] ),
         .O(\sAXIMasterGreen[7]_i_3_n_0 ));
   LUT4 #(
     .INIT(16'hEB28)) 
     \sAXIMasterGreen[7]_i_4 
-       (.I0(\sPixel_reg[3] [5]),
+       (.I0(\sPixel_reg_n_0_[3][5] ),
         .I1(sCrntPositionIndicatorDly3[0]),
         .I2(sCrntPositionIndicatorDly3[1]),
-        .I3(\sPixel_reg[2] [5]),
+        .I3(\sPixel_reg_n_0_[2][5] ),
         .O(\sAXIMasterGreen[7]_i_4_n_0 ));
   LUT4 #(
     .INIT(16'hEB28)) 
     \sAXIMasterGreen[7]_i_5 
-       (.I0(\sPixel_reg[3] [4]),
+       (.I0(\sPixel_reg_n_0_[3][4] ),
         .I1(sCrntPositionIndicatorDly3[0]),
         .I2(sCrntPositionIndicatorDly3[1]),
-        .I3(\sPixel_reg[2] [4]),
+        .I3(\sPixel_reg_n_0_[2][4] ),
         .O(\sAXIMasterGreen[7]_i_5_n_0 ));
   LUT6 #(
     .INIT(64'h5A33335A5ACCCC5A)) 
     \sAXIMasterGreen[7]_i_6 
-       (.I0(\sPixel_reg[2] [7]),
-        .I1(\sPixel_reg[3] [7]),
-        .I2(\sPixel_reg[1] [7]),
+       (.I0(\sPixel_reg_n_0_[2][7] ),
+        .I1(\sPixel_reg_n_0_[3][7] ),
+        .I2(\sPixel_reg_n_0_[1][7] ),
         .I3(sCrntPositionIndicatorDly3[1]),
         .I4(sCrntPositionIndicatorDly3[0]),
-        .I5(\sPixel_reg[0] [7]),
+        .I5(\sPixel_reg_n_0_[0][7] ),
         .O(\sAXIMasterGreen[7]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h5A33335A5ACCCC5A)) 
     \sAXIMasterGreen[7]_i_7 
-       (.I0(\sPixel_reg[2] [6]),
-        .I1(\sPixel_reg[3] [6]),
-        .I2(\sPixel_reg[1] [6]),
+       (.I0(\sPixel_reg_n_0_[2][6] ),
+        .I1(\sPixel_reg_n_0_[3][6] ),
+        .I2(\sPixel_reg_n_0_[1][6] ),
         .I3(sCrntPositionIndicatorDly3[1]),
         .I4(sCrntPositionIndicatorDly3[0]),
-        .I5(\sPixel_reg[0] [6]),
+        .I5(\sPixel_reg_n_0_[0][6] ),
         .O(\sAXIMasterGreen[7]_i_7_n_0 ));
   LUT6 #(
     .INIT(64'h5A33335A5ACCCC5A)) 
     \sAXIMasterGreen[7]_i_8 
-       (.I0(\sPixel_reg[2] [5]),
-        .I1(\sPixel_reg[3] [5]),
-        .I2(\sPixel_reg[1] [5]),
+       (.I0(\sPixel_reg_n_0_[2][5] ),
+        .I1(\sPixel_reg_n_0_[3][5] ),
+        .I2(\sPixel_reg_n_0_[1][5] ),
         .I3(sCrntPositionIndicatorDly3[1]),
         .I4(sCrntPositionIndicatorDly3[0]),
-        .I5(\sPixel_reg[0] [5]),
+        .I5(\sPixel_reg_n_0_[0][5] ),
         .O(\sAXIMasterGreen[7]_i_8_n_0 ));
   LUT6 #(
     .INIT(64'h5A33335A5ACCCC5A)) 
     \sAXIMasterGreen[7]_i_9 
-       (.I0(\sPixel_reg[2] [4]),
-        .I1(\sPixel_reg[3] [4]),
-        .I2(\sPixel_reg[1] [4]),
+       (.I0(\sPixel_reg_n_0_[2][4] ),
+        .I1(\sPixel_reg_n_0_[3][4] ),
+        .I2(\sPixel_reg_n_0_[1][4] ),
         .I3(sCrntPositionIndicatorDly3[1]),
         .I4(sCrntPositionIndicatorDly3[0]),
-        .I5(\sPixel_reg[0] [4]),
+        .I5(\sPixel_reg_n_0_[0][4] ),
         .O(\sAXIMasterGreen[7]_i_9_n_0 ));
-  LUT6 #(
-    .INIT(64'hE0E0E000FFFFFFFF)) 
-    \sAXIMasterGreen[9]_i_1 
-       (.I0(s_axis_video_tvalid),
-        .I1(\sAXIMasterGreen[9]_i_3_n_0 ),
-        .I2(m_axis_video_tready),
-        .I3(\sStrobesShiftReg_reg[2][FirstColumn]__0 ),
-        .I4(\sStrobesShiftReg_reg[2][FirstLine]__0 ),
-        .I5(sStreamReset_n),
-        .O(\sAXIMasterGreen[9]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
+  LUT4 #(
+    .INIT(16'hEB28)) 
+    \sAXIMasterGreen[9]_i_2 
+       (.I0(\sPixel_reg_n_0_[3][9] ),
+        .I1(sCrntPositionIndicatorDly3[0]),
+        .I2(sCrntPositionIndicatorDly3[1]),
+        .I3(\sPixel_reg_n_0_[2][9] ),
+        .O(\sAXIMasterGreen[9]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'hEB28)) 
     \sAXIMasterGreen[9]_i_3 
-       (.I0(sCntRemPixels[0]),
-        .I1(sCntRemPixels[1]),
+       (.I0(\sPixel_reg_n_0_[3][8] ),
+        .I1(sCrntPositionIndicatorDly3[0]),
+        .I2(sCrntPositionIndicatorDly3[1]),
+        .I3(\sPixel_reg_n_0_[2][8] ),
         .O(\sAXIMasterGreen[9]_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'hEB28)) 
+  LUT6 #(
+    .INIT(64'h5A33335A5ACCCC5A)) 
     \sAXIMasterGreen[9]_i_4 
-       (.I0(\sPixel_reg[3] [9]),
-        .I1(sCrntPositionIndicatorDly3[0]),
-        .I2(sCrntPositionIndicatorDly3[1]),
-        .I3(\sPixel_reg[2] [9]),
+       (.I0(\sPixel_reg_n_0_[2][9] ),
+        .I1(\sPixel_reg_n_0_[3][9] ),
+        .I2(\sPixel_reg_n_0_[1][9] ),
+        .I3(sCrntPositionIndicatorDly3[1]),
+        .I4(sCrntPositionIndicatorDly3[0]),
+        .I5(\sPixel_reg_n_0_[0][9] ),
         .O(\sAXIMasterGreen[9]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'hEB28)) 
+  LUT6 #(
+    .INIT(64'h5A33335A5ACCCC5A)) 
     \sAXIMasterGreen[9]_i_5 
-       (.I0(\sPixel_reg[3] [8]),
-        .I1(sCrntPositionIndicatorDly3[0]),
-        .I2(sCrntPositionIndicatorDly3[1]),
-        .I3(\sPixel_reg[2] [8]),
+       (.I0(\sPixel_reg_n_0_[2][8] ),
+        .I1(\sPixel_reg_n_0_[3][8] ),
+        .I2(\sPixel_reg_n_0_[1][8] ),
+        .I3(sCrntPositionIndicatorDly3[1]),
+        .I4(sCrntPositionIndicatorDly3[0]),
+        .I5(\sPixel_reg_n_0_[0][8] ),
         .O(\sAXIMasterGreen[9]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'h5A33335A5ACCCC5A)) 
-    \sAXIMasterGreen[9]_i_6 
-       (.I0(\sPixel_reg[2] [9]),
-        .I1(\sPixel_reg[3] [9]),
-        .I2(\sPixel_reg[1] [9]),
-        .I3(sCrntPositionIndicatorDly3[1]),
-        .I4(sCrntPositionIndicatorDly3[0]),
-        .I5(\sPixel_reg[0] [9]),
-        .O(\sAXIMasterGreen[9]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'h5A33335A5ACCCC5A)) 
-    \sAXIMasterGreen[9]_i_7 
-       (.I0(\sPixel_reg[2] [8]),
-        .I1(\sPixel_reg[3] [8]),
-        .I2(\sPixel_reg[1] [8]),
-        .I3(sCrntPositionIndicatorDly3[1]),
-        .I4(sCrntPositionIndicatorDly3[0]),
-        .I5(\sPixel_reg[0] [8]),
-        .O(\sAXIMasterGreen[9]_i_7_n_0 ));
   FDRE \sAXIMasterGreen_reg[10] 
        (.C(StreamClk),
         .CE(1'b1),
         .D(\sAXIMasterGreen[10]_i_1_n_0 ),
-        .Q(\sAXIMasterGreen_reg_n_0_[10] ),
+        .Q(m_axis_video_tdata[19]),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sAXIMasterGreen_reg[1] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sAXIMasterGreen1_in[1]),
-        .Q(\sAXIMasterGreen_reg_n_0_[1] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[10]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterGreen_reg[2] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sAXIMasterGreen1_in[2]),
-        .Q(\sAXIMasterGreen_reg_n_0_[2] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[11]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterGreen_reg[3] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sAXIMasterGreen1_in[3]),
-        .Q(\sAXIMasterGreen_reg_n_0_[3] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[12]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 \sAXIMasterGreen_reg[3]_i_1 
        (.CI(1'b0),
@@ -1039,26 +729,26 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sAXIMasterGreen1_in[4]),
-        .Q(\sAXIMasterGreen_reg_n_0_[4] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[13]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterGreen_reg[5] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sAXIMasterGreen1_in[5]),
-        .Q(\sAXIMasterGreen_reg_n_0_[5] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[14]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterGreen_reg[6] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sAXIMasterGreen1_in[6]),
-        .Q(\sAXIMasterGreen_reg_n_0_[6] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[15]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterGreen_reg[7] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sAXIMasterGreen1_in[7]),
-        .Q(\sAXIMasterGreen_reg_n_0_[7] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[16]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 \sAXIMasterGreen_reg[7]_i_1 
        (.CI(\sAXIMasterGreen_reg[3]_i_1_n_0 ),
@@ -1071,112 +761,137 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sAXIMasterGreen1_in[8]),
-        .Q(\sAXIMasterGreen_reg_n_0_[8] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[17]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterGreen_reg[9] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sAXIMasterGreen1_in[9]),
-        .Q(\sAXIMasterGreen_reg_n_0_[9] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[18]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
-  CARRY4 \sAXIMasterGreen_reg[9]_i_2 
+  CARRY4 \sAXIMasterGreen_reg[9]_i_1 
        (.CI(\sAXIMasterGreen_reg[7]_i_1_n_0 ),
-        .CO({\NLW_sAXIMasterGreen_reg[9]_i_2_CO_UNCONNECTED [3],sAXIMasterGreen1_in[10],\NLW_sAXIMasterGreen_reg[9]_i_2_CO_UNCONNECTED [1],\sAXIMasterGreen_reg[9]_i_2_n_3 }),
+        .CO({\NLW_sAXIMasterGreen_reg[9]_i_1_CO_UNCONNECTED [3],sAXIMasterGreen1_in[10],\NLW_sAXIMasterGreen_reg[9]_i_1_CO_UNCONNECTED [1],\sAXIMasterGreen_reg[9]_i_1_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,\sAXIMasterGreen[9]_i_4_n_0 ,\sAXIMasterGreen[9]_i_5_n_0 }),
-        .O({\NLW_sAXIMasterGreen_reg[9]_i_2_O_UNCONNECTED [3:2],sAXIMasterGreen1_in[9:8]}),
-        .S({1'b0,1'b1,\sAXIMasterGreen[9]_i_6_n_0 ,\sAXIMasterGreen[9]_i_7_n_0 }));
+        .DI({1'b0,1'b0,\sAXIMasterGreen[9]_i_2_n_0 ,\sAXIMasterGreen[9]_i_3_n_0 }),
+        .O({\NLW_sAXIMasterGreen_reg[9]_i_1_O_UNCONNECTED [3:2],sAXIMasterGreen1_in[9:8]}),
+        .S({1'b0,1'b1,\sAXIMasterGreen[9]_i_4_n_0 ,\sAXIMasterGreen[9]_i_5_n_0 }));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterRed[0]_i_1 
-       (.I0(\sPixel_reg[3] [0]),
-        .I1(\sPixel_reg[2] [0]),
-        .I2(\sPixel_reg[1] [0]),
+       (.I0(\sPixel_reg_n_0_[3][0] ),
+        .I1(\sPixel_reg_n_0_[2][0] ),
+        .I2(\sPixel_reg_n_0_[1][0] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[0] [0]),
+        .I5(\sPixel_reg_n_0_[0][0] ),
         .O(\sAXIMasterRed[0]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterRed[1]_i_1 
-       (.I0(\sPixel_reg[3] [1]),
-        .I1(\sPixel_reg[2] [1]),
-        .I2(\sPixel_reg[1] [1]),
+       (.I0(\sPixel_reg_n_0_[3][1] ),
+        .I1(\sPixel_reg_n_0_[2][1] ),
+        .I2(\sPixel_reg_n_0_[1][1] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[0] [1]),
+        .I5(\sPixel_reg_n_0_[0][1] ),
         .O(\sAXIMasterRed[1]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterRed[2]_i_1 
-       (.I0(\sPixel_reg[3] [2]),
-        .I1(\sPixel_reg[2] [2]),
-        .I2(\sPixel_reg[1] [2]),
+       (.I0(\sPixel_reg_n_0_[3][2] ),
+        .I1(\sPixel_reg_n_0_[2][2] ),
+        .I2(\sPixel_reg_n_0_[1][2] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[0] [2]),
+        .I5(\sPixel_reg_n_0_[0][2] ),
         .O(\sAXIMasterRed[2]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterRed[3]_i_1 
-       (.I0(\sPixel_reg[3] [3]),
-        .I1(\sPixel_reg[2] [3]),
-        .I2(\sPixel_reg[1] [3]),
+       (.I0(\sPixel_reg_n_0_[3][3] ),
+        .I1(\sPixel_reg_n_0_[2][3] ),
+        .I2(\sPixel_reg_n_0_[1][3] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[0] [3]),
+        .I5(\sPixel_reg_n_0_[0][3] ),
         .O(\sAXIMasterRed[3]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterRed[4]_i_1 
-       (.I0(\sPixel_reg[3] [4]),
-        .I1(\sPixel_reg[2] [4]),
-        .I2(\sPixel_reg[1] [4]),
+       (.I0(\sPixel_reg_n_0_[3][4] ),
+        .I1(\sPixel_reg_n_0_[2][4] ),
+        .I2(\sPixel_reg_n_0_[1][4] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[0] [4]),
+        .I5(\sPixel_reg_n_0_[0][4] ),
         .O(\sAXIMasterRed[4]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterRed[5]_i_1 
-       (.I0(\sPixel_reg[3] [5]),
-        .I1(\sPixel_reg[2] [5]),
-        .I2(\sPixel_reg[1] [5]),
+       (.I0(\sPixel_reg_n_0_[3][5] ),
+        .I1(\sPixel_reg_n_0_[2][5] ),
+        .I2(\sPixel_reg_n_0_[1][5] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[0] [5]),
+        .I5(\sPixel_reg_n_0_[0][5] ),
         .O(\sAXIMasterRed[5]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterRed[6]_i_1 
-       (.I0(\sPixel_reg[3] [6]),
-        .I1(\sPixel_reg[2] [6]),
-        .I2(\sPixel_reg[1] [6]),
+       (.I0(\sPixel_reg_n_0_[3][6] ),
+        .I1(\sPixel_reg_n_0_[2][6] ),
+        .I2(\sPixel_reg_n_0_[1][6] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[0] [6]),
+        .I5(\sPixel_reg_n_0_[0][6] ),
         .O(\sAXIMasterRed[6]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterRed[7]_i_1 
-       (.I0(\sPixel_reg[3] [7]),
-        .I1(\sPixel_reg[2] [7]),
-        .I2(\sPixel_reg[1] [7]),
+       (.I0(\sPixel_reg_n_0_[3][7] ),
+        .I1(\sPixel_reg_n_0_[2][7] ),
+        .I2(\sPixel_reg_n_0_[1][7] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[0] [7]),
+        .I5(\sPixel_reg_n_0_[0][7] ),
         .O(\sAXIMasterRed[7]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFF0CCAA00F0CCAA)) 
+    .INIT(64'hE0E0E000FFFFFFFF)) 
     \sAXIMasterRed[8]_i_1 
-       (.I0(\sPixel_reg[3] [8]),
-        .I1(\sPixel_reg[2] [8]),
-        .I2(\sPixel_reg[1] [8]),
+       (.I0(s_axis_video_tvalid),
+        .I1(\sAXIMasterRed[8]_i_4_n_0 ),
+        .I2(m_axis_video_tready),
+        .I3(\sStrobesShiftReg_reg[2][FirstColumn]__0 ),
+        .I4(\sStrobesShiftReg_reg[2][FirstLine]__0 ),
+        .I5(sStreamReset_n),
+        .O(\sAXIMasterRed[8]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'hAAA8)) 
+    \sAXIMasterRed[8]_i_2 
+       (.I0(m_axis_video_tready),
+        .I1(sCntRemPixels[1]),
+        .I2(sCntRemPixels[0]),
+        .I3(s_axis_video_tvalid),
+        .O(sOtherPixelsData));
+  LUT6 #(
+    .INIT(64'hFFF0CCAA00F0CCAA)) 
+    \sAXIMasterRed[8]_i_3 
+       (.I0(\sPixel_reg_n_0_[3][8] ),
+        .I1(\sPixel_reg_n_0_[2][8] ),
+        .I2(\sPixel_reg_n_0_[1][8] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[0] [8]),
-        .O(\sAXIMasterRed[8]_i_1_n_0 ));
+        .I5(\sPixel_reg_n_0_[0][8] ),
+        .O(\sAXIMasterRed[8]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \sAXIMasterRed[8]_i_4 
+       (.I0(sCntRemPixels[0]),
+        .I1(sCntRemPixels[1]),
+        .O(\sAXIMasterRed[8]_i_4_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \sAXIMasterRed[9]_i_1 
@@ -1194,12 +909,12 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
   LUT6 #(
     .INIT(64'hFFF0CCAA00F0CCAA)) 
     \sAXIMasterRed[9]_i_3 
-       (.I0(\sPixel_reg[3] [9]),
-        .I1(\sPixel_reg[2] [9]),
-        .I2(\sPixel_reg[1] [9]),
+       (.I0(\sPixel_reg_n_0_[3][9] ),
+        .I1(\sPixel_reg_n_0_[2][9] ),
+        .I2(\sPixel_reg_n_0_[1][9] ),
         .I3(sCrntPositionIndicatorDly3[0]),
         .I4(sCrntPositionIndicatorDly3[1]),
-        .I5(\sPixel_reg[0] [9]),
+        .I5(\sPixel_reg_n_0_[0][9] ),
         .O(\sAXIMasterRed[9]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT4 #(
@@ -1214,56 +929,56 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterRed[0]_i_1_n_0 ),
-        .Q(\sAXIMasterRed_reg_n_0_[0] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[20]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterRed_reg[1] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterRed[1]_i_1_n_0 ),
-        .Q(\sAXIMasterRed_reg_n_0_[1] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[21]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterRed_reg[2] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterRed[2]_i_1_n_0 ),
-        .Q(\sAXIMasterRed_reg_n_0_[2] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[22]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterRed_reg[3] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterRed[3]_i_1_n_0 ),
-        .Q(\sAXIMasterRed_reg_n_0_[3] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[23]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterRed_reg[4] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterRed[4]_i_1_n_0 ),
-        .Q(\sAXIMasterRed_reg_n_0_[4] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[24]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterRed_reg[5] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterRed[5]_i_1_n_0 ),
-        .Q(\sAXIMasterRed_reg_n_0_[5] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[25]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterRed_reg[6] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterRed[6]_i_1_n_0 ),
-        .Q(\sAXIMasterRed_reg_n_0_[6] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[26]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterRed_reg[7] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(\sAXIMasterRed[7]_i_1_n_0 ),
-        .Q(\sAXIMasterRed_reg_n_0_[7] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .Q(m_axis_video_tdata[27]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterRed_reg[8] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sAXIMasterRed[8]_i_1_n_0 ),
-        .Q(\sAXIMasterRed_reg_n_0_[8] ),
-        .R(\sAXIMasterGreen[9]_i_1_n_0 ));
+        .D(\sAXIMasterRed[8]_i_3_n_0 ),
+        .Q(m_axis_video_tdata[28]),
+        .R(\sAXIMasterRed[8]_i_1_n_0 ));
   FDRE \sAXIMasterRed_reg[9] 
        (.C(StreamClk),
         .CE(1'b1),
@@ -1320,14 +1035,14 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I4(sCntColumns_reg__0[3]),
         .I5(sCntColumns_reg__0[5]),
         .O(\sCntColumns[10]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \sCntColumns[1]_i_1 
        (.I0(sCntColumns_reg__0[0]),
         .I1(sCntColumns_reg__0[1]),
         .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \sCntColumns[2]_i_1 
@@ -1335,7 +1050,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(sCntColumns_reg__0[0]),
         .I2(sCntColumns_reg__0[2]),
         .O(plusOp[2]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \sCntColumns[3]_i_1 
@@ -1344,7 +1059,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntColumns_reg__0[1]),
         .I3(sCntColumns_reg__0[3]),
         .O(plusOp[3]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \sCntColumns[4]_i_1 
@@ -1364,14 +1079,14 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I4(sCntColumns_reg__0[3]),
         .I5(sCntColumns_reg__0[5]),
         .O(plusOp[5]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \sCntColumns[6]_i_1 
        (.I0(\sCntColumns[10]_i_3_n_0 ),
         .I1(sCntColumns_reg__0[6]),
         .O(plusOp[6]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \sCntColumns[7]_i_1 
@@ -1379,7 +1094,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(sCntColumns_reg__0[6]),
         .I2(sCntColumns_reg__0[7]),
         .O(plusOp[7]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \sCntColumns[8]_i_1 
@@ -1388,7 +1103,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntColumns_reg__0[7]),
         .I3(sCntColumns_reg__0[8]),
         .O(plusOp[8]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \sCntColumns[9]_i_1 
@@ -1520,7 +1235,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .D(\sCntLines[0]_i_1_n_0 ),
         .Q(sCntLines_reg),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'h0E)) 
     \sCntRemPixels[0]_i_1 
@@ -1528,7 +1243,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(s_axis_video_tvalid),
         .I2(sCntRemPixels[0]),
         .O(\sCntRemPixels[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'hC2)) 
     \sCntRemPixels[1]_i_1 
@@ -1939,7 +1654,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntRemPixels[1]),
         .I3(s_axis_video_tdata[10]),
         .O(p_1_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \sOtherPixelsData[10]_i_1 
@@ -1948,7 +1663,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntRemPixels[1]),
         .I3(s_axis_video_tdata[20]),
         .O(p_1_in[10]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \sOtherPixelsData[11]_i_1 
@@ -1957,6 +1672,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntRemPixels[1]),
         .I3(s_axis_video_tdata[21]),
         .O(p_1_in[11]));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \sOtherPixelsData[12]_i_1 
@@ -1965,7 +1681,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntRemPixels[1]),
         .I3(s_axis_video_tdata[22]),
         .O(p_1_in[12]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \sOtherPixelsData[13]_i_1 
@@ -1983,6 +1699,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntRemPixels[1]),
         .I3(s_axis_video_tdata[24]),
         .O(p_1_in[14]));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \sOtherPixelsData[15]_i_1 
@@ -1991,7 +1708,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntRemPixels[1]),
         .I3(s_axis_video_tdata[25]),
         .O(p_1_in[15]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \sOtherPixelsData[16]_i_1 
@@ -2000,7 +1717,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntRemPixels[1]),
         .I3(s_axis_video_tdata[26]),
         .O(p_1_in[16]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \sOtherPixelsData[17]_i_1 
@@ -2009,7 +1726,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntRemPixels[1]),
         .I3(s_axis_video_tdata[27]),
         .O(p_1_in[17]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \sOtherPixelsData[18]_i_1 
@@ -2018,7 +1735,6 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntRemPixels[1]),
         .I3(s_axis_video_tdata[28]),
         .O(p_1_in[18]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \sOtherPixelsData[19]_i_1 
@@ -2027,7 +1743,6 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntRemPixels[1]),
         .I3(s_axis_video_tdata[29]),
         .O(p_1_in[19]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \sOtherPixelsData[1]_i_1 
@@ -2036,7 +1751,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntRemPixels[1]),
         .I3(s_axis_video_tdata[11]),
         .O(p_1_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \sOtherPixelsData[20]_i_1 
@@ -2044,7 +1759,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(sCntRemPixels[1]),
         .I2(sCntRemPixels[0]),
         .O(p_1_in[20]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \sOtherPixelsData[21]_i_1 
@@ -2052,7 +1767,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(sCntRemPixels[1]),
         .I2(sCntRemPixels[0]),
         .O(p_1_in[21]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \sOtherPixelsData[22]_i_1 
@@ -2060,7 +1775,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(sCntRemPixels[1]),
         .I2(sCntRemPixels[0]),
         .O(p_1_in[22]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \sOtherPixelsData[23]_i_1 
@@ -2068,7 +1783,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(sCntRemPixels[1]),
         .I2(sCntRemPixels[0]),
         .O(p_1_in[23]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \sOtherPixelsData[24]_i_1 
@@ -2076,7 +1791,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(sCntRemPixels[1]),
         .I2(sCntRemPixels[0]),
         .O(p_1_in[24]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \sOtherPixelsData[25]_i_1 
@@ -2084,7 +1799,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(sCntRemPixels[1]),
         .I2(sCntRemPixels[0]),
         .O(p_1_in[25]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \sOtherPixelsData[26]_i_1 
@@ -2092,7 +1807,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(sCntRemPixels[1]),
         .I2(sCntRemPixels[0]),
         .O(p_1_in[26]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \sOtherPixelsData[27]_i_1 
@@ -2100,7 +1815,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(sCntRemPixels[1]),
         .I2(sCntRemPixels[0]),
         .O(p_1_in[27]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \sOtherPixelsData[28]_i_1 
@@ -2108,7 +1823,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(sCntRemPixels[1]),
         .I2(sCntRemPixels[0]),
         .O(p_1_in[28]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \sOtherPixelsData[29]_i_1 
@@ -2124,7 +1839,6 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntRemPixels[1]),
         .I3(s_axis_video_tdata[12]),
         .O(p_1_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \sOtherPixelsData[3]_i_1 
@@ -2133,6 +1847,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I2(sCntRemPixels[1]),
         .I3(s_axis_video_tdata[13]),
         .O(p_1_in[3]));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \sOtherPixelsData[4]_i_1 
@@ -2370,241 +2085,241 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sLineBufferWriteDataDly[0]),
-        .Q(\sPixel_reg[0] [0]),
+        .Q(\sPixel_reg_n_0_[0][0] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[0][1] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sLineBufferWriteDataDly[1]),
-        .Q(\sPixel_reg[0] [1]),
+        .Q(\sPixel_reg_n_0_[0][1] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[0][2] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sLineBufferWriteDataDly[2]),
-        .Q(\sPixel_reg[0] [2]),
+        .Q(\sPixel_reg_n_0_[0][2] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[0][3] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sLineBufferWriteDataDly[3]),
-        .Q(\sPixel_reg[0] [3]),
+        .Q(\sPixel_reg_n_0_[0][3] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[0][4] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sLineBufferWriteDataDly[4]),
-        .Q(\sPixel_reg[0] [4]),
+        .Q(\sPixel_reg_n_0_[0][4] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[0][5] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sLineBufferWriteDataDly[5]),
-        .Q(\sPixel_reg[0] [5]),
+        .Q(\sPixel_reg_n_0_[0][5] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[0][6] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sLineBufferWriteDataDly[6]),
-        .Q(\sPixel_reg[0] [6]),
+        .Q(\sPixel_reg_n_0_[0][6] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[0][7] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sLineBufferWriteDataDly[7]),
-        .Q(\sPixel_reg[0] [7]),
+        .Q(\sPixel_reg_n_0_[0][7] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[0][8] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sLineBufferWriteDataDly[8]),
-        .Q(\sPixel_reg[0] [8]),
+        .Q(\sPixel_reg_n_0_[0][8] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[0][9] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(sLineBufferWriteDataDly[9]),
-        .Q(\sPixel_reg[0] [9]),
+        .Q(\sPixel_reg_n_0_[0][9] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[1][0] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[0] [0]),
-        .Q(\sPixel_reg[1] [0]),
+        .D(\sPixel_reg_n_0_[0][0] ),
+        .Q(\sPixel_reg_n_0_[1][0] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[1][1] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[0] [1]),
-        .Q(\sPixel_reg[1] [1]),
+        .D(\sPixel_reg_n_0_[0][1] ),
+        .Q(\sPixel_reg_n_0_[1][1] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[1][2] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[0] [2]),
-        .Q(\sPixel_reg[1] [2]),
+        .D(\sPixel_reg_n_0_[0][2] ),
+        .Q(\sPixel_reg_n_0_[1][2] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[1][3] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[0] [3]),
-        .Q(\sPixel_reg[1] [3]),
+        .D(\sPixel_reg_n_0_[0][3] ),
+        .Q(\sPixel_reg_n_0_[1][3] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[1][4] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[0] [4]),
-        .Q(\sPixel_reg[1] [4]),
+        .D(\sPixel_reg_n_0_[0][4] ),
+        .Q(\sPixel_reg_n_0_[1][4] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[1][5] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[0] [5]),
-        .Q(\sPixel_reg[1] [5]),
+        .D(\sPixel_reg_n_0_[0][5] ),
+        .Q(\sPixel_reg_n_0_[1][5] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[1][6] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[0] [6]),
-        .Q(\sPixel_reg[1] [6]),
+        .D(\sPixel_reg_n_0_[0][6] ),
+        .Q(\sPixel_reg_n_0_[1][6] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[1][7] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[0] [7]),
-        .Q(\sPixel_reg[1] [7]),
+        .D(\sPixel_reg_n_0_[0][7] ),
+        .Q(\sPixel_reg_n_0_[1][7] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[1][8] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[0] [8]),
-        .Q(\sPixel_reg[1] [8]),
+        .D(\sPixel_reg_n_0_[0][8] ),
+        .Q(\sPixel_reg_n_0_[1][8] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[1][9] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[0] [9]),
-        .Q(\sPixel_reg[1] [9]),
+        .D(\sPixel_reg_n_0_[0][9] ),
+        .Q(\sPixel_reg_n_0_[1][9] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[2][0] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(LineBufferInst_n_19),
-        .Q(\sPixel_reg[2] [0]),
+        .Q(\sPixel_reg_n_0_[2][0] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[2][1] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(LineBufferInst_n_18),
-        .Q(\sPixel_reg[2] [1]),
+        .Q(\sPixel_reg_n_0_[2][1] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[2][2] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(LineBufferInst_n_17),
-        .Q(\sPixel_reg[2] [2]),
+        .Q(\sPixel_reg_n_0_[2][2] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[2][3] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(LineBufferInst_n_16),
-        .Q(\sPixel_reg[2] [3]),
+        .Q(\sPixel_reg_n_0_[2][3] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[2][4] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(LineBufferInst_n_15),
-        .Q(\sPixel_reg[2] [4]),
+        .Q(\sPixel_reg_n_0_[2][4] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[2][5] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(LineBufferInst_n_14),
-        .Q(\sPixel_reg[2] [5]),
+        .Q(\sPixel_reg_n_0_[2][5] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[2][6] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(LineBufferInst_n_13),
-        .Q(\sPixel_reg[2] [6]),
+        .Q(\sPixel_reg_n_0_[2][6] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[2][7] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(LineBufferInst_n_12),
-        .Q(\sPixel_reg[2] [7]),
+        .Q(\sPixel_reg_n_0_[2][7] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[2][8] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(LineBufferInst_n_11),
-        .Q(\sPixel_reg[2] [8]),
+        .Q(\sPixel_reg_n_0_[2][8] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[2][9] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
         .D(LineBufferInst_n_10),
-        .Q(\sPixel_reg[2] [9]),
+        .Q(\sPixel_reg_n_0_[2][9] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[3][0] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[2] [0]),
-        .Q(\sPixel_reg[3] [0]),
+        .D(\sPixel_reg_n_0_[2][0] ),
+        .Q(\sPixel_reg_n_0_[3][0] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[3][1] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[2] [1]),
-        .Q(\sPixel_reg[3] [1]),
+        .D(\sPixel_reg_n_0_[2][1] ),
+        .Q(\sPixel_reg_n_0_[3][1] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[3][2] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[2] [2]),
-        .Q(\sPixel_reg[3] [2]),
+        .D(\sPixel_reg_n_0_[2][2] ),
+        .Q(\sPixel_reg_n_0_[3][2] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[3][3] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[2] [3]),
-        .Q(\sPixel_reg[3] [3]),
+        .D(\sPixel_reg_n_0_[2][3] ),
+        .Q(\sPixel_reg_n_0_[3][3] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[3][4] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[2] [4]),
-        .Q(\sPixel_reg[3] [4]),
+        .D(\sPixel_reg_n_0_[2][4] ),
+        .Q(\sPixel_reg_n_0_[3][4] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[3][5] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[2] [5]),
-        .Q(\sPixel_reg[3] [5]),
+        .D(\sPixel_reg_n_0_[2][5] ),
+        .Q(\sPixel_reg_n_0_[3][5] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[3][6] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[2] [6]),
-        .Q(\sPixel_reg[3] [6]),
+        .D(\sPixel_reg_n_0_[2][6] ),
+        .Q(\sPixel_reg_n_0_[3][6] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[3][7] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[2] [7]),
-        .Q(\sPixel_reg[3] [7]),
+        .D(\sPixel_reg_n_0_[2][7] ),
+        .Q(\sPixel_reg_n_0_[3][7] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[3][8] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[2] [8]),
-        .Q(\sPixel_reg[3] [8]),
+        .D(\sPixel_reg_n_0_[2][8] ),
+        .Q(\sPixel_reg_n_0_[3][8] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   FDRE \sPixel_reg[3][9] 
        (.C(StreamClk),
         .CE(sOtherPixelsData),
-        .D(\sPixel_reg[2] [9]),
-        .Q(\sPixel_reg[3] [9]),
+        .D(\sPixel_reg_n_0_[2][9] ),
+        .Q(\sPixel_reg_n_0_[3][9] ),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFF80808000808080)) 
@@ -2616,7 +2331,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I4(sStreamReset_n),
         .I5(\sStrobesShiftReg_reg[0][FirstColumn]__0 ),
         .O(\sStrobesShiftReg[0][FirstColumn]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     \sStrobesShiftReg[0][FirstColumn]_i_2 
@@ -2650,7 +2365,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
        (.I0(\sStrobesShiftReg_reg[0][Last]__0 ),
         .I1(s_axis_video_tuser),
         .I2(s_axis_video_tvalid),
-        .I3(\sAXIMasterGreen[9]_i_3_n_0 ),
+        .I3(\sAXIMasterRed[8]_i_4_n_0 ),
         .I4(m_axis_video_tready),
         .I5(\sStrobesShiftReg_reg[0][FirstLine]__0 ),
         .O(\sStrobesShiftReg[0][FirstLine]_i_1_n_0 ));
@@ -2661,7 +2376,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I1(\sCntLines[0]_i_2_n_0 ),
         .I2(\sStrobesShiftReg_reg[0][Last]__0 ),
         .I3(m_axis_video_tready),
-        .I4(\sAXIMasterGreen[9]_i_3_n_0 ),
+        .I4(\sAXIMasterRed[8]_i_4_n_0 ),
         .I5(s_axis_video_tvalid),
         .O(\sStrobesShiftReg[0][Last]_i_1_n_0 ));
   LUT6 #(
@@ -2674,14 +2389,6 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .I4(m_axis_video_tready),
         .I5(\sStrobesShiftReg_reg[0][User]__0 ),
         .O(\sStrobesShiftReg[0][User]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hAAA8)) 
-    \sStrobesShiftReg[3][User]_i_1 
-       (.I0(m_axis_video_tready),
-        .I1(sCntRemPixels[1]),
-        .I2(sCntRemPixels[0]),
-        .I3(s_axis_video_tvalid),
-        .O(sOtherPixelsData));
   FDRE \sStrobesShiftReg_reg[0][FirstColumn] 
        (.C(StreamClk),
         .CE(1'b1),
@@ -2766,7 +2473,7 @@ module system_AXI_BayerToRGB_1_0_AXI_BayerToRGB
         .D(\sStrobesShiftReg_reg[2][User]__0 ),
         .Q(m_axis_video_tuser),
         .R(\sAXIMasterRed[9]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'h02)) 
     s_axis_video_tready_INST_0

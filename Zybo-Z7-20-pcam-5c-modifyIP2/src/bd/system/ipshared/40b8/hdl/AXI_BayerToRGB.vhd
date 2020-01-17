@@ -427,20 +427,24 @@ end process AssignValid;
 m_axis_video_tuser  <= sStrobesShiftReg(3).User;
 m_axis_video_tlast  <= sStrobesShiftReg(3).Last;
 
-m_axis_video_tdata  <= "00" &
-    std_logic_vector(to_unsigned(1023, sAXIMasterRed'length))& 
-    std_logic_vector(to_unsigned(0, sAXIMasterGreen'length-1))&
-    std_logic_vector(to_unsigned(1023, sAXIMasterBlue'length)) when
-    sAXIMasterRed> 512 else
-    "00" &
-    std_logic_vector(sAXIMasterRed) &
-    std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) &
-    std_logic_vector(sAXIMasterBlue);
+--m_axis_video_tdata  <="00" &
+--    std_logic_vector(to_unsigned(0, sAXIMasterRed'length))& 
+--    std_logic_vector(to_unsigned(0, sAXIMasterGreen'length-1))&
+--    std_logic_vector(to_unsigned(0, sAXIMasterBlue'length));
 
-
--- m_axis_video_tdata  <= "00" &
---    std_logic_vector(sAXIMasterRed)& 
---    std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1))&
+--    "00" &
+--    std_logic_vector(to_unsigned(0, sAXIMasterRed'length))& 
+--    std_logic_vector(to_unsigned(0, sAXIMasterGreen'length-1))&
+--    std_logic_vector(to_unsigned(0, sAXIMasterBlue'length)) when
+--    sAXIMasterRed > 512 else
+--    "00" &
+--    std_logic_vector(sAXIMasterRed) &
+--    std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) &
 --    std_logic_vector(sAXIMasterBlue);
+
+ m_axis_video_tdata  <= "00" &
+    std_logic_vector(sAXIMasterRed)& 
+    std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1))&
+    std_logic_vector(sAXIMasterBlue);
 
 end rtl;
