@@ -6333,3 +6333,6 @@ con
 ----------------End of Script----------------
 
 16:34:06 INFO  : Launch script is exported to file 'C:\Users\fpga\Documents\Github\Zybo_Pcam\Zybo-Z7-20-pcam-5c-modifyIP2\proj\pcam-5c.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_pcam_vdma_hdmi.elf_on_local.tcl'
+16:56:00 WARN  : channel "tcfchan#23" closed
+16:56:00 INFO  : Disconnected from the channel tcfchan#24.
+16:56:01 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

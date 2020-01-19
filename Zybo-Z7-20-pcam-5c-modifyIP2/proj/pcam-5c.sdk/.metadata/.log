@@ -11819,3 +11819,15 @@ org.eclipse.tcf.core.ErrorReport: TCF error report:
 
 !ENTRY com.xilinx.sdk.utils 0 0 2020-01-19 16:34:06.477
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-37
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-01-19 16:56:00.839
+!MESSAGE XSCT Command: [disconnect tcfchan#23], Thread: Thread-1886
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-01-19 16:56:00.839
+!MESSAGE XSCT command with result: [disconnect tcfchan#23], Result: [{Format=channel "tcfchan#23" closed, Time=1579420560839, Code=1}, ]. Thread: Thread-1886
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-01-19 16:56:00.870
+!MESSAGE XSCT Command: [disconnect tcfchan#24], Thread: Thread-1889
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-01-19 16:56:00.876
+!MESSAGE XSCT command with result: [disconnect tcfchan#24], Result: [null, ]. Thread: Thread-1889
