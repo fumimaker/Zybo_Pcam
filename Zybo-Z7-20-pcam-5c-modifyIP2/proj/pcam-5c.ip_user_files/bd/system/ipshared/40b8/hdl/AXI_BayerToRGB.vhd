@@ -359,9 +359,9 @@ begin
     elsif sDataIsAvailableAndRequested = '1' then
       if (sStrobesShiftReg(2).FirstColumn = '1') or
         (sStrobesShiftReg(2).FirstLine = '1') then
-        sAXIMasterBlue  <= to_unsigned(0, sAXIMasterBlue'length);
-        sAXIMasterGreen <= to_unsigned(0, sAXIMasterGreen'length);
-        sAXIMasterRed  <= to_unsigned(1023, sAXIMasterRed'length);
+        sAXIMasterBlue  <= to_unsigned(512, sAXIMasterBlue'length);
+        sAXIMasterGreen <= to_unsigned(1024, sAXIMasterGreen'length);
+        sAXIMasterRed  <= to_unsigned(512, sAXIMasterRed'length);
       else
 --        case sCrntPositionIndicatorDly3 is
 --          when "01" =>
@@ -382,26 +382,35 @@ begin
 --            sAXIMasterRed  <= sPixel(1)(kBayerWidth-1 downto 0);
 --          when others => null;
 --        end case;
-
-        case sCrntPositionIndicatorDly3 is
-          when "00" =>
-            sAXIMasterBlue  <= sPixel(1)(kBayerWidth-1 downto 0);
-            sAXIMasterGreen <= sPixel(0) + sPixel(3);
-            sAXIMasterred  <= sPixel(2)(kBayerWidth-1 downto 0);
-          when "01" =>
-            sAXIMasterBlue  <= sPixel(0)(kBayerWidth-1 downto 0);
-            sAXIMasterGreen <= sPixel(1) + sPixel(2);
-            sAXIMasterRed  <= sPixel(3)(kBayerWidth-1 downto 0);
-          when "10" =>
-            sAXIMasterBlue  <= sPixel(3)(kBayerWidth-1 downto 0);
-            sAXIMasterGreen <= sPixel(1) + sPixel(2);
-            sAXIMasterRed  <= sPixel(0)(kBayerWidth-1 downto 0);
-          when "11" =>
-            sAXIMasterBlue  <= sPixel(2)(kBayerWidth-1 downto 0);
-            sAXIMasterGreen <= sPixel(0) + sPixel(3);
-            sAXIMasterRed  <= sPixel(1)(kBayerWidth-1 downto 0);
-          when others => null;
-        end case;
+--        if (sCntColumns > 500) and ( sCntColumns < 1000 ) and ( sCntLines > 300 ) and ( sCntLines < 600 ) then
+--            case sCrntPositionIndicatorDly3 is
+--              when "00" =>
+--                sAXIMasterBlue  <= sPixel(1)(kBayerWidth-1 downto 0);
+--                sAXIMasterGreen <= sPixel(0) + sPixel(3);
+--                sAXIMasterred  <= sPixel(2)(kBayerWidth-1 downto 0);
+--              when "01" =>
+--                sAXIMasterBlue  <= sPixel(0)(kBayerWidth-1 downto 0);
+--                sAXIMasterGreen <= sPixel(1) + sPixel(2);
+--                sAXIMasterRed  <= sPixel(3)(kBayerWidth-1 downto 0);
+--              when "10" =>
+--                sAXIMasterBlue  <= sPixel(3)(kBayerWidth-1 downto 0);
+--                sAXIMasterGreen <= sPixel(1) + sPixel(2);
+--                sAXIMasterRed  <= sPixel(0)(kBayerWidth-1 downto 0);
+--              when "11" =>
+--                sAXIMasterBlue  <= sPixel(2)(kBayerWidth-1 downto 0);
+--                sAXIMasterGreen <= sPixel(0) + sPixel(3);
+--                sAXIMasterRed  <= sPixel(1)(kBayerWidth-1 downto 0);
+--              when others => null;
+--            end case;
+--        else
+--            sAXIMasterBlue  <= to_unsigned(0, sAXIMasterBlue'length);
+--            sAXIMasterGreen <= to_unsigned(0, sAXIMasterGreen'length);
+--            sAXIMasterRed  <= to_unsigned(0, sAXIMasterRed'length);
+--        end if;
+        
+        sAXIMasterBlue  <= to_unsigned(0, sAXIMasterBlue'length);
+        sAXIMasterGreen <= to_unsigned(0, sAXIMasterGreen'length);
+        sAXIMasterRed  <= to_unsigned(0, sAXIMasterRed'length);
         
 --        if (sAXIMasterBlue>to_unsigned(512, sAXIMasterBlue'length)) or
 --            (sAXIMasterGreen>to_unsigned(1024, sAXIMasterGreen'length)) or

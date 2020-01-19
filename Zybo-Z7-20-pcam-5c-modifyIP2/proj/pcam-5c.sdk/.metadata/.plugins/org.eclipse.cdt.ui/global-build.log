@@ -298,3 +298,23 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: `main-build' に対して行うべき事はありません.
+16:21:55 **** Incremental Build of configuration Debug for project fsbl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build' に対して行うべき事はありません.
+16:22:02 **** Incremental Build of configuration Debug for project pcam_vdma_hdmi ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build' に対して行うべき事はありません.
+16:33:54 **** Incremental Build of configuration Debug for project fsbl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build' に対して行うべき事はありません.
+16:34:01 **** Incremental Build of configuration Debug for project pcam_vdma_hdmi ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build' に対して行うべき事はありません.
