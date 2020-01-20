@@ -1,0 +1,453 @@
+
+*** Running vivado
+    with args -log system_AXI_BayerToRGB_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_AXI_BayerToRGB_1_0.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source system_AXI_BayerToRGB_1_0.tcl -notrace
+Command: synth_design -top system_AXI_BayerToRGB_1_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5860 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 364.949 ; gain = 100.520
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_AXI_BayerToRGB_1_0' [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_AXI_BayerToRGB_1_0/synth/system_AXI_BayerToRGB_1_0.vhd:73]
+	Parameter kBayerWidth bound to: 10 - type: integer 
+	Parameter kMaxSamplesPerClock bound to: 4 - type: integer 
+	Parameter kAXI_InputDataWidth bound to: 40 - type: integer 
+	Parameter kAXI_OutputDataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'AXI_BayerToRGB' declared at 'c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:66' bound to instance 'U0' of component 'AXI_BayerToRGB' [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_AXI_BayerToRGB_1_0/synth/system_AXI_BayerToRGB_1_0.vhd:121]
+INFO: [Synth 8-638] synthesizing module 'AXI_BayerToRGB' [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:91]
+	Parameter kAXI_InputDataWidth bound to: 40 - type: integer 
+	Parameter kBayerWidth bound to: 10 - type: integer 
+	Parameter kAXI_OutputDataWidth bound to: 32 - type: integer 
+	Parameter kMaxSamplesPerClock bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'LineBuffer' [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/LineBuffer.vhd:56]
+	Parameter kLineBufferWidth bound to: 2048 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'LineBuffer' (1#1) [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/LineBuffer.vhd:56]
+INFO: [Synth 8-226] default block is never used [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:366]
+WARNING: [Synth 8-6014] Unused sequential element sStrobesShiftReg_reg[0][FirstColumn] was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:140]
+WARNING: [Synth 8-6014] Unused sequential element sCrntPositionIndicatorDly1_reg was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:180]
+WARNING: [Synth 8-6014] Unused sequential element sPixel_reg[3] was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:275]
+WARNING: [Synth 8-6014] Unused sequential element sPixel_reg[2] was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:275]
+WARNING: [Synth 8-6014] Unused sequential element sPixel_reg[1] was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:275]
+WARNING: [Synth 8-6014] Unused sequential element sPixel_reg[0] was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:275]
+WARNING: [Synth 8-6014] Unused sequential element sLineBufferWriteDataDly_reg was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:276]
+WARNING: [Synth 8-6014] Unused sequential element sCrntPositionIndicatorDly2_reg was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:277]
+WARNING: [Synth 8-6014] Unused sequential element sCrntPositionIndicatorDly3_reg was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:278]
+WARNING: [Synth 8-6014] Unused sequential element sLineBufferReadDataBuf_reg was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:279]
+WARNING: [Synth 8-6014] Unused sequential element sCntLines_reg was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:302]
+WARNING: [Synth 8-6014] Unused sequential element sStrobesShiftReg_reg[0][FirstLine] was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:327]
+WARNING: [Synth 8-6014] Unused sequential element sAXIMasterBlue_reg was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:356]
+WARNING: [Synth 8-6014] Unused sequential element sAXIMasterGreen_reg was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:357]
+WARNING: [Synth 8-6014] Unused sequential element sAXIMasterRed_reg was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:358]
+WARNING: [Synth 8-6014] Unused sequential element sStrobesShiftReg_reg[3][FirstLine] was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:360]
+WARNING: [Synth 8-6014] Unused sequential element sStrobesShiftReg_reg[3][FirstColumn] was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:360]
+WARNING: [Synth 8-6014] Unused sequential element sStrobesShiftReg_reg[2][FirstLine] was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:360]
+WARNING: [Synth 8-6014] Unused sequential element sStrobesShiftReg_reg[2][FirstColumn] was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:360]
+WARNING: [Synth 8-6014] Unused sequential element sStrobesShiftReg_reg[1][FirstLine] was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:360]
+WARNING: [Synth 8-6014] Unused sequential element sStrobesShiftReg_reg[1][FirstColumn] was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:360]
+WARNING: [Synth 8-3848] Net m_axis_video_tdata in module/entity AXI_BayerToRGB does not have driver. [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'AXI_BayerToRGB' (2#1) [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/AXI_BayerToRGB.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'system_AXI_BayerToRGB_1_0' (3#1) [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_AXI_BayerToRGB_1_0/synth/system_AXI_BayerToRGB_1_0.vhd:73]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[31]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[30]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[29]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[28]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[27]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[26]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[25]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[24]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[23]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[22]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[21]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[20]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[19]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[18]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[17]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[16]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[15]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[14]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[13]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[12]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[11]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[10]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[9]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[8]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[7]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[6]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[5]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[4]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[3]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[2]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[1]
+WARNING: [Synth 8-3331] design AXI_BayerToRGB has unconnected port m_axis_video_tdata[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 417.012 ; gain = 152.582
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 417.012 ; gain = 152.582
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 765.023 ; gain = 0.012
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 765.023 ; gain = 500.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 765.023 ; gain = 500.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 765.023 ; gain = 500.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 765.023 ; gain = 500.594
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               30 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 13    
++---RAMs : 
+	              20K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     30 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module LineBuffer 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
++---RAMs : 
+	              20K Bit         RAMs := 1     
+Module AXI_BayerToRGB 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               30 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input     30 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[31]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[30]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[29]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[28]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[27]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[26]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[25]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[24]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[23]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[22]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[21]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[20]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[19]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[18]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[17]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[16]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[15]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[14]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[13]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[12]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[11]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[10]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[9]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[8]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[7]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[6]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[5]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[4]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[3]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[2]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[1]
+WARNING: [Synth 8-3331] design system_AXI_BayerToRGB_1_0 has unconnected port m_axis_video_tdata[0]
+WARNING: [Synth 8-6014] Unused sequential element U0/LineBufferInst/pReadData_reg was removed.  [c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ipshared/40b8/hdl/LineBuffer.vhd:72]
+WARNING: [Synth 8-6014] Unused sequential element U0/LineBufferInst/pLineBuffer_reg was removed. 
+WARNING: [Synth 8-5730] RAM U0/LineBufferInst/pLineBuffer_reg got removed due to cross hierarchy optimization. 
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferWrite_reg) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sCntColumns_reg[10]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sCntColumns_reg[9]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sCntColumns_reg[8]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sCntColumns_reg[7]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sCntColumns_reg[6]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sCntColumns_reg[5]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sCntColumns_reg[4]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sCntColumns_reg[3]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sCntColumns_reg[2]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sCntColumns_reg[1]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sCntColumns_reg[0]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferCrntAddr_reg[10]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferCrntAddr_reg[9]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferCrntAddr_reg[8]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferCrntAddr_reg[7]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferCrntAddr_reg[6]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferCrntAddr_reg[5]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferCrntAddr_reg[4]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferCrntAddr_reg[3]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferCrntAddr_reg[2]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferCrntAddr_reg[1]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferCrntAddr_reg[0]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[29]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[28]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[27]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[26]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[25]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[24]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[23]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[22]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[21]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[20]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[19]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[18]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[17]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[16]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[15]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[14]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[13]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[12]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[11]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[10]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[9]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[8]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[7]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[6]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[5]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[4]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[3]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[2]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[1]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sOtherPixelsData_reg[0]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferWriteData_reg[9]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferWriteData_reg[8]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferWriteData_reg[7]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferWriteData_reg[6]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferWriteData_reg[5]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferWriteData_reg[4]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferWriteData_reg[3]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferWriteData_reg[2]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferWriteData_reg[1]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferWriteData_reg[0]) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+INFO: [Synth 8-3332] Sequential element (U0/sLineBufferRead_reg) is unused and will be removed from module system_AXI_BayerToRGB_1_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 765.023 ; gain = 500.594
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 768.566 ; gain = 504.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 768.566 ; gain = 504.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 788.137 ; gain = 523.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 788.137 ; gain = 523.707
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 788.137 ; gain = 523.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 788.137 ; gain = 523.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 788.137 ; gain = 523.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 788.137 ; gain = 523.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 788.137 ; gain = 523.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     2|
+|3     |LUT3 |     1|
+|4     |LUT4 |     4|
+|5     |LUT6 |     4|
+|6     |FDRE |    13|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+---------------+------+
+|      |Instance |Module         |Cells |
++------+---------+---------------+------+
+|1     |top      |               |    25|
+|2     |  U0     |AXI_BayerToRGB |    25|
++------+---------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 788.137 ; gain = 523.707
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 788.137 ; gain = 175.695
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 788.137 ; gain = 523.707
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+81 Infos, 89 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 793.336 ; gain = 540.375
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Common 17-1381] The checkpoint 'C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/pcam-5c.runs/system_AXI_BayerToRGB_1_0_synth_1/system_AXI_BayerToRGB_1_0.dcp' has been generated.

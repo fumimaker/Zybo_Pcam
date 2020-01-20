@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jan  8 20:21:54 2020
+# Process ID: 432
+# Current directory: c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj
+# Command line: wbtcv.exe -mode batch -source c:/github/zybo_pcam/zybo-z7-20-pcam-5c-modifyip2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj/webtalk.log
+# Journal file: c:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/proj\webtalk.jou
+#-----------------------------------------------------------
+source c:/github/zybo_pcam/zybo-z7-20-pcam-5c-modifyip2/proj/pcam-5c.tmp/axi_bayertorgb_v1_0_project/AXI_BayerToRGB_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
