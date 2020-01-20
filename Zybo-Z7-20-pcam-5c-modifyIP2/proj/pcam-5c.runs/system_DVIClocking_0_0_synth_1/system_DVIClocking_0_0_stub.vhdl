@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
--- Date        : Mon Jan 20 16:20:07 2020
+-- Date        : Mon Jan 20 18:38:04 2020
 -- Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ system_DVIClocking_0_0_stub.vhdl
@@ -29,6 +29,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "PixelClk5X,PixelClk,SerialClk,aLockedIn,aLockedOut";
 attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "DVIClocking,Vivado 2017.4";
+attribute x_core_info of stub : architecture is "DVIClocking,Vivado 2017.4.1";
 begin
 end;

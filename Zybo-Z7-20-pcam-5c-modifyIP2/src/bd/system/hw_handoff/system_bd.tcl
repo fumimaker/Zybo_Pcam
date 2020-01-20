@@ -179,7 +179,7 @@ proc create_root_design { parentCell } {
   set dphy_data_lp_p [ create_bd_port -dir I -from 1 -to 0 dphy_data_lp_p ]
 
   # Create instance: AXI_BayerToRGB_1, and set properties
-  set AXI_BayerToRGB_1 [ create_bd_cell -type ip -vlnv digilentinc.com:user:AXI_BayerToRGB:1.0 AXI_BayerToRGB_1 ]
+  set AXI_BayerToRGB_1 [ create_bd_cell -type ip -vlnv digilentinc.com:user:AXI_BayerToRGB:1.2 AXI_BayerToRGB_1 ]
 
   set_property -dict [ list \
    CONFIG.TDATA_NUM_BYTES {5} \

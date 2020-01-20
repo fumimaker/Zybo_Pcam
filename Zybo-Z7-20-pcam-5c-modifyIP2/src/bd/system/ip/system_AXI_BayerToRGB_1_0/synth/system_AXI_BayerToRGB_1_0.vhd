@@ -46,8 +46,8 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: digilentinc.com:user:AXI_BayerToRGB:1.0
--- IP Revision: 15
+-- IP VLNV: digilentinc.com:user:AXI_BayerToRGB:1.2
+-- IP Revision: 25
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -96,7 +96,7 @@ ARCHITECTURE system_AXI_BayerToRGB_1_0_arch OF system_AXI_BayerToRGB_1_0 IS
     );
   END COMPONENT AXI_BayerToRGB;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF system_AXI_BayerToRGB_1_0_arch: ARCHITECTURE IS "AXI_BayerToRGB,Vivado 2017.4";
+  ATTRIBUTE X_CORE_INFO OF system_AXI_BayerToRGB_1_0_arch: ARCHITECTURE IS "AXI_BayerToRGB,Vivado 2017.4.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF system_AXI_BayerToRGB_1_0_arch : ARCHITECTURE IS "system_AXI_BayerToRGB_1_0,AXI_BayerToRGB,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -115,7 +115,7 @@ ARCHITECTURE system_AXI_BayerToRGB_1_0_arch OF system_AXI_BayerToRGB_1_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_video_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 AXI_Slave_Interface TREADY";
   ATTRIBUTE X_INTERFACE_PARAMETER OF sStreamReset_n: SIGNAL IS "XIL_INTERFACENAME AXI_Stream_Reset_n, POLARITY ACTIVE_LOW";
   ATTRIBUTE X_INTERFACE_INFO OF sStreamReset_n: SIGNAL IS "xilinx.com:signal:reset:1.0 AXI_Stream_Reset_n RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF StreamClk: SIGNAL IS "XIL_INTERFACENAME AXI_Stream_Clk, ASSOCIATED_BUSIF AXI_Stream_Master:AXI_Slave_Interface, FREQ_HZ 150000000, PHASE 0.0, CLK_DOMAIN system_clk_wiz_0_0_clk_out1";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF StreamClk: SIGNAL IS "XIL_INTERFACENAME AXI_Stream_Clk, ASSOCIATED_BUSIF AXI_Stream_Master:AXI_Slave_Interface, ASSOCIATED_RESET sStreamReset_n, FREQ_HZ 150000000, PHASE 0.0, CLK_DOMAIN system_clk_wiz_0_0_clk_out1";
   ATTRIBUTE X_INTERFACE_INFO OF StreamClk: SIGNAL IS "xilinx.com:signal:clock:1.0 AXI_Stream_Clk CLK";
 BEGIN
   U0 : AXI_BayerToRGB

@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
--- Date        : Mon Jan 20 16:20:06 2020
+-- Date        : Mon Jan 20 18:38:02 2020
 -- Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_AXI_BayerToRGB_1_0/system_AXI_BayerToRGB_1_0_sim_netlist.vhdl
@@ -21,12 +21,12 @@ entity system_AXI_BayerToRGB_1_0_AXI_BayerToRGB is
     m_axis_video_tdata : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axis_video_tready : out STD_LOGIC;
     m_axis_video_tvalid : out STD_LOGIC;
-    StreamClk : in STD_LOGIC;
     s_axis_video_tvalid : in STD_LOGIC;
     m_axis_video_tready : in STD_LOGIC;
+    StreamClk : in STD_LOGIC;
     sStreamReset_n : in STD_LOGIC;
-    s_axis_video_tlast : in STD_LOGIC;
-    s_axis_video_tuser : in STD_LOGIC
+    s_axis_video_tuser : in STD_LOGIC;
+    s_axis_video_tlast : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of system_AXI_BayerToRGB_1_0_AXI_BayerToRGB : entity is "AXI_BayerToRGB";
@@ -35,57 +35,31 @@ end system_AXI_BayerToRGB_1_0_AXI_BayerToRGB;
 architecture STRUCTURE of system_AXI_BayerToRGB_1_0_AXI_BayerToRGB is
   signal \^m_axis_video_tvalid\ : STD_LOGIC;
   signal m_axis_video_tvalid_i_1_n_0 : STD_LOGIC;
-  signal plusOp : STD_LOGIC_VECTOR ( 10 downto 0 );
-  signal sAXIMasterBlue1 : STD_LOGIC;
   signal \sAXIMasterGreen[10]_i_1_n_0\ : STD_LOGIC;
   signal sAXI_SlaveLastAsserted_i_1_n_0 : STD_LOGIC;
   signal sAXI_SlaveLastAsserted_reg_n_0 : STD_LOGIC;
-  signal \sCntColumns[10]_i_1_n_0\ : STD_LOGIC;
-  signal \sCntColumns[10]_i_3_n_0\ : STD_LOGIC;
-  signal \sCntColumns_reg__0\ : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal \sCntRemPixels[0]_i_1_n_0\ : STD_LOGIC;
   signal \sCntRemPixels[1]_i_1_n_0\ : STD_LOGIC;
   signal \sCntRemPixels_reg_n_0_[0]\ : STD_LOGIC;
   signal \sCntRemPixels_reg_n_0_[1]\ : STD_LOGIC;
   signal sCoverInitialLatency : STD_LOGIC;
   signal sCoverInitialLatency_i_1_n_0 : STD_LOGIC;
-  signal sLineBufferWriteData : STD_LOGIC;
-  signal \sStrobesShiftReg[0][FirstColumn]_i_1_n_0\ : STD_LOGIC;
-  signal \sStrobesShiftReg[0][FirstColumn]_i_2_n_0\ : STD_LOGIC;
-  signal \sStrobesShiftReg[0][FirstColumn]_i_3_n_0\ : STD_LOGIC;
-  signal \sStrobesShiftReg[0][FirstColumn]_i_4_n_0\ : STD_LOGIC;
-  signal \sStrobesShiftReg[0][FirstLine]_i_1_n_0\ : STD_LOGIC;
+  signal \sDataIsAvailableAndRequested__0\ : STD_LOGIC;
+  signal \sStrobesShiftReg[0][Last]1_out\ : STD_LOGIC;
   signal \sStrobesShiftReg[0][Last]_i_1_n_0\ : STD_LOGIC;
-  signal \sStrobesShiftReg[0][Last]_i_2_n_0\ : STD_LOGIC;
-  signal \sStrobesShiftReg[0][Last]_i_3_n_0\ : STD_LOGIC;
   signal \sStrobesShiftReg[0][User]_i_1_n_0\ : STD_LOGIC;
-  signal \sStrobesShiftReg_reg[0][FirstColumn]__0\ : STD_LOGIC;
-  signal \sStrobesShiftReg_reg[0][FirstLine]__0\ : STD_LOGIC;
   signal \sStrobesShiftReg_reg[0][Last]__0\ : STD_LOGIC;
+  signal \sStrobesShiftReg_reg[0][User]2\ : STD_LOGIC;
   signal \sStrobesShiftReg_reg[0][User]__0\ : STD_LOGIC;
-  signal \sStrobesShiftReg_reg[1][FirstColumn]__0\ : STD_LOGIC;
-  signal \sStrobesShiftReg_reg[1][FirstLine]__0\ : STD_LOGIC;
   signal \sStrobesShiftReg_reg[1][Last]__0\ : STD_LOGIC;
   signal \sStrobesShiftReg_reg[1][User]__0\ : STD_LOGIC;
-  signal \sStrobesShiftReg_reg[2][FirstColumn]__0\ : STD_LOGIC;
-  signal \sStrobesShiftReg_reg[2][FirstLine]__0\ : STD_LOGIC;
   signal \sStrobesShiftReg_reg[2][Last]__0\ : STD_LOGIC;
   signal \sStrobesShiftReg_reg[2][User]__0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \sCntColumns[1]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \sCntColumns[2]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \sCntColumns[3]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \sCntColumns[4]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \sCntColumns[6]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \sCntColumns[7]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \sCntColumns[8]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \sCntColumns[9]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \sCntRemPixels[0]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \sCntRemPixels[1]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \sStrobesShiftReg[0][FirstColumn]_i_2\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \sStrobesShiftReg[0][Last]_i_2\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \sStrobesShiftReg[0][Last]_i_3\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of s_axis_video_tready_INST_0 : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \sCntRemPixels[0]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \sCntRemPixels[1]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \sStrobesShiftReg[0][Last]_i_2\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of s_axis_video_tready_INST_0 : label is "soft_lutpair1";
 begin
   m_axis_video_tvalid <= \^m_axis_video_tvalid\;
 m_axis_video_tvalid_i_1: unisim.vcomponents.LUT6
@@ -94,8 +68,8 @@ m_axis_video_tvalid_i_1: unisim.vcomponents.LUT6
     )
         port map (
       I0 => s_axis_video_tvalid,
-      I1 => \sCntRemPixels_reg_n_0_[1]\,
-      I2 => \sCntRemPixels_reg_n_0_[0]\,
+      I1 => \sCntRemPixels_reg_n_0_[0]\,
+      I2 => \sCntRemPixels_reg_n_0_[1]\,
       I3 => sCoverInitialLatency,
       I4 => m_axis_video_tready,
       I5 => \^m_axis_video_tvalid\,
@@ -117,45 +91,25 @@ m_axis_video_tvalid_reg: unisim.vcomponents.FDRE
       I0 => sStreamReset_n,
       O => \sAXIMasterGreen[10]_i_1_n_0\
     );
-\sAXIMasterGreen[10]_i_2\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FE00"
-    )
-        port map (
-      I0 => \sCntRemPixels_reg_n_0_[0]\,
-      I1 => \sCntRemPixels_reg_n_0_[1]\,
-      I2 => s_axis_video_tvalid,
-      I3 => m_axis_video_tready,
-      O => sLineBufferWriteData
-    );
-\sAXIMasterGreen[10]_i_3\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
-      I1 => \sStrobesShiftReg_reg[2][FirstLine]__0\,
-      O => sAXIMasterBlue1
-    );
 \sAXIMasterGreen_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => sAXIMasterBlue1,
+      CE => \sDataIsAvailableAndRequested__0\,
+      D => \sDataIsAvailableAndRequested__0\,
       Q => m_axis_video_tdata(0),
       R => \sAXIMasterGreen[10]_i_1_n_0\
     );
 sAXI_SlaveLastAsserted_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AA0AAAEAAA0AAAAA"
+      INIT => X"FF0F0008FFFF0000"
     )
         port map (
-      I0 => sAXI_SlaveLastAsserted_reg_n_0,
-      I1 => s_axis_video_tvalid,
-      I2 => m_axis_video_tready,
+      I0 => s_axis_video_tvalid,
+      I1 => s_axis_video_tlast,
+      I2 => \sCntRemPixels_reg_n_0_[0]\,
       I3 => \sCntRemPixels_reg_n_0_[1]\,
-      I4 => \sCntRemPixels_reg_n_0_[0]\,
-      I5 => s_axis_video_tlast,
+      I4 => sAXI_SlaveLastAsserted_reg_n_0,
+      I5 => m_axis_video_tready,
       O => sAXI_SlaveLastAsserted_i_1_n_0
     );
 sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
@@ -166,294 +120,32 @@ sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
       Q => sAXI_SlaveLastAsserted_reg_n_0,
       R => \sAXIMasterGreen[10]_i_1_n_0\
     );
-\sCntColumns[0]_i_1\: unisim.vcomponents.LUT1
+\sCntRemPixels[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"1"
+      INIT => X"32CC"
     )
         port map (
-      I0 => \sCntColumns_reg__0\(0),
-      O => plusOp(0)
-    );
-\sCntColumns[10]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"2000FFFF"
-    )
-        port map (
-      I0 => \sCntRemPixels_reg_n_0_[0]\,
-      I1 => \sCntRemPixels_reg_n_0_[1]\,
-      I2 => sAXI_SlaveLastAsserted_reg_n_0,
+      I0 => s_axis_video_tvalid,
+      I1 => \sCntRemPixels_reg_n_0_[0]\,
+      I2 => \sCntRemPixels_reg_n_0_[1]\,
       I3 => m_axis_video_tready,
-      I4 => sStreamReset_n,
-      O => \sCntColumns[10]_i_1_n_0\
-    );
-\sCntColumns[10]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F7FFFFFF08000000"
-    )
-        port map (
-      I0 => \sCntColumns_reg__0\(9),
-      I1 => \sCntColumns_reg__0\(7),
-      I2 => \sCntColumns[10]_i_3_n_0\,
-      I3 => \sCntColumns_reg__0\(6),
-      I4 => \sCntColumns_reg__0\(8),
-      I5 => \sCntColumns_reg__0\(10),
-      O => plusOp(10)
-    );
-\sCntColumns[10]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \sCntColumns_reg__0\(4),
-      I1 => \sCntColumns_reg__0\(2),
-      I2 => \sCntColumns_reg__0\(0),
-      I3 => \sCntColumns_reg__0\(1),
-      I4 => \sCntColumns_reg__0\(3),
-      I5 => \sCntColumns_reg__0\(5),
-      O => \sCntColumns[10]_i_3_n_0\
-    );
-\sCntColumns[1]_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"6"
-    )
-        port map (
-      I0 => \sCntColumns_reg__0\(0),
-      I1 => \sCntColumns_reg__0\(1),
-      O => plusOp(1)
-    );
-\sCntColumns[2]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"78"
-    )
-        port map (
-      I0 => \sCntColumns_reg__0\(1),
-      I1 => \sCntColumns_reg__0\(0),
-      I2 => \sCntColumns_reg__0\(2),
-      O => plusOp(2)
-    );
-\sCntColumns[3]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7F80"
-    )
-        port map (
-      I0 => \sCntColumns_reg__0\(2),
-      I1 => \sCntColumns_reg__0\(0),
-      I2 => \sCntColumns_reg__0\(1),
-      I3 => \sCntColumns_reg__0\(3),
-      O => plusOp(3)
-    );
-\sCntColumns[4]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"7FFF8000"
-    )
-        port map (
-      I0 => \sCntColumns_reg__0\(3),
-      I1 => \sCntColumns_reg__0\(1),
-      I2 => \sCntColumns_reg__0\(0),
-      I3 => \sCntColumns_reg__0\(2),
-      I4 => \sCntColumns_reg__0\(4),
-      O => plusOp(4)
-    );
-\sCntColumns[5]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFF80000000"
-    )
-        port map (
-      I0 => \sCntColumns_reg__0\(4),
-      I1 => \sCntColumns_reg__0\(2),
-      I2 => \sCntColumns_reg__0\(0),
-      I3 => \sCntColumns_reg__0\(1),
-      I4 => \sCntColumns_reg__0\(3),
-      I5 => \sCntColumns_reg__0\(5),
-      O => plusOp(5)
-    );
-\sCntColumns[6]_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"9"
-    )
-        port map (
-      I0 => \sCntColumns[10]_i_3_n_0\,
-      I1 => \sCntColumns_reg__0\(6),
-      O => plusOp(6)
-    );
-\sCntColumns[7]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"D2"
-    )
-        port map (
-      I0 => \sCntColumns_reg__0\(6),
-      I1 => \sCntColumns[10]_i_3_n_0\,
-      I2 => \sCntColumns_reg__0\(7),
-      O => plusOp(7)
-    );
-\sCntColumns[8]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"DF20"
-    )
-        port map (
-      I0 => \sCntColumns_reg__0\(7),
-      I1 => \sCntColumns[10]_i_3_n_0\,
-      I2 => \sCntColumns_reg__0\(6),
-      I3 => \sCntColumns_reg__0\(8),
-      O => plusOp(8)
-    );
-\sCntColumns[9]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F7FF0800"
-    )
-        port map (
-      I0 => \sCntColumns_reg__0\(8),
-      I1 => \sCntColumns_reg__0\(6),
-      I2 => \sCntColumns[10]_i_3_n_0\,
-      I3 => \sCntColumns_reg__0\(7),
-      I4 => \sCntColumns_reg__0\(9),
-      O => plusOp(9)
-    );
-\sCntColumns_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => plusOp(0),
-      Q => \sCntColumns_reg__0\(0),
-      R => \sCntColumns[10]_i_1_n_0\
-    );
-\sCntColumns_reg[10]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => plusOp(10),
-      Q => \sCntColumns_reg__0\(10),
-      R => \sCntColumns[10]_i_1_n_0\
-    );
-\sCntColumns_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => plusOp(1),
-      Q => \sCntColumns_reg__0\(1),
-      R => \sCntColumns[10]_i_1_n_0\
-    );
-\sCntColumns_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => plusOp(2),
-      Q => \sCntColumns_reg__0\(2),
-      R => \sCntColumns[10]_i_1_n_0\
-    );
-\sCntColumns_reg[3]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => plusOp(3),
-      Q => \sCntColumns_reg__0\(3),
-      R => \sCntColumns[10]_i_1_n_0\
-    );
-\sCntColumns_reg[4]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => plusOp(4),
-      Q => \sCntColumns_reg__0\(4),
-      R => \sCntColumns[10]_i_1_n_0\
-    );
-\sCntColumns_reg[5]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => plusOp(5),
-      Q => \sCntColumns_reg__0\(5),
-      R => \sCntColumns[10]_i_1_n_0\
-    );
-\sCntColumns_reg[6]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => plusOp(6),
-      Q => \sCntColumns_reg__0\(6),
-      R => \sCntColumns[10]_i_1_n_0\
-    );
-\sCntColumns_reg[7]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => plusOp(7),
-      Q => \sCntColumns_reg__0\(7),
-      R => \sCntColumns[10]_i_1_n_0\
-    );
-\sCntColumns_reg[8]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => plusOp(8),
-      Q => \sCntColumns_reg__0\(8),
-      R => \sCntColumns[10]_i_1_n_0\
-    );
-\sCntColumns_reg[9]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => plusOp(9),
-      Q => \sCntColumns_reg__0\(9),
-      R => \sCntColumns[10]_i_1_n_0\
-    );
-\sCntRemPixels[0]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"54"
-    )
-        port map (
-      I0 => \sCntRemPixels_reg_n_0_[0]\,
-      I1 => \sCntRemPixels_reg_n_0_[1]\,
-      I2 => s_axis_video_tvalid,
       O => \sCntRemPixels[0]_i_1_n_0\
     );
-\sCntRemPixels[1]_i_1\: unisim.vcomponents.LUT3
+\sCntRemPixels[1]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"98"
+      INIT => X"C2F0"
     )
         port map (
-      I0 => \sCntRemPixels_reg_n_0_[0]\,
-      I1 => \sCntRemPixels_reg_n_0_[1]\,
-      I2 => s_axis_video_tvalid,
+      I0 => s_axis_video_tvalid,
+      I1 => \sCntRemPixels_reg_n_0_[0]\,
+      I2 => \sCntRemPixels_reg_n_0_[1]\,
+      I3 => m_axis_video_tready,
       O => \sCntRemPixels[1]_i_1_n_0\
     );
 \sCntRemPixels_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
-      CE => sLineBufferWriteData,
+      CE => '1',
       D => \sCntRemPixels[0]_i_1_n_0\,
       Q => \sCntRemPixels_reg_n_0_[0]\,
       R => \sAXIMasterGreen[10]_i_1_n_0\
@@ -461,7 +153,7 @@ sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
 \sCntRemPixels_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
-      CE => sLineBufferWriteData,
+      CE => '1',
       D => \sCntRemPixels[1]_i_1_n_0\,
       Q => \sCntRemPixels_reg_n_0_[1]\,
       R => \sAXIMasterGreen[10]_i_1_n_0\
@@ -483,79 +175,28 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       Q => sCoverInitialLatency,
       R => \sAXIMasterGreen[10]_i_1_n_0\
     );
-\sStrobesShiftReg[0][FirstColumn]_i_1\: unisim.vcomponents.LUT6
+sDataIsAvailableAndRequested: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"80FF808080008080"
+      INIT => X"AAA8"
     )
         port map (
-      I0 => \sStrobesShiftReg[0][FirstColumn]_i_2_n_0\,
-      I1 => \sStrobesShiftReg[0][FirstColumn]_i_3_n_0\,
-      I2 => \sStrobesShiftReg[0][FirstColumn]_i_4_n_0\,
-      I3 => sLineBufferWriteData,
-      I4 => sStreamReset_n,
-      I5 => \sStrobesShiftReg_reg[0][FirstColumn]__0\,
-      O => \sStrobesShiftReg[0][FirstColumn]_i_1_n_0\
-    );
-\sStrobesShiftReg[0][FirstColumn]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"DF"
-    )
-        port map (
-      I0 => \sCntRemPixels_reg_n_0_[0]\,
-      I1 => \sCntRemPixels_reg_n_0_[1]\,
-      I2 => sAXI_SlaveLastAsserted_reg_n_0,
-      O => \sStrobesShiftReg[0][FirstColumn]_i_2_n_0\
-    );
-\sStrobesShiftReg[0][FirstColumn]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000100000000"
-    )
-        port map (
-      I0 => \sCntColumns_reg__0\(8),
-      I1 => \sCntColumns_reg__0\(9),
-      I2 => \sCntColumns_reg__0\(6),
-      I3 => \sCntColumns_reg__0\(7),
-      I4 => \sCntColumns_reg__0\(10),
-      I5 => sStreamReset_n,
-      O => \sStrobesShiftReg[0][FirstColumn]_i_3_n_0\
-    );
-\sStrobesShiftReg[0][FirstColumn]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000000001"
-    )
-        port map (
-      I0 => \sCntColumns_reg__0\(2),
-      I1 => \sCntColumns_reg__0\(3),
-      I2 => \sCntColumns_reg__0\(0),
-      I3 => \sCntColumns_reg__0\(1),
-      I4 => \sCntColumns_reg__0\(5),
-      I5 => \sCntColumns_reg__0\(4),
-      O => \sStrobesShiftReg[0][FirstColumn]_i_4_n_0\
-    );
-\sStrobesShiftReg[0][FirstLine]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFF7F00C00000"
-    )
-        port map (
-      I0 => \sStrobesShiftReg_reg[0][Last]__0\,
+      I0 => m_axis_video_tready,
       I1 => s_axis_video_tvalid,
-      I2 => m_axis_video_tready,
-      I3 => \sStrobesShiftReg[0][Last]_i_3_n_0\,
-      I4 => s_axis_video_tuser,
-      I5 => \sStrobesShiftReg_reg[0][FirstLine]__0\,
-      O => \sStrobesShiftReg[0][FirstLine]_i_1_n_0\
+      I2 => \sCntRemPixels_reg_n_0_[0]\,
+      I3 => \sCntRemPixels_reg_n_0_[1]\,
+      O => \sDataIsAvailableAndRequested__0\
     );
 \sStrobesShiftReg[0][Last]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A800A8A8A8A8A8A8"
+      INIT => X"00A0A0A0E0E0E0E0"
     )
         port map (
-      I0 => sStreamReset_n,
-      I1 => \sStrobesShiftReg[0][Last]_i_2_n_0\,
-      I2 => \sStrobesShiftReg_reg[0][Last]__0\,
-      I3 => \sStrobesShiftReg[0][Last]_i_3_n_0\,
-      I4 => m_axis_video_tready,
-      I5 => s_axis_video_tvalid,
+      I0 => \sStrobesShiftReg_reg[0][Last]__0\,
+      I1 => \sStrobesShiftReg[0][Last]1_out\,
+      I2 => sStreamReset_n,
+      I3 => m_axis_video_tready,
+      I4 => s_axis_video_tvalid,
+      I5 => \sStrobesShiftReg_reg[0][User]2\,
       O => \sStrobesShiftReg[0][Last]_i_1_n_0\
     );
 \sStrobesShiftReg[0][Last]_i_2\: unisim.vcomponents.LUT4
@@ -563,20 +204,20 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       INIT => X"0800"
     )
         port map (
-      I0 => m_axis_video_tready,
-      I1 => sAXI_SlaveLastAsserted_reg_n_0,
+      I0 => sAXI_SlaveLastAsserted_reg_n_0,
+      I1 => \sCntRemPixels_reg_n_0_[0]\,
       I2 => \sCntRemPixels_reg_n_0_[1]\,
-      I3 => \sCntRemPixels_reg_n_0_[0]\,
-      O => \sStrobesShiftReg[0][Last]_i_2_n_0\
+      I3 => m_axis_video_tready,
+      O => \sStrobesShiftReg[0][Last]1_out\
     );
 \sStrobesShiftReg[0][Last]_i_3\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"E"
+      INIT => X"1"
     )
         port map (
-      I0 => \sCntRemPixels_reg_n_0_[0]\,
-      I1 => \sCntRemPixels_reg_n_0_[1]\,
-      O => \sStrobesShiftReg[0][Last]_i_3_n_0\
+      I0 => \sCntRemPixels_reg_n_0_[1]\,
+      I1 => \sCntRemPixels_reg_n_0_[0]\,
+      O => \sStrobesShiftReg_reg[0][User]2\
     );
 \sStrobesShiftReg[0][User]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -590,22 +231,6 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       I4 => m_axis_video_tready,
       I5 => \sStrobesShiftReg_reg[0][User]__0\,
       O => \sStrobesShiftReg[0][User]_i_1_n_0\
-    );
-\sStrobesShiftReg_reg[0][FirstColumn]\: unisim.vcomponents.FDRE
-     port map (
-      C => StreamClk,
-      CE => '1',
-      D => \sStrobesShiftReg[0][FirstColumn]_i_1_n_0\,
-      Q => \sStrobesShiftReg_reg[0][FirstColumn]__0\,
-      R => '0'
-    );
-\sStrobesShiftReg_reg[0][FirstLine]\: unisim.vcomponents.FDRE
-     port map (
-      C => StreamClk,
-      CE => '1',
-      D => \sStrobesShiftReg[0][FirstLine]_i_1_n_0\,
-      Q => \sStrobesShiftReg_reg[0][FirstLine]__0\,
-      R => \sAXIMasterGreen[10]_i_1_n_0\
     );
 \sStrobesShiftReg_reg[0][Last]\: unisim.vcomponents.FDRE
      port map (
@@ -623,26 +248,10 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
       Q => \sStrobesShiftReg_reg[0][User]__0\,
       R => \sAXIMasterGreen[10]_i_1_n_0\
     );
-\sStrobesShiftReg_reg[1][FirstColumn]\: unisim.vcomponents.FDRE
-     port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => \sStrobesShiftReg_reg[0][FirstColumn]__0\,
-      Q => \sStrobesShiftReg_reg[1][FirstColumn]__0\,
-      R => \sAXIMasterGreen[10]_i_1_n_0\
-    );
-\sStrobesShiftReg_reg[1][FirstLine]\: unisim.vcomponents.FDRE
-     port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => \sStrobesShiftReg_reg[0][FirstLine]__0\,
-      Q => \sStrobesShiftReg_reg[1][FirstLine]__0\,
-      R => \sAXIMasterGreen[10]_i_1_n_0\
-    );
 \sStrobesShiftReg_reg[1][Last]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
-      CE => sLineBufferWriteData,
+      CE => \sDataIsAvailableAndRequested__0\,
       D => \sStrobesShiftReg_reg[0][Last]__0\,
       Q => \sStrobesShiftReg_reg[1][Last]__0\,
       R => \sAXIMasterGreen[10]_i_1_n_0\
@@ -650,31 +259,15 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
 \sStrobesShiftReg_reg[1][User]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
-      CE => sLineBufferWriteData,
+      CE => \sDataIsAvailableAndRequested__0\,
       D => \sStrobesShiftReg_reg[0][User]__0\,
       Q => \sStrobesShiftReg_reg[1][User]__0\,
-      R => \sAXIMasterGreen[10]_i_1_n_0\
-    );
-\sStrobesShiftReg_reg[2][FirstColumn]\: unisim.vcomponents.FDRE
-     port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => \sStrobesShiftReg_reg[1][FirstColumn]__0\,
-      Q => \sStrobesShiftReg_reg[2][FirstColumn]__0\,
-      R => \sAXIMasterGreen[10]_i_1_n_0\
-    );
-\sStrobesShiftReg_reg[2][FirstLine]\: unisim.vcomponents.FDRE
-     port map (
-      C => StreamClk,
-      CE => sLineBufferWriteData,
-      D => \sStrobesShiftReg_reg[1][FirstLine]__0\,
-      Q => \sStrobesShiftReg_reg[2][FirstLine]__0\,
       R => \sAXIMasterGreen[10]_i_1_n_0\
     );
 \sStrobesShiftReg_reg[2][Last]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
-      CE => sLineBufferWriteData,
+      CE => \sDataIsAvailableAndRequested__0\,
       D => \sStrobesShiftReg_reg[1][Last]__0\,
       Q => \sStrobesShiftReg_reg[2][Last]__0\,
       R => \sAXIMasterGreen[10]_i_1_n_0\
@@ -682,7 +275,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
 \sStrobesShiftReg_reg[2][User]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
-      CE => sLineBufferWriteData,
+      CE => \sDataIsAvailableAndRequested__0\,
       D => \sStrobesShiftReg_reg[1][User]__0\,
       Q => \sStrobesShiftReg_reg[2][User]__0\,
       R => \sAXIMasterGreen[10]_i_1_n_0\
@@ -690,7 +283,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
 \sStrobesShiftReg_reg[3][Last]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
-      CE => sLineBufferWriteData,
+      CE => \sDataIsAvailableAndRequested__0\,
       D => \sStrobesShiftReg_reg[2][Last]__0\,
       Q => m_axis_video_tlast,
       R => \sAXIMasterGreen[10]_i_1_n_0\
@@ -698,7 +291,7 @@ sCoverInitialLatency_reg: unisim.vcomponents.FDRE
 \sStrobesShiftReg_reg[3][User]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
-      CE => sLineBufferWriteData,
+      CE => \sDataIsAvailableAndRequested__0\,
       D => \sStrobesShiftReg_reg[2][User]__0\,
       Q => m_axis_video_tuser,
       R => \sAXIMasterGreen[10]_i_1_n_0\
@@ -709,8 +302,8 @@ s_axis_video_tready_INST_0: unisim.vcomponents.LUT3
     )
         port map (
       I0 => m_axis_video_tready,
-      I1 => \sCntRemPixels_reg_n_0_[1]\,
-      I2 => \sCntRemPixels_reg_n_0_[0]\,
+      I1 => \sCntRemPixels_reg_n_0_[0]\,
+      I2 => \sCntRemPixels_reg_n_0_[1]\,
       O => s_axis_video_tready
     );
 end STRUCTURE;
@@ -740,7 +333,7 @@ entity system_AXI_BayerToRGB_1_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of system_AXI_BayerToRGB_1_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of system_AXI_BayerToRGB_1_0 : entity is "AXI_BayerToRGB,Vivado 2017.4";
+  attribute x_core_info of system_AXI_BayerToRGB_1_0 : entity is "AXI_BayerToRGB,Vivado 2017.4.1";
 end system_AXI_BayerToRGB_1_0;
 
 architecture STRUCTURE of system_AXI_BayerToRGB_1_0 is
@@ -749,7 +342,7 @@ architecture STRUCTURE of system_AXI_BayerToRGB_1_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of StreamClk : signal is "xilinx.com:signal:clock:1.0 AXI_Stream_Clk CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of StreamClk : signal is "XIL_INTERFACENAME AXI_Stream_Clk, ASSOCIATED_BUSIF AXI_Stream_Master:AXI_Slave_Interface, FREQ_HZ 150000000, PHASE 0.0, CLK_DOMAIN system_clk_wiz_0_0_clk_out1";
+  attribute x_interface_parameter of StreamClk : signal is "XIL_INTERFACENAME AXI_Stream_Clk, ASSOCIATED_BUSIF AXI_Stream_Master:AXI_Slave_Interface, ASSOCIATED_RESET sStreamReset_n, FREQ_HZ 150000000, PHASE 0.0, CLK_DOMAIN system_clk_wiz_0_0_clk_out1";
   attribute x_interface_info of m_axis_video_tlast : signal is "xilinx.com:interface:axis:1.0 AXI_Stream_Master TLAST";
   attribute x_interface_info of m_axis_video_tready : signal is "xilinx.com:interface:axis:1.0 AXI_Stream_Master TREADY";
   attribute x_interface_parameter of m_axis_video_tready : signal is "XIL_INTERFACENAME AXI_Stream_Master, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 150000000, PHASE 0.0, CLK_DOMAIN system_clk_wiz_0_0_clk_out1, LAYERED_METADATA undef";

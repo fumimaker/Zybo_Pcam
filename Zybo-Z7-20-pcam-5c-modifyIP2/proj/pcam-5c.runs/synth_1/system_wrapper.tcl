@@ -16,7 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param general.maxThreads 8
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -48,13 +47,13 @@ set_property used_in_implementation false [get_files -all c:/Users/fpga/Document
 set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/mipi_csi2_rx_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/ila_sfen_rxclk/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/ila_sfen_rxclk/ila_sfen_rxclk_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/MIPI_DPHY_Receiver.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/MIPI_DPHY_Receiver_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/MIPI_DPHY_Receiver_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/ila_scnn_refclk/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/ila_scnn_refclk/ila_scnn_refclk_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/ila_sfen_refclk/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/ila_sfen_refclk/ila_sfen_refclk_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/MIPI_DPHY_Receiver.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/MIPI_DPHY_Receiver_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_MIPI_D_PHY_RX_0_0/hdl/MIPI_DPHY_Receiver_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_ooc.xdc]

@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-// Date        : Mon Jan 20 16:20:07 2020
+// Date        : Mon Jan 20 18:38:04 2020
 // Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ system_DVIClocking_0_0_sim_netlist.v
@@ -116,7 +116,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_SyncAsync
         .Q(oSyncStages[1]));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "system_DVIClocking_0_0,DVIClocking,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "DVIClocking,Vivado 2017.4" *) 
+(* CHECK_LICENSE_TYPE = "system_DVIClocking_0_0,DVIClocking,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "DVIClocking,Vivado 2017.4.1" *) 
 (* NotValidForBitStream *)
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (PixelClk5X,

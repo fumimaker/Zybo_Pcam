@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-// Date        : Mon Jan 20 16:20:07 2020
+// Date        : Mon Jan 20 18:38:04 2020
 // Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_DVIClocking_0_0/system_DVIClocking_0_0_sim_netlist.v
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "system_DVIClocking_0_0,DVIClocking,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "DVIClocking,Vivado 2017.4" *) 
+(* CHECK_LICENSE_TYPE = "system_DVIClocking_0_0,DVIClocking,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "DVIClocking,Vivado 2017.4.1" *) 
 (* NotValidForBitStream *)
 module system_DVIClocking_0_0
    (PixelClk5X,

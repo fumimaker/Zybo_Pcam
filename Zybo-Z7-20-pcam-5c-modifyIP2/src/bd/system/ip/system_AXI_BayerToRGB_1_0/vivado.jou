@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Jan 20 17:19:01 2020
+# Process ID: 10640
+# Current directory: C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_AXI_BayerToRGB_1_0
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16064 C:\Users\fpga\Documents\Github\Zybo_Pcam\Zybo-Z7-20-pcam-5c-modifyIP2\src\bd\system\ip\system_AXI_BayerToRGB_1_0\system_AXI_BayerToRGB_1_0.dcp
+# Log file: C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_AXI_BayerToRGB_1_0/vivado.log
+# Journal file: C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_AXI_BayerToRGB_1_0\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_checkpoint C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_AXI_BayerToRGB_1_0/system_AXI_BayerToRGB_1_0.dcp

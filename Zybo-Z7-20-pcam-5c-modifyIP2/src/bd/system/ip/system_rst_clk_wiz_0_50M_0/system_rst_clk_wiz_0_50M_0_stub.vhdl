@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
 -- Date        : Mon Jan 20 16:20:06 2020
 -- Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_rst_clk_wiz_0_50M_0/system_rst_clk_wiz_0_50M_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top system_rst_clk_wiz_0_50M_0 -prefix
+--               system_rst_clk_wiz_0_50M_0_ system_rst_clk_wiz_0_50M_0_stub.vhdl
 -- Design      : system_rst_clk_wiz_0_50M_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

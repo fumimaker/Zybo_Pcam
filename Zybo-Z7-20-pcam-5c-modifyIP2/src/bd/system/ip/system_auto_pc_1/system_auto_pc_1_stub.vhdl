@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
 -- Date        : Mon Jan 20 16:22:56 2020
 -- Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-modifyIP2/src/bd/system/ip/system_auto_pc_1/system_auto_pc_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top system_auto_pc_1 -prefix
+--               system_auto_pc_1_ system_auto_pc_1_stub.vhdl
 -- Design      : system_auto_pc_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
