@@ -83,7 +83,10 @@ port (
   m_axis_video_tdata : out STD_LOGIC_VECTOR(kAXI_OutputDataWidth-1 downto 0);
   m_axis_video_tvalid : out STD_LOGIC;
   m_axis_video_tuser : out STD_LOGIC;
-  m_axis_video_tlast : out STD_LOGIC
+  m_axis_video_tlast : out STD_LOGIC;
+  
+  led : out STD_LOGIC_VECTOR(3 downto 0);
+  button : in STD_LOGIC_VECTOR(3 downto 0)
   
 );
 end AXI_BayerToRGB;
@@ -476,5 +479,10 @@ m_axis_video_tlast  <= sStrobesShiftReg(3).Last;
     std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1))&
     std_logic_vector(sAXIMasterBlue)&
     std_logic_vector(sAXIMasterRed);
+
+led(0) <= button(0);
+led(1) <= button(1);
+led(2) <= button(2);
+led(3) <= button(3);
 
 end rtl;

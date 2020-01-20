@@ -318,3 +318,13 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: `main-build' ‚É‘Î‚µ‚Äs‚¤‚×‚«–‚Í‚ ‚è‚Ü‚¹‚ñ.
+16:37:11 **** Incremental Build of configuration Debug for project fsbl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build' ‚É‘Î‚µ‚Äs‚¤‚×‚«–‚Í‚ ‚è‚Ü‚¹‚ñ.
+16:37:17 **** Incremental Build of configuration Debug for project pcam_vdma_hdmi ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build' ‚É‘Î‚µ‚Äs‚¤‚×‚«–‚Í‚ ‚è‚Ü‚¹‚ñ.
