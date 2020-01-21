@@ -1,28 +1,31 @@
 import cv2
 import numpy as np
-import serial
 
 cap = cv2.VideoCapture(0)
-cap.set(cv2.CAP_PROP_FPS, 60)
+#cap.set(cv2.CAP_PROP_FPS, 30)
+print(cap.get(cv2.CAP_PROP_FPS))
+
+tm = cv2.TickMeter()
+tm.start()
+count = 0
+max_count = 10
+fps = 0
+
 while(1):
     # フレームを取得
     ret, frame = cap.read()
 
-    
-    # フレームをHSVに変換
-    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    if count == max_count:
+        tm.stop()
+        fps = max_count / tm.getTimeSec()
+        tm.reset()
+        tm.start()
+        count = 0
+    cv2.putText(frame, 'FPS: {:.2f}'.format(fps),
+                (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 0), thickness=2)
+    cv2.imshow("frame", frame)
 
-    # 取得する色の範囲を指定する
-    lower_yellow = np.array([20, 50, 50])
-    upper_yellow = np.array([100, 255, 255])
-
-    # 指定した色に基づいたマスク画像の生成
-    img_mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
-
-    # フレーム画像とマスク画像の共通の領域を抽出する。
-    img_color = cv2.bitwise_and(frame, frame, mask=img_mask)
-
-    cv2.imshow("SHOW COLOR IMAGE", img_color)
+    count += 1
 
     # qを押したら終了
     k = cv2.waitKey(1)

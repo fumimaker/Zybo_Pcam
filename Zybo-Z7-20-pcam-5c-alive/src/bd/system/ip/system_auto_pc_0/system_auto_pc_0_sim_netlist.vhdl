@@ -1,8 +1,8 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Tue Jun 19 19:22:55 2018
--- Host        : elodlt-ro running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+-- Date        : Tue Jan 21 22:26:36 2020
+-- Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top system_auto_pc_0 -prefix
 --               system_auto_pc_0_ system_auto_pc_0_sim_netlist.vhdl
 -- Design      : system_auto_pc_0
@@ -7680,7 +7680,7 @@ entity system_auto_pc_0 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_auto_pc_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of system_auto_pc_0 : entity is "axi_protocol_converter_v2_1_15_axi_protocol_converter,Vivado 2017.4";
+  attribute X_CORE_INFO of system_auto_pc_0 : entity is "axi_protocol_converter_v2_1_15_axi_protocol_converter,Vivado 2017.4.1";
 end system_auto_pc_0;
 
 architecture STRUCTURE of system_auto_pc_0 is

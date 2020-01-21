@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2020 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: digilentinc.com:user:AXI_GammaCorrection:1.0
--- IP Revision: 20
+-- IP Revision: 21
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -139,7 +139,7 @@ ARCHITECTURE system_AXI_GammaCorrection_0_0_arch OF system_AXI_GammaCorrection_0
     );
   END COMPONENT AXI_GammaCorrection;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF system_AXI_GammaCorrection_0_0_arch: ARCHITECTURE IS "AXI_GammaCorrection,Vivado 2017.4";
+  ATTRIBUTE X_CORE_INFO OF system_AXI_GammaCorrection_0_0_arch: ARCHITECTURE IS "AXI_GammaCorrection,Vivado 2017.4.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF system_AXI_GammaCorrection_0_0_arch : ARCHITECTURE IS "system_AXI_GammaCorrection_0_0,AXI_GammaCorrection,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;

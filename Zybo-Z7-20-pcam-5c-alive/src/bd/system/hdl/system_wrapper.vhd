@@ -1,8 +1,8 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
---Date        : Wed Jun 20 16:11:33 2018
---Host        : elodlt-ro running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+--Date        : Tue Jan 21 23:00:00 2020
+--Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
 --Command     : generate_target system_wrapper.bd
 --Design      : system_wrapper
 --Purpose     : IP block netlist
@@ -34,6 +34,7 @@ entity system_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
     cam_gpio_tri_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     cam_iic_scl_io : inout STD_LOGIC;
     cam_iic_sda_io : inout STD_LOGIC;
@@ -48,7 +49,10 @@ entity system_wrapper is
     hdmi_tx_clk_n : out STD_LOGIC;
     hdmi_tx_clk_p : out STD_LOGIC;
     hdmi_tx_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    hdmi_tx_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 )
+    hdmi_tx_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    jb_p : out STD_LOGIC_VECTOR ( 4 downto 1 );
+    led : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    sw : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
 end system_wrapper;
 
@@ -91,12 +95,16 @@ architecture STRUCTURE of system_wrapper is
     hdmi_tx_clk_n : out STD_LOGIC;
     hdmi_tx_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
     hdmi_tx_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    jb_p : out STD_LOGIC_VECTOR ( 4 downto 1 );
     dphy_clk_lp_n : in STD_LOGIC;
     dphy_clk_lp_p : in STD_LOGIC;
     dphy_data_hs_n : in STD_LOGIC_VECTOR ( 1 downto 0 );
     dphy_data_hs_p : in STD_LOGIC_VECTOR ( 1 downto 0 );
     dphy_data_lp_n : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    dphy_data_lp_p : in STD_LOGIC_VECTOR ( 1 downto 0 )
+    dphy_data_lp_p : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    led : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    sw : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component system;
   component IOBUF is
@@ -162,6 +170,7 @@ system_i: component system
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      btn(3 downto 0) => btn(3 downto 0),
       cam_gpio_tri_i(0) => cam_gpio_tri_i_0(0),
       cam_gpio_tri_o(0) => cam_gpio_tri_o_0(0),
       cam_gpio_tri_t(0) => cam_gpio_tri_t_0(0),
@@ -182,6 +191,9 @@ system_i: component system
       hdmi_tx_clk_n => hdmi_tx_clk_n,
       hdmi_tx_clk_p => hdmi_tx_clk_p,
       hdmi_tx_data_n(2 downto 0) => hdmi_tx_data_n(2 downto 0),
-      hdmi_tx_data_p(2 downto 0) => hdmi_tx_data_p(2 downto 0)
+      hdmi_tx_data_p(2 downto 0) => hdmi_tx_data_p(2 downto 0),
+      jb_p(4 downto 1) => jb_p(4 downto 1),
+      led(3 downto 0) => led(3 downto 0),
+      sw(3 downto 0) => sw(3 downto 0)
     );
 end STRUCTURE;

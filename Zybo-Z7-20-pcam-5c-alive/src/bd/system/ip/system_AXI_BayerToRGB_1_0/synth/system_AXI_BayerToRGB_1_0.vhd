@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2020 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -46,8 +46,8 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: digilentinc.com:user:AXI_BayerToRGB:1.0
--- IP Revision: 13
+-- IP VLNV: digilentinc.com:user:AXI_BayerToRGB:4.2
+-- IP Revision: 1
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -66,7 +66,11 @@ ENTITY system_AXI_BayerToRGB_1_0 IS
     m_axis_video_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     m_axis_video_tvalid : OUT STD_LOGIC;
     m_axis_video_tuser : OUT STD_LOGIC;
-    m_axis_video_tlast : OUT STD_LOGIC
+    m_axis_video_tlast : OUT STD_LOGIC;
+    led : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    button : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    sw : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    jb_p : OUT STD_LOGIC_VECTOR(4 DOWNTO 1)
   );
 END system_AXI_BayerToRGB_1_0;
 
@@ -92,11 +96,15 @@ ARCHITECTURE system_AXI_BayerToRGB_1_0_arch OF system_AXI_BayerToRGB_1_0 IS
       m_axis_video_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       m_axis_video_tvalid : OUT STD_LOGIC;
       m_axis_video_tuser : OUT STD_LOGIC;
-      m_axis_video_tlast : OUT STD_LOGIC
+      m_axis_video_tlast : OUT STD_LOGIC;
+      led : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      button : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      sw : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      jb_p : OUT STD_LOGIC_VECTOR(4 DOWNTO 1)
     );
   END COMPONENT AXI_BayerToRGB;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF system_AXI_BayerToRGB_1_0_arch: ARCHITECTURE IS "AXI_BayerToRGB,Vivado 2017.4";
+  ATTRIBUTE X_CORE_INFO OF system_AXI_BayerToRGB_1_0_arch: ARCHITECTURE IS "AXI_BayerToRGB,Vivado 2017.4.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF system_AXI_BayerToRGB_1_0_arch : ARCHITECTURE IS "system_AXI_BayerToRGB_1_0,AXI_BayerToRGB,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -115,7 +123,7 @@ ARCHITECTURE system_AXI_BayerToRGB_1_0_arch OF system_AXI_BayerToRGB_1_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_video_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 AXI_Slave_Interface TREADY";
   ATTRIBUTE X_INTERFACE_PARAMETER OF sStreamReset_n: SIGNAL IS "XIL_INTERFACENAME AXI_Stream_Reset_n, POLARITY ACTIVE_LOW";
   ATTRIBUTE X_INTERFACE_INFO OF sStreamReset_n: SIGNAL IS "xilinx.com:signal:reset:1.0 AXI_Stream_Reset_n RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF StreamClk: SIGNAL IS "XIL_INTERFACENAME AXI_Stream_Clk, ASSOCIATED_BUSIF AXI_Stream_Master:AXI_Slave_Interface, FREQ_HZ 150000000, PHASE 0.0, CLK_DOMAIN system_clk_wiz_0_0_clk_out1";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF StreamClk: SIGNAL IS "XIL_INTERFACENAME AXI_Stream_Clk, ASSOCIATED_BUSIF AXI_Stream_Master:AXI_Slave_Interface, ASSOCIATED_RESET sStreamReset_n, FREQ_HZ 150000000, PHASE 0.0, CLK_DOMAIN system_clk_wiz_0_0_clk_out1";
   ATTRIBUTE X_INTERFACE_INFO OF StreamClk: SIGNAL IS "xilinx.com:signal:clock:1.0 AXI_Stream_Clk CLK";
 BEGIN
   U0 : AXI_BayerToRGB
@@ -137,6 +145,10 @@ BEGIN
       m_axis_video_tdata => m_axis_video_tdata,
       m_axis_video_tvalid => m_axis_video_tvalid,
       m_axis_video_tuser => m_axis_video_tuser,
-      m_axis_video_tlast => m_axis_video_tlast
+      m_axis_video_tlast => m_axis_video_tlast,
+      led => led,
+      button => button,
+      sw => sw,
+      jb_p => jb_p
     );
 END system_AXI_BayerToRGB_1_0_arch;

@@ -83,7 +83,11 @@ port (
   m_axis_video_tdata : out STD_LOGIC_VECTOR(kAXI_OutputDataWidth-1 downto 0);
   m_axis_video_tvalid : out STD_LOGIC;
   m_axis_video_tuser : out STD_LOGIC;
-  m_axis_video_tlast : out STD_LOGIC
+  m_axis_video_tlast : out STD_LOGIC;
+  led : out STD_LOGIC_VECTOR(3 downto 0);
+  button : in STD_LOGIC_VECTOR(3 downto 0);
+  sw : in STD_LOGIC_VECTOR(3 downto 0);
+  jb_p : out STD_LOGIC_VECTOR(4 downto 1)
 );
 end AXI_BayerToRGB;
 
@@ -125,6 +129,8 @@ architecture rtl of AXI_BayerToRGB is
 
   signal sDataIsAvailableAndRequested: STD_LOGIC;
   signal sCoverInitialLatency: STD_LOGIC;
+  
+  signal counter: unsigned(15 downto 0);
 
 begin
 
@@ -355,36 +361,55 @@ begin
       sAXIMasterBlue  <= (others => '0');
       sAXIMasterGreen <= (others => '0');
       sAXIMasterRed  <= (others => '0');
+      counter <= (others => '0');
     elsif sDataIsAvailableAndRequested = '1' then
       if (sStrobesShiftReg(2).FirstColumn = '1') or
         (sStrobesShiftReg(2).FirstLine = '1') then
+        
+        if (sStrobesShiftReg(2).FirstLine = '1') then
+            counter <= (others => '0');
+        end if;
+        
         sAXIMasterBlue  <= to_unsigned(512, sAXIMasterBlue'length);
         sAXIMasterGreen <= to_unsigned(1024, sAXIMasterGreen'length);
         sAXIMasterRed  <= to_unsigned(512, sAXIMasterRed'length);
+      
       else
-        case sCrntPositionIndicatorDly3 is
-          when "01" =>
-            sAXIMasterBlue  <= sPixel(1)(kBayerWidth-1 downto 0);
-            sAXIMasterGreen <= sPixel(0) + sPixel(3);
-            sAXIMasterRed  <= sPixel(2)(kBayerWidth-1 downto 0);
-          when "00" =>
-            sAXIMasterBlue  <= sPixel(0)(kBayerWidth-1 downto 0);
-            sAXIMasterGreen <= sPixel(1) + sPixel(2);
-            sAXIMasterRed  <= sPixel(3)(kBayerWidth-1 downto 0);
-          when "11" =>
-            sAXIMasterBlue  <= sPixel(3)(kBayerWidth-1 downto 0);
-            sAXIMasterGreen <= sPixel(1) + sPixel(2);
-            sAXIMasterRed  <= sPixel(0)(kBayerWidth-1 downto 0);
-          when "10" =>
-            sAXIMasterBlue  <= sPixel(2)(kBayerWidth-1 downto 0);
-            sAXIMasterGreen <= sPixel(0) + sPixel(3);
-            sAXIMasterRed  <= sPixel(1)(kBayerWidth-1 downto 0);
-          when others => null;
-        end case;
+        if (sAXIMasterBlue > 900) and (sAXIMasterRed < 700) and (sAXIMasterGreen(kBayerWidth downto 1) < 700) then
+            sAXIMasterBlue  <= to_unsigned(0, sAXIMasterBlue'length);
+            sAXIMasterGreen <= to_unsigned(0, sAXIMasterGreen'length);
+            sAXIMasterRed  <= to_unsigned(1023, sAXIMasterRed'length);
+            counter <= counter + 1;
+        else
+            case sCrntPositionIndicatorDly3 is
+              when "01" =>
+                sAXIMasterBlue  <= sPixel(1)(kBayerWidth-1 downto 0);
+                sAXIMasterGreen <= sPixel(0) + sPixel(3);
+                sAXIMasterRed  <= sPixel(2)(kBayerWidth-1 downto 0);
+              when "00" =>
+                sAXIMasterBlue  <= sPixel(0)(kBayerWidth-1 downto 0);
+                sAXIMasterGreen <= sPixel(1) + sPixel(2);
+                sAXIMasterRed  <= sPixel(3)(kBayerWidth-1 downto 0);
+              when "11" =>
+                sAXIMasterBlue  <= sPixel(3)(kBayerWidth-1 downto 0);
+                sAXIMasterGreen <= sPixel(1) + sPixel(2);
+                sAXIMasterRed  <= sPixel(0)(kBayerWidth-1 downto 0);
+              when "10" =>
+                sAXIMasterBlue  <= sPixel(2)(kBayerWidth-1 downto 0);
+                sAXIMasterGreen <= sPixel(0) + sPixel(3);
+                sAXIMasterRed  <= sPixel(1)(kBayerWidth-1 downto 0);
+              when others => null;
+            end case;
+        end if;
       end if;
     end if;
   end if;
 end process AssignOutputs;
+
+--HSV: process(StreamClk)
+--begin
+--    red 
+--end process HSV;
 
 -- This process shifts the registers containing the User and the Last signals for
 -- the AXI stream output, as well as some internal signals.
@@ -416,9 +441,51 @@ end process AssignValid;
 -- Assign AXI stream output interface signals.
 m_axis_video_tuser  <= sStrobesShiftReg(3).User;
 m_axis_video_tlast  <= sStrobesShiftReg(3).Last;
-m_axis_video_tdata  <= "00" & std_logic_vector(sAXIMasterRed) &
-  std_logic_vector(sAXIMasterBlue) &
-  std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1));
 
+--m_axis_video_tdata  <= "00" & std_logic_vector(sAXIMasterRed) &
+--  std_logic_vector(sAXIMasterBlue) &
+--  std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1));
+
+--m_axis_video_tdata  <= "00" &
+--    std_logic_vector(to_unsigned(1023, sAXIMasterBlue'length)) &
+--    std_logic_vector(to_unsigned(0, sAXIMasterGreen'length-1)) &
+--    std_logic_vector(to_unsigned(0, sAXIMasterRed'length))  when 
+    
+--    (sAXIMasterRed  > to_unsigned(800, sAXIMasterRed'length)) and 
+--    (sAXIMasterBlue  < to_unsigned(200, sAXIMasterBlue'length)) and 
+--    (sAXIMasterGreen  < to_unsigned(400, sAXIMasterGreen'length)) else
+    
+--     "00" & std_logic_vector(sAXIMasterRed) &
+--     std_logic_vector(sAXIMasterBlue) &
+--     std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1));
+
+m_axis_video_tdata <= "00" &
+      std_logic_vector(sAXIMasterBlue) &
+      std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) &
+      std_logic_vector(sAXIMasterRed)
+      when sw(1) = '1' else
+      
+      "00" &
+    std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) &
+    std_logic_vector(sAXIMasterRed)&
+    std_logic_vector(sAXIMasterBlue) 
+    when sw(0) = '1' else
+             
+     "00" &
+     std_logic_vector(sAXIMasterRed)&
+     std_logic_vector(sAXIMasterBlue)&
+      std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) 
+      when sw(2) = '1' else
+      
+      "00"&    
+     std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) &
+     std_logic_vector(sAXIMasterRed)&
+     std_logic_vector(sAXIMasterBlue); 
+
+led(0) <= sw(0);
+led(1) <= sw(1);
+led(2) <= sw(2);
+led(3) <= '1' when counter > 1024 else '0';
+jb_p <= "1111" when counter > 1024 else "0000";
 end rtl;
 
