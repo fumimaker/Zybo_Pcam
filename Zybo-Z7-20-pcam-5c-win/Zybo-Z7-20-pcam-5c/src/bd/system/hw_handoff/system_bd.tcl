@@ -182,11 +182,7 @@ proc create_root_design { parentCell } {
   set sw [ create_bd_port -dir I -from 3 -to 0 sw ]
 
   # Create instance: AXI_BayerToRGB_1, and set properties
-  set AXI_BayerToRGB_1 [ create_bd_cell -type ip -vlnv digilentinc.com:user:AXI_BayerToRGB:2.5 AXI_BayerToRGB_1 ]
-
-  set_property -dict [ list \
-   CONFIG.TDATA_NUM_BYTES {5} \
- ] [get_bd_intf_pins /AXI_BayerToRGB_1/AXI_Slave_Interface]
+  set AXI_BayerToRGB_1 [ create_bd_cell -type ip -vlnv digilentinc.com:user:AXI_BayerToRGB:2.8 AXI_BayerToRGB_1 ]
 
   set_property -dict [ list \
    CONFIG.TDATA_NUM_BYTES {4} \

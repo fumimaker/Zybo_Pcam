@@ -56,27 +56,6 @@
 --  
 -------------------------------------------------------------------------------
 
--- 目的：
--- このコンポーネントは、2x2 Bayerピクセルマトリックスに基づいて、BayerからRGB（「デモザイク」）
--- への画像変換を実行します。コンポーネントは、AXI Stream Slaveインターフェイスを介して一度に
--- 4ピクセルを受信します。 AXI Stream Masterインターフェイスに一度に1ピクセルを出力します。
--- コンポーネントはパイプラインとして設計されているため、入力から出力までのレイテンシがカバーされると、
--- 少なくとも4クロックサイクルごとに入力で1ピクセルを受信する限り、クロックサイクルごとにピクセルが
--- 割り当てられます。ダウンストリームAXIコンポーネントがオフに戻ると、このコンポーネントは、
--- ダウンストリームAXIコンポーネントがデータを再度受信する準備ができるまで、新しいピクセルの受信と処理を停止します。
--- アップストリームAXIコンポーネントがデータの送信を停止すると、このコンポーネントは、新しいデータを受信するまで、
--- 新しいデータのダウンストリーム送信も停止します。
--
--- コンポーネントの仕様：
--- 入力サンプル形式：Bayer（単色）
--- 入力サンプルサイズ：10ビット
--- 入力サンプル数：一度に4
--- 出力サンプル形式：RGB
--- 出力サンプルサイズ：32ビット（10ビット/色）+ 2未使用ビット
--- 出力サンプル数：一度に1
--- 最大解像度：2048 x <任意の値>ピクセル;
--- 入力から出力までのレイテンシ：4 StreamClkサイクル。
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.NUMERIC_STD.ALL;
@@ -104,7 +83,11 @@ port (
   m_axis_video_tdata : out STD_LOGIC_VECTOR(kAXI_OutputDataWidth-1 downto 0);
   m_axis_video_tvalid : out STD_LOGIC;
   m_axis_video_tuser : out STD_LOGIC;
-  m_axis_video_tlast : out STD_LOGIC
+  m_axis_video_tlast : out STD_LOGIC;
+  led : out STD_LOGIC_VECTOR(3 downto 0);
+  button : in STD_LOGIC_VECTOR(3 downto 0);
+  sw : in STD_LOGIC_VECTOR(3 downto 0);
+  portB : out STD_LOGIC_VECTOR(7 downto 0)
 );
 end AXI_BayerToRGB;
 
@@ -146,14 +129,14 @@ architecture rtl of AXI_BayerToRGB is
 
   signal sDataIsAvailableAndRequested: STD_LOGIC;
   signal sCoverInitialLatency: STD_LOGIC;
+  
+  signal counter: unsigned(15 downto 0);
 
 begin
 
 -- Until we cover the initial component latency (i.e. the amount of time needed until the
 -- first data we received arrives (processed) at the output of our component), we will
 -- prevent erroneous AXI stream Valid assertions on the output.
-
--- 最初のデータが届くまでAXI出力しないようにする。
 CoverInitialLatency: process(StreamClk)
 begin
   if rising_edge(StreamClk) then
@@ -169,8 +152,6 @@ sLineBufferWriteAddr <= std_logic_vector(sLineBufferCrntAddr);
 sLineBufferReadAddr <= std_logic_vector(sLineBufferCrntAddr);
 
 -- This RAM component will store at all times the previous line we received via AXI.
--- AXIで読み取ったひとつ前のデータをRAMに格納する。
-
 LineBufferInst: entity work.LineBuffer
 generic map(kLineBufferWidth => 2048)
 port map(
@@ -188,8 +169,6 @@ s_axis_video_tready <= '1' when (m_axis_video_tready = '1') and (sCntRemPixels =
 
 -- This process will put data into the LineBuffer and assert some additional signals which
 -- are needed downstream.
--- このプロセスはラインバッファーにデータを入れて下流に必要な追加の信号を付与する。
-
 PutInputDataInRAM: process(StreamClk)
 begin
 
@@ -206,15 +185,15 @@ begin
       sCrntPositionIndicatorDly1 <= (others => '0');
       sCntRemPixels <= (others => '0');
       sOtherPixelsData <= (others => '0');
-
     elsif sCntRemPixels = 0 then
+
       if m_axis_video_tready = '1' then
         if s_axis_video_tvalid = '1' then
           sStrobesShiftReg(0).Last <= '0';
           if s_axis_video_tlast = '1' then
             sAXI_SlaveLastAsserted <= '1';
           end if;
-          -- RAMインターフェイス信号値を割り当てる。
+          -- Assign RAM interface signal values
           sLineBufferWrite <= '1';
           sLineBufferCrntAddr <= sCntColumns;
           sCntColumns <= sCntColumns + 1;
@@ -224,7 +203,7 @@ begin
           end if;
           sLineBufferWriteData <= s_axis_video_tdata(sLineBufferWriteData'range);
           sCrntPositionIndicatorDly1 <= sCrntPositionIndicator;
-          -- 残りのピクセルをシフトする。
+          -- Shift remaining pixels
           sCntRemPixels <= "11";
           sOtherPixelsData <= s_axis_video_tdata(s_axis_video_tdata'left downto
             sLineBufferWriteData'length);
@@ -270,22 +249,11 @@ end process PutInputDataInRAM;
 -- have processed pixels to send to it (either we just received a new set of pixels from
 -- the upstream component, either we still have at least one more pixel from the last
 -- received set).
-
--- この信号は、ダウンストリームAXIコンポーネントがデータを受信する準備ができていて、送信するピクセルを
--- 処理した場合にアサートされます（アップストリームコンポーネントから新しいピクセルセットを受信したか、
--- または少なくとも1つ以上のピクセルをまだ持っている場合）最後に受信したセット）。
-
--- この信号はAXIコンポーネントがデータを受信する準備ができており、送信するピクセルを処理しているとき
--- にアサートされる。
 sDataIsAvailableAndRequested <= '1' when ((sCntRemPixels > 0) or
   (s_axis_video_tvalid = '1')) and (m_axis_video_tready = '1') else '0';
 
 -- This process will assign the LineBuffer Read signal. This signal is actually a buffered
 -- version of the sDataIsAvailableAndRequested signal.
-
--- このプロセスは、LineBuffer Read信号を割り当てます。 
--- この信号は、実際にはsDataIsAvailableAndRequested信号のバッファーバージョンです。
-
 RamAddrBuffer: process(StreamClk)
 begin
   if rising_edge(StreamClk) then
@@ -305,16 +273,6 @@ end process RamAddrBuffer;
 --   - sPixel(0) is the current value read from the AXI stream input, delayed by 1
 --     clock cycle;
 --   - sPixel(1) is the previous value read from the AXI stream input.
-
--- このプロセスは、BayerからRGBへの変換に必要な2x2ピクセルマトリックスをまとめます。
--- 最初の行列行はLineBufferから取得されます：
---  sPixel（2）は、LineBufferから読み取られた現在の値です。
---  sPixel（3）は、LineBufferから読み取られた以前の値です。
---  2番目のマトリックスラインは、AXIストリーム入力からバッファリングされます。
---  sPixel（0）は、AXIストリーム入力から読み取られた現在の値で、1遅延
---  クロックサイクル;
---  sPixel（1）は、AXIストリーム入力から読み取られた以前の値です。
-
 AssignPixelValues: process(StreamClk)
 begin
   if rising_edge(StreamClk) then
@@ -342,8 +300,6 @@ begin
 end process AssignPixelValues;
 
 -- This process keeps track of the current line number in the current frame.
--- このプロセスは、現在のフレームの現在の行番号を追跡します。
-
 AssignLineNumber: process(StreamClk)
 begin
   if rising_edge(StreamClk) then
@@ -369,13 +325,6 @@ end process AssignLineNumber;
 -- line and the first column in each frame. The FirstLine signal is asserted as the same
 -- time as the User signal, but it is deasserted only after the pixel marked as Last in
 -- the current line is received by the downstream circuit.
-
--- このプロセスは、AXIストリーム出力にユーザー信号を割り当てます。 
--- User信号がAXIストリーム入力でアサートされ、受信したセットの最初のピクセルを
--- 現在送信している場合にのみ、User信号がアサートされます。
--- このプロセスは、各フレームの最初の行と最初の列をグレーに変更するために必要なFirstLine信号も割り当てます。
---  FirstLine信号はUser信号と同時にアサートされますが、現在の行でLastとしてマークされた
--- ピクセルがダウンストリーム回路で受信された後にのみアサート解除されます。
 AssignUserAndFirstLine: process(StreamClk)
 begin
   if rising_edge(StreamClk) then
@@ -400,16 +349,11 @@ begin
 end process AssignUserAndFirstLine;
 
 -- Pixel position indicator in the 2x2 pixel matrix.
--- 2x2ピクセルマトリックスのピクセル位置インジケーター。
-
 sCrntPositionIndicator <= sCntLines(0) & sCntColumns(0);
 
 -- Based on current position in the Bayer matrix, we decide from which position we take
 -- the blue, the green and the red pixels which we will then use to form a complete
 -- pixel (RGB).
-
--- Bayerマトリックスの現在の位置に基づいて、青、緑、赤のピクセルをどの位置から取得するかを決定し、
--- これらのピクセルを使用して完全なピクセル（RGB）を形成します。
 AssignOutputs: process(StreamClk)
 begin
   if rising_edge(StreamClk) then
@@ -417,40 +361,58 @@ begin
       sAXIMasterBlue  <= (others => '0');
       sAXIMasterGreen <= (others => '0');
       sAXIMasterRed  <= (others => '0');
+      counter <= (others => '0');
     elsif sDataIsAvailableAndRequested = '1' then
       if (sStrobesShiftReg(2).FirstColumn = '1') or
         (sStrobesShiftReg(2).FirstLine = '1') then
+        
+        if (sStrobesShiftReg(2).FirstLine = '1') then
+            counter <= (others => '0');
+        end if;
+        
         sAXIMasterBlue  <= to_unsigned(512, sAXIMasterBlue'length);
         sAXIMasterGreen <= to_unsigned(1024, sAXIMasterGreen'length);
         sAXIMasterRed  <= to_unsigned(512, sAXIMasterRed'length);
+      
       else
-        case sCrntPositionIndicatorDly3 is
-          when "01" =>
-            sAXIMasterBlue  <= sPixel(1)(kBayerWidth-1 downto 0);
-            sAXIMasterGreen <= sPixel(0) + sPixel(3);
-            sAXIMasterred  <= sPixel(2)(kBayerWidth-1 downto 0);
-          when "00" =>
-            sAXIMasterBlue  <= sPixel(0)(kBayerWidth-1 downto 0);
-            sAXIMasterGreen <= sPixel(1) + sPixel(2);
-            sAXIMasterRed  <= sPixel(3)(kBayerWidth-1 downto 0);
-          when "11" =>
-            sAXIMasterBlue  <= sPixel(3)(kBayerWidth-1 downto 0);
-            sAXIMasterGreen <= sPixel(1) + sPixel(2);
-            sAXIMasterRed  <= sPixel(0)(kBayerWidth-1 downto 0);
-          when "10" =>
-            sAXIMasterBlue  <= sPixel(2)(kBayerWidth-1 downto 0);
-            sAXIMasterGreen <= sPixel(0) + sPixel(3);
-            sAXIMasterRed  <= sPixel(1)(kBayerWidth-1 downto 0);
-          when others => null;
-        end case;
+        if (sAXIMasterBlue > 900) and (sAXIMasterRed < 700) and (sAXIMasterGreen(kBayerWidth downto 1) < 700) then
+            sAXIMasterBlue  <= to_unsigned(0, sAXIMasterBlue'length);
+            sAXIMasterGreen <= to_unsigned(0, sAXIMasterGreen'length);
+            sAXIMasterRed  <= to_unsigned(1023, sAXIMasterRed'length);
+            counter <= counter + 1;
+        else
+            case sCrntPositionIndicatorDly3 is
+              when "01" =>
+                sAXIMasterBlue  <= sPixel(1)(kBayerWidth-1 downto 0);
+                sAXIMasterGreen <= sPixel(0) + sPixel(3);
+                sAXIMasterRed  <= sPixel(2)(kBayerWidth-1 downto 0);
+              when "00" =>
+                sAXIMasterBlue  <= sPixel(0)(kBayerWidth-1 downto 0);
+                sAXIMasterGreen <= sPixel(1) + sPixel(2);
+                sAXIMasterRed  <= sPixel(3)(kBayerWidth-1 downto 0);
+              when "11" =>
+                sAXIMasterBlue  <= sPixel(3)(kBayerWidth-1 downto 0);
+                sAXIMasterGreen <= sPixel(1) + sPixel(2);
+                sAXIMasterRed  <= sPixel(0)(kBayerWidth-1 downto 0);
+              when "10" =>
+                sAXIMasterBlue  <= sPixel(2)(kBayerWidth-1 downto 0);
+                sAXIMasterGreen <= sPixel(0) + sPixel(3);
+                sAXIMasterRed  <= sPixel(1)(kBayerWidth-1 downto 0);
+              when others => null;
+            end case;
+        end if;
       end if;
     end if;
   end if;
 end process AssignOutputs;
 
+--HSV: process(StreamClk)
+--begin
+--    red 
+--end process HSV;
+
 -- This process shifts the registers containing the User and the Last signals for
 -- the AXI stream output, as well as some internal signals.
--- このプロセスは、AXIストリーム出力のユーザー信号と最終信号、およびいくつかの内部信号を含むレジスタをシフトします。
 ShiftStrobes: process(StreamClk)
 begin
   if rising_edge(StreamClk) then
@@ -463,7 +425,6 @@ begin
 end process ShiftStrobes;
 
 -- This process assigns the Valid signal on the AXI stream output interface.
---  このプロセスは、AXIストリーム出力インターフェイスに有効な信号を割り当てます。
 AssignValid: process(StreamClk)
 begin
   if rising_edge(StreamClk) then
@@ -478,12 +439,54 @@ begin
 end process AssignValid;
 
 -- Assign AXI stream output interface signals.
--- -AXIストリーム出力インターフェイス信号を割り当てます。
 m_axis_video_tuser  <= sStrobesShiftReg(3).User;
 m_axis_video_tlast  <= sStrobesShiftReg(3).Last;
-m_axis_video_tdata  <= "00" & std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) & 
-    std_logic_vector(sAXIMasterBlue)&
-    std_logic_vector(sAXIMasterRed);
+
+--m_axis_video_tdata  <= "00" & std_logic_vector(sAXIMasterRed) &
+--  std_logic_vector(sAXIMasterBlue) &
+--  std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1));
+
+--m_axis_video_tdata  <= "00" &
+--    std_logic_vector(to_unsigned(1023, sAXIMasterBlue'length)) &
+--    std_logic_vector(to_unsigned(0, sAXIMasterGreen'length-1)) &
+--    std_logic_vector(to_unsigned(0, sAXIMasterRed'length))  when 
+    
+--    (sAXIMasterRed  > to_unsigned(800, sAXIMasterRed'length)) and 
+--    (sAXIMasterBlue  < to_unsigned(200, sAXIMasterBlue'length)) and 
+--    (sAXIMasterGreen  < to_unsigned(400, sAXIMasterGreen'length)) else
+    
+--     "00" & std_logic_vector(sAXIMasterRed) &
+--     std_logic_vector(sAXIMasterBlue) &
+--     std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1));
+
+m_axis_video_tdata <= "00" &
+      std_logic_vector(sAXIMasterBlue) &
+      std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) &
+      std_logic_vector(sAXIMasterRed)
+      when sw(1) = '1' else
+      
+      "00" &
+    std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) &
+    std_logic_vector(sAXIMasterRed)&
+    std_logic_vector(sAXIMasterBlue) 
+    when sw(0) = '1' else
+             
+     "00" &
+     std_logic_vector(sAXIMasterRed)&
+     std_logic_vector(sAXIMasterBlue)&
+      std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) 
+      when sw(2) = '1' else
+      
+      "00"&    
+     std_logic_vector(sAXIMasterGreen(kBayerWidth downto 1)) &
+     std_logic_vector(sAXIMasterRed)&
+     std_logic_vector(sAXIMasterBlue); 
+
+led(0) <= sw(0);
+led(1) <= sw(1);
+led(2) <= sw(2);
+led(3) <= '1' when counter > 1024 else '0';
+portB <= "11111111" when counter > 1024 else "00000000";
 
 end rtl;
 

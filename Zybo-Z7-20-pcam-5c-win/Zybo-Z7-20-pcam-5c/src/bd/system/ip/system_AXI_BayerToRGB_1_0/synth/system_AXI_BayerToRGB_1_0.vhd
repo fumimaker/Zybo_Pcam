@@ -46,7 +46,7 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: digilentinc.com:user:AXI_BayerToRGB:2.5
+-- IP VLNV: digilentinc.com:user:AXI_BayerToRGB:2.8
 -- IP Revision: 1
 
 LIBRARY ieee;

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 21 01:10:06 2020" VIVADOVERSION="2017.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 21 15:49:04 2020" VIVADOVERSION="2017.4">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -168,7 +168,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE FULLNAME="/AXI_BayerToRGB_1" HWVERSION="2.5" INSTANCE="AXI_BayerToRGB_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AXI_BayerToRGB" VLNV="digilentinc.com:user:AXI_BayerToRGB:2.5">
+    <MODULE FULLNAME="/AXI_BayerToRGB_1" HWVERSION="2.8" INSTANCE="AXI_BayerToRGB_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AXI_BayerToRGB" VLNV="digilentinc.com:user:AXI_BayerToRGB:2.8">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="kBayerWidth" VALUE="10"/>
@@ -618,7 +618,7 @@
     </MODULE>
     <MODULE FULLNAME="/MIPI_CSI_2_RX_0" HWVERSION="1.1" INSTANCE="MIPI_CSI_2_RX_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="MIPI_CSI_2_RX" VLNV="digilentinc.com:ip:MIPI_CSI_2_RX:1.1">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/Users/tlab/Downloads/Zybo-Z7-20-pcam-5c-2017.4-1/Zybo-Z7-20-pcam-5c/repo/vivado-library/ip/MIPI_CSI_2_RX/docs/mipi_csi_2_rx.pdf"/>
+        <DOCUMENT SOURCE="c:/Users/tlab/Documents/GitHub/Zybo_Pcam/Zybo-Z7-20-pcam-5c-win/Zybo-Z7-20-pcam-5c/repo/vivado-library/ip/MIPI_CSI_2_RX/docs/mipi_csi_2_rx.pdf"/>
       </DOCUMENTS>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI_LITE" NAME="S_AXI_LITE_reg" RANGE="4096" USAGE="register"/>
@@ -965,7 +965,7 @@
     </MODULE>
     <MODULE FULLNAME="/MIPI_D_PHY_RX_0" HWVERSION="1.2" INSTANCE="MIPI_D_PHY_RX_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="MIPI_D_PHY_RX" VLNV="digilentinc.com:ip:MIPI_D_PHY_RX:1.2">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/Users/tlab/Downloads/Zybo-Z7-20-pcam-5c-2017.4-1/Zybo-Z7-20-pcam-5c/repo/vivado-library/ip/MIPI_D_PHY_RX/docs/mipi_d_phy_rx.pdf"/>
+        <DOCUMENT SOURCE="c:/Users/tlab/Documents/GitHub/Zybo_Pcam/Zybo-Z7-20-pcam-5c-win/Zybo-Z7-20-pcam-5c/repo/vivado-library/ip/MIPI_D_PHY_RX/docs/mipi_d_phy_rx.pdf"/>
       </DOCUMENTS>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI_LITE" NAME="S_AXI_LITE_reg" RANGE="4096" USAGE="register"/>
@@ -5465,13 +5465,13 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP2_ACLK"/>
             <CONNECTION INSTANCE="v_axi4s_vid_out_0" PORT="aclk"/>
             <CONNECTION INSTANCE="MIPI_CSI_2_RX_0" PORT="video_aclk"/>
-            <CONNECTION INSTANCE="AXI_BayerToRGB_1" PORT="StreamClk"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon_1" PORT="ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon_1" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon_1" PORT="M00_ACLK"/>
+            <CONNECTION INSTANCE="AXI_BayerToRGB_1" PORT="StreamClk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="200000000" DIR="O" NAME="clk_out3" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out3">
@@ -8715,7 +8715,7 @@
     </MODULE>
     <MODULE FULLNAME="/rgb2dvi_0" HWVERSION="1.4" INSTANCE="rgb2dvi_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2dvi" VLNV="digilentinc.com:ip:rgb2dvi:1.4">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/Users/tlab/Downloads/Zybo-Z7-20-pcam-5c-2017.4-1/Zybo-Z7-20-pcam-5c/repo/vivado-library/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
+        <DOCUMENT SOURCE="c:/Users/tlab/Documents/GitHub/Zybo_Pcam/Zybo-Z7-20-pcam-5c-win/Zybo-Z7-20-pcam-5c/repo/vivado-library/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kGenerateSerialClk" VALUE="false"/>
@@ -8851,7 +8851,6 @@
             <CONNECTION INSTANCE="video_dynclk" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="vtg" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="MIPI_CSI_2_RX_0" PORT="s_axi_lite_aresetn"/>
-            <CONNECTION INSTANCE="AXI_BayerToRGB_1" PORT="sStreamReset_n"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon_1" PORT="S00_ARESETN"/>
@@ -8863,6 +8862,7 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M04_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M05_ARESETN"/>
+            <CONNECTION INSTANCE="AXI_BayerToRGB_1" PORT="sStreamReset_n"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

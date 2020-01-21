@@ -1064,7 +1064,7 @@
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>AXI_BayerToRGB_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="AXI_BayerToRGB" spirit:vendor="digilentinc.com" spirit:version="2.5"/>
+        <spirit:componentRef spirit:library="user" spirit:name="AXI_BayerToRGB" spirit:vendor="digilentinc.com" spirit:version="2.8"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_AXI_BayerToRGB_1_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
