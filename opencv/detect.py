@@ -1,102 +1,31 @@
 import cv2
 import numpy as np
 
-# 0 <= h <= 179 (色相)　OpenCVではmax=179なのでR:0(180),G:60,B:120となる
-# 0 <= s <= 255 (彩度)　黒や白の値が抽出されるときはこの閾値を大きくする
-# 0 <= v <= 255 (明度)　これが大きいと明るく，小さいと暗い
-# ここでは青色を抽出するので120±20を閾値とした
-LOW_COLOR = np.array([100, 75, 75])
-HIGH_COLOR = np.array([140, 255, 255])
+def find_rect_of_target_color(image):
+    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV_FULL)
+    h = hsv[:, :, 0]
+    s = hsv[:, :, 1]
+    mask = np.zeros(h.shape, dtype=np.uint8)
+    mask[((h < 150) & (h > 90)) & (s > 128)] = 180
+    contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    rects = []
+    for contour in contours:
+        approx = cv2.convexHull(contour)
+        rect = cv2.boundingRect(approx)
+        rects.append(np.array(rect))
+    return rects
 
-# 抽出する青色の塊のしきい値
-AREA_RATIO_THRESHOLD = 0.005
-
-def find_specific_color(frame,AREA_RATIO_THRESHOLD,LOW_COLOR,HIGH_COLOR):
-    """
-    指定した範囲の色の物体の座標を取得する関数
-    frame: 画像
-    AREA_RATIO_THRESHOLD: area_ratio未満の塊は無視する
-    LOW_COLOR: 抽出する色の下限(h,s,v)
-    HIGH_COLOR: 抽出する色の上限(h,s,v)
-    """
-    # 高さ，幅，チャンネル数
-    h,w,c = frame.shape
-
-    # hsv色空間に変換
-    hsv = cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
-    
-    # 色を抽出する
-    ex_img = cv2.inRange(hsv,LOW_COLOR,HIGH_COLOR)
-
-    # 輪郭抽出
-    _,contours = cv2.findContours(ex_img,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
-    
-    # 面積を計算
-    areas = np.array(list(map(cv2.contourArea,contours)))
-
-    if len(areas) == 0 or np.max(areas) / (h*w) < AREA_RATIO_THRESHOLD:
-        # 見つからなかったらNoneを返す
-        print("the area is too small")
-        return None
-    else:
-        # 面積が最大の塊の重心を計算し返す
-        max_idx = np.argmax(areas)
-        max_area = areas[max_idx]
-        result = cv2.moments(contours[max_idx])
-        x = int(result["m10"]/result["m00"])
-        y = int(result["m01"]/result["m00"])
-        return (x,y)
-
-def test():
-    img = cv2.imread("sample.jpg")
-
-    # 位置を抽出
-    pos = find_specific_color(
-        img,
-        AREA_RATIO_THRESHOLD,
-        LOW_COLOR,
-        HIGH_COLOR
-    )
-
-    if pos is not None:
-        cv2.circle(img,pos,10,(0,0,255),-1)
-    
-    cv2.imwrite("result.jpg",img)
-
-def main():
-    # webカメラを扱うオブジェクトを取得
-    cap = cv2.VideoCapture(0)
-
-    while True:
-        ret,frame = cap.read()
-
-        if ret is False:
-            print("cannot read image")
-            continue
-
-        # 位置を抽出
-        pos = find_specific_color(
-            frame,
-            AREA_RATIO_THRESHOLD,
-            LOW_COLOR,
-            HIGH_COLOR
-        )
-
-        if pos is not None:
-            # 抽出した座標に丸を描く
-            cv2.circle(frame,pos,10,(0,0,255),-1)
-        
-        # 画面に表示する
-        cv2.imshow('frame',frame)
-
-        # キーボード入力待ち
-        key = cv2.waitKey(1) & 0xFF
-
-        # qが押された場合は終了する
-        if key == ord('q'):
-            break
-
-    cv2.destroyAllWindows()
-
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+  capture = cv2.VideoCapture(0)
+  while cv2.waitKey(30) < 0:
+    _, frame = capture.read()
+    rects = find_rect_of_target_color(frame)
+    if len(rects) > 0:
+      rect = max(rects, key=(lambda x: x[2] * x[3]))
+      print(rect[2], rect[3])
+      cv2.rectangle(frame, tuple(rect[0:2]), tuple(rect[0:2] + rect[2:4]), (255,0,0), thickness=2)
+      if(rect[3]>70):
+        print("detected")
+    cv2.imshow('red', frame)
+  capture.release()
+  cv2.destroyAllWindows()

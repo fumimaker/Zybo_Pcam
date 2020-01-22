@@ -11,8 +11,9 @@ max_count = 10
 fps = 0
 bgrLower = np.array([254, 254, 254])    # 抽出する色の下限(BGR)
 bgrUpper = np.array([255, 255, 255])    # 抽出する色の上限(BGR)
-HEIGHT = 480
-WIDTH = 640
+h = 480
+w = 640
+
 counter = 0
 
 while(1):
@@ -28,11 +29,14 @@ while(1):
     cv2.putText(frame, 'FPS: {:.2f}'.format(fps),
                 (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 0), thickness=2)
     
-    for x in range(HEIGHT):
-        for y in range(WIDTH):
+    for x in range(160, 320):
+        for y in range(213, 426):
+            
             b, g, r = frame[x, y]
             if (b,g,r) == (255, 255, 255):
                 counter += 1
+            
+
     print(counter)
     cv2.imshow('red', frame)
     counter = 0
