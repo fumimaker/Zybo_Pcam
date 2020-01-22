@@ -1,5 +1,7 @@
 import cv2
 import numpy as np
+import serial
+import time
 
 def find_rect_of_target_color(image):
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV_FULL)
@@ -16,16 +18,39 @@ def find_rect_of_target_color(image):
     return rects
 
 if __name__ == "__main__":
-  capture = cv2.VideoCapture(0)
-  while cv2.waitKey(30) < 0:
-    _, frame = capture.read()
-    rects = find_rect_of_target_color(frame)
-    if len(rects) > 0:
-      rect = max(rects, key=(lambda x: x[2] * x[3]))
-      print(rect[2], rect[3])
-      cv2.rectangle(frame, tuple(rect[0:2]), tuple(rect[0:2] + rect[2:4]), (255,0,0), thickness=2)
-      if(rect[3]>70):
-        print("detected")
-    cv2.imshow('red', frame)
-  capture.release()
-  cv2.destroyAllWindows()
+    tm = cv2.TickMeter()
+    tm.start()
+    count = 0
+    max_count = 10
+    fps = 0
+    ser = serial.Serial('COM6', 115200, timeout=0.1)
+    time.sleep(1)
+    
+    capture = cv2.VideoCapture(0)
+    
+    while 1:
+        _, frame = capture.read()
+        if count == max_count:
+            tm.stop()
+            fps = max_count / tm.getTimeSec()
+            tm.reset()
+            tm.start()
+            count = 0
+        cv2.putText(frame, 'FPS: {:.2f}'.format(fps),
+                    (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 0), thickness=2)
+        rects = find_rect_of_target_color(frame)
+        if len(rects) > 0:
+            rect = max(rects, key=(lambda x: x[2] * x[3]))
+            print(rect[2], rect[3])
+            cv2.rectangle(frame, tuple(rect[0:2]), tuple(rect[0:2] + rect[2:4]), (255, 0, 0), thickness=2)
+            if(rect[3] > 70):
+                print("detected")
+                ser.write(b'a')
+        count += 1        
+        cv2.imshow('red', frame)
+        k = cv2.waitKey(1)
+        if k == ord('q'):
+            break
+    capture.release()
+    cv2.destroyAllWindows()
+    ser.close()

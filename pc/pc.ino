@@ -1,7 +1,7 @@
 #include <SoftwareSerial.h>
 #define pin 7
-#define led 6
-#define btn 8
+#define led 13
+#define btn 5
 
 uint32_t _us, us = 0;
 
@@ -14,18 +14,32 @@ void setup()
   pinMode(led, OUTPUT);
   pinMode(pin, INPUT);
   Serial.begin(115200);
-  mySerial.begin(115200);
+  mySerial.begin(9600);
+  mySerial.println("press button to start");
 }
 
 void loop()
 {
-  // put your main code here, to run repeatedly:
-  if (!btn){
-    digitalWrite(led, HIGH);
-    _us = micros();
-    while(Serial.read() == -1);
-    us = micros;
-    int tmp = us - _us;
-    mySerial.println(tmp);
+  if (!digitalRead(btn)){
+    //mySerial.println("Pushed");
+    for(int i=0; i<1000; i++){
+      while(Serial.available()){
+       Serial.read();
+      }
+      digitalWrite(led, HIGH);
+      
+      _us = micros();
+      while(Serial.read() == -1);
+      us = micros();
+      int32_t tmp = us - _us;
+      mySerial.println(tmp);
+      
+      digitalWrite(led,LOW);
+      delay(100);
+      while(Serial.available()){
+        Serial.read();
+      }
+      delay(100);
+    }
   }
 }
