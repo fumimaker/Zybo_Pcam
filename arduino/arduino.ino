@@ -1,7 +1,7 @@
 
 #define pin 7
-#define led 6
-#define btn 8
+#define led 13
+#define btn 5
 
 uint32_t _us, us = 0;
 
@@ -16,12 +16,16 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if (!btn){
-    digitalWrite(led, HIGH);
-    _us = micros();
-    while( !(PIND&_BV(7)) ); // 7pin
-    us = micros;
-    int tmp = us - _us;
-    Serial.println(tmp);
+  if (!digitalRead(btn)){
+    for(int i=0; i<100; i++){
+      digitalWrite(led, HIGH);
+      _us = micros();
+      while( !(PIND&_BV(7)) ); // 7pin
+      us = micros();
+      digitalWrite(led, LOW);
+      Serial.println(us - _us);
+      while((PIND&_BV(7)));
+      delay(100);
+    }
   }
 }
