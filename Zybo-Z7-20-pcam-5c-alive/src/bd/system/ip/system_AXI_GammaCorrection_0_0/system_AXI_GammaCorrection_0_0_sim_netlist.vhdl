@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
--- Date        : Tue Jan 21 22:26:18 2020
+-- Date        : Tue Jan 21 22:26:17 2020
 -- Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-alive/src/bd/system/ip/system_AXI_GammaCorrection_0_0/system_AXI_GammaCorrection_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top system_AXI_GammaCorrection_0_0 -prefix
+--               system_AXI_GammaCorrection_0_0_ system_AXI_GammaCorrection_0_0_sim_netlist.vhdl
 -- Design      : system_AXI_GammaCorrection_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity system_AXI_GammaCorrection_0_0_StoredGammaCoefs is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     StreamClk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_AXI_GammaCorrection_0_0_StoredGammaCoefs : entity is "StoredGammaCoefs";
 end system_AXI_GammaCorrection_0_0_StoredGammaCoefs;
 
 architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs is
@@ -20696,8 +20694,6 @@ entity system_AXI_GammaCorrection_0_0_AXI_GammaCorrection is
     S_AXI_RREADY : in STD_LOGIC;
     S_AXI_AWADDR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_AXI_GammaCorrection_0_0_AXI_GammaCorrection : entity is "AXI_GammaCorrection";
 end system_AXI_GammaCorrection_0_0_AXI_GammaCorrection;
 
 architecture STRUCTURE of system_AXI_GammaCorrection_0_0_AXI_GammaCorrection is

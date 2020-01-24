@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2020 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -234,7 +234,7 @@ ARCHITECTURE system_MIPI_D_PHY_RX_0_0_arch OF system_MIPI_D_PHY_RX_0_0 IS
     );
   END COMPONENT MIPI_DPHY_Receiver;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF system_MIPI_D_PHY_RX_0_0_arch: ARCHITECTURE IS "MIPI_DPHY_Receiver,Vivado 2017.4";
+  ATTRIBUTE X_CORE_INFO OF system_MIPI_D_PHY_RX_0_0_arch: ARCHITECTURE IS "MIPI_DPHY_Receiver,Vivado 2017.4.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF system_MIPI_D_PHY_RX_0_0_arch : ARCHITECTURE IS "system_MIPI_D_PHY_RX_0_0,MIPI_DPHY_Receiver,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;

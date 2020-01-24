@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 21 23:00:03 2020" VIVADOVERSION="2017.4.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan 24 22:00:23 2020" VIVADOVERSION="2017.4.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -40,11 +40,6 @@
     <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_tx_clk_n" SIGIS="clk"/>
     <PORT DIR="O" LEFT="2" NAME="hdmi_tx_data_p" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="O" LEFT="2" NAME="hdmi_tx_data_n" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="O" LEFT="4" NAME="jb_p" RIGHT="1" SIGIS="undef" SIGNAME="AXI_BayerToRGB_1_jb_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="AXI_BayerToRGB_1" PORT="jb_p"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" NAME="dphy_clk_lp_n" SIGIS="undef" SIGNAME="External_Ports_dphy_clk_lp_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="MIPI_D_PHY_RX_0" PORT="dphy_clk_lp_n"/>
@@ -88,6 +83,11 @@
     <PORT DIR="I" LEFT="3" NAME="sw" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sw">
       <CONNECTIONS>
         <CONNECTION INSTANCE="AXI_BayerToRGB_1" PORT="sw"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="4" NAME="jb_p" RIGHT="1" SIGIS="undef" SIGNAME="AXI_BayerToRGB_1_jb_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="AXI_BayerToRGB_1" PORT="jb_p"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -173,7 +173,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE FULLNAME="/AXI_BayerToRGB_1" HWVERSION="4.2" INSTANCE="AXI_BayerToRGB_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AXI_BayerToRGB" VLNV="digilentinc.com:user:AXI_BayerToRGB:4.2">
+    <MODULE FULLNAME="/AXI_BayerToRGB_1" HWVERSION="4.6" INSTANCE="AXI_BayerToRGB_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AXI_BayerToRGB" VLNV="digilentinc.com:user:AXI_BayerToRGB:4.6">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="kBayerWidth" VALUE="10"/>

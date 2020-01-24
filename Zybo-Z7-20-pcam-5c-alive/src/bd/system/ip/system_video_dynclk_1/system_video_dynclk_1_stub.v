@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Tue Jun 19 19:04:12 2018
-// Host        : elodlt-ro running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top system_video_dynclk_1 -prefix
-//               system_video_dynclk_1_ system_video_dynclk_1_stub.v
+// Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+// Date        : Fri Jan 24 22:03:20 2020
+// Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub
+//               C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-alive/src/bd/system/ip/system_video_dynclk_1/system_video_dynclk_1_stub.v
 // Design      : system_video_dynclk_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

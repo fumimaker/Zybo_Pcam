@@ -17,7 +17,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   if (!digitalRead(btn)){
-    for(int i=0; i<100; i++){
+    for(int i=0; i<101; i++){
       digitalWrite(led, HIGH);
       _us = micros();
       while( !(PIND&_BV(7)) ); // 7pin
@@ -25,7 +25,7 @@ void loop() {
       digitalWrite(led, LOW);
       Serial.println(us - _us);
       while((PIND&_BV(7)));
-      delay(100);
+      delay(500);
     }
   }
 }

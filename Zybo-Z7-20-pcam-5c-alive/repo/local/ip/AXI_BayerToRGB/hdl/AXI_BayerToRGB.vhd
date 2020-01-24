@@ -375,7 +375,9 @@ begin
         sAXIMasterRed  <= to_unsigned(512, sAXIMasterRed'length);
       
       else
-        if (sAXIMasterBlue > 900) and (sAXIMasterRed < 700) and (sAXIMasterGreen(kBayerWidth downto 1) < 700) then
+        --if (sAXIMasterBlue > 900) and (sAXIMasterRed < 700) and (sAXIMasterGreen(kBayerWidth downto 1) < 700) then
+        if (sAXIMasterBlue > 600) then
+                  
             sAXIMasterBlue  <= to_unsigned(0, sAXIMasterBlue'length);
             sAXIMasterGreen <= to_unsigned(0, sAXIMasterGreen'length);
             sAXIMasterRed  <= to_unsigned(1023, sAXIMasterRed'length);
@@ -485,7 +487,7 @@ m_axis_video_tdata <= "00" &
 led(0) <= sw(0);
 led(1) <= sw(1);
 led(2) <= sw(2);
-led(3) <= '1' when counter > 1024 else '0';
-jb_p <= "1111" when counter > 1024 else "0000";
+led(3) <= '1' when counter > 10 else '0';
+jb_p <= "1111" when counter > 10 else "0000";
 end rtl;
 

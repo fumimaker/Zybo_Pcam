@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Tue Jun 19 19:13:48 2018
--- Host        : elodlt-ro running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top system_axi_vdma_0_0 -prefix
---               system_axi_vdma_0_0_ system_axi_vdma_0_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+-- Date        : Fri Jan 24 22:07:30 2020
+-- Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/fpga/Documents/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-alive/src/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_sim_netlist.vhdl
 -- Design      : system_axi_vdma_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -55,6 +55,8 @@ entity system_axi_vdma_0_0_axi_datamover_ibttcc is
     D : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_ibttcc : entity is "axi_datamover_ibttcc";
 end system_axi_vdma_0_0_axi_datamover_ibttcc;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_ibttcc is
@@ -5139,6 +5141,8 @@ entity system_axi_vdma_0_0_axi_datamover_mssai_skid_buf is
     D : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_mssai_skid_buf : entity is "axi_datamover_mssai_skid_buf";
 end system_axi_vdma_0_0_axi_datamover_mssai_skid_buf;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_mssai_skid_buf is
@@ -7833,6 +7837,8 @@ entity system_axi_vdma_0_0_axi_datamover_pcc is
     sig_wr_fifo_0 : in STD_LOGIC;
     sig_wr_fifo_1 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_pcc : entity is "axi_datamover_pcc";
 end system_axi_vdma_0_0_axi_datamover_pcc;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_pcc is
@@ -12833,6 +12839,8 @@ entity system_axi_vdma_0_0_axi_datamover_rd_status_cntl is
     sig_rd_sts_slverr_reg0 : in STD_LOGIC;
     sig_data2rsc_decerr : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_rd_status_cntl : entity is "axi_datamover_rd_status_cntl";
 end system_axi_vdma_0_0_axi_datamover_rd_status_cntl;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_rd_status_cntl is
@@ -12927,6 +12935,8 @@ entity system_axi_vdma_0_0_axi_datamover_reset is
     \sig_addr_posted_cntr_reg[0]\ : in STD_LOGIC;
     sig_next_calc_error_reg : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_reset : entity is "axi_datamover_reset";
 end system_axi_vdma_0_0_axi_datamover_reset;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_reset is
@@ -13129,6 +13139,8 @@ entity system_axi_vdma_0_0_axi_datamover_skid2mm_buf is
     \sig_next_strt_strb_reg_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \sig_next_strt_strb_reg_reg[7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_skid2mm_buf : entity is "axi_datamover_skid2mm_buf";
 end system_axi_vdma_0_0_axi_datamover_skid2mm_buf;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_skid2mm_buf is
@@ -15516,6 +15528,8 @@ entity system_axi_vdma_0_0_axi_datamover_skid_buf is
     S : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \gen_wr_a.gen_word_narrow.mem_reg_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_skid_buf : entity is "axi_datamover_skid_buf";
 end system_axi_vdma_0_0_axi_datamover_skid_buf;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_skid_buf is
@@ -18413,6 +18427,8 @@ entity system_axi_vdma_0_0_axi_datamover_slice is
     sig_fifo_mssai : in STD_LOGIC_VECTOR ( 1 downto 0 );
     sig_stream_rst : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_slice : entity is "axi_datamover_slice";
 end system_axi_vdma_0_0_axi_datamover_slice;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_slice is
@@ -18858,6 +18874,8 @@ entity system_axi_vdma_0_0_axi_datamover_strb_gen2 is
     D : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \out\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_strb_gen2 : entity is "axi_datamover_strb_gen2";
 end system_axi_vdma_0_0_axi_datamover_strb_gen2;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_strb_gen2 is
@@ -18922,6 +18940,8 @@ entity system_axi_vdma_0_0_axi_vdma_cmdsts_if is
     zero_hsize_err : in STD_LOGIC;
     zero_vsize_err : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_cmdsts_if : entity is "axi_vdma_cmdsts_if";
 end system_axi_vdma_0_0_axi_vdma_cmdsts_if;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_cmdsts_if is
@@ -20040,6 +20060,8 @@ entity system_axi_vdma_0_0_axi_vdma_fsync_gen is
     p_51_out : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_fsync_gen : entity is "axi_vdma_fsync_gen";
 end system_axi_vdma_0_0_axi_vdma_fsync_gen;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_fsync_gen is
@@ -20312,6 +20334,8 @@ entity system_axi_vdma_0_0_axi_vdma_genlock_mux is
     mm2s_frame_ptr_out : in STD_LOGIC_VECTOR ( 2 downto 0 );
     m_axi_s2mm_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_genlock_mux : entity is "axi_vdma_genlock_mux";
 end system_axi_vdma_0_0_axi_vdma_genlock_mux;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_genlock_mux is
@@ -20566,6 +20590,8 @@ entity system_axi_vdma_0_0_axi_vdma_intrpt is
     p_0_in : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_intrpt : entity is "axi_vdma_intrpt";
 end system_axi_vdma_0_0_axi_vdma_intrpt;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_intrpt is
@@ -22217,6 +22243,8 @@ entity system_axi_vdma_0_0_axi_vdma_reg_mux is
     \out\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
     in0 : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_reg_mux : entity is "axi_vdma_reg_mux";
 end system_axi_vdma_0_0_axi_vdma_reg_mux;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_reg_mux is
@@ -22287,6 +22315,8 @@ entity system_axi_vdma_0_0_axi_vdma_regdirect is
     mm2s_axi2ip_wrce : in STD_LOGIC_VECTOR ( 5 downto 0 );
     D : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_regdirect : entity is "axi_vdma_regdirect";
 end system_axi_vdma_0_0_axi_vdma_regdirect;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_regdirect is
@@ -25696,6 +25726,8 @@ entity system_axi_vdma_0_0_axi_vdma_register is
     \GEN_LITE_IS_ASYNC.GEN_ASYNC_LITE_ACCESS.mm2s_axi2ip_wrdata_cdc_tig_reg[18]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \DYNAMIC_SLAVE_MODE_FRAME_CNT.frame_number_i_reg[4]_2\ : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_register : entity is "axi_vdma_register";
 end system_axi_vdma_0_0_axi_vdma_register;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_register is
@@ -27729,6 +27761,8 @@ entity system_axi_vdma_0_0_axi_vdma_skid_buf is
     p_88_out : in STD_LOGIC;
     p_17_out : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_skid_buf : entity is "axi_vdma_skid_buf";
 end system_axi_vdma_0_0_axi_vdma_skid_buf;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_skid_buf is
@@ -30386,6 +30420,8 @@ entity system_axi_vdma_0_0_axi_vdma_sm is
     err_i_reg : in STD_LOGIC_VECTOR ( 0 to 0 );
     \GEN_REGISTER_DIRECT.GEN_REGDIRECT_DRES.video_prmtrs_valid_i_reg_0\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_sm : entity is "axi_vdma_sm";
 end system_axi_vdma_0_0_axi_vdma_sm;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_sm is
@@ -36257,6 +36293,8 @@ entity system_axi_vdma_0_0_axi_vdma_sof_gen is
     \out\ : in STD_LOGIC;
     p_27_out : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_sof_gen : entity is "axi_vdma_sof_gen";
 end system_axi_vdma_0_0_axi_vdma_sof_gen;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_sof_gen is
@@ -36475,6 +36513,8 @@ entity system_axi_vdma_0_0_axi_vdma_sts_mngr is
     \out\ : in STD_LOGIC;
     s2mm_dmasr : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_sts_mngr : entity is "axi_vdma_sts_mngr";
 end system_axi_vdma_0_0_axi_vdma_sts_mngr;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_sts_mngr is
@@ -36625,6 +36665,8 @@ entity system_axi_vdma_0_0_axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axisc_down
     \state_reg[1]_0\ : in STD_LOGIC;
     \acc_data_reg[95]\ : in STD_LOGIC_VECTOR ( 95 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axisc_downsizer : entity is "axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axisc_downsizer";
 end system_axi_vdma_0_0_axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axisc_downsizer;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axisc_downsizer is
@@ -41311,6 +41353,8 @@ entity system_axi_vdma_0_0_axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axisc_upsi
     \sig_strb_reg_out_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \sig_data_reg_out_reg[31]\ : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axisc_upsizer : entity is "axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axisc_upsizer";
 end system_axi_vdma_0_0_axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axisc_upsizer;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axisc_upsizer is
@@ -44660,6 +44704,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity system_axi_vdma_0_0_axi_vdma_vid_cdc is
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_vid_cdc : entity is "axi_vdma_vid_cdc";
 end system_axi_vdma_0_0_axi_vdma_vid_cdc;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_vid_cdc is
@@ -45382,6 +45428,8 @@ entity system_axi_vdma_0_0_axi_vdma_vregister is
     \GEN_NUM_FSTORES_3.reg_module_start_address2_i_reg[31]\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \GEN_NUM_FSTORES_3.reg_module_start_address1_i_reg[31]\ : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_vregister : entity is "axi_vdma_vregister";
 end system_axi_vdma_0_0_axi_vdma_vregister;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_vregister is
@@ -49830,6 +49878,8 @@ entity system_axi_vdma_0_0_cdc_sync is
     s_axis_s2mm_aclk : in STD_LOGIC;
     p_3_out : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_cdc_sync : entity is "cdc_sync";
 end system_axi_vdma_0_0_cdc_sync;
 
 architecture STRUCTURE of system_axi_vdma_0_0_cdc_sync is
@@ -54436,6 +54486,8 @@ entity system_axi_vdma_0_0_cntr_incr_decr_addn_f is
     sig_stream_rst : in STD_LOGIC;
     m_axi_s2mm_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_cntr_incr_decr_addn_f : entity is "cntr_incr_decr_addn_f";
 end system_axi_vdma_0_0_cntr_incr_decr_addn_f;
 
 architecture STRUCTURE of system_axi_vdma_0_0_cntr_incr_decr_addn_f is
@@ -56586,6 +56638,8 @@ entity system_axi_vdma_0_0_dynshreg_f is
     \s_axis_cmd_tdata_reg[63]\ : in STD_LOGIC_VECTOR ( 48 downto 0 );
     m_axi_s2mm_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_dynshreg_f : entity is "dynshreg_f";
 end system_axi_vdma_0_0_dynshreg_f;
 
 architecture STRUCTURE of system_axi_vdma_0_0_dynshreg_f is
@@ -67284,6 +67338,8 @@ entity system_axi_vdma_0_0_xpm_fifo_reg_bit is
     \gen_rst_cc.fifo_wr_rst_i_reg\ : in STD_LOGIC;
     wr_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
 end system_axi_vdma_0_0_xpm_fifo_reg_bit;
 
 architecture STRUCTURE of system_axi_vdma_0_0_xpm_fifo_reg_bit is
@@ -67392,6 +67448,8 @@ entity system_axi_vdma_0_0_xpm_fifo_rst is
     rst_d1 : in STD_LOGIC;
     rd_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_xpm_fifo_rst : entity is "xpm_fifo_rst";
 end system_axi_vdma_0_0_xpm_fifo_rst;
 
 architecture STRUCTURE of system_axi_vdma_0_0_xpm_fifo_rst is
@@ -68073,6 +68131,8 @@ entity system_axi_vdma_0_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of system_axi_vdma_0_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of system_axi_vdma_0_0_xpm_memory_base : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of system_axi_vdma_0_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -69767,6 +69827,8 @@ entity system_axi_vdma_0_0_blk_mem_gen_prim_wrapper is
     \gc0.count_d1_reg[9]\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     dm2linebuf_mm2s_tdata : in STD_LOGIC_VECTOR ( 17 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end system_axi_vdma_0_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of system_axi_vdma_0_0_blk_mem_gen_prim_wrapper is
@@ -70699,6 +70761,8 @@ entity system_axi_vdma_0_0_compare is
     ram_full_fb_i_reg_0 : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_compare : entity is "compare";
 end system_axi_vdma_0_0_compare;
 
 architecture STRUCTURE of system_axi_vdma_0_0_compare is
@@ -71222,6 +71286,8 @@ entity system_axi_vdma_0_0_rd_bin_cntr is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axis_s2mm_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_rd_bin_cntr : entity is "rd_bin_cntr";
 end system_axi_vdma_0_0_rd_bin_cntr;
 
 architecture STRUCTURE of system_axi_vdma_0_0_rd_bin_cntr is
@@ -72152,6 +72218,8 @@ entity system_axi_vdma_0_0_rd_fwft is
     s2mm_halt : in STD_LOGIC;
     \GEN_S2MM_FLUSH_SOF_LOGIC.done_vsize_counter_reg[6]\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_rd_fwft : entity is "rd_fwft";
 end system_axi_vdma_0_0_rd_fwft;
 
 architecture STRUCTURE of system_axi_vdma_0_0_rd_fwft is
@@ -72891,6 +72959,8 @@ entity system_axi_vdma_0_0_wr_bin_cntr is
     \state_reg[1]\ : in STD_LOGIC;
     s_axis_s2mm_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_wr_bin_cntr : entity is "wr_bin_cntr";
 end system_axi_vdma_0_0_wr_bin_cntr;
 
 architecture STRUCTURE of system_axi_vdma_0_0_wr_bin_cntr is
@@ -73918,6 +73988,8 @@ entity system_axi_vdma_0_0_axi_vdma_genlock_mngr is
     num_fstore_minus1 : in STD_LOGIC_VECTOR ( 0 to 0 );
     s2mm_frame_ptr_out : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_genlock_mngr : entity is "axi_vdma_genlock_mngr";
 end system_axi_vdma_0_0_axi_vdma_genlock_mngr;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_genlock_mngr is
@@ -74952,6 +75024,8 @@ entity system_axi_vdma_0_0_axi_vdma_lite_if is
     \GEN_MM2S_LITE_CROSSINGS.GEN_MM2S_CROSSINGS_ASYNC.mm2s_ip2axi_frame_store_cdc_tig_reg[4]\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \GEN_S2MM_LITE_CROSSINGS.GEN_S2MM_CROSSINGS_ASYNC.s2mm_ip2axi_frame_store_cdc_tig_reg[4]\ : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_lite_if : entity is "axi_vdma_lite_if";
 end system_axi_vdma_0_0_axi_vdma_lite_if;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_lite_if is
@@ -81581,6 +81655,8 @@ entity system_axi_vdma_0_0_axi_vdma_reg_module is
     \GEN_LITE_IS_ASYNC.GEN_ASYNC_LITE_ACCESS.mm2s_axi2ip_wrdata_cdc_tig_reg[18]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \DYNAMIC_SLAVE_MODE_FRAME_CNT.frame_number_i_reg[4]_2\ : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_reg_module : entity is "axi_vdma_reg_module";
 end system_axi_vdma_0_0_axi_vdma_reg_module;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_reg_module is
@@ -82121,6 +82197,8 @@ entity system_axi_vdma_0_0_axi_vdma_reset is
     \GEN_LINEBUF_NO_SOF.all_lines_xfred_reg_0\ : in STD_LOGIC;
     prmry_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_reset : entity is "axi_vdma_reset";
 end system_axi_vdma_0_0_axi_vdma_reset;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_reset is
@@ -83781,6 +83859,8 @@ entity system_axi_vdma_0_0_axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axis_dwidt
     \sig_strb_reg_out_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \sig_data_reg_out_reg[31]\ : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axis_dwidth_converter : entity is "axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axis_dwidth_converter";
 end system_axi_vdma_0_0_axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axis_dwidth_converter;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_v6_3_3_axis_dwidth_converter_v1_0_axis_dwidth_converter is
@@ -84174,6 +84254,8 @@ entity system_axi_vdma_0_0_axi_vdma_vidreg_module is
     \GEN_NUM_FSTORES_3.reg_module_start_address2_i_reg[31]\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \GEN_NUM_FSTORES_3.reg_module_start_address1_i_reg[31]\ : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_vidreg_module : entity is "axi_vdma_vidreg_module";
 end system_axi_vdma_0_0_axi_vdma_vidreg_module;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_vidreg_module is
@@ -84415,6 +84497,8 @@ entity system_axi_vdma_0_0_srl_fifo_rbu_f is
     s_axis_s2mm_cmd_tvalid : in STD_LOGIC;
     \s_axis_cmd_tdata_reg[63]\ : in STD_LOGIC_VECTOR ( 48 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_srl_fifo_rbu_f : entity is "srl_fifo_rbu_f";
 end system_axi_vdma_0_0_srl_fifo_rbu_f;
 
 architecture STRUCTURE of system_axi_vdma_0_0_srl_fifo_rbu_f is
@@ -85749,6 +85833,8 @@ entity system_axi_vdma_0_0_xpm_fifo_base is
   attribute FULL_RESET_VALUE of system_axi_vdma_0_0_xpm_fifo_base : entity is 0;
   attribute FULL_RST_VAL : string;
   attribute FULL_RST_VAL of system_axi_vdma_0_0_xpm_fifo_base : entity is "1'b0";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_xpm_fifo_base : entity is "xpm_fifo_base";
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of system_axi_vdma_0_0_xpm_fifo_base : entity is 8;
   attribute PE_THRESH_MAX : integer;
@@ -89016,6 +89102,8 @@ entity system_axi_vdma_0_0_blk_mem_gen_prim_width is
     \gc0.count_d1_reg[9]\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     dm2linebuf_mm2s_tdata : in STD_LOGIC_VECTOR ( 17 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end system_axi_vdma_0_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of system_axi_vdma_0_0_blk_mem_gen_prim_width is
@@ -89157,6 +89245,8 @@ entity system_axi_vdma_0_0_rd_status_flags_ss is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     \state_reg[1]\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_rd_status_flags_ss : entity is "rd_status_flags_ss";
 end system_axi_vdma_0_0_rd_status_flags_ss;
 
 architecture STRUCTURE of system_axi_vdma_0_0_rd_status_flags_ss is
@@ -89315,6 +89405,8 @@ entity system_axi_vdma_0_0_wr_status_flags_ss is
     \state_reg[1]\ : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_wr_status_flags_ss : entity is "wr_status_flags_ss";
 end system_axi_vdma_0_0_wr_status_flags_ss;
 
 architecture STRUCTURE of system_axi_vdma_0_0_wr_status_flags_ss is
@@ -89554,6 +89646,8 @@ entity system_axi_vdma_0_0_axi_vdma_mm2s_axis_dwidth_converter is
     \sig_data_reg_out_reg[31]\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     D : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_mm2s_axis_dwidth_converter : entity is "axi_vdma_mm2s_axis_dwidth_converter";
 end system_axi_vdma_0_0_axi_vdma_mm2s_axis_dwidth_converter;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_mm2s_axis_dwidth_converter is
@@ -90098,6 +90192,8 @@ entity system_axi_vdma_0_0_axi_vdma_mngr is
     s2mm_frame_ptr_out : in STD_LOGIC_VECTOR ( 2 downto 0 );
     err_i_reg : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_mngr : entity is "axi_vdma_mngr";
 end system_axi_vdma_0_0_axi_vdma_mngr;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_mngr is
@@ -91908,6 +92004,8 @@ entity system_axi_vdma_0_0_axi_vdma_reg_if is
     \DYNAMIC_MASTER_MODE_FRAME_CNT.chnl_current_frame_reg[4]\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \DYNAMIC_MASTER_MODE_FRAME_CNT.genlock_pair_frame_reg[4]\ : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_reg_if : entity is "axi_vdma_reg_if";
 end system_axi_vdma_0_0_axi_vdma_reg_if;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_reg_if is
@@ -93076,6 +93174,8 @@ entity system_axi_vdma_0_0_axi_vdma_rst_module is
     \GEN_LINEBUF_NO_SOF.all_lines_xfred_reg_0\ : in STD_LOGIC;
     \cmnds_queued_reg[0]\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_rst_module : entity is "axi_vdma_rst_module";
 end system_axi_vdma_0_0_axi_vdma_rst_module;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_rst_module is
@@ -93304,6 +93404,8 @@ entity system_axi_vdma_0_0_axi_vdma_s2mm_axis_dwidth_converter is
     \sig_strb_reg_out_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \sig_data_reg_out_reg[23]\ : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_s2mm_axis_dwidth_converter : entity is "axi_vdma_s2mm_axis_dwidth_converter";
 end system_axi_vdma_0_0_axi_vdma_s2mm_axis_dwidth_converter;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_s2mm_axis_dwidth_converter is
@@ -93917,6 +94019,8 @@ entity system_axi_vdma_0_0_srl_fifo_f is
     s_axis_s2mm_cmd_tvalid : in STD_LOGIC;
     \s_axis_cmd_tdata_reg[63]\ : in STD_LOGIC_VECTOR ( 48 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_srl_fifo_f : entity is "srl_fifo_f";
 end system_axi_vdma_0_0_srl_fifo_f;
 
 architecture STRUCTURE of system_axi_vdma_0_0_srl_fifo_f is
@@ -94673,6 +94777,8 @@ entity system_axi_vdma_0_0_xpm_fifo_sync is
     \sig_token_cntr_reg[1]\ : in STD_LOGIC;
     \sig_token_cntr_reg[4]\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_xpm_fifo_sync : entity is "xpm_fifo_sync";
 end system_axi_vdma_0_0_xpm_fifo_sync;
 
 architecture STRUCTURE of system_axi_vdma_0_0_xpm_fifo_sync is
@@ -96216,6 +96322,8 @@ entity system_axi_vdma_0_0_blk_mem_gen_generic_cstr is
     dm2linebuf_mm2s_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     DIADI : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end system_axi_vdma_0_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of system_axi_vdma_0_0_blk_mem_gen_generic_cstr is
@@ -96335,6 +96443,8 @@ entity system_axi_vdma_0_0_rd_logic is
     s2mm_halt : in STD_LOGIC;
     \GEN_S2MM_FLUSH_SOF_LOGIC.done_vsize_counter_reg[6]\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_rd_logic : entity is "rd_logic";
 end system_axi_vdma_0_0_rd_logic;
 
 architecture STRUCTURE of system_axi_vdma_0_0_rd_logic is
@@ -96497,6 +96607,8 @@ entity system_axi_vdma_0_0_wr_logic is
     \state_reg[1]\ : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_wr_logic : entity is "wr_logic";
 end system_axi_vdma_0_0_wr_logic;
 
 architecture STRUCTURE of system_axi_vdma_0_0_wr_logic is
@@ -96625,6 +96737,8 @@ entity system_axi_vdma_0_0_axi_datamover_fifo is
     sig_init_done_3 : in STD_LOGIC;
     \s_axis_cmd_tdata_reg[63]\ : in STD_LOGIC_VECTOR ( 48 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_fifo : entity is "axi_datamover_fifo";
 end system_axi_vdma_0_0_axi_datamover_fifo;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_fifo is
@@ -98075,6 +98189,8 @@ entity system_axi_vdma_0_0_sync_fifo_fg is
     \sig_token_cntr_reg[1]\ : in STD_LOGIC;
     \sig_token_cntr_reg[4]\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_sync_fifo_fg : entity is "sync_fifo_fg";
 end system_axi_vdma_0_0_sync_fifo_fg;
 
 architecture STRUCTURE of system_axi_vdma_0_0_sync_fifo_fg is
@@ -98242,6 +98358,8 @@ entity system_axi_vdma_0_0_blk_mem_gen_top is
     dm2linebuf_mm2s_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     DIADI : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end system_axi_vdma_0_0_blk_mem_gen_top;
 
 architecture STRUCTURE of system_axi_vdma_0_0_blk_mem_gen_top is
@@ -98338,6 +98456,8 @@ entity system_axi_vdma_0_0_axi_datamover_addr_cntl is
     sig_halt_reg_dly3 : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 36 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_addr_cntl : entity is "axi_datamover_addr_cntl";
 end system_axi_vdma_0_0_axi_datamover_addr_cntl;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_addr_cntl is
@@ -99524,6 +99644,8 @@ entity system_axi_vdma_0_0_axi_datamover_cmd_status is
     \s_axis_cmd_tdata_reg[63]\ : in STD_LOGIC_VECTOR ( 48 downto 0 );
     sig_rd_sts_slverr_reg_reg_0 : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_cmd_status : entity is "axi_datamover_cmd_status";
 end system_axi_vdma_0_0_axi_datamover_cmd_status;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_cmd_status is
@@ -99716,6 +99838,8 @@ entity system_axi_vdma_0_0_axi_datamover_rddata_cntl is
     sig_rst2all_stop_request : in STD_LOGIC;
     sig_posted_to_axi_reg : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_rddata_cntl : entity is "axi_datamover_rddata_cntl";
 end system_axi_vdma_0_0_axi_datamover_rddata_cntl;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_rddata_cntl is
@@ -100765,6 +100889,8 @@ entity system_axi_vdma_0_0_axi_datamover_s2mm_scatter is
     D : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_s2mm_scatter : entity is "axi_datamover_s2mm_scatter";
 end system_axi_vdma_0_0_axi_datamover_s2mm_scatter;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_s2mm_scatter is
@@ -102328,6 +102454,8 @@ entity system_axi_vdma_0_0_axi_datamover_sfifo_autord is
     \sig_token_cntr_reg[1]\ : in STD_LOGIC;
     \sig_token_cntr_reg[4]\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_sfifo_autord : entity is "axi_datamover_sfifo_autord";
 end system_axi_vdma_0_0_axi_datamover_sfifo_autord;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_sfifo_autord is
@@ -102509,6 +102637,8 @@ entity system_axi_vdma_0_0_axi_datamover_wr_status_cntl is
     m_axi_s2mm_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \GEN_INDET_BTT.lsig_eop_reg_reg\ : in STD_LOGIC_VECTOR ( 18 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_wr_status_cntl : entity is "axi_datamover_wr_status_cntl";
 end system_axi_vdma_0_0_axi_datamover_wr_status_cntl;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_wr_status_cntl is
@@ -103035,6 +103165,8 @@ entity system_axi_vdma_0_0_axi_datamover_wrdata_cntl is
     D : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \sig_xfer_addr_reg_reg[2]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_wrdata_cntl : entity is "axi_datamover_wrdata_cntl";
 end system_axi_vdma_0_0_axi_datamover_wrdata_cntl;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_wrdata_cntl is
@@ -104558,6 +104690,8 @@ entity system_axi_vdma_0_0_blk_mem_gen_v8_4_1_synth is
     dm2linebuf_mm2s_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     DIADI : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end system_axi_vdma_0_0_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of system_axi_vdma_0_0_blk_mem_gen_v8_4_1_synth is
@@ -104684,6 +104818,8 @@ entity system_axi_vdma_0_0_axi_datamover_indet_btt is
     \sig_strb_reg_out_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     SR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_indet_btt : entity is "axi_datamover_indet_btt";
 end system_axi_vdma_0_0_axi_datamover_indet_btt;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_indet_btt is
@@ -105782,6 +105918,8 @@ entity system_axi_vdma_0_0_axi_datamover_rd_sf is
     sig_last_mmap_dbeat_reg_reg : in STD_LOGIC;
     sig_cmd_stat_rst_user_reg_n_cdc_from_reg : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_rd_sf : entity is "axi_datamover_rd_sf";
 end system_axi_vdma_0_0_axi_datamover_rd_sf;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_rd_sf is
@@ -106110,6 +106248,8 @@ entity system_axi_vdma_0_0_axi_datamover_s2mm_realign is
     D : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_s2mm_realign : entity is "axi_datamover_s2mm_realign";
 end system_axi_vdma_0_0_axi_datamover_s2mm_realign;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_s2mm_realign is
@@ -106332,6 +106472,8 @@ entity system_axi_vdma_0_0_blk_mem_gen_v8_4_1 is
     dm2linebuf_mm2s_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     DIADI : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
 end system_axi_vdma_0_0_blk_mem_gen_v8_4_1;
 
 architecture STRUCTURE of system_axi_vdma_0_0_blk_mem_gen_v8_4_1 is
@@ -106436,6 +106578,8 @@ entity system_axi_vdma_0_0_axi_datamover_mm2s_full_wrap is
     m_axi_mm2s_rvalid : in STD_LOGIC;
     m_axi_mm2s_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_mm2s_full_wrap : entity is "axi_datamover_mm2s_full_wrap";
 end system_axi_vdma_0_0_axi_datamover_mm2s_full_wrap;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_mm2s_full_wrap is
@@ -106759,6 +106903,8 @@ entity system_axi_vdma_0_0_axi_datamover_s2mm_full_wrap is
     m_axi_s2mm_bvalid : in STD_LOGIC;
     m_axis_s2mm_sts_tready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover_s2mm_full_wrap : entity is "axi_datamover_s2mm_full_wrap";
 end system_axi_vdma_0_0_axi_datamover_s2mm_full_wrap;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover_s2mm_full_wrap is
@@ -107812,6 +107958,8 @@ entity system_axi_vdma_0_0_memory is
     dm2linebuf_mm2s_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     DIADI : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_memory : entity is "memory";
 end system_axi_vdma_0_0_memory;
 
 architecture STRUCTURE of system_axi_vdma_0_0_memory is
@@ -107961,6 +108109,8 @@ entity system_axi_vdma_0_0_axi_datamover is
     m_axi_s2mm_bvalid : in STD_LOGIC;
     m_axis_s2mm_sts_tready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_datamover : entity is "axi_datamover";
 end system_axi_vdma_0_0_axi_datamover;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_datamover is
@@ -108075,6 +108225,8 @@ entity system_axi_vdma_0_0_fifo_generator_ramfifo is
     mm2s_prmry_resetn : in STD_LOGIC;
     sig_s_ready_out_reg_0 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_fifo_generator_ramfifo : entity is "fifo_generator_ramfifo";
 end system_axi_vdma_0_0_fifo_generator_ramfifo;
 
 architecture STRUCTURE of system_axi_vdma_0_0_fifo_generator_ramfifo is
@@ -108287,6 +108439,8 @@ entity system_axi_vdma_0_0_fifo_generator_top is
     mm2s_prmry_resetn : in STD_LOGIC;
     sig_s_ready_out_reg_0 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_fifo_generator_top : entity is "fifo_generator_top";
 end system_axi_vdma_0_0_fifo_generator_top;
 
 architecture STRUCTURE of system_axi_vdma_0_0_fifo_generator_top is
@@ -108403,6 +108557,8 @@ entity system_axi_vdma_0_0_fifo_generator_v13_2_1_synth is
     mm2s_prmry_resetn : in STD_LOGIC;
     sig_s_ready_out_reg_0 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_fifo_generator_v13_2_1_synth : entity is "fifo_generator_v13_2_1_synth";
 end system_axi_vdma_0_0_fifo_generator_v13_2_1_synth;
 
 architecture STRUCTURE of system_axi_vdma_0_0_fifo_generator_v13_2_1_synth is
@@ -108519,6 +108675,8 @@ entity system_axi_vdma_0_0_fifo_generator_v13_2_1 is
     mm2s_prmry_resetn : in STD_LOGIC;
     sig_s_ready_out_reg_0 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_fifo_generator_v13_2_1 : entity is "fifo_generator_v13_2_1";
 end system_axi_vdma_0_0_fifo_generator_v13_2_1;
 
 architecture STRUCTURE of system_axi_vdma_0_0_fifo_generator_v13_2_1 is
@@ -108635,6 +108793,8 @@ entity system_axi_vdma_0_0_axi_vdma_sfifo is
     mm2s_prmry_resetn : in STD_LOGIC;
     sig_s_ready_out_reg_0 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_sfifo : entity is "axi_vdma_sfifo";
 end system_axi_vdma_0_0_axi_vdma_sfifo;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_sfifo is
@@ -108767,6 +108927,8 @@ entity system_axi_vdma_0_0_axi_vdma_mm2s_linebuf is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     p_27_out : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_mm2s_linebuf : entity is "axi_vdma_mm2s_linebuf";
 end system_axi_vdma_0_0_axi_vdma_mm2s_linebuf;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_mm2s_linebuf is
@@ -109725,6 +109887,8 @@ entity system_axi_vdma_0_0_axi_vdma_s2mm_linebuf is
     s2mm_dmac2cdc_fsync_out : in STD_LOGIC;
     s2mm_strm_all_lines_rcvd : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma_s2mm_linebuf : entity is "axi_vdma_s2mm_linebuf";
 end system_axi_vdma_0_0_axi_vdma_s2mm_linebuf;
 
 architecture STRUCTURE of system_axi_vdma_0_0_axi_vdma_s2mm_linebuf is
@@ -110876,6 +111040,8 @@ entity system_axi_vdma_0_0_axi_vdma is
   attribute C_USE_MM2S_FSYNC of system_axi_vdma_0_0_axi_vdma : entity is 0;
   attribute C_USE_S2MM_FSYNC : integer;
   attribute C_USE_S2MM_FSYNC of system_axi_vdma_0_0_axi_vdma : entity is 2;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_vdma_0_0_axi_vdma : entity is "axi_vdma";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of system_axi_vdma_0_0_axi_vdma : entity is "yes";
   attribute ip_group : string;
@@ -112821,7 +112987,7 @@ entity system_axi_vdma_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of system_axi_vdma_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of system_axi_vdma_0_0 : entity is "axi_vdma,Vivado 2017.4";
+  attribute x_core_info of system_axi_vdma_0_0 : entity is "axi_vdma,Vivado 2017.4.1";
 end system_axi_vdma_0_0;
 
 architecture STRUCTURE of system_axi_vdma_0_0 is

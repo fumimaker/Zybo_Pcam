@@ -201,16 +201,6 @@
       </spirit:views>
       <spirit:ports>
         <spirit:port>
-          <spirit:name>jb_p</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-            <spirit:vector>
-              <spirit:left>4</spirit:left>
-              <spirit:right>1</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>dphy_clk_lp_n</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
@@ -289,6 +279,16 @@
             <spirit:vector>
               <spirit:left>3</spirit:left>
               <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>jb_p</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>4</spirit:left>
+              <spirit:right>1</spirit:right>
             </spirit:vector>
           </spirit:wire>
         </spirit:port>
@@ -1074,7 +1074,7 @@
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>AXI_BayerToRGB_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="AXI_BayerToRGB" spirit:vendor="digilentinc.com" spirit:version="4.2"/>
+        <spirit:componentRef spirit:library="user" spirit:name="AXI_BayerToRGB" spirit:vendor="digilentinc.com" spirit:version="4.6"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_AXI_BayerToRGB_1_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>

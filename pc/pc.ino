@@ -15,14 +15,15 @@ void setup()
   pinMode(pin, INPUT);
   Serial.begin(115200);
   mySerial.begin(9600);
-  mySerial.println("press button to start");
+  mySerial.println("PC");
 }
 
 void loop()
 {
   if (!digitalRead(btn)){
     //mySerial.println("Pushed");
-    for(int i=0; i<1000; i++){
+    for(int i=0; i<101; i++){
+      delay(500);
       while(Serial.available()){
        Serial.read();
       }
@@ -31,15 +32,15 @@ void loop()
       _us = micros();
       while(Serial.read() == -1);
       us = micros();
+      digitalWrite(led,LOW);
       int32_t tmp = us - _us;
       mySerial.println(tmp);
       
-      digitalWrite(led,LOW);
-      delay(100);
+      
+      
       while(Serial.available()){
         Serial.read();
       }
-      delay(100);
     }
   }
 }

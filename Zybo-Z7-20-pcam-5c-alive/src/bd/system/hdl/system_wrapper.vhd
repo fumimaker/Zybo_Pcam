@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
---Date        : Tue Jan 21 23:00:00 2020
+--Date        : Fri Jan 24 21:57:34 2020
 --Host        : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
 --Command     : generate_target system_wrapper.bd
 --Design      : system_wrapper
@@ -95,7 +95,6 @@ architecture STRUCTURE of system_wrapper is
     hdmi_tx_clk_n : out STD_LOGIC;
     hdmi_tx_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
     hdmi_tx_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    jb_p : out STD_LOGIC_VECTOR ( 4 downto 1 );
     dphy_clk_lp_n : in STD_LOGIC;
     dphy_clk_lp_p : in STD_LOGIC;
     dphy_data_hs_n : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -104,7 +103,8 @@ architecture STRUCTURE of system_wrapper is
     dphy_data_lp_p : in STD_LOGIC_VECTOR ( 1 downto 0 );
     led : out STD_LOGIC_VECTOR ( 3 downto 0 );
     btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    sw : in STD_LOGIC_VECTOR ( 3 downto 0 )
+    sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    jb_p : out STD_LOGIC_VECTOR ( 4 downto 1 )
   );
   end component system;
   component IOBUF is
