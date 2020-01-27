@@ -1,0 +1,305 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Fri Jan 24 20:42:26 2020
+| Host         : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_AXI_BayerToRGB_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_AXI_BayerToRGB_1_0 from digilentinc.com:user:AXI_BayerToRGB:4.5 (Rev. 1) to digilentinc.com:user:AXI_BayerToRGB:4.6 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Fri Jan 24 19:54:19 2020
+| Host         : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_AXI_BayerToRGB_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_AXI_BayerToRGB_1_0 from digilentinc.com:user:AXI_BayerToRGB:4.4 (Rev. 1) to digilentinc.com:user:AXI_BayerToRGB:4.5 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Fri Jan 24 19:36:01 2020
+| Host         : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_AXI_BayerToRGB_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_AXI_BayerToRGB_1_0 from digilentinc.com:user:AXI_BayerToRGB:4.3 (Rev. 1) to digilentinc.com:user:AXI_BayerToRGB:4.4 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Fri Jan 24 19:32:21 2020
+| Host         : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_AXI_BayerToRGB_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_AXI_BayerToRGB_1_0 from digilentinc.com:user:AXI_BayerToRGB:4.2 (Rev. 2) to digilentinc.com:user:AXI_BayerToRGB:4.3 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Fri Jan 24 19:04:32 2020
+| Host         : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_AXI_BayerToRGB_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_AXI_BayerToRGB_1_0 (digilentinc.com:user:AXI_BayerToRGB:4.2) from (Rev. 1) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Tue Jan 21 22:58:40 2020
+| Host         : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_AXI_BayerToRGB_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_AXI_BayerToRGB_1_0 from digilentinc.com:user:AXI_BayerToRGB:4.1 (Rev. 1) to digilentinc.com:user:AXI_BayerToRGB:4.2 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Tue Jan 21 22:56:55 2020
+| Host         : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_AXI_BayerToRGB_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_AXI_BayerToRGB_1_0 from digilentinc.com:user:AXI_BayerToRGB:4.0 (Rev. 1) to digilentinc.com:user:AXI_BayerToRGB:4.1 (Rev. 1)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_AXI_BayerToRGB_1_0'. These changes may impact your design.
+
+
+-Upgraded port 'jb_p' width 4 differs from original width 1
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Tue Jan 21 22:49:44 2020
+| Host         : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_AXI_BayerToRGB_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_AXI_BayerToRGB_1_0 from digilentinc.com:user:AXI_BayerToRGB:3.9 (Rev. 1) to digilentinc.com:user:AXI_BayerToRGB:4.0 (Rev. 1)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_AXI_BayerToRGB_1_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'portBn'
+
+-Upgrade has removed port 'portBp'
+
+-Upgrade has added port 'jb_p'
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Tue Jan 21 22:37:26 2020
+| Host         : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_AXI_BayerToRGB_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_AXI_BayerToRGB_1_0 from digilentinc.com:user:AXI_BayerToRGB:3.8 (Rev. 1) to digilentinc.com:user:AXI_BayerToRGB:3.9 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Tue Jan 21 22:31:32 2020
+| Host         : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_AXI_BayerToRGB_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_AXI_BayerToRGB_1_0 from digilentinc.com:user:AXI_BayerToRGB:3.7 (Rev. 1) to digilentinc.com:user:AXI_BayerToRGB:3.8 (Rev. 1)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_AXI_BayerToRGB_1_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'portB'
+
+-Upgrade has added port 'portBn'
+
+-Upgrade has added port 'portBp'
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Tue Jan 21 22:24:59 2020
+| Host         : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_AXI_GammaCorrection_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_AXI_GammaCorrection_0_0 (digilentinc.com:user:AXI_GammaCorrection:1.0) from (Rev. 20) to (Rev. 21)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Tue Jan 21 22:24:59 2020
+| Host         : DESKTOP-5VC2SBS running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_AXI_BayerToRGB_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_AXI_BayerToRGB_1_0 from digilentinc.com:user:AXI_BayerToRGB:1.0 (Rev. 13) to digilentinc.com:user:AXI_BayerToRGB:3.7 (Rev. 1)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_AXI_BayerToRGB_1_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'button'
+
+-Upgrade has added port 'led'
+
+-Upgrade has added port 'portB'
+
+-Upgrade has added port 'sw'
+
+
