@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import serial
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 print(cap.get(cv2.CAP_PROP_FPS))
 
 tm = cv2.TickMeter()
