@@ -1,55 +1,52 @@
 import cv2
 import numpy as np
+import serial
+cap = cv2.VideoCapture(1)
+print(cap.get(cv2.CAP_PROP_FPS))
 
-corner_track_params = dict(maxCorners = 10,
-                       qualityLevel = 0.3,
-                       minDistance = 7,
-                       blockSize = 7)
+tm = cv2.TickMeter()
+tm.start()
+count = 0
+max_count = 10
+fps = 0
+bgrLower = np.array([254, 254, 254])    # 抽出する色の下限(BGR)
+bgrUpper = np.array([255, 255, 255])    # 抽出する色の上限(BGR)
+h = 480
+w = 640
 
-lk_params = dict(winSize = (200,200),
-                 maxLevel = 2,
-                 criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10,0.03))
+counter = 0
 
-cap = cv2.VideoCapture(0)
+while(1):
+    # フレームを取得
+    ret, frame = cap.read()
 
-ret, prev_frame = cap.read()
+    if count == max_count:
+        tm.stop()
+        fps = max_count / tm.getTimeSec()
+        tm.reset()
+        tm.start()
+        count = 0
+    cv2.putText(frame, 'FPS: {:.2f}'.format(fps),
+                (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 0), thickness=2)
+    
+    for x in range(160, 320):
+        for y in range(213, 426):
+            
+            b, g, r = frame[x, y]
+            if (b,g,r) == (255, 255, 255):
+                counter += 1
+            
 
-prev_gray = cv2.cvtColor(prev_frame, cv2.COLOR_BGR2GRAY)
+    print(counter)
+    cv2.imshow('red', frame)
+    counter = 0
 
-prevPts = cv2.goodFeaturesToTrack(prev_gray, mask = None, **corner_track_params)
+    count += 1
 
-mask = np.zeros_like(prev_frame)
-
-
-while True:
-
-    ret,frame = cap.read()
-
-    frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
-    nextPts, status, err = cv2.calcOpticalFlowPyrLK(prev_gray, frame_gray, prevPts, None, **lk_params)
-
-    good_new = nextPts[status==1]
-    good_prev = prevPts[status==1]
-
-    for i,(new,prev) in enumerate(zip(good_new,good_prev)):
-
-        x_new,y_new = new.ravel()
-        x_prev,y_prev = prev.ravel()
-
-        mask = cv2.line(mask, (x_new,y_new),(x_prev,y_prev), (0,255,0), 3)
-
-        frame = cv2.circle(frame,(x_new,y_new),8,(0,0,255),-1)
-
-    img = cv2.add(frame,mask)
-    cv2.imshow('frame',img)
-
-    if cv2.waitKey(30) & 0xff == 27:
+    # qを押したら終了
+    k = cv2.waitKey(1)
+    if k == ord('q'):
         break
-
-    prev_gray = frame_gray.copy()
-    prevPts = good_new.reshape(-1,1,2)
-
 
 cap.release()
 cv2.destroyAllWindows()
