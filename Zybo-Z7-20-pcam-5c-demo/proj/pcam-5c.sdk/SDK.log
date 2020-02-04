@@ -1,0 +1,6 @@
+01:49:10 INFO  : Registering command handlers for SDK TCF services
+01:49:11 INFO  : Launching XSCT server: xsct.bat -interactive C:\Github\Zybo_Pcam\Zybo-Z7-20-pcam-5c-demo\proj\pcam-5c.sdk\temp_xsdb_launch_script.tcl
+01:49:13 INFO  : XSCT server has started successfully.
+01:49:13 INFO  : Successfully done setting XSCT server connection channel  
+01:49:16 INFO  : Successfully done setting SDK workspace  
+01:49:16 INFO  : Processing command line option -hwspec C:/Github/Zybo_Pcam/Zybo-Z7-20-pcam-5c-demo/proj/pcam-5c.sdk/system_wrapper.hdf.
