@@ -1,4 +1,8 @@
 # Zybo_Pcam
+RG termで使ったリポジトリ。USBカメラとCSIカメラの遅延評価を行いました。OpenCVを使ってWindowsPCとRaspiの比較を行いました。OpenCVのコードもあります。  
+Zyboのプロジェクトは既存のPcamデモのIPを改造しています。  
+
+
 Zyboでカメラを使ってみるリポジトリです。最初はPiCamRev1.3で頑張ってたんだけど、InitializeRegisterがあまりにも違いすぎて移植を断念。
 現在はXilinxのPcamのDemoコードをベースにCSIカメラの扱い方を勉強しています。最終的には複数のCSIカメラを接続して障害物認識、検知などを行いたい。
 
